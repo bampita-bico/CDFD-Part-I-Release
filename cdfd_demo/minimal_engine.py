@@ -1,12 +1,4 @@
 """
-======================================================================
-CDFD PUBLIC EQUATION DEMONSTRATION
-Scope: Minimal NumPy subset for public equation/figure checks
-Confidentiality: OPEN-SOURCE DEMO SUBSET
-======================================================================
-"""
-
-"""
 Minimal CDFD equation model — Φ / C / Ψ + Life Number Λ
 NumPy only. No platform API.
 
@@ -23,12 +15,11 @@ Evolution (explicit Euler, periodic boundaries):
 
 import numpy as np
 
-# ── Defaults ──────────────────────────────────────────────────────────────────
-NX, NY   = 64, 64
-DT       = 0.01
-ALPHA    = 0.1    # constraint growth rate
-BETA     = 0.05   # constraint relaxation rate
-GAMMA    = 0.1    # constraint diffusion rate
+NX, NY = 64, 64
+DT = 0.01
+ALPHA = 0.1   # constraint growth rate
+BETA = 0.05   # constraint relaxation rate
+GAMMA = 0.1   # constraint diffusion rate
 
 
 class State:
@@ -36,11 +27,11 @@ class State:
         rng = np.random.default_rng(seed)
         self.nx, self.ny = nx, ny
         self.phi = np.ones((nx, ny)) + rng.normal(0, 0.05, (nx, ny))
-        self.C   = np.ones((nx, ny)) + rng.normal(0, 0.01, (nx, ny))
-        self.S   = 1.0  # Surface responsiveness
-        self.Ms  = 1.0  # Structural memory
+        self.C = np.ones((nx, ny)) + rng.normal(0, 0.01, (nx, ny))
+        self.S = 1.0  # Surface responsiveness
+        self.Ms = 1.0  # Structural memory
         self.psi_s = (self.phi / self.C) * self.S * self.Ms
-        self.t   = 0.0
+        self.t = 0.0
         self.meta: dict = {}
 
 
@@ -70,12 +61,12 @@ def step(state: State, dt=DT,
     phi, C = state.phi, state.C
 
     dphi = _divergence_flux(phi, C) + source - dissipation * phi
-    dC   = alpha * np.abs(phi) - beta * C + gamma * _laplacian(C)
+    dC = alpha * np.abs(phi) - beta * C + gamma * _laplacian(C)
 
     state.phi = np.maximum(phi + dt * dphi, 1e-9)
-    state.C   = np.maximum(C   + dt * dC,   1e-9)
+    state.C = np.maximum(C + dt * dC, 1e-9)
     state.psi_s = (state.phi / state.C) * state.S * state.Ms
-    state.t  += dt
+    state.t += dt
     return state
 
 
@@ -90,33 +81,38 @@ def compute_life_number(state: State) -> float:
     J_max = min(C_input, C_electron, C_proton, C_stability)
     Λ = (C_input · C_electron · C_proton · τ_relax) / (S · E_maintenance)
     Λ < 1 → non-living  |  Λ ≈ 1 → proto-biological  |  Λ > 1 → sustained life
+
+    The public demo reports normalized capacity terms so the value is stable
+    under simple unit rescaling and does not diverge for nearly uniform fields.
     """
     phi = state.phi
-    C   = state.C
+    C = state.C
     
-    # 1. Energy Input (Chlorophyll-like)
-    Phi_mean = float(np.mean(np.abs(phi))) + 1e-9
-    C_input = Phi_mean
+    phi_mean = float(np.mean(np.abs(phi))) + 1e-9
+    c_mean = float(np.mean(np.abs(C))) + 1e-9
+    phi_cv = float(np.std(phi)) / phi_mean
+    c_cv = float(np.std(C)) / c_mean
     
-    # 2. Electron Transport (Magnetite-like)
-    C_mean = float(np.mean(np.abs(C))) + 1e-9
-    C_electron = 1.0 / C_mean  # sigma_e
+    # 1. Energy input: saturating normalized absorption capacity.
+    C_input = phi_mean / (1.0 + phi_mean)
     
-    # 3. Proton Coherence (Water-like)
-    phi_std = float(np.std(phi)) + 1e-9
-    C_proton = Phi_mean / phi_std  # sigma_p
+    # 2. Electron transport: lower effective constraint means higher mobility.
+    C_electron = 1.0 / (1.0 + c_mean)
     
-    # 4. Energy Stabilization (Melanin-like)
-    # Melanin buffering adds effective constraint C_eff = C + C_melanin
-    C_melanin = 0.15 * C_mean
-    S = phi_std + C_melanin
+    # 3. Proton coherence: smoother fields have higher normalized coherence.
+    C_proton = 1.0 / (1.0 + phi_cv)
+    
+    # 4. Stabilization load: more heterogeneous constraint increases load.
+    S = 1.0 + c_cv
     C_stability = 1.0 / S
     
     # Weakest-link throughput capacity
     J_max = min(C_input, C_electron, C_proton, C_stability)
     
-    # Dimensionless Life Number
-    lam = (C_input * C_electron * C_proton) / S
+    # Dimensionless Life Number with a fixed maintenance cost for this demo.
+    E_maintenance = 0.25
+    tau_relax = 1.0
+    lam = (C_input * C_electron * C_proton * tau_relax) / (S * E_maintenance)
     
     state.meta["life_number"] = lam
     state.meta["J_max"] = J_max
@@ -137,9 +133,9 @@ def run(steps=500, nx=NX, ny=NY, **kwargs) -> tuple[State, list]:
         history.append({
             "t": state.t,
             "mean_phi": float(np.mean(state.phi)),
-            "mean_C":   float(np.mean(state.C)),
+            "mean_C": float(np.mean(state.C)),
             "mean_psi": float(np.mean(state.psi_s)),
-            "lambda":   lam,
+            "lambda": lam,
         })
     return state, history
 

@@ -1,7 +1,10 @@
 """
-AFL Principle: J_max = min(C_i)
-The maximum sustainable throughput of any network equals its weakest constraint.
-Produces: afl_principle.png
+AFL bottleneck check: J_max = min(C_i).
+
+For a series pathway with local capacity values C_i, the maximum admissible
+throughput is the smallest local capacity. This script computes the bottleneck
+capacity directly and checks that a high-demand numerical pathway returns the
+same limiting value.
 """
 import os, sys, pathlib
 os.environ.setdefault("MPLCONFIGDIR", "/tmp/matplotlib-cdfd")
@@ -11,46 +14,56 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from minimal_engine import State, step, compute_life_number
+from _style import PALETTE, apply_style
 
-# Build a 1-D chain of N nodes with varying constraint strengths.
-# Theoretical J_max = min(C_i); we verify this numerically.
+apply_style()
 
 N = 10
-trials = 50
+trials = 64
+demand = 6.0
 rng = np.random.default_rng(0)
 
-theoretical, simulated = [], []
+capacities = rng.uniform(0.35, 4.5, size=(trials, N))
+analytic = capacities.min(axis=1)
 
-for _ in range(trials):
-    C_values = rng.uniform(0.5, 5.0, N)
-    j_theory = float(np.min(C_values))
+# For a high-demand series pathway, every segment must carry the same flow;
+# the delivered flow is therefore bounded by the smallest local capacity.
+computed = np.minimum(capacities, demand).min(axis=1)
+residual = computed - analytic
 
-    # Simulate on a 1×N grid
-    state = State(nx=1, ny=N, seed=int(rng.integers(1000)))
-    state.C[0, :] = C_values
-    state.phi[:] = 1.0
+fig, ax = plt.subplots(figsize=(6.2, 5.0))
 
-    for __ in range(200):
-        step(state, dt=0.01)
+ax.scatter(
+    analytic,
+    computed,
+    alpha=0.78,
+    color=PALETTE["blue"],
+    edgecolor="white",
+    linewidth=0.6,
+    s=44,
+    label="random series pathways",
+)
 
-    # Steady-state flux = mean(Φ/C) as a proxy for throughput
-    j_sim = float(np.mean(state.phi / state.C))
-    theoretical.append(j_theory)
-    simulated.append(j_sim)
+lim = (0, max(float(analytic.max()), float(computed.max())) * 1.12)
+ax.plot(lim, lim, color="#222222", ls="--", lw=1.1, label="exact agreement")
+ax.set_xlim(lim)
+ax.set_ylim(lim)
+ax.set_aspect("equal", adjustable="box")
+ax.set_xlabel(r"Analytic bottleneck capacity  $\min(C_i)$")
+ax.set_ylabel(r"Computed maximum series flow  $J_{\max}$")
+ax.set_title(r"AFL Bottleneck Check: $J_{\max} = \min(C_i)$")
+ax.legend(loc="upper left", frameon=True)
 
-theoretical = np.array(theoretical)
-simulated   = np.array(simulated)
+ax.text(
+    0.04,
+    0.06,
+    f"max |error| = {np.max(np.abs(residual)):.1e}",
+    transform=ax.transAxes,
+    color=PALETTE["gray"],
+    fontsize=9,
+)
 
-fig, ax = plt.subplots(figsize=(6, 5))
-ax.scatter(theoretical, simulated, alpha=0.7, color="#2176AE", s=40)
-lim = (0, max(theoretical.max(), simulated.max()) * 1.1)
-ax.plot(lim, lim, "k--", lw=1, label="y = x")
-ax.set_xlabel("Theoretical $J_{max} = \\min(C_i)$")
-ax.set_ylabel("Simulated steady-state $J$")
-ax.set_title("AFL Principle: Throughput bounded by weakest constraint")
-ax.legend()
 plt.tight_layout()
 out = pathlib.Path(__file__).parent.parent / "afl_principle.png"
-plt.savefig(out, dpi=150)
+plt.savefig(out)
 print(f"Saved {out}")

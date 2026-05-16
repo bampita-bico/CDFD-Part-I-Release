@@ -1,40 +1,44 @@
-# CDFD Public Minimal Demo
+# CDFD Public Demo
 
-Welcome to the public-facing demonstration of the **Constraint-Driven Flux Dynamics (CDFD)** framework.
+This directory contains a small, reproducible public demonstration for the
+**Constraint-Driven Flux Dynamics (CDFD)** framework.
 
-This directory is a small, runnable proof-of-concept for the public $\Psi_s = (\Phi / C) \cdot S \cdot M_s$ equations. It is not the full research archive, not the full paper source tree, and not a product.
+The demo is intentionally narrow: it exposes a minimal NumPy equation model,
+three figure-generation scripts, and a Docker path for rerunning the public
+checks. It is not the full research archive or the full paper source tree.
 
-## What This Demo Does
+## Scope
 
-The demo exposes only:
+Included:
 
 1. A minimal NumPy equation model in `minimal_engine.py`.
 2. Three figure-producing scripts in `paper_scripts/`.
 3. A Docker path that runs those scripts without the private app stack.
 
-The full workspace contains the broader paper archive and active code. This demo should be presented only as a reproducible public equation check.
+The figures should be read as reproducible equation illustrations and numerical
+sanity checks, not as empirical validation of the CDFD hypotheses.
 
-## Public Demo Instructions
-This minimal script exercises the core mathematics of the Adaptive Surface/Vacuum framework ($\Psi_s = (\Phi / C) \cdot S \cdot M_s$) without describing any non-public implementation details.
+## Run
 
-One command, three figures:
+One command regenerates the three public figures:
 ```bash
 docker compose up
 ```
 
-Figures are written to this directory:
-| File | What it proves |
+The figures are written to this directory:
+
+| File | Purpose |
 |------|---------------|
-| `afl_principle.png` | Throughput J bounded by weakest constraint: J_max = min(C_i) |
-| `tri_regime.png` | Life Number Λ crosses 1 as electron transport capacity increases |
-| `life_emergence.png` | Λ transition: non-living → proto-biological → sustained life |
+| `afl_principle.png` | Checks the series-path bottleneck relation `J_max = min(C_i)`. |
+| `tri_regime.png` | Sweeps a normalized transport capacity through the `Lambda = 1` threshold. |
+| `life_emergence.png` | Shows an illustrative normalized trajectory crossing `Lambda = 1`. |
 
-### Core Equations Proved Herein
-**Flow evolution:** $\partial\Phi/\partial t = \nabla\cdot(1/C \cdot \nabla\Phi) + S - D$
-**Constraint evolution:** $\partial C/\partial t = \alpha|\Phi| - \beta C + \gamma\nabla^2C$
-**Equilibrium:** $\Psi_s = (\Phi / C) \cdot S \cdot M_s$
+## Public Equations Represented
 
-No internet required. `minimal_engine.py` is ~100 lines of NumPy — read it to verify the math.
+- Flow evolution: `dPhi/dt = div((1/C) grad Phi) + S - D`
+- Constraint evolution: `dC/dt = alpha |Phi| - beta C + gamma laplacian(C)`
+- Equilibrium proxy: `Psi_s = (Phi / C) * S * M_s`
+- Life Number: `Lambda = (C_input * C_electron * C_proton * tau_relax) / (S * E_maintenance)`
 
-### Numerical Verification Scripts
-The main runnable public scripts are `afl_principle.py`, `tri_regime.py`, and `life_emergence.py`. Other `supplementary_*` files in this demo are legacy/minimal mirrors and should not be presented as the complete proof scripts from the private paper archive unless they are regenerated from the active source tree.
+No internet is required. `minimal_engine.py` is a compact NumPy implementation
+intended for inspection and reproducibility.
