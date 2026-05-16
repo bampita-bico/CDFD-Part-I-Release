@@ -42,3 +42,7 @@ The figures are written to this directory:
 
 No internet is required. `minimal_engine.py` is a compact NumPy implementation
 intended for inspection and reproducibility.
+
+## License
+
+This public demo is licensed under CC BY 4.0. See `LICENSE`.

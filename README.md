@@ -11,7 +11,7 @@ Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project.
 - `cdfd_demo/` - small public equation demo with Docker support.
 - `requirements.txt` - Python dependencies for the public supplementary scripts.
 - `environment.yml` - Conda environment for the public science stack.
-- `LICENSE` - release license.
+- `LICENSE` - CC BY 4.0 release license.
 
 ## Review Status
 
@@ -31,6 +31,11 @@ physical hypotheses.
 
 See `Part_I_Fundamental_Physics/REPRODUCIBILITY.md` for rebuild and verification
 commands.
+
+## License
+
+This release is licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0). See `LICENSE`.
 
 ## Citation
 
