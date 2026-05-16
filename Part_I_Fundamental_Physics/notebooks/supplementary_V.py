@@ -2,7 +2,8 @@
 Supplementary Material — Paper V
 "Zero Parameters: Deriving the Vacuum Chirality Phase from the Koide Invariant"
 
-Author: Steve Bico Mujjabi (2026)
+Author: Steve Bico Mujjabi, MD (2026)
+ORCID: https://orcid.org/0009-0001-0556-5516
 
 Uses paper-local public helpers for chi, kappa, Brannen primitives, geometric inputs,
 PDG masses, Koide bookkeeping, plus SymPy algebraic checks, SciPy minimization,

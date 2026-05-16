@@ -2,7 +2,8 @@
 Supplementary Material — Paper III
 "Topology, Chirality, and the Vacuum Density"
 
-Author: Steve Bico Mujjabi (2026)
+Author: Steve Bico Mujjabi, MD (2026)
+ORCID: https://orcid.org/0009-0001-0556-5516
 
 Reproduces every number in the paper (κ closure, torus knots, Faddeev–Niemi
 ordering, chirality equilibrium, M and ρ₀ decomposition). Uses the public
@@ -301,7 +302,7 @@ def _plot_figure_bundle(
     text = rf"geom $\chi$: {geom['chi_geometric']:.6f}"
 
     fig.suptitle(
-        "Paper III — Topology, Chirality, Vacuum Density Scale\nCDFD public supplementary material · Steve Bico Mujjabi (2026)\n" + text,
+        "Paper III — Topology, Chirality, Vacuum Density Scale\nCDFD public supplementary material · Steve Bico Mujjabi, MD (2026)\n" + text,
         fontsize=12,
         fontweight="bold",
         y=1.05,

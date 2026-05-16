@@ -3,6 +3,11 @@
 This directory contains the Part I physics sequence for the
 Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project.
 
+## Author
+
+Steve Bico Mujjabi, MD  
+ORCID: https://orcid.org/0009-0001-0556-5516
+
 ## Contents
 
 - `papers/` - LaTeX sources for Papers I-XII.

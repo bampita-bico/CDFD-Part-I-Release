@@ -2,7 +2,8 @@
 Supplementary Material — Paper II
 "Lepton Masses from Z3-Symmetric Vortex Modes and the Koide Formula"
 
-Author: Steve Bico Mujjabi (2026)
+Author: Steve Bico Mujjabi, MD (2026)
+ORCID: https://orcid.org/0009-0001-0556-5516
 
 Reproduces every number in the paper's tables and generates
 publication-quality figures. Powered by the public equations stated in the
@@ -411,7 +412,7 @@ def _plot_figure_bundle(out: Path, fit: dict, pl: dict, theta_refined_rad: Optio
 
     fig.suptitle(
         "Paper II — Lepton Masses from Z₃ Vortex Modes & the Koide Formula\n"
-        "CDFD public supplementary material · Steve Bico Mujjabi (2026)\n"
+        "CDFD public supplementary material · Steve Bico Mujjabi, MD (2026)\n"
         + subtitle,
         fontsize=13,
         fontweight="bold",

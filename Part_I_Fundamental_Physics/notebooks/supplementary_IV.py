@@ -2,7 +2,8 @@
 Supplementary Material — Paper IV
 "The Vacuum Equation of State and the Origin of rho_0"
 
-Author: Steve Bico Mujjabi (2026)
+Author: Steve Bico Mujjabi, MD (2026)
+ORCID: https://orcid.org/0009-0001-0556-5516
 
 Uses paper-local public helpers for χ, κ, Brannen fit, Compton-ring geometry,
 and rho0 bookkeeping; SymPy verifies dimensionless reductions; SciPy verifies

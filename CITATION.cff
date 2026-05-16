@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this archive, please cite the Zenodo DOI for the specific release version."
+title: "CDFD Part I: Fundamental Physics"
+version: "1.0.0"
+date-released: 2026-05-17
+license: CC-BY-4.0
+authors:
+  - family-names: Mujjabi
+    given-names: Steve Bico
+    name-suffix: MD
+    affiliation: Independent Researcher
+    orcid: "https://orcid.org/0009-0001-0556-5516"
+abstract: "Public Part I physics archive for the Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project, including manuscripts, supplementary scripts, generated outputs, bibliography, and a minimal public demo."
+keywords:
+  - constraint-driven field theory
+  - constraint-driven flux dynamics
+  - CDFT
+  - CDFD
+  - theoretical physics
+  - preprint

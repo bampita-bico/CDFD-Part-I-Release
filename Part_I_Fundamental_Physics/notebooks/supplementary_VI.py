@@ -3,7 +3,8 @@ Supplementary Material — Paper VI
 "The Universal Torus Knot Hierarchy: Z_n Symmetry, the Cinquefoil Family,
 and the General Structure of CDFT Particle Families"
 
-Author: Steve Bico Mujjabi (2026)
+Author: Steve Bico Mujjabi, MD (2026)
+ORCID: https://orcid.org/0009-0001-0556-5516
 
 Uses paper-local public helpers for chi, kappa, Brannen/Koide primitives, PDG
 lepton masses; SymPy for Z_n Fourier identities and c_n = sqrt(2); SciPy for bounded

@@ -1,0 +1,21 @@
+{
+  "title": "CDFD Part I: Fundamental Physics",
+  "version": "1.0.0",
+  "creators": [
+    {
+      "name": "Mujjabi, Steve Bico, MD",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0001-0556-5516"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Constraint-Driven Field Theory",
+    "Constraint-Driven Flux Dynamics",
+    "CDFT",
+    "CDFD",
+    "theoretical physics",
+    "preprint"
+  ],
+  "description": "Public Part I physics archive for the Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project, including manuscripts, supplementary scripts, generated outputs, bibliography, and a minimal public demo."
+}

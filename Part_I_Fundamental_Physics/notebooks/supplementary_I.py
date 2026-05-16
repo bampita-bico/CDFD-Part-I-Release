@@ -3,7 +3,8 @@ Supplementary Material — Paper I
 "Vortex Stability in a Constrained Transport Vacuum
  and the Origin of the Fine-Structure Constant"
 
-Author: Steve Bico Mujjabi (2026)
+Author: Steve Bico Mujjabi, MD (2026)
+ORCID: https://orcid.org/0009-0001-0556-5516
 
 Reproduces every number in the paper's three tables and generates
 publication-quality figures. Numerics come from the public equations stated in
@@ -417,7 +418,7 @@ def _plot_figure_bundle(
 
     fig.suptitle(
         "Paper I — Vortex Stability & Origin of the Fine-Structure Constant\n"
-        r"CDFD public supplementary material · Steve Bico Mujjabi (2026)",
+        r"CDFD public supplementary material · Steve Bico Mujjabi, MD (2026)",
         fontsize=13,
         fontweight="bold",
         y=1.01,

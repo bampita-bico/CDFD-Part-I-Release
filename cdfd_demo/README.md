@@ -7,6 +7,11 @@ The demo is intentionally narrow: it exposes a minimal NumPy equation model,
 three figure-generation scripts, and a Docker path for rerunning the public
 checks. It is not the full research archive or the full paper source tree.
 
+## Author
+
+Steve Bico Mujjabi, MD  
+ORCID: https://orcid.org/0009-0001-0556-5516
+
 ## Scope
 
 Included:
