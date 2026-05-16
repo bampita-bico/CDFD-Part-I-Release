@@ -1,0 +1,4 @@
+check,expression,ok
+dPsi_dPhi_positive,1/C_vac,True
+dPsi_dC_negative,-Phi_vac/C_vac**2,True
+feedback_contains_flux_term,-C_vac*beta + Phi_vac*alpha + gamma*laplacian_C,True

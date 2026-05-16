@@ -1,0 +1,11 @@
+symbol,value,notes
+alpha_codata_via_chi_inverse,0.0072973525692838015,Paper I public chi equilibrium
+chi_eq,137.035999084,Paper I \(\chi_{\mathrm{eq}} \approx 137.036\)
+kappa,117361.9949447333,Paper III \(\chi^2(\ln 8\chi-\beta+1)\)
+g_dimensionless_energy,1575.8277116084441,Papers I+III \(\chi(\ln8\chi-\beta)+\kappa/\chi\)
+Q_brannen_theorem,0.6666666666666666,Paper II Koide invariant
+theta_derived_rad,0.2222222222222222,Paper V \(Q/3\)
+phi_c_derived_rad,2.4749259869231266,Paper V \(\pi - Q\) with \(Q=2/3\) rad
+A_e_min,0.040349908219207364,Brannen minimum amplitude derived
+M_scale_MeV,313.8592302862007,Paper II \(M=m_e/A_e^2\)
+rho0_kg_m3,15867181338893.785,Papers IV–V: $M_{\mathrm{kg}}/(a^3 g)$

@@ -1,0 +1,2 @@
+torch_abs_dmin_dtheta,jax_abs_dmin_dtheta,backends
+,,"torch=missing, jax=missing, numba=ok"

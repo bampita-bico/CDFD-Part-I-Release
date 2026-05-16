@@ -1,0 +1,8 @@
+metric,value
+max_phi,1.329676634850124
+max_constraint,1.8
+max_psi,9.761802118863642
+rupture_threshold_q985,5.402649382792891
+event_fraction,0.015
+r2_phi_only,0.12680448751357976
+r2_phi_plus_rupture_index,0.6466133717589088

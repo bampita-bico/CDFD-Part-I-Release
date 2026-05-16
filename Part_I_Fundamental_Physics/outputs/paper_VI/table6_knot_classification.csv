@@ -1,0 +1,10 @@
+n,parity,topological_class,persistent_knot,symmetry
+1,odd,unknot,No,Z_1
+2,even,Hopf link,No,Z_2
+3,odd,trefoil knot,Yes,Z_3
+4,even,Solomon link,No,Z_4
+5,odd,cinquefoil knot,Yes,Z_5
+6,even,2-component link,No,Z_6
+7,odd,heptafoil knot,Yes,Z_7
+8,even,2-component link,No,Z_8
+9,odd,"T(2,9) knot",Yes,Z_9

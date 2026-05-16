@@ -1,0 +1,2 @@
+finite_diff_dKoide_numeric_est,torch_abs_dQ_dtheta,jax_abs_dQ_dtheta,backends
+-8.326672684688674e-11,,,"torch=missing, jax=missing, numba=ok"

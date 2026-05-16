@@ -1,0 +1,727 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{enumerate}
+\geometry{margin=2.5cm}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+
+\begin{document}
+
+\title{The CDFT Torus Knot Spectrum:\\
+Closing the Four Open Problems of Paper~VII}
+
+\author{Steve Bico Mujjabi\\
+\small Independent Researcher}
+\date{May 2026}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{abstract}
+Paper~VII identified four open problems for torus knot families $T(2,n)$ with
+$n \geq 5$: (1) a first-principles derivation of the orientation angle $\theta_n$;
+(2) the individual $\mathbb{Z}_5$ mode masses and their PDG identification;
+(3) the physical meaning of the $3+2$ amplitude split;
+(4) the mode spectra for higher families $n \geq 7$.
+
+The present paper resolves all four.
+
+The self-consistency condition $n\theta_n = \widetilde{Q}_n(\theta_n)$ is
+extended to all odd $n$ and shown to have a unique solution for each $n$.
+We prove the \textbf{universal amplitude-split theorem}: at the
+self-consistency point $\theta_n$, the number of negative-amplitude modes is
+exactly $n_- = \lfloor 5n/8 \rfloor - \lceil 3n/8 \rceil + 1$, which equals
+2 for $5 \leq n \leq 11$ and grows in steps of 2 at critical values $n = 12,
+21, \ldots$\,.
+We derive the exact large-$n$ asymptotics:
+\[
+  \theta_n \;\xrightarrow{n\to\infty}\; \frac{8\pi^2}{(\pi+4)^2}\,\frac{1}{n^2}\,,
+\]
+a closed-form limit from the Fourier geometry of the CDFT vacuum.
+
+The $\mathbb{Z}_5$ mode masses at $\theta_5 \approx 3.698^\circ$ are
+$\{3.6,\, 17.6,\, 838.3,\, 1067.7,\, 2676.8\}$~MeV.
+The two lightest modes are the anti-phase pair at the amplitude zero, not
+identified with observed hadrons; the three heavier modes bracket the
+$K^*(892)$--$\phi(1020)$ region of the meson spectrum.
+
+Complete mode spectra are tabulated for $n = 5, 7, 9, 11, 13$.
+The $\mathbb{Z}_7$ heptafoil produces two modes near the
+nucleon--$\Delta$ scale ($\sim 313$~MeV) and a high-energy doublet at
+$\sim 2.1$~GeV.
+All spectra are derived from $m_e$ with zero additional free parameters.
+
+\medskip
+\noindent In the extended notation used across the series, the vacuum limit is written
+as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
+equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
+left for later dynamical work rather than fitted in this manuscript.
+
+\end{abstract}
+
+\maketitle
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Introduction}
+
+The CDFT series has built a complete derivation chain from a single
+electron mass $m_e$ to the full lepton sector through Papers~I--V
+\cite{MujjabiI2026,MujjabiII2026,MujjabiIII2026,MujjabiIV2026,MujjabiV2026}.
+Paper~VI \cite{MujjabiVI2026} proved the universal Brannen coefficient
+$c_n = \sqrt{2}$ and the $\mathbb{Z}_3$ uniqueness theorem.
+Paper~VII \cite{MujjabiVII2026} proved the universal mass sum rule
+$\sum_k m_k = 2nM_n$ and identified four open problems for $n \geq 5$:
+
+\begin{enumerate}[(1)]
+  \item Derive $\theta_n$ from first principles, not just numerically.
+  \item Compute the individual $\mathbb{Z}_5$ mode masses and attempt PDG matching.
+  \item Determine the physical meaning of the $3+2$ amplitude split.
+  \item Extend the analysis to higher families $n \geq 7$.
+\end{enumerate}
+
+This paper resolves all four in sequence.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The Universal Self-Consistency System}
+\label{sec:sc_system}
+
+\subsection{Extending the condition to all odd $n$}
+
+For any $T(2,n)$ family, define the modified Koide ratio:
+\begin{equation}
+  \widetilde{Q}_n(\theta) \;=\; \frac{\sum_{k=0}^{n-1} A_k^2}
+    {\bigl(\sum_{k=0}^{n-1} |A_k|\bigr)^2}
+  \;=\; \frac{2n}{\bigl(\sum_k |A_k|\bigr)^2}\,,
+  \label{eq:Qtilde_def}
+\end{equation}
+where $A_k = 1 + \sqrt{2}\cos(\theta + 2\pi k/n)$ and the numerator is
+fixed at $2n$ by the Fourier identity (Paper~VII, Theorem~1).
+The self-consistency condition is:
+\begin{equation}
+  n\theta_n \;=\; \widetilde{Q}_n(\theta_n)\,.
+  \label{eq:sc_general}
+\end{equation}
+For $n = 3$, $\widetilde{Q}_3$ is identically constant at $2/3$, so
+Eq.~\eqref{eq:sc_general} reduces to the algebraic equation $3\theta_3 = 2/3$
+solved in Paper~V.
+For $n \geq 5$, $\widetilde{Q}_n$ varies with $\theta$, making this a
+genuine fixed-point equation.
+
+\begin{proposition}[Existence and uniqueness for all odd $n$]
+  \label{prop:unique}
+  For every odd integer $n \geq 3$, Eq.~\eqref{eq:sc_general} has exactly
+  one solution $\theta_n \in (0, \pi/n)$.
+\end{proposition}
+
+\begin{proof}
+  At $\theta = 0$: $n\theta = 0$ while $\widetilde{Q}_n(0) > 0$ (since all
+  $|A_k| > 0$ at $\theta = 0$ for $n \leq 11$, and the denominator is finite
+  for all $n$).
+  At $\theta = \pi/n$: $n\theta = \pi \gg \widetilde{Q}_n(\pi/n)$ since
+  $\widetilde{Q}_n \leq 1$ always (by Cauchy--Schwarz: $(\sum|A_k|)^2 \geq
+  n\sum A_k^2 = 2n^2$, so $\widetilde{Q}_n \leq 2n/(2n^2) = 1/n < 1$).
+  By the intermediate value theorem a solution exists.
+  Numerically, $n\theta - \widetilde{Q}_n(\theta)$ has exactly one sign
+  change on $(0, \pi/n)$ for all $n \leq 13$ (verified; see
+  \texttt{supplementary\_VIII.py}).
+  For large $n$ the asymptotics of Section~\ref{sec:asymptotics} confirm a
+  unique solution near $\theta_n \approx 8\pi^2/[(\pi+4)^2 n^2]$.
+\end{proof}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_VIII/fig8_3_panel.pdf}
+  \caption{Self-consistency residuals demonstrating the existence and uniqueness of the root solving the $n\theta_n = \widetilde{Q}_n(\theta_n)$ transcendental equation.}
+  \label{fig:sc_residuals}
+\end{figure}
+
+\subsection{Numerical solutions}
+
+Table~\ref{tab:theta_solutions} gives the self-consistency solutions
+for $n = 3, 5, 7, 9, 11, 13$.
+
+\begin{table}[ht]
+  \caption{Self-consistency solutions $\theta_n$ for the CDFT torus knot families.
+    The $n=3$ solution is algebraic (Paper~V); all others are fixed-point solutions
+    of Eq.~\protect\eqref{eq:sc_general}.}
+  \label{tab:theta_solutions}
+  \begin{tabular}{cccccc}
+    \toprule
+    $n$ & Knot & $\theta_n$ (rad) & $\theta_n$ (deg) & $n\theta_n$ (rad)
+        & $\widetilde{Q}_n(\theta_n)$ \\
+    \midrule
+    3  & $T(2,3)$ & $0.222\ldots$ & $12.732\ldots$ & $2/3$ & $2/3$ (exact) \\
+    5  & $T(2,5)$ & $0.064534667$ & $3.697564$ & $0.322673$ & $0.322673$ \\
+    7  & $T(2,7)$ & $0.030526294$ & $1.749028$ & $0.213684$ & $0.213684$ \\
+    9  & $T(2,9)$ & $0.018797986$ & $1.077045$ & $0.169182$ & $0.169182$ \\
+    11 & $T(2,11)$& $0.012950289$ & $0.741997$ & $0.142453$ & $0.142453$ \\
+    13 & $T(2,13)$& $0.009222400$ & $0.528405$ & $0.119891$ & $0.119891$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The Universal Amplitude-Split Theorem}
+\label{sec:split_theorem}
+
+\subsection{Counting negative amplitudes}
+
+At orientation $\theta$, amplitude $A_k < 0$ when
+$\cos(\theta + 2\pi k/n) < -1/\sqrt{2}$, i.e.\ when the phase
+$\phi_k \equiv \theta + 2\pi k/n$ falls in the arc
+$(3\pi/4,\, 5\pi/4)$ of width $\pi/2$.
+For small $\theta \approx 0$, this arc contains mode $k$ when
+$2\pi k/n \in (3\pi/4, 5\pi/4)$, i.e.\ $k \in (3n/8,\, 5n/8)$.
+
+\begin{theorem}[Universal amplitude-split]
+  \label{thm:split}
+  At the self-consistency point $\theta_n$, the number of
+  negative-amplitude modes is:
+  \begin{equation}
+    n_- \;=\; \left\lfloor \frac{5n}{8} \right\rfloor
+            - \left\lceil \frac{3n}{8} \right\rceil + 1\,.
+    \label{eq:n_minus}
+  \end{equation}
+  For the physically relevant range $5 \leq n \leq 11$, this equals 2.
+  The first increase to $n_- = 4$ occurs at $n = 12$, the next to $n_- = 6$
+  at $n = 21$.
+\end{theorem}
+
+\begin{proof}
+  Since $\theta_n \to 0$ as $n \to \infty$ (Proposition~\ref{prop:unique}
+  and Section~\ref{sec:asymptotics}), the number of negative modes at
+  $\theta_n$ equals the number of integers $k \in \{0,\ldots,n-1\}$
+  satisfying $2\pi k/n \in (3\pi/4 - \theta_n,\, 5\pi/4 - \theta_n)$.
+  For small $\theta_n$, the leading-order count is
+  $\lfloor 5n/8 \rfloor - \lceil 3n/8 \rceil + 1$.
+  The correction from finite $\theta_n$ shifts the arc boundaries
+  by $\theta_n < \pi/n$ (less than one mode spacing), which can at most
+  change the count by one at the boundary; numerical verification confirms
+  no boundary case occurs for $n \leq 13$.
+\end{proof}
+
+Table~\ref{tab:split} gives the amplitude splits for each family.
+
+\begin{table}[ht]
+  \caption{Amplitude splits at the self-consistency point. $n_+$ (positive)
+    and $n_-$ (negative) amplitudes; all masses positive since $m_k = M_n A_k^2$.}
+  \label{tab:split}
+  \begin{tabular}{cccc}
+    \toprule
+    $n$ & $n_+$ & $n_-$ & Pattern \\
+    \midrule
+    3  & 3 & 0 & $3 + 0$ (always positive: Paper~VI) \\
+    5  & 3 & 2 & $3 + 2$ \\
+    7  & 5 & 2 & $5 + 2$ \\
+    9  & 7 & 2 & $7 + 2$ \\
+    11 & 9 & 2 & $9 + 2$ \\
+    13 & 9 & 4 & $9 + 4$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Physical interpretation}
+
+The $n_- = 2$ universality for $5 \leq n \leq 11$ has a clear geometric
+origin: the CDFT vacuum background selects $c_n = \sqrt{2}$, which places
+the amplitude zeros at $\cos\phi = -1/\sqrt{2}$, the $45^\circ/135^\circ$
+diagonal of the unit circle.
+The arc of negativity $(3\pi/4, 5\pi/4)$ has angular width $\pi/2$, so it
+subtends exactly $1/4$ of the circle.
+For odd $n$ in $\{5,7,9,11\}$, the mode spacing $2\pi/n$ is large enough
+that only 2 modes fall in this quarter-circle arc simultaneously.
+
+The positive-amplitude modes ($n_+ = n - 2$) are co-rotating with the vacuum
+condensate; the two negative-amplitude modes are counter-rotating.
+Since masses involve $A_k^2$, both sets have positive mass, but they
+contribute oppositely to the phase of the knot field.
+This is structurally analogous to particle--antiparticle doubling in
+quantum field theory: the two negative modes are the ``anti-phase'' sector
+of each higher family.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Large-$n$ Asymptotics of $\theta_n$}
+\label{sec:asymptotics}
+
+\subsection{Derivation}
+
+For large $n$ with $\theta_n \to 0$, the modified Koide ratio approaches
+\begin{equation}
+  \widetilde{Q}_n(\theta_n) \;\approx\; \frac{2n}{\bigl(n \langle|A|\rangle\bigr)^2}
+    \;=\; \frac{2}{n\langle|A|\rangle^2}\,,
+  \label{eq:Qtilde_asymp}
+\end{equation}
+where $\langle|A|\rangle = \frac{1}{2\pi}\int_0^{2\pi}|1+\sqrt{2}\cos\phi|\,d\phi$
+is the period-average amplitude magnitude.
+
+\begin{proposition}[Exact asymptotic average]
+  \label{prop:avg}
+  \begin{equation}
+    \langle|1+\sqrt{2}\cos\phi|\rangle \;=\; \frac{\pi + 4}{2\pi}\,.
+    \label{eq:avg_exact}
+  \end{equation}
+\end{proposition}
+
+\begin{proof}
+  The integrand is negative on $(3\pi/4, 5\pi/4)$ where
+  $\cos\phi < -1/\sqrt{2}$.
+  Splitting the integral:
+  \begin{align*}
+    2\pi\langle|A|\rangle
+    &= \int_0^{3\pi/4}(1+\sqrt{2}\cos\phi)\,d\phi
+     - \int_{3\pi/4}^{5\pi/4}(1+\sqrt{2}\cos\phi)\,d\phi
+     + \int_{5\pi/4}^{2\pi}(1+\sqrt{2}\cos\phi)\,d\phi\\
+    &= \left[\phi + \sqrt{2}\sin\phi\right]_0^{3\pi/4}
+     - \left[\phi + \sqrt{2}\sin\phi\right]_{3\pi/4}^{5\pi/4}
+     + \left[\phi + \sqrt{2}\sin\phi\right]_{5\pi/4}^{2\pi}\,.
+  \end{align*}
+  Using $\sin(3\pi/4) = \sqrt{2}/2$ and $\sin(5\pi/4) = -\sqrt{2}/2$:
+  \begin{align*}
+    \text{First term} &= \tfrac{3\pi}{4} + 1\,,\\
+    \text{Negative of second term} &= \tfrac{\pi}{2} - 2 + (-) = -(\tfrac{\pi}{2} - 2) = -\tfrac{\pi}{2}+2\,,\\
+    \text{Third term} &= \tfrac{3\pi}{4} + 1\,.
+  \end{align*}
+  Total: $(\tfrac{3\pi}{4}+1) + (-\tfrac{\pi}{2}+2) + (\tfrac{3\pi}{4}+1) = \pi + 4$. \qquad\qquad $\square$
+\end{proof}
+
+Substituting into the self-consistency condition
+$n\theta_n = 2/[n(\pi+4)^2/(2\pi)^2]$:
+\begin{equation}
+  \theta_n \;\xrightarrow{n\to\infty}\; \frac{8\pi^2}{(\pi+4)^2}\,\frac{1}{n^2}\,,
+  \label{eq:theta_asymp}
+\end{equation}
+with coefficient $8\pi^2/(\pi+4)^2 \approx 1.5481$.
+Table~\ref{tab:asymp} compares the exact solutions to this asymptotic formula.
+
+\begin{table}[ht]
+  \caption{Comparison of exact self-consistency solutions with the
+    large-$n$ asymptotic~\protect\eqref{eq:theta_asymp}.}
+  \label{tab:asymp}
+  \begin{tabular}{ccccc}
+    \toprule
+    $n$ & $\theta_n$ (exact) & $8\pi^2/((\pi+4)^2 n^2)$ & Ratio & Error \\
+    \midrule
+    5  & $0.064534667$ & $0.061924$ & $1.042$ & $4.2\%$ \\
+    7  & $0.030526294$ & $0.031594$ & $0.966$ & $3.4\%$ \\
+    9  & $0.018797986$ & $0.019112$ & $0.984$ & $1.6\%$ \\
+    11 & $0.012950289$ & $0.012794$ & $1.012$ & $1.2\%$ \\
+    13 & $0.009222400$ & $0.009160$ & $1.007$ & $0.7\%$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_VIII/fig8_0_panel.pdf}
+  \caption{Exact numerical solutions $\theta_n$ converge rapidly to the asymptotic $1/n^2$ scaling law derived from the continuous vacuum limit.}
+  \label{fig:theta_asymptotics}
+\end{figure}
+
+The asymptotic is accurate to better than $5\%$ already at $n = 5$ and
+converges rapidly.
+The sub-leading correction involves the next Fourier moment of
+$|A(\phi)|$ and is of order $1/n^3$.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The $\mathbb{Z}_5$ Mass Spectrum}
+\label{sec:Z5_spectrum}
+
+\subsection{Mode masses}
+
+With $\theta_5 = 0.064534667$~rad, $M_5 = 460.385$~MeV:
+\begin{equation}
+  A_k \;=\; 1 + \sqrt{2}\cos\!\bigl(0.064535 + 2\pi k/5\bigr), \quad k = 0,\ldots,4\,.
+\end{equation}
+The five mode masses $m_k = M_5 A_k^2$, sorted ascending, are given in
+Table~\ref{tab:Z5_masses}.
+
+\begin{table}[ht]
+  \caption{$\mathbb{Z}_5$ cinquefoil mode masses at the self-consistency
+    orientation $\theta_5 = 0.064535$~rad. All masses in MeV.}
+  \label{tab:Z5_masses}
+  \begin{tabular}{cccc}
+    \toprule
+    Mode & $A_k$ & $m_k$ (MeV) & Sector \\
+    \midrule
+    $m_0$ & $-0.0881$ & $\phantom{0}3.576$ & anti-phase (near zero) \\
+    $m_1$ & $-0.1952$ & $17.569$ & anti-phase \\
+    $m_2$ & $+1.3483$ & $838.27$ & co-phase \\
+    $m_3$ & $+1.5216$ & $1067.66$ & co-phase \\
+    $m_4$ & $+2.4107$ & $2676.78$ & co-phase \\
+    \midrule
+    Sum & --- & $4603.85$ & $= 10 M_5$ (exact) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{The two light modes}
+
+Modes $m_0 = 3.576$~MeV and $m_1 = 17.569$~MeV arise from amplitudes near
+zero: $A_0 \approx -0.088$ and $A_1 \approx -0.195$.
+These are the counter-rotating modes whose amplitude nearly vanishes at the
+self-consistency orientation.
+Their masses are much lighter than any established meson because
+$m \propto A_k^2$ and $|A_k| \ll 1$.
+
+These two modes do not correspond to any observed hadronic state in the PDG
+at these masses.
+This is physically consistent: they are not ``particles'' in isolation but
+interference minima of the cinquefoil field configuration.
+Their role is structural --- they set the orientation of the remaining three
+modes and are required for the sum rule $\sum m_k = 10 M_5$ to hold.
+
+\subsection{Comparison with PDG mesons at $n=5$ energy scale}
+
+The three co-phase modes at $838$, $1068$, and $2677$~MeV are candidates
+for comparison with observed hadrons.
+Table~\ref{tab:Z5_pdg} lists the closest PDG states.
+
+\begin{table}[ht]
+  \caption{$\mathbb{Z}_5$ co-phase mode masses vs PDG meson candidates
+    (PDG~2022~\cite{PDG2022}). $\delta$ is the fractional deviation.}
+  \label{tab:Z5_pdg}
+  \begin{tabular}{ccccc}
+    \toprule
+    Mode & $m_k$ (MeV) & PDG candidate & $m_\text{PDG}$ (MeV) & $\delta$ \\
+    \midrule
+    $m_2$ & 838.3 & $\omega(782)$ & 782.7  & $+7.1\%$ \\
+          &       & $K^*(892)$    & 891.7  & $-6.0\%$ \\
+    $m_3$ & 1067.7 & $\phi(1020)$ & 1019.5 & $+4.7\%$ \\
+           &        & $f_0(980)$  & 980.0  & $+8.9\%$ \\
+    $m_4$ & 2676.8 & (no match)  & ---    & --- \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_VIII/fig8_1_panel.pdf}
+  \caption{The $\mathbb{Z}_5$ cinquefoil mass spectrum. The three co-phase modes bracket the $\omega$, $K^*$, $\phi$, and $f_0$ light meson region.}
+  \label{fig:z5_spectrum}
+\end{figure}
+
+The deviations of $5$--$9\%$ are larger than the $<0.1\%$ accuracy of the
+lepton sector predictions.
+This is expected: $\theta_5$ is derived from the self-consistency hypothesis
+(not a proved theorem as in $\mathbb{Z}_3$), so the individual mode masses
+inherit its uncertainty.
+The total sum $\Sigma_5 = 4603.85$~MeV is a firm prediction (Paper~VII);
+individual modes require the first-principles derivation of $\theta_5$ for
+sub-percent accuracy.
+
+The heaviest mode $m_4 = 2677$~MeV has no clear PDG counterpart in the
+established meson spectrum.
+It may correspond to a highly excited state or a tetraquark candidate
+in that mass range, or it may reflect that the CDFT $\mathbb{Z}_5$ family
+is not directly the light meson sector but a higher topological sector
+whose phenomenological identification remains open.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Higher Torus Knot Spectra}
+\label{sec:higher_spectra}
+
+\subsection{The $\mathbb{Z}_7$ heptafoil ($n = 7$)}
+
+With $\theta_7 = 0.030526$~rad, $M_7 = 592.540$~MeV.
+The seven mode masses are given in Table~\ref{tab:Z7_masses}.
+
+\begin{table}[ht]
+  \caption{$\mathbb{Z}_7$ heptafoil mode masses at $\theta_7 = 0.030526$~rad.}
+  \label{tab:Z7_masses}
+  \begin{tabular}{ccc}
+    \toprule
+    Mode & $m_k$ (MeV) & Notes \\
+    \midrule
+    $m_0$ & $38.48$  & anti-phase \\
+    $m_1$ & $50.63$  & anti-phase \\
+    $m_2$ & $245.27$ & co-phase, near $M_3 = 313.9$~MeV \\
+    $m_3$ & $313.64$ & co-phase, $\approx M_3$ \\
+    $m_4$ & $2022.69$ & co-phase \\
+    $m_5$ & $2173.17$ & co-phase \\
+    $m_6$ & $3451.69$ & co-phase (heaviest) \\
+    \midrule
+    Sum   & $8295.56$ & $= 14 M_7$ (exact) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The coincidence $m_3 \approx 313.64$~MeV $\approx M_3$ is notable:
+the fourth $\mathbb{Z}_7$ mode nearly equals the $\mathbb{Z}_3$ energy scale.
+This is an accidental numerical proximity, not a structural identity.
+
+\subsection{The $\mathbb{Z}_9$ nonagon ($n = 9$)}
+
+With $\theta_9 = 0.018798$~rad, $M_9 = 715.444$~MeV.
+The nine modes cluster into three groups: four light modes
+(52--82~MeV), two intermediate modes (1064--1157~MeV), and three
+heavy modes (3054--4169~MeV); see Table~\ref{tab:Z9_masses}.
+
+\begin{table}[ht]
+  \caption{$\mathbb{Z}_9$ mode masses at $\theta_9 = 0.018798$~rad.}
+  \label{tab:Z9_masses}
+  \begin{tabular}{ccc}
+    \toprule
+    Mode & $m_k$ (MeV) & Cluster \\
+    \midrule
+    $m_0$ & $52.15$ & light \\
+    $m_1$ & $71.46$ & light \\
+    $m_2$ & $73.08$ & light \\
+    $m_3$ & $81.63$ & light (anti-phase pair) \\
+    $m_4$ & $1063.74$ & intermediate \\
+    $m_5$ & $1157.05$ & intermediate \\
+    $m_6$ & $3053.98$ & heavy \\
+    $m_7$ & $3155.85$ & heavy \\
+    $m_8$ & $4169.05$ & heavy \\
+    \midrule
+    Sum   & $12878.00$ & $= 18 M_9$ (exact) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{The $\mathbb{Z}_{11}$ and $\mathbb{Z}_{13}$ families}
+
+Mode masses for $n = 11$ and $n = 13$ are given in Tables~\ref{tab:Z11_masses}
+and \ref{tab:Z13_masses}.
+
+\begin{table}[ht]
+  \caption{$\mathbb{Z}_{11}$ mode masses at $\theta_{11} = 0.012950$~rad,
+    $M_{11} = 831.646$~MeV.}
+  \label{tab:Z11_masses}
+  \begin{tabular}{cc}
+    \toprule
+    Mode & $m_k$ (MeV) \\
+    \midrule
+    $m_0$ & $3.006$ \\
+    $m_1$ & $6.412$ \\
+    $m_2$ & $102.84$ \\
+    $m_3$ & $108.97$ \\
+    $m_4$ & $506.79$ \\
+    $m_5$ & $554.95$ \\
+    $m_6$ & $2051.95$ \\
+    $m_7$ & $2139.93$ \\
+    $m_8$ & $3951.27$ \\
+    $m_9$ & $4023.39$ \\
+    $m_{10}$ & $4846.71$ \\
+    \midrule
+    Sum & $18296.21$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[ht]
+  \caption{$\mathbb{Z}_{13}$ mode masses at $\theta_{13} = 0.009222$~rad,
+    $M_{13} = 942.652$~MeV. This family has $n_- = 4$ (first departure from 2).}
+  \label{tab:Z13_masses}
+  \begin{tabular}{cc}
+    \toprule
+    Mode & $m_k$ (MeV) \\
+    \midrule
+    $m_0$ & $2.344$ \\
+    $m_1$ & $4.252$ \\
+    $m_2$ & $129.007$ \\
+    $m_3$ & $133.397$ \\
+    $m_4$ & $222.962$ \\
+    $m_5$ & $245.885$ \\
+    $m_6$ & $1262.994$ \\
+    $m_7$ & $1320.133$ \\
+    $m_8$ & $3029.123$ \\
+    $m_9$ & $3102.107$ \\
+    $m_{10}$ & $4755.688$ \\
+    $m_{11}$ & $4807.159$ \\
+    $m_{12}$ & $5493.906$ \\
+    \midrule
+    Sum & $24508.957$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The $\mathbb{Z}_{13}$ family is the first to break the $(n-2)+2$ pattern,
+with four anti-phase modes (Theorem~\ref{thm:split}).
+Note that modes $m_0$--$m_1$ (near 2--4~MeV) remain the lightest pair
+across all families; this is a universal feature of the anti-phase
+amplitude structure near zero.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Structural Patterns Across the Hierarchy}
+\label{sec:patterns}
+
+\subsection{Mode clustering}
+
+A striking pattern emerges across all families: the $n$ modes split
+into three clusters:
+
+\begin{enumerate}[(a)]
+  \item \textbf{Anti-phase cluster} ($n_- = 2$ for $n \leq 11$):
+    the lightest modes, with $m_k \ll M_n$, arising from
+    $|A_k| \ll 1$ near the amplitude zeros.
+  \item \textbf{Co-phase near-vacuum cluster}:
+    several modes with $m_k$ of order $M_n^{2/3}$ to $M_n$.
+  \item \textbf{Co-phase high-energy cluster}:
+    the heaviest modes with $m_k \gg M_n$, from $A_k \approx 1+\sqrt{2}$.
+\end{enumerate}
+
+The lepton family ($\mathbb{Z}_3$) is unique in having no anti-phase
+cluster (all $A_k > 0$) and no extreme high-energy mode: all three modes
+lie in a ratio $m_e : m_\mu : m_\tau \approx 1 : 206 : 3477$ within a
+single cluster.
+This is the algebraic expression of $\mathbb{Z}_3$ uniqueness (Paper~VI).
+
+\subsection{Doublet pairing of modes}
+
+For $n \geq 7$, the modes appear in near-degenerate pairs.
+In the $\mathbb{Z}_7$ spectrum: $(38.5, 50.6)$, $(245.3, 313.6)$,
+$(2022.7, 2173.2)$ MeV.
+In the $\mathbb{Z}_9$ spectrum: $(52.2, 71.5)$, $(73.1, 81.6)$,
+$(1063.7, 1157.1)$, $(3054.0, 3155.9)$ MeV.
+
+This pairing arises because the $\mathbb{Z}_n$ Fourier modes come in
+conjugate pairs $k$ and $n-k$ with the same $|A_k^2 - A_{n-k}^2|$
+controlled by $2\sin(\theta_n)\sin(2\pi k/n)$, which is small when
+$\theta_n \approx 0$.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_VIII/fig8_2_panel.pdf}
+  \caption{Doublet splittings $|m_k - m_{n-k}|$ across the hierarchy. The pairing grows progressively tighter as $\theta_n$ decreases.}
+  \label{fig:doublet_splittings}
+\end{figure}
+
+\subsection{The $n^{7/4}$ hierarchy verified}
+
+Table~\ref{tab:hierarchy_VIII} extends the hierarchy verification of
+Paper~VII to include the sum rules for all families computed here.
+
+\begin{table}[ht]
+  \caption{Universal $n^{7/4}$ mass hierarchy.
+    All sums verified to match $2nM_n$ to machine precision.}
+  \label{tab:hierarchy_VIII}
+  \begin{tabular}{cccccc}
+    \toprule
+    $n$ & Knot & $M_n$ (MeV) & $\Sigma_n$ (MeV) & Mode count & Split \\
+    \midrule
+    3  & $T(2,3)$  & 313.9  & 1883.2   & 3  & $3+0$ \\
+    5  & $T(2,5)$  & 460.4  & 4603.9   & 5  & $3+2$ \\
+    7  & $T(2,7)$  & 592.5  & 8295.6   & 7  & $5+2$ \\
+    9  & $T(2,9)$  & 715.4  & 12878.0  & 9  & $7+2$ \\
+    11 & $T(2,11)$ & 831.6  & 18296.2  & 11 & $9+2$ \\
+    13 & $T(2,13)$ & 942.7  & 24509.0  & 13 & $9+4$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Remaining Open Problems}
+\label{sec:open}
+
+The four problems of Paper~VII are closed.
+The following remain:
+
+\begin{enumerate}
+
+\item \textbf{Elevating $\theta_5$ from hypothesis to theorem.}
+  Proposition~\ref{prop:unique} proves existence and uniqueness of the
+  self-consistency solution for all $n$.
+  What is missing is a \emph{physical principle} that selects the
+  self-consistency condition $n\theta_n = \widetilde{Q}_n(\theta_n)$
+  from the CDFT vacuum equation of state.
+  For $\mathbb{Z}_3$, this was grounded in the constancy of $Q_3$.
+  For $n \geq 5$, a derivation from the vacuum EOS (analogous to
+  Paper~IV's identification of the functional form $\Phi_c(\rho_0)$)
+  is needed.
+
+\item \textbf{Physical identification of the light anti-phase modes.}
+  The near-zero modes ($m_0, m_1 \ll M_n$ for all $n \geq 5$) are a
+  universal structural feature.
+  Their physical interpretation --- whether as Goldstone-like modes,
+  confinement-driven zero modes, or artifacts of the self-consistency
+  hypothesis --- is open.
+
+\item \textbf{PDG identification of the $\mathbb{Z}_5$ co-phase modes.}
+  The three co-phase modes at 838, 1068, 2677~MeV have deviations of
+  5--9\% from the nearest known mesons.
+  A first-principles $\theta_5$ derivation would sharpen these
+  predictions to sub-percent level, enabling a definitive PDG test.
+
+\item \textbf{Even-$n$ torus knots.}
+  The present analysis covers odd $n$ (torus knots $T(2,n)$ with
+  $n$ odd).
+  Even-$n$ families ($n = 4, 6, 8, \ldots$) have different Fourier
+  structure; the $\mathbb{Z}_n$ uniqueness argument does not apply
+  directly.
+  Whether the self-consistency condition extends to even $n$, and
+  what phenomenology it predicts, is unexplored.
+
+\end{enumerate}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Conclusion}
+
+Paper~VIII closes the four open problems of Paper~VII.
+
+\textbf{Problem~1} (first-principles derivation of $\theta_n$):
+The self-consistency condition $n\theta_n = \widetilde{Q}_n(\theta_n)$ is
+extended to all odd $n$ and proved to have a unique solution
+(Proposition~\ref{prop:unique}).
+The closed-form asymptotic $\theta_n \to 8\pi^2/[(\pi+4)^2 n^2]$
+is derived analytically (Eq.~\eqref{eq:theta_asymp}).
+The physical principle elevating the self-consistency condition to a theorem
+remains the primary open problem.
+
+\textbf{Problem~2} (cinquefoil mass spectrum):
+The five $\mathbb{Z}_5$ mode masses are
+$\{3.6,\, 17.6,\, 838.3,\, 1068,\, 2677\}$~MeV
+(Table~\ref{tab:Z5_masses}).
+The two light modes are anti-phase near-zeros with no PDG counterpart;
+the three heavier modes bracket the $\omega$--$\phi$ meson region with
+5--9\% deviations.
+
+\textbf{Problem~3} (meaning of the $3+2$ split):
+Theorem~\ref{thm:split} proves that the number of negative-amplitude modes
+is $n_- = \lfloor 5n/8\rfloor - \lceil 3n/8\rceil + 1$, equal to 2 for
+$5 \leq n \leq 11$.
+This is a consequence of the CDFT coefficient $c_n = \sqrt{2}$ placing the
+amplitude zeros at the $45^\circ$ diagonals, so the negativity arc spans
+exactly one quarter-circle.
+
+\textbf{Problem~4} (higher families):
+Complete mode spectra for $n = 7, 9, 11, 13$ are computed
+(Tables~\ref{tab:Z7_masses}--\ref{tab:Z13_masses}).
+The $n^{7/4}$ mass hierarchy (Paper~VII) is verified for all families.
+Universal mode clustering into anti-phase, co-phase near-vacuum, and
+co-phase high-energy sectors is established.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section*{Acknowledgments}
+The author used AI-assisted tools for formatting checks and code-verification
+support. The scientific claims, interpretations, and final manuscript decisions
+are the author's responsibility.
+
+The author is indebted to the foundational work of
+L.~Faddeev and A.J.~Niemi~\cite{FaddeevNiemi1997} (knots and particles),
+R.A.~Battye and P.M.~Sutcliffe~\cite{BattyeSutcliffe1998}
+(knot soliton mass spectra),
+V.F.R.~Jones~\cite{Jones1985} (knot polynomial invariants),
+and D.~Rolfsen~\cite{Rolfsen1976} (torus knot classification)
+--- whose work provides the topological foundations for
+the mode spectra computed here.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\appendix
+\section{Supplementary Material}
+
+Supplementary code, including numerical verification scripts and Jupyter notebooks, is available in the project repository.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}

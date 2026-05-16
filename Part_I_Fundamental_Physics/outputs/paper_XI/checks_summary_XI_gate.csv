@@ -1,0 +1,8 @@
+component,ok
+dark_matter,True
+dark_energy,True
+black_holes,True
+blancken_layer,True
+symbolic,True
+bridge_rows,True
+autodiff_backends,"torch=missing, jax=missing, numba=ok"

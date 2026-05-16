@@ -1,0 +1,3 @@
+variance_A_equals_c_sq_over_2,max_entropy_Var_equals_mean_sq,positive_root_c,matches_sqrt2,block,n,sum_Ak_squared_symbolic,sum_Ak_squared_numeric,sum_Ak,Q_n_from_algebra,target_2_over_n
+c**2/2,"Eq(c**2/2, 1)",1.4142135623730951,True,sympy_cn,,,,,,
+,,,,sympy_Q3_algebra,3.0,6,6.0,3.0,0.6666666666666666,0.6666666666666666

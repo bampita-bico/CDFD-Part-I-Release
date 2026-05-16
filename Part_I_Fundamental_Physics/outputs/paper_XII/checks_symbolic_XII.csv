@@ -1,0 +1,4 @@
+check,expression,ok
+dPsi_dPhi_positive,1/C,True
+dPsi_dC_negative,-Phi/C**2,True
+adaptive_constraint_contains_memory,-C*beta + M*eta + Phi*alpha,True

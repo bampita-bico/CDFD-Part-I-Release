@@ -1,0 +1,2 @@
+check,pass,simplified_X,target
+X_rho_a3_me_equals_inv_gAe2,True,1/(A_e**2*g),1/(A_e**2*g)

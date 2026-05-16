@@ -1,0 +1,2 @@
+Q_prediction,Q_target,agreement_ok,max_abs_residual_numba_grid
+0.6666666666666669,0.6666666666666666,True,6.661338147750939e-16

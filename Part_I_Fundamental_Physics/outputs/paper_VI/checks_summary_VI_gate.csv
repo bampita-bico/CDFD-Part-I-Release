@@ -1,0 +1,2 @@
+numeric_variance_ratio_gate,sympy_fourier_and_cn,public_helper_koide_at_theta_2_9,valid_domain_only_Z3,valid_domain_table_shape,Q3_flat_scan_valid_domain,M5_agreement_460p4_MeV,M5_abs_diff_MeV,Q5_nonconstant_samples,numba_Q3_scan_gate,scipy_vs_dense_grid_n5,torch_grad_min_amp_optional,jax_grad_min_amp_optional,overall_ok
+True,True,True,True,True,True,True,0.014679540290444493,True,True,True,True,True,True

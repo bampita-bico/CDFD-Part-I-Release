@@ -1,0 +1,474 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{enumerate}
+\geometry{margin=2.5cm}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+
+\begin{document}
+
+\title{The Universal Mass Sum Rule:\\
+A Theta-Independent Prediction for All\\
+CDFT Torus Knot Families}
+
+\author{Steve Bico Mujjabi\\
+\small Independent Researcher}
+\date{May 2026}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{abstract}
+Paper~VI of this series argued within the model that the Brannen amplitude coefficient
+$c_n = \sqrt{2}$ is universal across all $\mathbb{Z}_n$ torus knot families,
+and established that $\mathbb{Z}_3$ is uniquely exactly solvable.
+For $n \geq 5$, the individual mode masses depend on the orientation angle
+$\theta_n$, which cannot be determined by purely algebraic methods.
+
+The present paper identifies what \emph{can} be derived without knowing
+$\theta_n$.
+The central result is the \textbf{universal mass sum rule}:
+\begin{equation*}
+  \sum_{k=0}^{n-1} m_k \;=\; 2\,n\,M_n\,,
+\end{equation*}
+which holds exactly and independently of $\theta_n$ for every $T(2,n)$
+family.
+The proof is two lines from the $\mathbb{Z}_n$ Fourier identity.
+Combined with the Faddeev--Niemi energy scaling $M_n = M_3(n/3)^{3/4}$
+(Paper~IV), the total mass of every torus knot family scales as $n^{7/4}$:
+\begin{equation*}
+  \sum_k m_k(n) \;=\; 2M_3 \cdot 3^{-3/4} \cdot n^{7/4}\,.
+\end{equation*}
+For $n = 3$ this gives $m_e + m_\mu + m_\tau = 1883.16$~MeV
+(verified against PDG: within $0.067\%$, consistent with the tau mass
+error from Paper~V).
+For $n = 5$: $\sum_k m_k^{(5)} = 4603.85$~MeV.
+
+We also prove the $\mathbb{Z}_5$ mode split: at the symmetric point
+$\theta = 0$, the five cinquefoil amplitudes divide into three positive
+and two negative, yielding a structural $3 + 2$ pattern.
+We derive the $\mathbb{Z}_5$ self-consistency transcendental equation
+$5\theta_5 = \tilde{Q}_5(\theta_5)$ and its unique solution
+$\theta_5 \approx 3.70^\circ$, reported as a hypothesis pending
+a first-principles physical argument.
+
+\medskip
+\noindent In the extended notation used across the series, the vacuum limit is written
+as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
+equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
+left for later dynamical work rather than fitted in this manuscript.
+
+\end{abstract}
+
+\maketitle
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Introduction}
+
+The CDFT series has established a complete derivation chain for the lepton
+sector (Papers~I--V~\cite{MujjabiI2026,MujjabiII2026,MujjabiIII2026,MujjabiIV2026,MujjabiV2026})
+and identified the universal coefficient $c_n = \sqrt{2}$ and the
+$\mathbb{Z}_3$ uniqueness theorem (Paper~VI~\cite{MujjabiVI2026}).
+
+A key finding of Paper~VI is that for $n \geq 5$ the Brannen amplitudes
+$A_k = 1 + \sqrt{2}\cos(\theta + 2\pi k/n)$ are negative for at least one
+mode at every orientation $\theta$.
+This structural obstruction means that the Koide-like invariant $Q_n = 2/n$
+(which requires all $A_k \geq 0$) does not hold as a constant, and the
+purely algebraic self-consistency argument that determined $\theta_3 = 2/9$~rad
+in Paper~V cannot be directly applied.
+
+The question for the present paper is: \emph{what predictions can be made
+for $n \geq 5$ families without knowing $\theta_n$?}
+
+The answer is the universal mass sum rule: the sum of all mode masses is
+$2nM_n$, exactly, for any $\theta_n$.
+This follows from a two-line algebraic identity and requires no knowledge
+of $\theta_n$.
+For $n = 3$ it recovers the known lepton sum $m_e + m_\mu + m_\tau$ to
+within the Paper~V tau mass error.
+For $n = 5$ it predicts the total cinquefoil mass sum as $4603.85$~MeV.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The Universal Mass Sum Rule}
+\label{sec:sum_rule}
+
+\subsection{Statement and proof}
+
+\begin{theorem}[Universal mass sum rule]
+  \label{thm:sum_rule}
+  For any $T(2,n)$ family with masses $m_k = M_n A_k^2$,
+  $A_k = 1 + \sqrt{2}\cos(\theta + 2\pi k/n)$, $k = 0,\ldots,n-1$:
+  \begin{equation}
+    \sum_{k=0}^{n-1} m_k \;=\; 2\,n\,M_n\,,
+    \label{eq:sum_rule}
+  \end{equation}
+  for any $\theta$ and any $M_n > 0$.
+\end{theorem}
+
+\begin{proof}
+  From the $\mathbb{Z}_n$ Fourier identity (Paper~VI, Eq.~(2)):
+  $\sum_{k=0}^{n-1} \cos^2(\theta + 2\pi k/n) = n/2$ for any $\theta$.
+  Therefore:
+  \[
+    \sum_k A_k^2
+    = \sum_k \bigl[1 + \sqrt{2}\cos(\theta + 2\pi k/n)\bigr]^2
+    = n + 2\sqrt{2}\cdot 0 + 2\cdot\frac{n}{2} = 2n\,.
+  \]
+  Hence $\sum_k m_k = M_n \sum_k A_k^2 = 2nM_n$.
+\end{proof}
+
+\begin{corollary}[Mean mode mass]
+  The mean mass per mode is $\bar{m} = 2M_n$, independent of $\theta_n$.
+\end{corollary}
+
+\subsection{Why this is non-trivial}
+
+At first glance, Eq.~\eqref{eq:sum_rule} might seem like a restatement of
+known identities.
+The non-trivial content is twofold:
+\begin{enumerate}[(a)]
+  \item The sum is \emph{theta-independent}.
+    Individual masses $m_k = M_n A_k^2$ depend strongly on $\theta_n$:
+    they range from $0$ (when $A_k = 0$) to $M_n(1+\sqrt{2})^2 \approx 5.83 M_n$.
+    Yet their sum is always exactly $2nM_n$.
+    This means the total mass of a family is a firm prediction even when
+    the mass spectrum (individual mode masses) is not.
+
+  \item Combined with the Faddeev--Niemi scaling $M_n = M_3(n/3)^{3/4}$
+    (Paper~IV~\cite{MujjabiIV2026}), the sum becomes a prediction from
+    first principles:
+    \begin{equation}
+      \sum_{k=0}^{n-1} m_k(n)
+      \;=\; 2n M_3 \left(\frac{n}{3}\right)^{3/4}
+      \;=\; 2M_3 \cdot 3^{-3/4} \cdot n^{7/4}\,.
+      \label{eq:sum_n74}
+    \end{equation}
+    This requires only $M_3$ (derived from $m_e$ in Paper~V) and the
+    Faddeev--Niemi exponent $3/4$ (from the field theory of knotted
+    solitons~\cite{FaddeevNiemi1997}).
+    No other free parameters enter.
+\end{enumerate}
+
+\subsection{Verification for $n = 3$}
+
+For the lepton family ($n = 3$, $M_3 = 313.86$~MeV):
+\begin{align}
+  \sum_k m_k^{(3)} &= 6 M_3 = 1883.16~\text{MeV}\,.
+  \label{eq:sum_3}
+\end{align}
+The measured value is $m_e + m_\mu + m_\tau = 1883.03$~MeV (PDG~2022~\cite{PDG2022}).
+The difference is $0.13$~MeV, which equals the tau mass prediction error
+from Paper~V ($+1.04\sigma$).
+The sum rule is verified at the accuracy of the Paper~V prediction.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The $n^{7/4}$ Mass Hierarchy}
+\label{sec:hierarchy}
+
+\subsection{Derivation of the scaling law}
+
+From Eq.~\eqref{eq:sum_n74}, the total family mass scales as:
+\begin{equation}
+  \Sigma_n \;\equiv\; \sum_{k=0}^{n-1} m_k(n) \;=\; 2M_3 \cdot 3^{-3/4} \cdot n^{7/4}\,.
+  \label{eq:n74}
+\end{equation}
+The exponent $7/4 = 1.75$ arises as:
+\begin{align*}
+  \Sigma_n &= 2n \cdot M_3 \left(\frac{n}{3}\right)^{3/4}
+  = 2M_3 \cdot 3^{-3/4} \cdot n^{1+3/4}
+  = 2M_3 \cdot 3^{-3/4} \cdot n^{7/4}\,.
+\end{align*}
+The $n$ factor comes from the number of modes (the sum has $n$ terms).
+The $n^{3/4}$ factor comes from Faddeev--Niemi energy scaling.
+Their product gives $n^{7/4}$.
+
+\subsection{Hierarchy table}
+
+\begin{table}[h]
+  \caption{CDFT torus knot mass sum hierarchy.
+    All predictions from Theorem~\ref{thm:sum_rule} and Faddeev--Niemi
+    scaling, zero free parameters beyond $m_e$.}
+  \label{tab:hierarchy}
+  \begin{tabular}{ccccc}
+    \toprule
+    $n$ & Knot & $M_n$ (MeV) & $\Sigma_n$ (MeV) & Status \\
+    \midrule
+    3  & $T(2,3)$ trefoil    & 313.9  & 1\,883.2  & Verified (PDG: 1\,883.0) \\
+    5  & $T(2,5)$ cinquefoil & 460.4  & 4\,603.9  & Predicted \\
+    7  & $T(2,7)$ heptafoil  & 592.5  & 8\,295.6  & Predicted \\
+    9  & $T(2,9)$            & 715.4  & 12\,878.0 & Predicted \\
+    11 & $T(2,11)$           & 831.6  & 18\,296.2 & Predicted \\
+    13 & $T(2,13)$           & 942.7  & 24\,509.0 & Predicted \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_VII/fig7_0_panel.pdf}
+  \caption{The mass sum hierarchy $\Sigma_n$. The total mass of the $n$-th family scales exactly as $n^{7/4}$, driven by the combination of the topological mode count $n$ and the Faddeev-Niemi field energy $n^{3/4}$.}
+  \label{fig:mass_sum_hierarchy}
+\end{figure}
+
+The $n^{7/4}$ scaling is the universal mass growth law of the CDFT
+torus knot hierarchy.
+It is a direct consequence of two independently derived results:
+the universal Brannen coefficient $c_n = \sqrt{2}$ (Paper~VI) and
+the Faddeev--Niemi energy bound (Paper~IV).
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The $\mathbb{Z}_5$ Mode Split}
+\label{sec:Z5_split}
+
+\subsection{The $3 + 2$ pattern at the symmetric point}
+
+\begin{theorem}[$\mathbb{Z}_5$ mode split]
+  \label{thm:Z5_split}
+  At the $\mathbb{Z}_5$ symmetric point $\theta = 0$, the five cinquefoil
+  amplitudes divide as:
+  \begin{itemize}
+    \item 3 \emph{positive-phase} modes: $A_k > 0$ (aligned with vacuum background),
+    \item 2 \emph{negative-phase} modes: $A_k < 0$ (anti-aligned).
+  \end{itemize}
+\end{theorem}
+
+\begin{proof}
+  At $\theta = 0$: $A_k = 1 + \sqrt{2}\cos(2\pi k/5)$.
+  The five cosines are
+  $\cos(0^\circ) = 1$,
+  $\cos(72^\circ) = \cos(288^\circ) \approx 0.309$,
+  $\cos(144^\circ) = \cos(216^\circ) \approx -0.809$.
+  The corresponding amplitudes are:
+  \begin{align*}
+    A_0 &= 1 + \sqrt{2} \approx 2.414 > 0 \\
+    A_1 = A_4 &= 1 + \sqrt{2}\cos72^\circ \approx 1.437 > 0 \\
+    A_2 = A_3 &= 1 + \sqrt{2}\cos144^\circ \approx -0.144 < 0
+  \end{align*}
+  so 3 positive and 2 negative.
+\end{proof}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_VII/fig7_1_panel.pdf}
+  \caption{The $\mathbb{Z}_5$ mode split at $\theta = 0$. Three modes align positively with the vacuum background, while two modes oscillate in anti-phase (negative amplitude).}
+  \label{fig:mode_split}
+\end{figure}
+
+\subsection{Physical interpretation of the mode split}
+
+The negative amplitudes at $\theta = 0$ have magnitude $\sqrt{2} - 1 \approx 0.414$
+below the vacuum background.
+These two modes oscillate in anti-phase with the vacuum field.
+All five modes have positive mass: $m_k = M_5 A_k^2 \geq 0$ always,
+because mass involves the square.
+
+For general $\theta$, the count of negative amplitudes is:
+\begin{itemize}
+  \item 2 negative modes for $\theta \in [0, \pi/20) \cup (7\pi/20, 2\pi/5)$,
+  \item 1 negative mode for $\theta \in (\pi/20, 7\pi/20)$.
+\end{itemize}
+where $\pi/20 = 9^\circ$ and $7\pi/20 = 63^\circ$ are exact boundaries
+(zeros of the amplitude condition $1 + \sqrt{2}\cos(\theta + 2\pi k/5) = 0$).
+The 2-negative regime occupies 25\% of the period, the 1-negative regime 75\%.
+
+The $3 + 2$ pattern at the symmetric point suggests a natural structural
+division of the cinquefoil modes: three modes analogous to the three lepton
+generations, and two additional modes without a $\mathbb{Z}_3$ analogue.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The $\mathbb{Z}_5$ Self-Consistency Equation}
+\label{sec:Z5_sc}
+
+\subsection{The transcendental equation}
+
+For $\mathbb{Z}_3$, the self-consistency condition $3\theta_3 = Q_3 = 2/3$
+was algebraic: $Q_3$ is constant, so the solution $\theta_3 = 2/9$~rad
+follows immediately (Paper~V).
+
+For $\mathbb{Z}_5$, the modified Koide ratio (using $|A_k|$ for negative
+amplitudes):
+\begin{equation}
+  \tilde{Q}_5(\theta) \;=\; \frac{\sum_k A_k^2}{\bigl(\sum_k |A_k|\bigr)^2}
+  \;=\; \frac{10}{\bigl(\sum_k |A_k|\bigr)^2}
+  \label{eq:Q5_tilde}
+\end{equation}
+is \emph{not} constant: it ranges in $[0.294, 0.328]$ as $\theta$ varies.
+The numerator $\sum A_k^2 = 10$ is fixed (Theorem~\ref{thm:sum_rule});
+only the denominator $(\sum |A_k|)^2$ varies.
+
+The $\mathbb{Z}_5$ analogue of the chirality equilibrium (Paper~III) is:
+\begin{equation}
+  5\theta_5 + \phi_{c,5} \;=\; \pi\,.
+  \label{eq:equil_5}
+\end{equation}
+The $\mathbb{Z}_5$ self-consistency condition --- that the chirality breaking
+angle equals the Koide-like ratio at that angle --- then reads:
+\begin{equation}
+  5\theta_5 \;=\; \tilde{Q}_5(\theta_5)\,.
+  \label{eq:sc_5}
+\end{equation}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_VII/fig7_2_panel.pdf}
+  \caption{The $\mathbb{Z}_5$ self-consistency fixed point. The transcendental equation $5\theta_5 = \tilde Q_5(\theta_5)$ has exactly one solution in the physical domain.}
+  \label{fig:fixed_point}
+\end{figure}
+
+Unlike the $\mathbb{Z}_3$ case, this is a \emph{transcendental fixed-point
+equation}.
+
+\subsection{Unique solution}
+
+\begin{proposition}[Existence and uniqueness of $\theta_5$]
+  Equation~\eqref{eq:sc_5} has exactly one solution in $[0, \pi/5)$.
+\end{proposition}
+
+\begin{proof}[Proof sketch]
+  At $\theta = 0$: $5\theta = 0 < \tilde{Q}_5(0) \approx 0.322$.
+  At $\theta = \pi/5$: $5\theta = \pi \gg \tilde{Q}_5(\pi/5) \approx 0.294$.
+  By continuity, at least one solution exists (intermediate value theorem).
+  Numerically, $5\theta$ and $\tilde{Q}_5(\theta)$ cross exactly once
+  (one sign change in $5\theta - \tilde{Q}_5(\theta)$ on $[0, \pi/5]$).
+\end{proof}
+
+The numerical solution to machine precision:
+\begin{align}
+  \theta_5 &= 0.0645346670\ldots~\text{rad} \;=\; 3.6976^\circ
+  \label{eq:theta5_solution} \\
+  \phi_{c,5} &= \pi - 5\theta_5 = 2.8189\ldots~\text{rad} \;=\; 161.51^\circ\,.
+  \label{eq:phi_c5}
+\end{align}
+
+\subsection{Status: hypothesis, not theorem}
+
+The solution~\eqref{eq:theta5_solution} is reported as a \emph{hypothesis}.
+For $\mathbb{Z}_3$, the self-consistency condition was motivated by the
+constancy of $Q_3$: ``the chirality breaking angle equals the unique
+$\mathbb{Z}_3$ invariant.''
+For $\mathbb{Z}_5$, no such unique invariant exists (Paper~VI).
+The condition $5\theta_5 = \tilde{Q}_5(\theta_5)$ is a natural
+generalisation, but a first-principles physical argument from the CDFT
+vacuum equation of state would be needed to promote it to a theorem.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Structural Comparison: $\mathbb{Z}_3$ vs $\mathbb{Z}_n$, $n \geq 5$}
+\label{sec:comparison}
+
+Table~\ref{tab:comparison} summarises the structural differences between
+the lepton family and the higher families.
+
+\begin{table}[h]
+  \caption{Structural comparison: $\mathbb{Z}_3$ (leptons) vs $\mathbb{Z}_5$ (cinquefoil).}
+  \label{tab:comparison}
+  \begin{tabular}{lll}
+    \toprule
+    Property & $\mathbb{Z}_3$ (leptons) & $\mathbb{Z}_5$ (cinquefoil) \\
+    \midrule
+    Energy scale $M_n$ & $313.9$~MeV & $460.4$~MeV \\
+    Number of modes & 3 & 5 \\
+    Coefficient $c_n$ & $\sqrt{2}$ & $\sqrt{2}$ \\
+    Valid domain (all $A_k > 0$) & Yes: $\theta \in (-\pi/12, \pi/12)$ & No \\
+    $Q_n = 2/n$ constant? & Yes: $Q_3 = 2/3$ & No: $\tilde{Q}_5 \in [0.294, 0.328]$ \\
+    $\sum m_k = 2nM_n$ & Yes: $1883.2$~MeV (verified) & Yes: $4603.9$~MeV (predicted) \\
+    $\theta_n$ derivation & Algebraic (Paper~V) & Transcendental (hypothesis) \\
+    Sector closed? & Yes (Paper~V) & Open \\
+    Amplitude split & 3 positive always & $3+2$ or $4+1$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The key distinction: $\mathbb{Z}_3$ has a connected valid domain because
+the minimum amplitude $\min_k A_k = 1 - \sqrt{2}\cos(0) + \ldots$
+reaches a \emph{positive} maximum ($+0.293$ at $\theta = 0$).
+For $n \geq 5$, the analogous maximum is \emph{negative}
+(e.g.\ $-0.144$ for $n = 5$), so no valid domain exists.
+This is the root of $\mathbb{Z}_3$ uniqueness (Paper~VI, Theorem~2).
+
+The universal mass sum rule bridges the gap: it provides a firm prediction
+for all $n$ without requiring the valid-domain condition.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Open Problems}
+\label{sec:open}
+
+\begin{enumerate}
+
+\item \textbf{Physical principle for $\theta_5$.}
+  The transcendental equation~\eqref{eq:sc_5} gives a unique numerical
+  $\theta_5 \approx 3.70^\circ$.
+  A first-principles derivation from the CDFT vacuum equation of state ---
+  analogous to how Paper~IV identified the functional form $\Phi_c(\rho_0)$
+  as the remaining input --- is the priority open problem.
+
+\item \textbf{Identify the cinquefoil mass spectrum.}
+  Once $\theta_5$ is determined (or bounded), the five mode masses
+  $m_k = M_5 A_k^2$ can be compared to known hadronic states
+  at the $\sim 460$~MeV energy scale.
+  The total mass $\Sigma_5 = 4603.9$~MeV is a testable sum rule.
+
+\item \textbf{Physical meaning of the $3 + 2$ mode split.}
+  The positive-amplitude modes ($A_k > 0$) and negative-amplitude modes
+  ($A_k < 0$) interact differently with the vacuum background.
+  Whether this split corresponds to a known quantum number
+  (charge, colour, isospin) is an open question.
+
+\item \textbf{Higher families $n \geq 7$.}
+  The mass sum rule $\Sigma_n = 2nM_n$ applies to all $n$.
+  The individual mode spectra and their identification with known or
+  predicted particles require repeating the present analysis for each $n$.
+
+\end{enumerate}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Conclusion}
+
+The universal mass sum rule $\sum_k m_k = 2nM_n$ is derived from
+two algebraic facts: the $\mathbb{Z}_n$ Fourier identity
+(which forces $\sum A_k^2 = 2n$ regardless of $\theta_n$) and the
+Faddeev--Niemi energy scaling $M_n = M_3(n/3)^{3/4}$.
+Together they give the $n^{7/4}$ mass hierarchy (Eq.~\eqref{eq:n74}),
+verified for $n = 3$ and predicted for all higher families.
+
+For $\mathbb{Z}_5$ specifically, we prove the $3 + 2$ mode split
+(Theorem~\ref{thm:Z5_split}) and derive the transcendental
+self-consistency equation~\eqref{eq:sc_5} for $\theta_5$,
+reporting its solution $\theta_5 \approx 3.70^\circ$ as a hypothesis.
+
+The mass sum $\Sigma_5 = 4603.9$~MeV is a model-level prediction, conditional
+on the torus-knot hierarchy and the $m_e$ mass-unit calibration.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section*{Acknowledgments}
+The author used AI-assisted tools for formatting checks and code-verification
+support. The scientific claims, interpretations, and final manuscript decisions
+are the author's responsibility.
+
+The author is indebted to the foundational work of
+Y.~Koide~\cite{Koide1983} (lepton mass formula),
+C.A.~Brannen~\cite{Brannen2006} (Koide parametrisation),
+L.~Faddeev and A.J.~Niemi~\cite{FaddeevNiemi1997} (knots and particles),
+and D.~Rolfsen~\cite{Rolfsen1976} (torus knot classification)
+--- whose work underpins the mass sum rule derived here.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\appendix
+\section{Supplementary Material}
+
+Supplementary code, including numerical verification scripts and Jupyter notebooks, is available in the project repository.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}

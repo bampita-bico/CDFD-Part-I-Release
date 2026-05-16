@@ -1,0 +1,3 @@
+check,value,ok
+high_memory_has_larger_tail,2.0765060711261145,True
+deterministic_seed,120526.0,True

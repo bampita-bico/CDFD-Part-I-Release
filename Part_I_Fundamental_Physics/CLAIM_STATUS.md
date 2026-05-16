@@ -1,0 +1,32 @@
+# Claim Status
+
+This table separates internal mathematical statements from physical
+interpretation. It is intended to prevent the archive from presenting every
+statement at the same level of certainty.
+
+| Paper | Main role | Current status | What would strengthen it | What would weaken it |
+|---|---|---|---|---|
+| I | Vortex aspect-ratio model for alpha | Model assumption plus numerical consistency check | Independent derivation of the transport stiffness and charge/circulation inputs | Vacuum-medium premise fails or stiffness must be tuned arbitrarily |
+| II | Z3 mass parametrisation and Koide identity | Internal theorem for the chosen parametrisation; physical mapping remains assumed | Independent reason that charged leptons must map to the trefoil modes | Alternative mapping explains the same relation with fewer assumptions |
+| III | Topology/chirality bookkeeping | Internal model reduction; rho_0 remains the physical input | First-principles equation for the chirality phase | Chirality phase remains an empirical restatement of mass ratios |
+| IV | Vacuum equation-of-state condition for rho_0 | Self-consistency equation and numerical check | Closed vacuum EOS that determines rho_0 without mass-ratio input | EOS requires fitting the target phase |
+| V | Zero-adjustable-parameter lepton-sector closure after m_e input | Internal construction with m_e as mass unit | Independent derivation of the same theta and phase relation | Agreement depends on identifying a dimensionless ratio with an angle without physical support |
+| VI | General torus-knot hierarchy | Internal algebra and hierarchy proposal | External particle-family mapping with predictive tests | Higher-family assignments appear arbitrary |
+| VII | Mass sum rule | Internal theorem for the amplitude model | Empirical family assignments matching independent spectra | Sum rules do not map to observed families |
+| VIII | Odd-n spectrum extension | Numerical self-consistency and mode census | Stable external predictions for n >= 5 | Solutions exist mathematically but have no physical referent |
+| IX | Even-n extension and exclusions | Internal extension and exclusion logic | Observable distinction between even and odd families | Boundary-mode interpretation fails |
+| X | Public flow/constraint derivation of self-consistency | Internal model theorem and consistency check | Independent physical derivation of Phi, C, and Psi_s mappings | Mapping is only a relabeling of the same equation |
+| XI | Cosmology bridge | Hypothesis generator; not empirical evidence | Lensing, expansion, black-hole, or substrate discriminants beyond standard models | No residual predictive value after standard cosmology fits |
+| XII | Collective-matter bridge | Hypothesis generator for laboratory systems | Incremental prediction in friction, plasma, superconductivity, turbulence, or jamming | No improvement beyond established domain models |
+
+## Reading Rule
+
+An "internal theorem" means the statement follows inside the stated CDFT model.
+It does not mean the physical model has been empirically established.
+
+A "numerical consistency check" means the script reproduces the manuscript's
+stated calculations. It does not mean the underlying physical hypothesis is
+validated by data.
+
+A "hypothesis generator" means the paper proposes measurable discriminants and
+failure conditions. Those claims should be treated as future work until tested.

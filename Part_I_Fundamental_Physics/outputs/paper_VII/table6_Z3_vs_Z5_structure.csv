@@ -1,0 +1,10 @@
+property,Z3_leptons,Z5_cinquefoil
+Energy scale M_n (MeV),313.8592,460.3853
+Number of modes,3,5
+Brannen c_n,sqrt(2),sqrt(2)
+Valid domain all A_k>0,"YES (-pi/12,pi/12)",NO
+Q_n constant 2/n,YES Q_3=2/3,"NO in [0.2944,0.3282]"
+sum m_k = 2nM_n,YES 1883.16,YES 4603.85
+theta derivation,algebraic,transcendental
+Sector closed,YES (Paper V),OPEN
+Mode split,3 positive A_k,3+2 or 4+1

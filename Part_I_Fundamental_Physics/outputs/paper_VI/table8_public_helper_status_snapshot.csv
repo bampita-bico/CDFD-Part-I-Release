@@ -1,0 +1,9 @@
+block,key,value
+public_helper,CHI_TARGET,137.035999084
+public_helper,ALPHA_MEASURED,0.0072973525692838015
+public_helper,kappa_for_chi,117361.9949447333
+public_helper,g_E_norm,1575.8277116084441
+paper_VI,M_3_MeV,313.8592302862007
+paper_VI,M_5_MeV,460.38532045970953
+paper_VI,c_n_universal,1.4142135623730951
+legacy_anchor,rho0_kg_m3_order_of_magnitude,15870000000000.0

@@ -1,0 +1,2 @@
+theta_bisect_rad,theta_brentq_rad,theta_agreement_ok,abs_theta_diff,residual_abs
+0.06453466697187835,0.06453466697187825,True,9.71445146547012e-17,4.996003610813204e-16

@@ -1,0 +1,4 @@
+check,value,ok
+phase_stiffness_collapses_above_Tc,0.0,True
+resistance_low_below_Tc,0.013409916562944013,True
+resistance_high_above_Tc,1.0,True

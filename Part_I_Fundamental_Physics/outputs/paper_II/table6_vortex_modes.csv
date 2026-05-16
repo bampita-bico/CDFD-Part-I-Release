@@ -1,0 +1,7 @@
+mode_n,type_label,stable,reason,chi_equilibrium_used,energy_ratio_n3_over_n2_scale
+0,uniform expansion,False,violates J_crit conservation,137.035999084,2.25
+1,translation/dipole,False,zero mode — not a new structure,137.035999084,2.25
+2,elliptical/quadrupole,False,circulation term dominates at chi=137,137.035999084,2.25
+3,trefoil Z3,True,back-pressure wins; lowest knotted topology,137.035999084,2.25
+4,square Z4,False,"higher energy than n=3, suppressed",137.035999084,2.25
+5,pentagon Z5,False,further suppressed,137.035999084,2.25

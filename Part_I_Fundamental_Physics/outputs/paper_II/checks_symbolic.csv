@@ -1,0 +1,4 @@
+check,pass,numeric_scalar,detail
+z3_sum_cos_simplified,True,,0
+z3_sum_cos2_equals_three_halves,True,,3/2
+P_product_minus_closed_form_symbolic_residual,True,1.7763568394002505e-15,0

@@ -1,0 +1,2 @@
+abs_dQ_dtheta_torch,abs_dQ_dtheta_jax,theta_checked_rad,M_MeV,backends
+,,0.22223754411832986,313.9263599658792,"torch=missing, jax=missing, numba=ok"

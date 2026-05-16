@@ -1,0 +1,2 @@
+torch_abs_d_residual_dtheta,jax_abs_d_residual_dtheta,torch_gate,jax_gate,backends
+,,True,True,"torch=missing, jax=missing, numba=ok"

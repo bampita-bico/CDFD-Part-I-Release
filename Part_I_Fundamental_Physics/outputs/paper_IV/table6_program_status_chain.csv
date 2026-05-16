@@ -1,0 +1,8 @@
+item,value_or_gate,note
+alpha_derived_series,True,Paper I public chi equilibrium
+kappa_algebraic,True,Paper III χ² term
+koide_theorem_series,True,Paper II Z₃
+master_equation_article_IV,True,Eq.(master) structure
+Phi_c_from_EOS,False,Open — requires Navier–Stokes+CDFT
+M5_MeV_prediction,True,460.35
+rho0_inference_uses_PDG_theta,True,θ from masses until EOS closes

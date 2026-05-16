@@ -1,0 +1,2 @@
+variance_A_equals_c_sq_over_2,max_entropy_Var_equals_mean_sq,positive_root_c,matches_sqrt2
+c**2/2,"Eq(c**2/2, 1)",1.4142135623730951,True

@@ -1,0 +1,5 @@
+requirement,status,why_it_matters
+dimensionless invariant,open,prevents Blancken layer from being only a name for unknown substrate
+fixed-point selector boundary,highest_priority,could derive the selectors used in Papers VI-X
+scale law to observed constant,open,would connect sub-geometric constraint to measured physics
+no-go theorem for emergent geometries,open,would make the substrate mathematically restrictive

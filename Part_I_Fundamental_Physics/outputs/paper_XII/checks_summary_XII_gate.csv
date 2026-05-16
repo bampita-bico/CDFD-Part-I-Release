@@ -1,0 +1,7 @@
+component,ok
+friction,True
+superconductivity,True
+plasma,True
+jamming,True
+symbolic,True
+autodiff_backends,"torch=missing, jax=missing, numba=ok"

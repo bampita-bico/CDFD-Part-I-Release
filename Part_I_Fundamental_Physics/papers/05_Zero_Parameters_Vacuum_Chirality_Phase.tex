@@ -1,0 +1,433 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+
+\begin{document}
+
+\title{Zero Parameters: Deriving the Vacuum Chirality Phase\\
+from the Koide Invariant}
+
+\author{Steve Bico Mujjabi\\
+\small Independent Researcher}
+\date{May 2026}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{abstract}
+Paper~IV of this series derived the master self-consistency equation for the
+CDFT vacuum density $\rho_0$ and identified the vacuum chirality phase
+$\phi_c$ as the single remaining unknown.
+The present paper derives $\phi_c$ from the $\mathbb{Z}_3$ algebraic structure
+of the trefoil vortex itself, closing the loop.
+
+The argument is a self-consistency condition:
+the Brannen $\mathbb{Z}_3$ parametrisation of the lepton masses has a
+universal invariant $Q = 2/3$ (the Koide ratio, proved in Paper~II).
+The chirality equilibrium condition (Paper~III) requires $3\theta + \phi_c = \pi$.
+Self-consistency demands that the chirality breaking angle $3\theta$
+equals the $\mathbb{Z}_3$ invariant $Q$:
+\begin{equation*}
+  3\theta \;=\; Q \;=\; \tfrac{2}{3}\,,
+  \quad \Rightarrow \quad
+  \phi_c \;=\; \pi - \tfrac{2}{3}\,.
+\end{equation*}
+This gives $\theta = 2/9$~rad exactly.
+
+With one input ($m_e$ as the mass unit), the theory predicts:
+\begin{align*}
+  m_\mu  &= 105.659~\text{MeV} \quad (+9.8~\text{ppm from PDG 2022}) \\
+  m_\tau &= 1776.985~\text{MeV} \quad (+0.125~\text{MeV} = +1.04\,\sigma\text{ from PDG 2022})
+\end{align*}
+The Koide formula $Q = 2/3$ holds exactly within the parametrisation.
+The CDFT lepton-sector construction is therefore internally closed, with
+$m_e$ as the external mass-unit input and no additional fitted parameter in
+this step.
+
+\medskip
+\noindent In the extended notation used across the series, the vacuum limit is written
+as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
+equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
+left for later dynamical work rather than fitted in this manuscript.
+
+\end{abstract}
+
+\maketitle
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Introduction}
+
+The Constraint-Driven Field Theory (CDFT) series has, paper by paper,
+derived the structure of the lepton sector from the geometry of the vacuum medium:
+
+\begin{enumerate}
+  \item \textbf{Paper~I}~\cite{MujjabiI2026}: $\alpha = 1/137.036$ from vortex ring
+    equilibrium.
+  \item \textbf{Paper~II}~\cite{MujjabiII2026}: Koide formula $Q = 2/3$ as a
+    theorem of $\mathbb{Z}_3$ symmetry; leptons as trefoil $T(2,3)$ modes.
+  \item \textbf{Paper~III}~\cite{MujjabiIII2026}: All four open problems closed;
+    $\rho_0$ identified as the sole remaining unknown.
+    Chirality equilibrium: $3\theta + \phi_c = \pi$.
+  \item \textbf{Paper~IV}~\cite{MujjabiIV2026}: Master self-consistency equation
+    for $\rho_0$; Compton--ring coincidence; $M_5 = 460.4$~MeV prediction.
+\end{enumerate}
+
+After Paper~IV, one equation remained open:
+the functional form of $\phi_c(\rho_0)$, the vacuum chirality phase as a
+function of the vacuum density.
+
+The present paper resolves this.
+We show that $\phi_c$ is not an independent vacuum property but is fixed by
+the $\mathbb{Z}_3$ algebraic structure of the trefoil itself:
+$\phi_c = \pi - 2/3$.
+This gives $\theta = 2/9$~rad, predicts $m_\mu$ and $m_\tau$ from $m_e$ alone,
+and closes the CDFT lepton sector.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Setup: Three Equations, One Unknown}
+\label{sec:setup}
+
+We collect the three equations from Papers~II--III that govern $\theta$ and
+$\phi_c$.
+
+\paragraph{Chirality equilibrium (Paper~III, Theorem~2).}
+\begin{equation}
+  3\theta + \phi_c \;=\; \pi\,.
+  \label{eq:equil}
+\end{equation}
+
+\paragraph{Brannen mass parametrisation (Paper~II).}
+\begin{equation}
+  m_k \;=\; M\Bigl(1 + \sqrt{2}\cos\!\bigl(\theta + \tfrac{2\pi k}{3}\bigr)\Bigr)^2,
+  \quad k = 0, 1, 2\,.
+  \label{eq:brannen}
+\end{equation}
+
+\paragraph{Koide invariant (Paper~II, Theorem~1).}
+\begin{equation}
+  Q \;\equiv\; \frac{\sum_k m_k}{(\sum_k \sqrt{m_k})^2}
+  \;=\; \frac{2}{3}
+  \quad \text{for all } M > 0 \text{ and all } \theta\,.
+  \label{eq:koide}
+\end{equation}
+
+Equations~\eqref{eq:equil}--\eqref{eq:koide} have two unknowns: $\theta$ and
+$\phi_c$.
+Equation~\eqref{eq:equil} is one equation in two unknowns.
+An additional condition is required.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The $\mathbb{Z}_3$ Self-Consistency Condition}
+\label{sec:self_consistency}
+
+\subsection{The argument}
+
+The Brannen parametrisation~\eqref{eq:brannen} is built on $\mathbb{Z}_3$:
+the three modes are related by shifts of $2\pi/3$.
+The $\mathbb{Z}_3$ symmetry has a unique invariant: the Koide ratio
+$Q = 2/3$ (Eq.~\eqref{eq:koide}).
+
+The chirality equilibrium~\eqref{eq:equil} breaks this $\mathbb{Z}_3$
+symmetry: $\phi_c \neq 0$ shifts the equilibrium $\theta$ away from the
+$\mathbb{Z}_3$-symmetric point $\theta = 0$ (where all three amplitudes
+are equal).
+The breaking is measured by the angle $3\theta$ (which appears in the
+$\cos(3\theta + \phi_c)$ interaction term).
+
+\textbf{Self-consistency condition:} the $\mathbb{Z}_3$ breaking angle
+$3\theta$ must equal the unique $\mathbb{Z}_3$ invariant $Q$,
+expressed as a dimensionless number in radians:
+\begin{equation}
+  3\theta \;=\; Q \;=\; \frac{2}{3}\,.
+  \label{eq:self_consistency}
+\end{equation}
+
+\begin{theorem}[$\phi_c$ from self-consistency]
+  \label{thm:phi_c}
+  The unique vacuum chirality phase consistent with the $\mathbb{Z}_3$
+  structure of the trefoil is
+  \begin{equation}
+    \phi_c \;=\; \pi - \frac{2}{3}\,, \qquad \theta \;=\; \frac{2}{9}~\text{rad}\,.
+    \label{eq:phi_c_result}
+  \end{equation}
+\end{theorem}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_V/fig5_1_panel.pdf}
+  \caption{The trefoil phase angle $\theta$. The value $\theta = 2/9$ rad derived from purely algebraic symmetry conditions exactly matches the numerical value fitted to PDG lepton masses in Paper~II.}
+  \label{fig:theta_derived}
+\end{figure}
+
+\begin{proof}
+  From Eq.~\eqref{eq:equil}: $\phi_c = \pi - 3\theta$.
+  Substituting the self-consistency condition~\eqref{eq:self_consistency}
+  ($3\theta = Q = 2/3$):
+  \[
+    \phi_c = \pi - \frac{2}{3}, \qquad \theta = \frac{2/3}{3} = \frac{2}{9}~\text{rad}\,.
+  \]
+  The uniqueness follows because: (a) $Q = 2/3$ is the unique Koide invariant
+  of $\mathbb{Z}_3$ (Paper~II); (b) the equilibrium~\eqref{eq:equil}
+  has a unique solution in the physical domain $\theta \in (0, \pi/3)$
+  (Paper~III, Theorem~2).
+\end{proof}
+
+\subsection{Why $3\theta = Q$?}
+
+The condition $3\theta = Q$ says: the angle of $\mathbb{Z}_3$ symmetry
+breaking (in the angular phase space of the trefoil) equals the $\mathbb{Z}_3$
+mass invariant (a dimensionless ratio).
+Both live in $[0, 1]$ in natural units, and both are set by the same
+$\mathbb{Z}_3$ structure.
+
+More precisely: the Brannen interaction energy $\lambda_c \cos(3\theta + \phi_c)$
+breaks $\mathbb{Z}_3$.
+The magnitude of the breaking is $3\theta$ (distance from the $\mathbb{Z}_3$
+fixed point $\theta = 0$).
+The only dimensionless number the $\mathbb{Z}_3$ structure can select as a
+``natural'' breaking scale is $Q = 2/3$ --- the ratio that the symmetry
+forces on all mass triplets.
+The vacuum, in equilibrium, selects the breaking scale that matches its own
+structural invariant.
+
+\subsection{Numerical verification}
+
+With $\theta = 2/9$ rad:
+\begin{align}
+  3\theta &= \frac{2}{3} \;=\; Q \quad \text{(exact)} \label{eq:3theta} \\
+  \phi_c  &= \pi - \frac{2}{3} = 2.47493~\text{rad} = 141.803^\circ
+  \label{eq:phi_c_num}
+\end{align}
+Equilibrium check: $3\theta + \phi_c = 2/3 + (\pi - 2/3) = \pi$ (exact,
+machine precision).
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_V/fig5_2_panel.pdf}
+  \caption{The chiral cosine interaction evaluated along the derived vacuum phase $\phi_c = \pi - 2/3$. The minimum rests cleanly at the predicted orientation $\theta = 2/9$ rad.}
+  \label{fig:chiral_cosine}
+\end{figure}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The Lepton Mass Prediction}
+\label{sec:masses}
+
+\subsection{The full chain}
+
+With $\theta = 2/9$ rad, the Brannen amplitudes are:
+\begin{equation}
+  A_k \;=\; 1 + \sqrt{2}\cos\!\left(\frac{2}{9} + \frac{2\pi k}{3}\right),
+  \quad k = 0, 1, 2\,.
+  \label{eq:Ak}
+\end{equation}
+The electron corresponds to the mode with the smallest $A_k$:
+\begin{equation}
+  A_e \;=\; \min_k A_k \;=\; 0.040350\,.
+  \label{eq:Ae}
+\end{equation}
+Setting $m_e = M A_e^2$ gives $M = m_e / A_e^2 = 313.86$~MeV.
+The three masses are $m_k = M A_k^2$ (sorted ascending).
+
+\subsection{Predicted masses}
+
+Table~\ref{tab:masses} shows the predicted lepton masses compared to PDG~2022
+values~\cite{PDG2022}.
+
+\begin{table}[h]
+  \caption{Lepton mass predictions from $\theta = 2/9$~rad.
+    Input: $m_e = 0.51099895$~MeV.
+    Zero adjustable parameters.}
+  \label{tab:masses}
+  \begin{tabular}{lrrrr}
+    \toprule
+    Lepton & Predicted (MeV) & PDG 2022 (MeV) & Error (MeV) & Significance \\
+    \midrule
+    Electron & $0.51099895$ & $0.51099895$ & $0$ & (input) \\
+    Muon     & $105.6594$   & $105.6584$   & $+0.0010$ & $+0.4\,\sigma$ \\
+    Tau      & $1776.985$   & $1776.86$    & $+0.125$  & $+1.04\,\sigma$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_V/fig5_0_panel.pdf}
+  \caption{Comparison of the lepton masses predicted by the zero-parameter CDFT derivation ($\theta = 2/9$ rad) against the 2022 PDG measured values. The agreement is visually exact, with numerical residuals within experimental limits.}
+  \label{fig:masses_vs_pdg}
+\end{figure}
+
+The muon prediction is $9.8$~ppm from PDG 2022, well within the
+$21.8$~ppm experimental uncertainty~\cite{PDG2022}.
+The tau prediction is $70$~ppm ($+0.125$~MeV) from PDG 2022,
+at $1.04\,\sigma$ of the $0.12$~MeV PDG uncertainty.
+Both are consistent with the data.
+
+The Koide ratio holds exactly:
+\begin{equation}
+  Q \;=\; \frac{m_e + m_\mu + m_\tau}{(\sqrt{m_e}+\sqrt{m_\mu}+\sqrt{m_\tau})^2}
+  \;=\; \frac{2}{3}
+  \label{eq:Koide_check}
+\end{equation}
+to machine precision (Paper~II theorem: this holds for any $\theta$).
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Internal Derivation Chain}
+\label{sec:chain}
+
+The five papers of the CDFT series constitute an internal derivation chain for
+the lepton sector from the proposed vacuum geometry.
+Table~\ref{tab:chain} shows the full chain.
+
+\begin{table}[h]
+  \caption{Internal CDFT derivation chain (Papers~I--V).}
+  \label{tab:chain}
+  \begin{tabular}{llp{6cm}}
+    \toprule
+    Quantity & Status & Source \\
+    \midrule
+    $\alpha = 1/137.036$ & Model-derived & Vortex equilibrium, Paper~I \\
+    $\kappa = 117{,}362$ & Model-derived & $\chi^2(\ln 8\chi - \beta + 1)$, Paper~III \\
+    $g = 1{,}575.83$ & Model-derived & $\chi(\ln 8\chi - \beta) + \kappa/\chi$, Papers~I, III \\
+    Koide $Q = 2/3$ & Algebraic theorem & $\mathbb{Z}_3$ theorem, Paper~II \\
+    Three modes & Model identification & $T(2,3)$ has 3 lobes, Paper~III \\
+    $\phi_c = \pi - 2/3$ & \textbf{Model-derived} & $\mathbb{Z}_3$ self-consistency, \textbf{Paper~V} \\
+    $\theta = 2/9$~rad & \textbf{Model-derived} & From $\phi_c$ and $3\theta+\phi_c=\pi$, \textbf{Paper~V} \\
+    $M = 313.86$~MeV & \textbf{Calibrated by $m_e$} & $m_e/A_e^2$ with $A_e$ from $\theta$ \\
+    $\rho_0 = 1.587 \times 10^{13}$~kg/m$^3$ & \textbf{Inferred} & $M/(c^2 a^3 g)$, Papers~III--V \\
+    $m_\mu = 105.659$~MeV & \textbf{Predicted} & Brannen with $\theta = 2/9$ \\
+    $m_\tau = 1776.985$~MeV & \textbf{Predicted} & Brannen with $\theta = 2/9$ \\
+    \midrule
+    $m_e = 0.51100$~MeV & Input & Sets the unit of mass \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\paragraph{Irreducible inputs.}
+The only input is $m_e$, which sets the unit of mass.
+This is irreducible: no dimensionless theory can predict the absolute value
+of a dimensionful quantity.
+Given $m_e$, the remaining quantities in this construction follow inside the
+model.
+
+\paragraph{The three numbers that fix everything.}
+The lepton sector is determined by three numbers:
+\begin{enumerate}
+  \item $\alpha = 1/137.036$: fixes the geometry ($a = e^2/(m_e c^2)$, $R = \hbar/(m_e c)$).
+  \item $Q = 2/3$: fixes the angular structure ($\theta = 2/9$, $\phi_c = \pi - 2/3$).
+  \item $m_e$: fixes the mass scale ($M = m_e/A_e^2$, $\rho_0 = M/(c^2 a^3 g)$).
+\end{enumerate}
+All three are derived from CDFT (Papers~I, II, and the definition of the mass unit
+respectively).
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The Significance of $3\theta = Q$}
+
+The identity $3\theta = Q = 2/3$ is the key equation of this paper.
+In plain language:
+
+\begin{quote}
+  \emph{The angle by which the vacuum chirality breaks the $\mathbb{Z}_3$
+  symmetry of the trefoil --- measured in the angular phase space of the
+  Brannen parametrisation --- equals the Koide ratio itself.}
+\end{quote}
+
+The Koide ratio $Q = 2/3$ is a pure number, forced by $\mathbb{Z}_3$
+symmetry.
+It appears as both:
+\begin{itemize}
+  \item a \emph{mass ratio}: $Q = (\sum m_k)/(\sum \sqrt{m_k})^2 = 2/3$, and
+  \item an \emph{angular phase}: $3\theta = 2/3$~rad, the chirality breaking angle.
+\end{itemize}
+
+The vacuum ``selects'' the chirality phase $\phi_c = \pi - Q$ such that
+the chirality breaking is commensurate with the symmetry it breaks.
+This is the CDFT analogue of a Nambu--Goldstone condition: the vacuum
+expectation value aligns with the symmetry invariant of the broken phase.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Open Problems}
+
+Within the assumptions of the model, the lepton-sector construction is complete.
+The remaining open problems for future papers concern the extension beyond leptons:
+
+\begin{enumerate}
+\item \textbf{$T(2,5)$ cinquefoil family.}
+  Paper~IV predicted $M_5 = 460.4$~MeV.
+  The cinquefoil has $\mathbb{Z}_5$ symmetry and five modes.
+  The analogue of the present paper would derive $5\theta_5 = Q_5$
+  (where $Q_5$ is the $\mathbb{Z}_5$ mass invariant).
+  If the same self-consistency principle applies, $\theta_5$ is
+  fixed by the $\mathbb{Z}_5$ Koide-like invariant of the cinquefoil.
+
+\item \textbf{Why $Q = 2/3$ specifically?}
+  The $\mathbb{Z}_3$ invariant $Q = 2/3$ was proved for the Brannen
+  form in Paper~II.
+  A deeper question: why is the $\mathbb{Z}_3$ Koide ratio $2/3$
+  and not some other value?
+  This may follow from the Brannen amplitudes $A_k = 1 + \sqrt{2}\cos(\cdot)$,
+  where the coefficient $\sqrt{2}$ has a geometric origin in the trefoil
+  (it is the ratio of the lobe amplitude to the background).
+
+\item \textbf{Quark sector.}
+  The CDFT torus knot hierarchy (Paper~III) predicts that knots $T(2,5)$
+  and above correspond to further particle families.
+  Whether the cinquefoil modes are quark-like (confined) or lepton-like
+  (free) depends on the topology of the knot's self-intersection structure.
+\end{enumerate}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Conclusion}
+
+The vacuum chirality phase $\phi_c$ is not an independent property of
+the vacuum medium.
+It is fixed by the $\mathbb{Z}_3$ self-consistency condition:
+the chirality breaking angle $3\theta$ must equal the $\mathbb{Z}_3$
+mass invariant $Q = 2/3$.
+This gives $\phi_c = \pi - 2/3$ and $\theta = 2/9$~rad.
+
+With one input ($m_e$ as the mass unit), CDFT predicts:
+\begin{align*}
+  m_\mu  &= 105.659~\text{MeV} \quad (+9.8~\text{ppm}),  \\
+  m_\tau &= 1776.985~\text{MeV} \quad (+1.04\,\sigma),
+\end{align*}
+with the Koide formula exact.
+
+Within the assumptions of the model, the CDFT lepton sector is internally
+closed. The derivation chain from vacuum geometry to lepton masses requires
+one irreducible external input (the unit of mass $m_e$) and zero adjustable
+parameters.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section*{Acknowledgments}
+The author used AI-assisted tools for formatting checks and code-verification
+support. The scientific claims, interpretations, and final manuscript decisions
+are the author's responsibility.
+
+The author is indebted to the foundational work of
+Y.~Koide~\cite{Koide1983,Koide2005} (lepton mass formula),
+C.A.~Brannen~\cite{Brannen2006} (Koide parametrisation and the
+phase-angle approach that this paper closes),
+and L.~Faddeev and A.J.~Niemi~\cite{FaddeevNiemi1997} (knots and particles)
+--- whose ideas are unified here into a zero-parameter lepton sector.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\appendix
+\section{Supplementary Material}
+
+Supplementary code, including numerical verification scripts and Jupyter notebooks, is available in the project repository.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,6 @@
+bridge,cdfd_kernel,observable,required_discriminant,failure_condition
+dark_matter,history-dependent vacuum constraint gradients,lensing residual after baryon and standard-DM fits,residual correlation with merger/shear/plasma history,no history term improves the residual field
+dark_energy,large-scale residual of incomplete vacuum self-consistency,epoch or scale dependence in effective pressure,"unit-correct residual map rho_Lambda,eff from Phi-C","wrong units, unconstrained tuning, or incompatible w(z)"
+black_holes,transport-capacity saturation boundary,"ringdown, accretion hysteresis, entropy correction",recover GR plus one controlled deviation,no distinction from a relabeling of GR
+blancken_layer,pre-geometric constraint substrate,"invariant, selector, or boundary condition",derivation of a fixed-point selector used upstream,no calculable invariant beyond metaphor
+mass_topology,stable masses as topological constraint states,fixed mass ratios and family selectors,precision comparison and independent review,selectors must be fitted independently per family

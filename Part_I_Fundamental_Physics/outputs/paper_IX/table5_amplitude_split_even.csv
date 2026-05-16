@@ -1,0 +1,6 @@
+n,n_minus_formula,n_minus_numeric,match,note
+4,1,1,True,
+6,1,1,True,
+8,3,2,False,3n/8 exact integer -> boundary correction
+10,3,3,True,
+12,3,3,True,

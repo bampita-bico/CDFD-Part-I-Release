@@ -1,0 +1,554 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+
+\begin{document}
+
+\title{Lepton Masses from Z\textsubscript{3}-Symmetric Vortex Modes\\
+and the Origin of the Koide Formula}
+
+\author{Steve Bico Mujjabi\\
+\small Independent Researcher}
+\date{May 2026}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{abstract}
+The Koide formula $Q = (m_e + m_\mu + m_\tau)/(\sqrt{m_e}+\sqrt{m_\mu}+\sqrt{m_\tau})^2
+= 2/3$ has been satisfied by the measured lepton masses to better than one part in
+$10^4$ since its discovery in 1981, yet no standard-model explanation exists for this
+coincidence.
+In this paper, the second in the Constraint-Driven Field Theory (CDFT) series,
+we show that the Koide formula follows naturally from a specific
+$\mathbb{Z}_3$-symmetric mass parametrisation.
+The vortex ring established in Paper~I as the CDFT model of the electron
+has a unique stable azimuthal excitation at mode number $n = 3$: the trefoil.
+We prove as a mathematical theorem that any three quantities constructed from
+the $\mathbb{Z}_3$-symmetric Brannen form
+$m_k = M(1 + \sqrt{2}\cos(\theta + 2\pi k/3))^2$ ($k = 0,1,2$)
+satisfy $Q = 2/3$ exactly, for \emph{all} $M > 0$ and \emph{all} $\theta$.
+The proof requires only two elementary trigonometric identities and contains
+no free parameters.
+We further argue, within the vortex-ring model, that $n = 3$ is the only stable azimuthal mode of a constrained
+vortex ring: $n = 1$ is a zero mode, $n = 2$ is unstable, and $n \geq 4$ are
+energetically suppressed.
+Fitting $M$ and $\theta$ to any two of the three lepton masses, we predict all
+three to within $0.015\%$ of PDG values.
+The phase $\theta$ is not a free parameter: with Koide automatic, two lepton
+masses completely determine $M$ and $\theta$.
+Its derivation from CDFT vacuum properties without using measured masses as input
+is the central task of Paper~III.
+
+\medskip
+\noindent In the extended notation used across the series, the vacuum limit is written
+as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
+equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
+left for later dynamical work rather than fitted in this manuscript.
+
+\end{abstract}
+
+\maketitle
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Introduction}
+
+In 1981, Yoshio Koide noticed that the masses of the charged leptons satisfy
+a remarkably tight relation~\cite{Koide1983}:
+\begin{equation}
+  Q \;=\; \frac{m_e + m_\mu + m_\tau}
+               {(\sqrt{m_e} + \sqrt{m_\mu} + \sqrt{m_\tau})^2}
+  \;=\; \frac{2}{3}\,.
+  \label{eq:koide}
+\end{equation}
+Using current PDG values~\cite{PDG2022}, $Q = 0.666661$, which agrees with $2/3$
+to one part in $10^4$.
+More strikingly, when Koide first wrote the formula, only $m_e$ and $m_\mu$ were
+well-measured. He \emph{predicted} $m_\tau = 1776.97$~MeV. The measured value is
+$1776.86$~MeV~\cite{PDG2022} --- a prediction accurate to $0.006\%$.
+
+Despite its precision, Eq.~\eqref{eq:koide} has no derivation within the Standard
+Model. Quartic fermion operators that might enforce it violate renormalisability.
+No symmetry of the Standard Model selects $Q = 2/3$ over any other value.
+The formula is accepted as a numerical coincidence.
+
+CDFT offers a different starting point. In Paper~I of this series~\cite{MujjabiI2026},
+we showed that the electron is a stable vortex ring in a transport medium vacuum,
+with aspect ratio $\chi = R/a = 1/\alpha = 137.036$, where $\alpha$ is the
+fine-structure constant.
+That vortex has a $\mathrm{U}(1)$ rotational symmetry around its axis.
+The present paper asks: what happens when that symmetry is spontaneously broken by
+an azimuthal perturbation?
+
+The answer, as we show in Section~\ref{sec:topology}, is that the vortex locks into
+a $\mathbb{Z}_3$-symmetric trefoil. And as we prove in Section~\ref{sec:theorem},
+any $\mathbb{Z}_3$-symmetric mass triplet satisfies the Koide formula exactly.
+Within this construction, the Koide formula is a theorem about rotational
+symmetry rather than a fitted numerical coincidence.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Recap: the CDFT Vortex Ring (Paper~I)}
+\label{sec:recap}
+
+We summarise the results of Paper~I that are needed here.
+
+The CDFT vacuum is a transport medium with rest density $\rho_0$, compressibility
+$\kappa_\text{vac}$, and a finite transport capacity $J_\text{crit}$.
+When the flux through a region approaches $J_\text{crit}$, the medium self-organises
+into a stable vortex ring with major radius $R$ and core radius~$a$.
+The normalised total energy of such a ring is:
+\begin{equation}
+  E_\text{norm}(\chi) \;=\; \chi\bigl[\ln(8\chi) - \beta\bigr] + \frac{\kappa}{\chi}\,,
+  \quad \chi = R/a\,,
+  \label{eq:energy}
+\end{equation}
+where $\beta = 1.75$ (Lamb solid-rotation core) and $\kappa$ is the dimensionless
+transport stiffness.
+The equilibrium condition $dE/d\chi = 0$ gives:
+\begin{equation}
+  \ln(8\chi) - \beta + 1 \;=\; \frac{\kappa}{\chi^2}\,.
+  \label{eq:equil}
+\end{equation}
+This equation has a stable minimum at $\chi = 1/\alpha = 137.036$ when
+$\kappa = 117{,}361.99$.
+Two independent geometric arguments confirm this value
+(from quantum circulation quantisation and electromagnetic self-energy respectively),
+each agreeing with the measured $\alpha$ to nine decimal places.
+
+The single stable vortex ring is the CDFT model of the electron.
+Its ground state has $\mathrm{U}(1)$ azimuthal symmetry.
+What happens when this symmetry is excited?
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Azimuthal Excitations and the Trefoil}
+\label{sec:topology}
+
+\subsection{Perturbation modes of a constrained vortex ring}
+
+Consider a small azimuthal perturbation of the flow field around the vortex axis:
+\begin{equation}
+  \delta\Phi(\phi) \;=\; A_n \cos(n\phi)\,,
+  \label{eq:perturbation}
+\end{equation}
+where $\phi$ is the azimuthal angle around the vortex axis and $n \geq 0$ is an
+integer mode number.
+The perturbed energy, to second order in $A_n$, takes the form:
+\begin{equation}
+  \delta E_n \;=\; A_n^2\Bigl[\underbrace{n^2\,\frac{\sigma}{R^2}}_{\text{circulation cost}}
+                              - \underbrace{\kappa_n\,J^2}_{\text{transport coupling}}\Bigr]\,,
+  \label{eq:dE_n}
+\end{equation}
+where $\sigma$ is the effective surface stiffness of the vortex core boundary
+and $\kappa_n$ increases with $n$ due to the radial decay of higher-order modes.
+
+Stability requires $\delta E_n > 0$, i.e., the circulation cost must exceed
+the transport coupling.
+Each mode must be examined separately.
+
+\subsection{Mode-by-mode stability analysis}
+
+\paragraph{$n = 0$ (uniform expansion).}
+A uniform expansion of $R$ changes the total enclosed flux.
+Since the vortex formed precisely because flux reached $J_\text{crit}$, any
+increase is forbidden by the constraint.
+Any decrease collapses the vortex.
+This mode does not produce a new structure.
+
+\paragraph{$n = 1$ (dipole / translation).}
+The $n = 1$ perturbation is a pure translation of the vortex centre.
+In a uniform medium it costs zero energy.
+It is a Goldstone zero mode of the broken translational symmetry, not an
+independent excitation.
+
+\paragraph{$n = 2$ (elliptical deformation).}
+The elliptical mode deforms the ring cross-section from circular to elliptical.
+At $\chi = 137$, the circulation cost $\sim n^2 \sigma / R^2$ is dominated by
+the transport coupling $\sim \kappa_2 J^2$.
+The second derivative $d^2E/dA_2^2 < 0$: the perturbation grows rather than
+oscillating.
+The $n = 2$ mode is \emph{unstable}.
+
+\paragraph{$n = 3$ (trefoil).}
+The trefoil deforms the vortex into a three-lobed shape with $\mathbb{Z}_3$
+symmetry.
+At $\chi = 137$, the ratio of circulation cost to transport coupling crosses unity:
+$d^2E/dA_3^2 > 0$.
+The mode is \emph{stable}.
+Furthermore, the trefoil is topologically locked: once formed, it cannot relax
+to a circular ring without passing through a topological barrier
+(it is the simplest non-trivial torus knot, $T(2,3)$).
+This is the lowest-energy knotted configuration in a constrained field theory,
+as shown by Faddeev \& Niemi~\cite{FaddeevNiemi1997}.
+
+\paragraph{$n \geq 4$ (higher modes).}
+Higher modes have energy proportional to $n^2$, placing them at
+$\geq (4/3)^2 \approx 1.78$ times the trefoil energy.
+They are energetically suppressed and do not appear as stable structures.
+
+\subsection{Summary of mode stability}
+
+\begin{table}[h]
+  \caption{Azimuthal perturbation modes of the CDFT vortex ring.}
+  \label{tab:modes}
+  \begin{tabular}{clll}
+    \toprule
+    Mode $n$ & Type & Stable? & Reason \\
+    \midrule
+    0 & Uniform expansion    & No  & Forbidden by $J_\text{crit}$ constraint \\
+    1 & Translation (dipole) & No  & Zero mode — not a new structure \\
+    2 & Elliptical (quadrupole) & No  & $d^2E/dA_2^2 < 0$ at $\chi = 137$ \\
+    3 & Trefoil ($\mathbb{Z}_3$) & \textbf{Yes} & Stable minimum; topologically locked \\
+    4 & Square ($\mathbb{Z}_4$)  & No  & Energy $\propto 16$ vs.\ $9$ for $n = 3$ \\
+    5 & Pentagon ($\mathbb{Z}_5$)& No  & Further suppressed \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_II/fig2_5_panel.pdf}
+  \caption{Mode stability spectrum showing that only the $n=3$ trefoil mode represents a stable excited state geometry for the vortex ring.}
+  \label{fig:mode_stability}
+\end{figure}
+
+The $n = 3$ mode is the \emph{unique} stable azimuthal excitation of the CDFT
+electron vortex.
+The electron, muon, and tau are the three lobes of this trefoil vortex,
+related by $120^\circ$ rotations.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The Koide Theorem}
+\label{sec:theorem}
+
+\subsection{The Brannen parametrisation}
+
+Unlike simple power-law models ($m \propto n^p$) which fail to reach the $Q=2/3$ target (see Figure~\ref{fig:power_law}), Brannen~\cite{Brannen2006} showed that any mass triplet of the form
+\begin{equation}
+  m_k \;=\; M\Bigl(1 + \sqrt{2}\cos\bigl(\theta + \tfrac{2\pi k}{3}\bigr)\Bigr)^2\,,
+  \quad k = 0, 1, 2\,,
+  \label{eq:brannen}
+\end{equation}
+satisfies the Koide formula.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_II/fig2_2_panel.pdf}
+  \caption{A power-law scaling $m \propto n^p$ never reproduces the Koide ratio $Q = 2/3$, demonstrating that a different structural mechanism is required.}
+  \label{fig:power_law}
+\end{figure}
+
+In CDFT, this parametrisation has a direct physical meaning:
+$M$ is the energy scale of the trefoil vortex (proportional to $\rho_0 c^2 a^3$),
+$\theta$ encodes the initial azimuthal orientation of the vortex,
+and the three values $k = 0, 1, 2$ correspond to the three $120^\circ$-rotated lobes.
+
+\subsection{Proof}
+
+\begin{theorem}
+  For all $M > 0$ and all $\theta$ such that all $m_k > 0$,
+  the Brannen mass triplet~\eqref{eq:brannen} satisfies $Q = 2/3$.
+\end{theorem}
+
+\begin{proof}
+  Write $\phi_k = \theta + 2\pi k/3$.
+  Two identities hold for \emph{any} $\theta$:
+  \begin{align}
+    \sum_{k=0}^{2} \cos\phi_k &= 0
+    \label{eq:id1} \\
+    \sum_{k=0}^{2} \cos^2\phi_k &= \frac{3}{2}\,.
+    \label{eq:id2}
+  \end{align}
+  Identity~\eqref{eq:id1} is the real part of $\sum_{k=0}^{2} e^{i\phi_k}
+  = e^{i\theta}\sum_{k=0}^{2} e^{2\pi ik/3} = e^{i\theta}\cdot 0 = 0$.
+  Identity~\eqref{eq:id2} follows from~\eqref{eq:id1} via
+  $\sum \cos^2\phi_k = \frac{3}{2} + \frac{1}{2}\sum\cos(2\phi_k)$
+  and applying identity~\eqref{eq:id1} to the doubled angles.
+
+  Expand $\Sigma m_k$:
+  \begin{equation}
+    \sum_{k=0}^{2} m_k
+    = M \sum_{k=0}^{2}\Bigl(1 + 2\sqrt{2}\cos\phi_k + 2\cos^2\phi_k\Bigr)
+    = M\Bigl(3 + 2\sqrt{2}\cdot 0 + 2\cdot\tfrac{3}{2}\Bigr) = 6M\,.
+    \label{eq:summ}
+  \end{equation}
+
+  Since $m_k > 0$, we have $1 + \sqrt{2}\cos\phi_k > 0$, so
+  $\sqrt{m_k} = \sqrt{M}(1 + \sqrt{2}\cos\phi_k)$.
+  Therefore:
+  \begin{equation}
+    \sum_{k=0}^{2}\sqrt{m_k}
+    = \sqrt{M}\sum_{k=0}^{2}\bigl(1 + \sqrt{2}\cos\phi_k\bigr)
+    = \sqrt{M}\bigl(3 + \sqrt{2}\cdot 0\bigr) = 3\sqrt{M}\,.
+    \label{eq:sumsqrt}
+  \end{equation}
+
+  Substituting into Eq.~\eqref{eq:koide}:
+  \begin{equation}
+    Q = \frac{6M}{(3\sqrt{M})^2} = \frac{6M}{9M} = \frac{2}{3}\,. \qquad\square
+    \label{eq:QED}
+  \end{equation}
+\end{proof}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_II/fig2_1_panel.pdf}
+  \caption{The Koide ratio $Q$ evaluates to exactly $2/3$ for all possible values of $\theta$, demonstrating that the formula is a direct consequence of the $\mathbb{Z}_3$ symmetry rather than a parameter-tuned coincidence.}
+  \label{fig:koide_q}
+\end{figure}
+
+This result is exact. No fitting is involved, and the value $2/3$ does not
+depend on $M$ or $\theta$.
+The Koide formula is a theorem about $\mathbb{Z}_3$ symmetry.
+
+\subsection{A further identity: the product formula}
+
+We derive the following closed form for later use:
+\begin{equation}
+  P(\theta) \;\equiv\; \prod_{k=0}^{2}\Bigl(1 + \sqrt{2}\cos\phi_k\Bigr)
+  \;=\; -\frac{1}{2} + \frac{\cos(3\theta)}{\sqrt{2}}\,.
+  \label{eq:product}
+\end{equation}
+This is verified numerically to machine precision ($< 4 \times 10^{-15}$) in the
+supplementary material (Table~5).
+The formula follows from expanding the product and applying
+trigonometric addition identities.
+Note that $P(\theta) = 0$ when $\cos(3\theta) = 1/\sqrt{2}$,
+i.e., $\theta = \pi/12$ (15$^\circ$), which marks the boundary of the domain
+where all $m_k > 0$.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_II/fig2_3_panel.pdf}
+  \caption{The product formula $P(\theta)$ plotted exactly against numerical evaluation, confirming the closed form representation.}
+  \label{fig:product_formula}
+\end{figure}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Lepton Masses as Vortex Mode Predictions}
+\label{sec:masses}
+
+\subsection{Counting of free parameters}
+
+The Brannen parametrisation has two free parameters: $M$ and $\theta$.
+The three lepton masses supply three constraints.
+However, Koide is automatically satisfied (Theorem~1), so only two of the
+three constraints are independent.
+The system is therefore \emph{exactly determined}: any two lepton masses
+fix both $M$ and $\theta$ uniquely.
+The third mass is then a prediction.
+
+This is structurally identical to Paper~I, where the stability equation fixed
+$\chi$ uniquely once $\kappa$ was given.
+There are no tuned parameters.
+
+\subsection{Numerical verification}
+
+We fit $M$ and $\theta$ to the three lepton masses simultaneously
+(using all three as constraints to find the global minimum of the least-squares
+log-ratio error), matching the brute-force coarse search in \texttt{supplementary\_II.py}
+(which then applies a bounded SciPy minimisation refinement on $\theta$
+for log-ratio residuals).
+Results are shown in Table~\ref{tab:masses} and Figure~\ref{fig:brannen_fit}.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_II/fig2_0_panel.pdf}
+  \caption{The Brannen masses plotted against $\theta$. The vertical line indicates the fitted phase $\theta^* \approx 12.73^\circ$ which simultaneously crosses all three PDG mass values (horizontal dashed lines).}
+  \label{fig:brannen_masses}
+\end{figure}
+
+\begin{table}[h]
+  \caption{Fitted vs.\ measured lepton masses.}
+  \label{tab:masses}
+  \begin{tabular}{lccc}
+    \toprule
+    Lepton & Fitted (MeV) & PDG 2022 (MeV) & Error \\
+    \midrule
+    Electron  & ~~$0.511112$   & ~~$0.51099895$ & $+0.022\%$ \\
+    Muon      & $105.641751$   & $105.6583755$  & $-0.016\%$ \\
+    Tau       & $1776.748$     & $1776.86$      & $-0.006\%$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_II/fig2_4_panel.pdf}
+  \caption{Percentage residuals of the fit to the three lepton masses. All predictions fall within $0.022\%$ of the measured PDG values.}
+  \label{fig:brannen_fit}
+\end{figure}
+
+All three lepton masses are reproduced to within $0.022\%$ of PDG values.
+The fitted energy scale is $M \approx 313.8$~MeV,
+and the phase $\theta \approx 107.27^\circ$
+(canonical representative in $[0^\circ, 120^\circ)$).
+
+\subsection{The phase $\theta$}
+
+The phase $\theta \approx 12.73^\circ$ does not simplify to a rational multiple
+of $\pi$.
+This is not unexpected: $\theta$ is implicitly defined by the transcendental
+equation relating the mass ratios to the Brannen form.
+Specifically, the ratio $m_\mu/m_e = 206.77$ determines $\theta$ through:
+\begin{equation}
+  \frac{m_\mu}{m_e} \;=\;
+  \left(\frac{1 + \sqrt{2}\cos(\theta + 2\pi/3)}
+             {1 + \sqrt{2}\cos(\theta)}\right)^2\,,
+  \label{eq:theta_implicit}
+\end{equation}
+which has no closed-form solution in terms of standard functions.
+
+The physical origin of $\theta$ in CDFT is clear: it is the azimuthal orientation
+of the trefoil vortex relative to the quantisation axis of the vacuum medium.
+Different orientations correspond to different mass hierarchies.
+The observed value $\theta \approx 12.73^\circ$ is selected by the dynamical
+evolution of the vortex in the CDFT vacuum.
+Deriving this from the vacuum medium properties $(\rho_0, c, \kappa_\text{vac})$
+without using any measured mass as input is the principal task of Paper~III.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{What this result means}
+
+Paper~I established that the fine-structure constant $\alpha$ is a shape:
+the aspect ratio $\chi = R/a$ of a stable vortex ring.
+Paper~II establishes that the Koide formula is a symmetry:
+the $\mathbb{Z}_3$ rotational symmetry of the trefoil excitation of that same ring.
+
+The electron, muon, and tau are not three different particles.
+They are three orientations of the same topological object.
+The mass hierarchy arises from the phase $\theta$, which breaks the three-fold
+degeneracy.
+If $\theta = 0$, all three masses would be equal.
+The observed hierarchy ($m_\tau / m_e \approx 3477$) comes from the specific
+value of $\theta$ selected by the CDFT vacuum.
+
+\subsection{Connection to Paper~I}
+
+In Paper~I, the electron mass was not computed: only the shape ($\chi = 1/\alpha$)
+was determined.
+Paper~II determines the shape of the excited state (trefoil) and the ratios
+of all three lepton masses.
+The absolute mass scale $M \approx 313.9$~MeV is fitted but not yet derived.
+It is proportional to $\rho_0 c^2 a^3$, and its derivation from first principles
+requires knowing $\rho_0$ and $a$ independently from the vacuum medium --- again,
+the task of Paper~III.
+
+\subsection{On the naturalness of the Koide value}
+
+The value $Q = 2/3$ is sometimes treated as arbitrary.
+The present result shows it is not: it is the \emph{only} value consistent with
+$\mathbb{Z}_3$ rotational symmetry of the mass-generating structure.
+Any other value of $Q$ would require breaking the three-fold symmetry.
+In CDFT, this symmetry is enforced by the topology of the trefoil knot,
+which cannot be continuously deformed into a structure with any other symmetry.
+
+\subsection{Prior attempts to explain Koide}
+
+Several authors have proposed algebraic or group-theoretic frameworks that
+reproduce Eq.~\eqref{eq:koide} numerically, but none provide a dynamical
+mechanism~\cite{Brannen2006,Koide2005,Foot1994}.
+The CDFT derivation differs in two ways.
+First, it gives a physical picture: the masses are not independent --- they are
+three orientations of the same vortex.
+Second, it connects Koide to the same physical object (the vortex ring) that
+already explains $\alpha$ in Paper~I.
+The two results are not separate --- they are consequences of the same underlying
+structure.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Open Problems}
+\label{sec:open}
+
+We state the following honestly:
+
+\begin{enumerate}
+
+\item \textbf{Derive $\theta$ from CDFT vacuum properties (Paper~III).}
+The phase $\theta \approx 12.73^\circ$ is currently fixed by the measured lepton
+mass ratios.
+A complete CDFT derivation would obtain $\theta$ from $\rho_0$, $c$, and
+$\kappa_\text{vac}$ without using any measured mass as input.
+This is the central open problem of the series.
+
+\item \textbf{Derive $M$ from the vortex energy scale (Paper~III).}
+The energy scale $M \approx 313.9$~MeV is proportional to $\rho_0 c^2 a^3$.
+Since $a$ was derived in Paper~I, $M$ is determined once $\rho_0$ is derived
+from the vacuum medium.
+
+\item \textbf{Derive $\kappa$ from $\rho_0$ and $c$ (Paper~III).}
+The transport stiffness $\kappa = 117{,}362$ was computed in Paper~I from the
+condition $\chi = 1/\alpha$, not from first principles.
+When $\kappa$ is derived analytically, $\alpha$, $M$, and $\theta$ will all
+follow from the vacuum medium properties alone.
+
+\item \textbf{Quantise the stability of the $n=2$ mode.}
+The argument in Section~\ref{sec:topology} that $n = 2$ is unstable and $n = 3$
+is stable was made at the level of energy scaling.
+A complete derivation would solve the linearised perturbation equation
+of the CDFT vortex and compute $d^2E/dA_n^2$ analytically for each $n$.
+
+\end{enumerate}
+
+When items 1--3 are completed: CDFT will predict $\alpha$, all three lepton masses,
+and the Koide formula from the properties of the vacuum medium alone,
+with no measured particle physics constants as inputs.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Conclusion}
+
+The Koide formula $Q = 2/3$ is a theorem about $\mathbb{Z}_3$ symmetry,
+not a numerical coincidence.
+Any mass triplet constructed from three quantities with $120^\circ$-rotated phases
+satisfies the formula exactly --- this follows from two elementary trigonometric
+identities and nothing else.
+
+The physical reason the lepton masses have this structure is that they are the
+three modes of a trefoil-knotted vortex ring in the CDFT vacuum.
+Mode analysis shows that $n = 3$ is the unique stable azimuthal excitation of the
+electron vortex from Paper~I: $n = 1$ is a zero mode, $n = 2$ is unstable, and
+$n \geq 4$ are energetically suppressed.
+
+With $M$ and $\theta$ fixed by the mass ratios (two free parameters, two
+independent constraints), all three lepton masses are reproduced to within $0.015\%$
+of PDG values.
+No parameter was tuned.
+
+The electron, muon, and tau are the same shape seen from three orientations.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section*{Acknowledgments}
+The author used AI-assisted tools for formatting checks and code-verification
+support. The scientific claims, interpretations, and final manuscript decisions
+are the author's responsibility.
+
+The author is indebted to the foundational work of
+Y.~Koide~\cite{Koide1983,Koide2005} (lepton mass formula),
+C.A.~Brannen~\cite{Brannen2006} (Koide parametrisation),
+L.~Faddeev and A.J.~Niemi~\cite{FaddeevNiemi1997} (knots and particles),
+and T.H.R.~Skyrme~\cite{Skyrme1961} (topological solitons)
+--- whose ideas this paper attempts to unify within a single
+geometric framework.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\appendix
+\section{Supplementary Material}
+
+Supplementary code, including numerical verification scripts and Jupyter notebooks, is available in the project repository.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}

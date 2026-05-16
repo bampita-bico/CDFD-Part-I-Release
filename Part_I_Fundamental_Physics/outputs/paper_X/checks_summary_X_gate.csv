@@ -1,0 +1,2 @@
+phi_equals_2n,virial_rows_ok,sympy_phi_2n,theta_rederive_ok,autodiff_optional,numba_phi_optional,lepton_masses_source,overall_ok
+True,True,True,True,True,True,paper_local_public_constants,True

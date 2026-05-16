@@ -1,0 +1,2 @@
+theta_band_rad,n_samples,max_abs_Q_minus_2_over_3,pass
+"(-pi/12, pi/12) excluding boundaries",500,6.661338147750939e-16,True

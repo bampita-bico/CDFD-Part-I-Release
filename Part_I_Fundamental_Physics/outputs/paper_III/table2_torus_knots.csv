@@ -1,0 +1,8 @@
+n,name,is_knot,lobes,symmetry,role
+1,unknot,False,1,U(1),ground state (electron)
+2,Hopf link,False,2,Z2,"2-component link, transient"
+3,trefoil,True,3,Z3,"LEPTONS: e, mu, tau (Paper II)"
+4,Solomon link,False,4,Z4,"2-component link, transient"
+5,cinquefoil,True,5,Z5,next knotted family
+6,3-component lnk,False,6,Z6,multi-component link
+7,"T(2,7) knot",True,7,Z7,higher knotted family

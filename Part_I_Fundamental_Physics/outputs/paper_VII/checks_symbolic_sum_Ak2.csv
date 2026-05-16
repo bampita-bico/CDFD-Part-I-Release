@@ -1,0 +1,5 @@
+n,sum_Ak2_simplified,literal_equals_2n,numeric_gate_2n
+3,6,True,True
+5,10,True,True
+7,(sqrt(2)*sin(theta + pi/14) - 1)**2 + (sqrt(2)*sin(theta + 3*pi/14) + 1)**2 + (sqrt(2)*sin(theta + 5,False,True
+9,(sqrt(2)*sin(theta + pi/18) + 1)**2 + (sqrt(2)*sin(theta + pi/6) - 1)**2 + (sqrt(2)*sin(theta + 5*pi,False,True

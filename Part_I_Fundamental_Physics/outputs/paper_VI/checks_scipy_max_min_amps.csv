@@ -1,0 +1,2 @@
+n,max_min_scipy,max_min_dense_grid,agreement,abs_diff
+5,-0.14412626140169826,-0.14412280563536894,True,3.4557663293188767e-06

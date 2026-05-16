@@ -1,0 +1,2 @@
+finite_diff_d_gAe2_dphi_fixed_branch_k,finite_diff_d_gAe2_dphi_numeric,torch_d_gAe2_dphi_optional,jax_d_gAe2_dphi_optional,backends
+1,44.035550006427115,,,"torch=missing, jax=missing, numba=ok"

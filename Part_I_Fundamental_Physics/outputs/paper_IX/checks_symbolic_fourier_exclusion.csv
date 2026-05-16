@@ -1,0 +1,7 @@
+n,expr_minus_n_over_2,n_ge_3_expected_zero,numeric_gate_zero,n2_expected_2cos2th
+2,cos(2*theta),False,False,True
+3,0,True,True,False
+4,0,True,True,False
+5,0,True,True,False
+6,0,True,True,False
+7,sin(theta + pi/14)**2 + sin(theta + 3*pi/14)**2 + sin(theta + 5*pi/14)**2 + cos(theta)**2 + cos(theta + pi/7)**2 + cos(t,True,True,False

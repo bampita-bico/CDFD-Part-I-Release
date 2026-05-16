@@ -1,0 +1,18 @@
+# Full reproducibility stack for physics_papers supplementary scripts + notebooks.
+# Install from repository root:
+#   pip install -r requirements.txt
+#   pip install -r physics_papers/requirements-fullstack.txt
+#
+# Base scientific stack is pinned in ../requirements.txt (numpy, scipy, pandas,
+# matplotlib, sympy, statsmodels, scikit-learn, notebook, ipython, ipykernel).
+
+-r ../requirements.txt
+
+# Acceleration (optional — skip on very low-RAM machines)
+numba>=0.58
+
+# Automatic differentiation cross-checks (install ONE of the following; both not required)
+# PyTorch CPU wheels:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# JAX CPU:
+#   pip install "jax[cpu]"

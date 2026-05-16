@@ -1,0 +1,6 @@
+domain,phi_proxy,constraint_proxy,transition_signal,failure_condition
+friction,shear work tau*v*A,"contact memory, asperity locking, real area","stick-slip, acoustic/contact-resistance precursor",no residual memory/geometric predictor after rate-state fit
+superconductivity,paired charge current / phase transport,"dissipation suppressed, phase stiffness retained",resistance collapse plus stiffness/pinning reallocation,no added prediction for high-Tc/vortex/disorder anomalies
+plasma,"current density, pressure drive, energy flux","magnetic topology, resistivity, turbulent transport",reconnection/disruption at drive-topology extrema,events depend only on scalar plasma parameters
+turbulence,inertial energy flux,"viscosity, boundary drag, eddy impedance",localized transition before global failure,no local constraint variable improves transition prediction
+jamming_glass,"shear, vibration, thermal agitation","packing, cages, contact network, relaxation barrier",history-dependent avalanches or relaxation,preparation history adds no predictive information

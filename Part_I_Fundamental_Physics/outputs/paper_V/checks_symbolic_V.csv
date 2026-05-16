@@ -1,0 +1,4 @@
+check,pass,simplified_residual
+three_theta_plus_phi_c_equals_pi_substitution_Q,True,0
+self_consistency_three_theta_equals_Q_symbolic,True,0
+phi_c_lit_val_pi_minus_Q_Rational_exact,True,-2/3 + pi

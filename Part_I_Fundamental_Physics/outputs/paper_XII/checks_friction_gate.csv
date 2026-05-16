@@ -1,0 +1,4 @@
+check,value,ok
+events_detected,5.0,True
+precursor_peaks_detected,5.0,True
+psi_bounded_after_release,0.9997318128776893,True

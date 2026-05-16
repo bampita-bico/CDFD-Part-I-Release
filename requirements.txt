@@ -1,0 +1,13 @@
+# CDFD public science stack for paper-local supplementary scripts.
+
+numpy>=1.24,<3
+scipy>=1.11
+pandas>=2.0
+matplotlib>=3.7
+sympy>=1.12
+statsmodels>=0.14.0
+scikit-learn>=1.3.0
+notebook>=7.0
+ipykernel>=6.25
+ipython>=8.12
+pytest>=7.0

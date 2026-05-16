@@ -1,0 +1,3 @@
+check,value,note
+sympy_vs_public_dE_dchi_max_abs,0.0,SymPy derivative vs public helper on sample chi grid
+kappa_algebra_vs_public_helper,0.0,κ(χ*) from SymPy formula vs kappa_for_chi

@@ -1,0 +1,80 @@
+# Reproducibility
+
+Last local verification: 2026-05-17.
+
+## Environment Used
+
+- Python: `3.14.4`
+- LaTeX: `pdflatex` and `bibtex` available on path
+- Required Python stack: see `../requirements.txt` and `requirements-fullstack.txt`
+- Optional acceleration backends observed during verification:
+  - `numba=ok`
+  - `torch=missing`
+  - `jax=missing`
+
+The optional Torch/JAX checks are written as optional gates. Their absence did
+not fail the current verification run.
+
+## Rebuild Supplementary Outputs
+
+From the repository root:
+
+```bash
+python Part_I_Fundamental_Physics/notebooks/supplementary_I.py
+python Part_I_Fundamental_Physics/notebooks/supplementary_II.py
+python Part_I_Fundamental_Physics/notebooks/supplementary_III.py
+python Part_I_Fundamental_Physics/notebooks/supplementary_IV.py
+python Part_I_Fundamental_Physics/notebooks/supplementary_V.py
+python Part_I_Fundamental_Physics/notebooks/supplementary_VI.py
+python Part_I_Fundamental_Physics/notebooks/supplementary_VII.py
+python Part_I_Fundamental_Physics/notebooks/supplementary_VIII.py
+python Part_I_Fundamental_Physics/notebooks/supplementary_IX.py
+python Part_I_Fundamental_Physics/notebooks/supplementary_X.py
+python Part_I_Fundamental_Physics/notebooks/supplementary_XI.py
+python Part_I_Fundamental_Physics/notebooks/supplementary_XII.py
+```
+
+Expected result: each script exits successfully and writes figures, tables, and
+check files under `Part_I_Fundamental_Physics/outputs/paper_*`.
+
+## Check Summary Gates
+
+The current verification run found no failed summary gates in:
+
+- `outputs/paper_III/checks_summary_gate.csv`
+- `outputs/paper_IV/checks_summary_IV_gate.csv`
+- `outputs/paper_V/checks_summary_V_gate.csv`
+- `outputs/paper_VI/checks_summary_VI_gate.csv`
+- `outputs/paper_VII/checks_summary_VII_gate.csv`
+- `outputs/paper_VIII/checks_summary_VIII_gate.csv`
+- `outputs/paper_IX/checks_summary_IX_gate.csv`
+- `outputs/paper_X/checks_summary_X_gate.csv`
+- `outputs/paper_XI/checks_summary_XI_gate.csv`
+- `outputs/paper_XII/checks_summary_XII_gate.csv`
+
+Papers I and II report their pass/fail checks directly in generated check files
+and script output.
+
+## Rebuild PDFs
+
+From `Part_I_Fundamental_Physics`:
+
+```bash
+mkdir -p build
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory build papers/01_Vortex_Stability_in_a_Constrained_Transport_Vacuum.tex
+bibtex build/01_Vortex_Stability_in_a_Constrained_Transport_Vacuum
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory build papers/01_Vortex_Stability_in_a_Constrained_Transport_Vacuum.tex
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory build papers/01_Vortex_Stability_in_a_Constrained_Transport_Vacuum.tex
+```
+
+Repeat the same `pdflatex, bibtex, pdflatex, pdflatex` sequence for Papers
+II-XII. The current local build completed with no failed papers and no missing
+citation or reference warnings.
+
+The submission-facing PDFs are copied to `PDFs/`.
+
+## What This Verifies
+
+The reproducibility scripts verify that the archive can regenerate its stated
+tables, figures, and internal consistency checks. They do not verify that the
+physical hypotheses are true in nature.

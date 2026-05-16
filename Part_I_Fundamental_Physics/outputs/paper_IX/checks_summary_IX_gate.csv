@@ -1,0 +1,2 @@
+sym_fourier_exclusion,n2_exclusion_demo,even_sum_rule,split_formula_except_boundary,not_goldstone_scaling,numba_Qtilde_even_optional,autodiff_even_slopes_optional,lepton_masses_source,overall_ok
+True,True,True,True,True,True,True,paper_local_public_constants,True

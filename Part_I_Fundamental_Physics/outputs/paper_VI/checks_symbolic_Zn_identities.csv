@@ -1,0 +1,5 @@
+n,sum_cos_simplified,sum_cos_is_zero_literal,sum_cos_zero_numeric_gate,sum_cos_sq_simplified,sum_cos_sq_equals_n_over_2_literal,sum_cos_sq_numeric_gate
+3,0,True,True,3/2,True,True
+5,0,True,True,5/2,True,True
+7,-sin(theta + pi/14) + sin(theta + 3*pi/14) - sin(theta + 5*pi/14) + cos(theta) - cos(theta + pi/7) + cos(theta + 2*pi/7),False,True,sin(theta + pi/14)**2 + sin(theta + 3*pi/14)**2 + sin(theta + 5*pi/14)**2 + cos(theta)**2 + cos(theta + pi/7)**2 + cos(t,False,True
+9,sin(theta + pi/18) - sqrt(3)*sin(theta + pi/9) + 2*sin(theta + 5*pi/18) - sin(theta + 7*pi/18) - cos(theta + pi/9) + cos,False,True,sin(theta + pi/18)**2 + sin(theta + pi/6)**2 + sin(theta + 5*pi/18)**2 + sin(theta + 7*pi/18)**2 + cos(theta)**2 + cos(t,False,True

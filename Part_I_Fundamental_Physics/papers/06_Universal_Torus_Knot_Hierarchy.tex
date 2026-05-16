@@ -1,0 +1,505 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{enumerate}
+\geometry{margin=2.5cm}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+
+\begin{document}
+
+\title{The Universal Torus Knot Hierarchy:\\
+$\mathbb{Z}_n$ Symmetry, the Cinquefoil Family,\\
+and the General Structure of CDFT Particle Families}
+
+\author{Steve Bico Mujjabi\\
+\small Independent Researcher}
+\date{May 2026}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{abstract}
+Papers~I--V of the Constraint-Driven Field Theory (CDFT) series built the
+lepton-sector construction: $\alpha = 1/137.036$ from vortex ring equilibrium, the Koide
+formula from $\mathbb{Z}_3$ symmetry, and all three lepton masses from a single
+input ($m_e$).
+This paper extends the framework beyond leptons by studying the full hierarchy
+of torus knot families $T(2,n)$ for odd $n \geq 3$.
+
+We prove two new theorems.
+\textbf{Theorem~1} (universal coefficient): the Brannen amplitude coefficient
+$c_n = \sqrt{2}$ for all $\mathbb{Z}_n$ families, fixed by a maximum-entropy
+self-consistency condition on the amplitude distribution.
+\textbf{Theorem~2} ($\mathbb{Z}_3$ uniqueness): $\mathbb{Z}_3$ is the unique
+torus knot family for which the constant Koide-like invariant
+$Q_n = 2/n$ and the $\mathbb{Z}_n$ self-consistency condition hold
+simultaneously on a connected valid domain.
+For $n \geq 5$, the amplitude $A_k = 1 + \sqrt{2}\cos(\cdot)$ is
+negative for some modes at every orientation $\theta$, so the Koide
+theorem does not extend directly.
+
+The energy scale of the $n$-th family is given by Faddeev--Niemi scaling:
+\begin{equation*}
+  M_n \;=\; M_3 \left(\frac{n}{3}\right)^{3/4}\,,
+\end{equation*}
+where $M_3 = 313.86$~MeV is the trefoil scale from Paper~V.
+This gives $M_5 = 460.4$~MeV for the cinquefoil $T(2,5)$,
+$M_7 = 592.5$~MeV for the heptafoil $T(2,7)$, and so on.
+These are model predictions for the energy scales at which candidate
+knotted-vortex particle families would appear if the hierarchy maps to nature.
+
+The mass spectrum of the $T(2,5)$ family requires separate work:
+we identify the structural obstruction (no valid $\theta$ domain with all
+$A_k \geq 0$ for $n \geq 5$) and state the open problems precisely.
+
+\medskip
+\noindent In the extended notation used across the series, the vacuum limit is written
+as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
+equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
+left for later dynamical work rather than fitted in this manuscript.
+
+\end{abstract}
+
+\maketitle
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Introduction}
+
+Papers~I--V of the CDFT series established the lepton sector:
+\begin{enumerate}
+  \item \textbf{Paper~I}~\cite{MujjabiI2026}: $\alpha = 1/137.036$ from vortex ring equilibrium.
+  \item \textbf{Paper~II}~\cite{MujjabiII2026}: Koide $Q = 2/3$ as a $\mathbb{Z}_3$ theorem;
+    leptons as trefoil $T(2,3)$ modes.
+  \item \textbf{Paper~III}~\cite{MujjabiIII2026}: Topological selection of $T(2,3)$;
+    chirality equilibrium $3\theta + \phi_c = \pi$.
+  \item \textbf{Paper~IV}~\cite{MujjabiIV2026}: Master self-consistency equation for $\rho_0$;
+    Faddeev--Niemi prediction $M_5 = 460.4$~MeV.
+  \item \textbf{Paper~V}~\cite{MujjabiV2026}: $\phi_c = \pi - 2/3$ from $\mathbb{Z}_3$
+    self-consistency; lepton masses from one input.
+\end{enumerate}
+
+With the lepton sector complete, the natural question is: what is the structure
+of the next particle family?
+
+Paper~IV predicted the energy scale $M_5 = 460.4$~MeV for the cinquefoil
+$T(2,5)$ via Faddeev--Niemi scaling.
+The present paper studies the general $\mathbb{Z}_n$ structure of the
+$T(2,n)$ families, proves that $c_n = \sqrt{2}$ universally, identifies
+why $\mathbb{Z}_3$ is the unique exactly solvable case, and states precisely
+what is needed to determine the $T(2,5)$ mass spectrum.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The General $\mathbb{Z}_n$ Brannen Parametrisation}
+\label{sec:brannen}
+
+\subsection{Setup}
+
+The $\mathbb{Z}_n$ analogue of the Brannen parametrisation~\cite{Brannen2006}
+for the amplitudes of the $n$ modes of a $T(2,n)$ vortex is:
+\begin{equation}
+  A_k \;=\; 1 + c_n \cos\!\left(\theta + \frac{2\pi k}{n}\right),
+  \quad k = 0, 1, \ldots, n-1\,,
+  \label{eq:Zn_brannen}
+\end{equation}
+and the mode masses are $m_k = M A_k^2$.
+The coefficient $c_n$ controls the relative amplitude of the $\mathbb{Z}_n$
+oscillation.
+
+\subsection{$\mathbb{Z}_n$ Fourier identities}
+
+Two identities hold for the $\mathbb{Z}_n$ phase lattice $\{2\pi k/n\}$:
+\begin{align}
+  \sum_{k=0}^{n-1} \cos\!\left(\theta + \frac{2\pi k}{n}\right) &= 0
+  \label{eq:ident_I} \\
+  \sum_{k=0}^{n-1} \cos^2\!\left(\theta + \frac{2\pi k}{n}\right) &= \frac{n}{2}
+  \label{eq:ident_II}
+\end{align}
+for any $\theta$ and any $n \geq 2$.
+From~\eqref{eq:ident_I}: $\sum_k A_k = n$ (the sum of amplitudes is the
+dimension $n$, independent of $\theta$).
+From both identities: $\text{Var}(A_k) = c_n^2/2$.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Theorem 1: The Universal Coefficient $c_n = \sqrt{2}$}
+\label{sec:cn}
+
+\begin{theorem}[Universal Brannen coefficient]
+  \label{thm:cn}
+  The Brannen amplitude coefficient for any $\mathbb{Z}_n$ family is
+  $c_n = \sqrt{2}$, uniquely fixed by the maximum-entropy self-consistency
+  condition $\mathrm{Var}(A_k) = \overline{A_k}^2$.
+\end{theorem}
+
+\begin{proof}
+From identities~\eqref{eq:ident_I}--\eqref{eq:ident_II}:
+\[
+  \overline{A_k} = 1, \qquad \mathrm{Var}(A_k) = c_n^2/2.
+\]
+The maximum-entropy condition requires $\mathrm{Var}(A_k) = \overline{A_k}^2$:
+\[
+  c_n^2/2 = 1 \;\implies\; c_n = \sqrt{2}.
+\]
+Uniqueness: the condition is a quadratic in $c_n$ with unique positive root.
+\end{proof}
+
+\paragraph{Physical interpretation.}
+The condition $\text{Var}(A_k) = \overline{A_k}^2$ is equivalent to:
+the standard deviation of the amplitude distribution equals its mean.
+The amplitude can reach zero (nodal line) or $2\overline{A_k} = 2$
+(maximum) with equal probability under the $\mathbb{Z}_n$ phase average.
+This is the condition of maximal relative uncertainty in the mode
+amplitudes --- the vacuum selects the coefficient that neither suppresses
+nor privileges any mode over the background.
+
+\paragraph{Numerical verification.}
+For any $n \geq 2$ and any test angle $\theta$, the ratio
+$\text{Var}(A_k)/\overline{A_k}^2 = 1.000\ldots$ to machine precision
+when $c_n = \sqrt{2}$ (Table~1 of the supplementary).
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The Generalised Koide Invariant and the Valid Domain}
+\label{sec:koide_general}
+
+\subsection{Derivation of $Q_n = 2/n$}
+
+\begin{proposition}[General Koide invariant]
+  \label{prop:Qn}
+  For $m_k = M A_k^2$ with $A_k$ as in~\eqref{eq:Zn_brannen} and $c_n = \sqrt{2}$,
+  the generalised Koide ratio satisfies $Q_n = 2/n$ provided all $A_k \geq 0$.
+\end{proposition}
+
+\begin{proof}
+Using identity~\eqref{eq:ident_II} with $c_n = \sqrt{2}$:
+\[
+  \sum_k m_k = M \sum_k A_k^2 = M\!\left(n + c_n^2 \cdot \frac{n}{2}\right) = 2Mn.
+\]
+When all $A_k \geq 0$: $\sqrt{m_k} = \sqrt{M} A_k$, so
+$\sum_k \sqrt{m_k} = \sqrt{M}\sum_k A_k = \sqrt{M}\cdot n$ (by identity~\eqref{eq:ident_I}).
+Therefore:
+\[
+  Q_n \;\equiv\; \frac{\sum_k m_k}{\Bigl(\sum_k \sqrt{m_k}\Bigr)^2}
+  \;=\; \frac{2Mn}{M n^2} \;=\; \frac{2}{n}\,.
+\]
+\end{proof}
+
+\subsection{The valid domain}
+
+The derivation requires all $A_k \geq 0$.
+With $c_n = \sqrt{2}$, the amplitude $A_k = 1 + \sqrt{2}\cos(\cdot)$
+reaches its minimum of $1 - \sqrt{2} \approx -0.414$ when the cosine
+equals $-1$.
+For $n = 3$: the minimum over all $k$ reaches $+0.293$ (positive) at
+$\theta = 0$, and reaches zero at $\theta = \pm\pi/12 = \pm 15^\circ$.
+So $\mathbb{Z}_3$ has a valid domain $\theta \in (-\pi/12, \pi/12)$.
+The physical value $\theta = 2/9 \approx 12.73^\circ$ lies inside this domain.
+
+For $n \geq 5$: no connected interval of $\theta$ exists where all $n$
+amplitudes are simultaneously positive.
+Numerically:
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+$n$ & $\max_\theta[\min_k A_k]$ & Valid domain? \\
+\midrule
+3  & $+0.293$ & Yes: $\theta \in (-\pi/12,\; \pi/12)$ \\
+5  & $-0.144$ & No \\
+7  & $-0.274$ & No \\
+9  & $-0.329$ & No \\
+11 & $-0.357$ & No \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_VI/fig6_0_panel.pdf}
+  \caption{Minimum amplitude over all modes as a function of the phase $\theta$. For $n=3$, there is a domain where all amplitudes are positive. For $n \geq 5$, no such domain exists, obstructing the extension of the pure Koide formula.}
+  \label{fig:valid_domain}
+\end{figure}
+
+\begin{theorem}[$\mathbb{Z}_3$ uniqueness]
+  \label{thm:Z3_unique}
+  $\mathbb{Z}_3$ is the unique torus knot family $T(2,n)$ for which:
+  \begin{enumerate}[(a)]
+    \item $c_n = \sqrt{2}$ (Theorem~\ref{thm:cn}),
+    \item $Q_n = 2/n$ is constant on a connected valid domain
+      (Proposition~\ref{prop:Qn}),
+    \item the self-consistency condition $n\theta_n = Q_n$ fixes $\theta_n$
+      within that domain (Paper~V).
+  \end{enumerate}
+  For $n \geq 5$, property~(b) fails: no connected valid domain exists.
+\end{theorem}
+
+\begin{proof}
+  Property~(a) holds for all $n$ (Theorem~\ref{thm:cn}).
+  Property~(b) requires a connected domain where all $A_k > 0$;
+  the table above shows this fails for $n \geq 5$.
+  Property~(c) requires (b) as a prerequisite: $n\theta = 2/n$ with
+  $\theta \in (-\pi/12, \pi/12)$ gives $\theta_3 = 2/9$, which satisfies
+  $\theta_3 < \pi/12$ ($2/9 \approx 0.222 < \pi/12 \approx 0.262$).
+  No analogous closure exists for $n \geq 5$.
+\end{proof}
+
+This theorem explains why the lepton sector is exactly solvable while the
+cinquefoil sector requires additional structure: the $\mathbb{Z}_3$ amplitude
+distribution is the unique case where the Koide theorem, the valid domain,
+and the self-consistency condition are simultaneously consistent.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The Torus Knot Energy Hierarchy}
+\label{sec:hierarchy}
+
+\subsection{Topological selection rule}
+
+The torus knot $T(2,n)$ is a knot (a single connected component, hence
+topologically stable) if and only if $n$ is odd.
+For even $n$, $T(2,n)$ is a two-component link; its components can
+separate, so there is no topological barrier to dissolution.
+The particle families of CDFT therefore occur only at odd $n$:
+$n = 3, 5, 7, 9, \ldots$
+
+\subsection{Energy scaling from Faddeev--Niemi}
+
+The Faddeev--Niemi theorem~\cite{FaddeevNiemi1997} states that the minimum
+energy of a knotted soliton with Hopf charge $Q$ satisfies $E_\text{min} \sim Q^{3/4}$.
+For $T(2,n)$ the Hopf charge is $Q = n$, so:
+\begin{equation}
+  M_n \;=\; M_3 \left(\frac{n}{3}\right)^{3/4}\,,
+  \label{eq:Mn}
+\end{equation}
+where $M_3 = 313.86$~MeV is the trefoil scale derived in Paper~V
+($M_3 = m_e / A_{e,3}^2$ with $\theta_3 = 2/9$~rad).
+
+\begin{table}[h]
+  \caption{CDFT torus knot energy hierarchy.
+    $M_3 = 313.86$~MeV from Paper~V.
+    All predictions from Faddeev--Niemi scaling, zero free parameters.}
+  \label{tab:hierarchy}
+  \begin{tabular}{ccccc}
+    \toprule
+    $n$ & Knot & $M_n$ (MeV) & Symmetry & Status \\
+    \midrule
+    3 & $T(2,3)$ trefoil     & 313.9 & $\mathbb{Z}_3$ & Papers I--V (complete) \\
+    5 & $T(2,5)$ cinquefoil  & 460.4 & $\mathbb{Z}_5$ & This paper \\
+    7 & $T(2,7)$ heptafoil   & 592.5 & $\mathbb{Z}_7$ & Future work \\
+    9 & $T(2,9)$             & 715.4 & $\mathbb{Z}_9$ & Future work \\
+    11& $T(2,11)$            & 831.6 & $\mathbb{Z}_{11}$ & Future work \\
+    13& $T(2,13)$            & 942.7 & $\mathbb{Z}_{13}$ & Future work \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_VI/fig6_1_panel.pdf}
+  \caption{The mass scales of the higher $\mathbb{Z}_n$ knotted families, predicted by Faddeev-Niemi scaling directly from the lepton scale $M_3$.}
+  \label{fig:energy_hierarchy}
+\end{figure}
+
+These are the energy \emph{scales} of each family.
+The mass of the lightest mode of family $n$ is $M_n \cdot (A_{k,\min}^{(n)})^2$,
+which requires knowing $\theta_n$ (open problem).
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The Cinquefoil $T(2,5)$: What is Known and What Remains}
+\label{sec:cinquefoil}
+
+\subsection{What is established}
+
+\paragraph{Energy scale.}
+$M_5 = 460.4$~MeV (Eq.~\eqref{eq:Mn}, zero free parameters).
+
+\paragraph{Topology.}
+$T(2,5)$ is a knot, hence topologically stable.
+It supports $\mathbb{Z}_5$-symmetric modes (five lobes).
+
+\paragraph{Amplitude coefficient.}
+$c_5 = \sqrt{2}$ (Theorem~\ref{thm:cn}).
+
+\paragraph{Hadron scale context.}
+$M_5 = 460.4$~MeV lies between the kaon ($\sim 494$~MeV) and the
+eta meson ($\sim 548$~MeV).
+We do not claim the cinquefoil corresponds to a specific known particle:
+the mass spectrum depends on $\theta_5$ (open problem~1 below).
+
+\subsection{The structural obstruction for $n \geq 5$}
+
+With $c_5 = \sqrt{2}$, the five amplitudes
+$A_k = 1 + \sqrt{2}\cos(\theta + 2\pi k/5)$ for $k = 0,\ldots,4$
+are never all positive simultaneously (see the valid-domain table in
+Section~\ref{sec:koide_general}).
+The minimum amplitude over all five is always negative,
+with maximum value $-0.144$ at $\theta = 0$.
+
+This means:
+\begin{enumerate}
+  \item $Q_5 = 2/5$ does not hold as a universal constant
+    (Proposition~\ref{prop:Qn} fails).
+  \item The step $\sum_k \sqrt{m_k} = \sqrt{M}\sum_k A_k$ is invalid
+    because some $A_k < 0$ requires $\sqrt{m_k} = \sqrt{M}|A_k|$.
+  \item The self-consistency condition $5\theta_5 = Q_5 = 2/5$
+    cannot be applied without first establishing the correct $Q_5$.
+\end{enumerate}
+
+\subsection{The modified Koide ratio for $n \geq 5$}
+
+When some $A_k < 0$, define $\tilde{Q}_n(\theta)$ using $|A_k|$:
+\begin{equation}
+  \tilde{Q}_n(\theta) \;\equiv\;
+  \frac{\sum_k A_k^2}{\Bigl(\sum_k |A_k|\Bigr)^2}\,.
+  \label{eq:Q_tilde}
+\end{equation}
+For $\mathbb{Z}_3$ in its valid domain: $\tilde{Q}_3 = Q_3 = 2/3$ (constant,
+since all $A_k > 0$ there).
+For $\mathbb{Z}_5$: $\tilde{Q}_5(\theta)$ varies from $0.294$ to $0.326$,
+far from the putative value $2/5 = 0.400$.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.8\textwidth]{outputs/paper_VI/fig6_2_panel.pdf}
+  \caption{The modified ratio $\tilde Q_n(\theta)$ for $n=3$ and $n=5$. While $\tilde Q_3$ is a strict constant ($2/3$), $\tilde Q_5$ varies and does not meet the $2/5$ target.}
+  \label{fig:q_tilde}
+\end{figure}
+
+The function $\tilde{Q}_5(\theta)$ is not constant.
+This means: no analogue of the Koide self-consistency argument from Paper~V
+applies to $\mathbb{Z}_5$ without additional structure.
+A derivation of $\theta_5$ requires either:
+(a) a physical principle beyond the $\mathbb{Z}_n$ algebraic structure alone, or
+(b) a modified Brannen parametrisation for the $T(2,5)$ family that avoids
+    negative amplitudes.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{The CDFT Torus Knot Picture}
+\label{sec:picture}
+
+The torus knot hierarchy $T(2,n)$ for odd $n$ provides a candidate ordered
+sequence of CDFT particle families.
+Table~\ref{tab:hierarchy} lists the energy scales.
+
+The key structural divide is at $n = 3$:
+\begin{itemize}
+  \item $n = 3$ (trefoil, leptons): $c_3 = \sqrt{2}$, valid domain exists,
+    $Q_3 = 2/3$ constant, self-consistency closes the internal system.
+  \item $n \geq 5$: $c_n = \sqrt{2}$, \emph{no} valid domain, $Q_n \neq 2/n$
+    (as a constant). Requires new approach for mass spectrum.
+\end{itemize}
+
+The energy scale hierarchy is fixed once the model assumptions are accepted.
+The mass spectra of $n \geq 5$ families are open.
+
+\begin{table}[h]
+  \caption{Torus knot $T(2,n)$ topological classification.}
+  \label{tab:classification}
+  \begin{tabular}{cccc}
+    \toprule
+    $n$ & Topological type & Persistent? & CDFT family \\
+    \midrule
+    1 & Unknot & No & (none) \\
+    2 & Hopf link & No & (none) \\
+    3 & Trefoil knot & \textbf{Yes} & Leptons (Papers I--V) \\
+    4 & Solomon link & No & (none) \\
+    5 & Cinquefoil knot & \textbf{Yes} & This paper \\
+    7 & Heptafoil knot & \textbf{Yes} & Future \\
+    $2k$ & $k$-component link & No & (none) \\
+    $2k+1$ & Torus knot & \textbf{Yes} & Predicted \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Open Problems}
+\label{sec:open}
+
+\begin{enumerate}
+
+\item \textbf{The $T(2,5)$ chirality phase $\theta_5$.}
+  The cinquefoil has $\mathbb{Z}_5$ symmetry and five modes.
+  Determining $\theta_5$ requires either:
+  (a) a physical principle that selects a preferred orientation of the
+  $\mathbb{Z}_5$ oscillation in the vacuum background, or
+  (b) a modified amplitude form for $T(2,5)$ that ensures all $A_k \geq 0$.
+
+\item \textbf{The $T(2,5)$ mass spectrum.}
+  With $\theta_5$ known, the five mode masses are
+  $m_k^{(5)} = M_5 |A_k^{(5)}|^2$.
+  Identification of these five modes with known particles
+  (at the $\sim 460$~MeV scale: kaons, etas, or new states)
+  depends on whether the cinquefoil modes are confined (quark-like)
+  or free (lepton-like).
+
+\item \textbf{Why is $\mathbb{Z}_3$ exactly solvable?}
+  Theorem~\ref{thm:Z3_unique} identifies the structural reason
+  ($n = 3$ uniquely has a valid domain with $c_n = \sqrt{2}$),
+  but a deeper question remains: why does the CDFT vacuum select
+  a ground state where the first stable knotted excitation ($T(2,3)$)
+  is exactly the one where the Koide self-consistency is possible?
+
+\item \textbf{The general $n$-family chirality equilibrium.}
+  Paper~III derived $3\theta + \phi_c = \pi$ from the $\mathbb{Z}_3$
+  chirality interaction $\lambda_c \cos(3\theta + \phi_c)$.
+  The $\mathbb{Z}_5$ analogue would be $5\theta_5 + \phi_{c,5} = \pi$
+  (or some other value).
+  Whether this generalises directly and what determines $\phi_{c,5}$
+  is an open problem.
+
+\end{enumerate}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Conclusion}
+
+This paper extends the CDFT framework beyond the lepton sector by studying
+the general $\mathbb{Z}_n$ structure of torus knot families $T(2,n)$.
+
+\textbf{Theorem~1} proves that $c_n = \sqrt{2}$ for all families,
+from the maximum-entropy self-consistency condition
+$\text{Var}(A_k) = \overline{A_k}^2$.
+This is a universal property of the CDFT vacuum that applies across all
+particle families.
+
+\textbf{Theorem~2} proves that $\mathbb{Z}_3$ is the unique family where
+the Koide invariant $Q_n = 2/n$ is constant on a connected valid domain.
+For $n \geq 5$, the amplitude $A_k = 1 + \sqrt{2}\cos(\cdot)$ is
+everywhere negative for at least one mode, so the Koide self-consistency
+of Paper~V does not extend.
+This explains structurally why the lepton sector is exactly solvable and
+the cinquefoil sector requires new ingredients.
+
+The Faddeev--Niemi energy hierarchy~\eqref{eq:Mn} gives the first-principles
+energy scales of all torus knot families (Table~\ref{tab:hierarchy}),
+with $M_5 = 460.4$~MeV the firm prediction for the cinquefoil family.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section*{Acknowledgments}
+The author used AI-assisted tools for formatting checks and code-verification
+support. The scientific claims, interpretations, and final manuscript decisions
+are the author's responsibility.
+
+The author is indebted to the foundational work of
+L.~Faddeev and A.J.~Niemi~\cite{FaddeevNiemi1997} (knots and particles),
+R.A.~Battye and P.M.~Sutcliffe~\cite{BattyeSutcliffe1998}
+(knot soliton energy spectra),
+D.~Rolfsen~\cite{Rolfsen1976} (torus knot classification),
+and Y.~Koide~\cite{Koide1983} (lepton mass formula)
+--- whose work this paper generalises to arbitrary $T(2,n)$ families.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\appendix
+\section{Supplementary Material}
+
+Supplementary code, including numerical verification scripts and Jupyter notebooks, is available in the project repository.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+\end{document}
