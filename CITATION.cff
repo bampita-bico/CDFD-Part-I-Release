@@ -3,6 +3,7 @@ message: "If you use this archive, please cite the Zenodo DOI for the specific r
 title: "CDFD Part I: Fundamental Physics - Constraint-Driven Field Theory and Flux Dynamics"
 version: "1.0.0"
 date-released: 2026-05-17
+doi: "10.5281/zenodo.20250821"
 license: CC-BY-4.0
 authors:
   - family-names: Mujjabi
