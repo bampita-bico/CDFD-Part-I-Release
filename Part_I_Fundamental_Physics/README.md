@@ -58,8 +58,10 @@ consequences, Paper X becomes the vacuum-engineering control-law bridge, Paper
 XI carries cosmic-scale memory and capacity tests, and Paper XII closes with
 the Mujjabi Falsification Program.
 
-See `MISSING_INTEGRATION_PLAN.md` for the source-to-paper map and claim
-guardrails. See `MUJJABI_LAWS_AND_TESTS.md` for the public naming layer.
+The public release keeps the final architecture in `MUJJABI_LAWS_AND_TESTS.md`
+and the uncertainty boundaries in `CLAIM_STATUS.md`. The working extraction map
+from `MISSING.docx` is an editorial artifact and is not part of the public
+release surface.
 
 ## Series Flow
 
@@ -95,6 +97,12 @@ Statsmodels, scikit-learn, optional Numba, and optional Torch/JAX autodiff.
 Not every paper needs every library; the rule is to use the stack where it
 provides an independent symbolic, numerical, statistical, acceleration, or
 autodiff check rather than adding decorative dependencies.
+
+## Interactive Panels
+
+`make_interactive_panels.py` generates offline HTML panels from the released
+figures and CSV outputs. The panels are viewers over the full-stack outputs; the
+scientific work remains in the supplementary scripts and notebooks.
 
 ## Review Status
 

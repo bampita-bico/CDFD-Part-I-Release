@@ -23,6 +23,16 @@ Included:
 The figures should be read as reproducible equation illustrations and numerical
 sanity checks, not as empirical validation of the CDFD hypotheses.
 
+## Relation to the Full Scientific Stack
+
+This demo intentionally stays minimal. It uses NumPy and Matplotlib so a reader
+can inspect the public equations without installing the full paper environment.
+The full scientific stack for Part I lives in `Part_I_Fundamental_Physics/`:
+SymPy, SciPy, Pandas, Statsmodels, scikit-learn, optional Numba, and optional
+Torch/JAX are used there for symbolic checks, numerical roots, tables, gates,
+statistical checks, acceleration, and autodiff parity. The demo should not be
+expanded into the full engine or the full paper stack.
+
 ## Run
 
 One command regenerates the three public figures:
