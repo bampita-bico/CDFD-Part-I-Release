@@ -8,6 +8,15 @@ Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project.
 Steve Bico Mujjabi, MD  
 ORCID: https://orcid.org/0009-0001-0556-5516
 
+## Keywords
+
+Constraint-Driven Field Theory; Constraint-Driven Flux Dynamics; CDFT; CDFD;
+fundamental physics; theoretical physics; mathematical physics; computational
+physics; particle physics; quantum foundations; field theory; vacuum structure;
+vacuum equation of state; topological physics; knot theory; torus knots; vortex
+dynamics; Koide formula; lepton masses; fine-structure constant; reproducible
+research; open science.
+
 ## Contents
 
 - `Part_I_Fundamental_Physics/` - Part I manuscripts, PDFs, supplementary
