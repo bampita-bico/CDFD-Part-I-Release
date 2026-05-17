@@ -6,7 +6,7 @@ statement at the same level of certainty.
 
 | Paper | Main role | Current status | What would strengthen it | What would weaken it |
 |---|---|---|---|---|
-| I | Vortex aspect-ratio model for alpha | Model assumption plus numerical consistency check | Independent derivation of the transport stiffness and charge/circulation inputs | Vacuum-medium premise fails or stiffness must be tuned arbitrarily |
+| I | Vortex aspect-ratio model for alpha | Model assumption plus numerical consistency check; vacuum-memory and core-profile robustness are now explicit open tests | Independent derivation of the transport stiffness, charge/circulation inputs, memory relaxation law, and core-profile invariance without retuning | Vacuum-medium premise fails, stiffness must be tuned arbitrarily, or core-profile changes destroy the claimed equilibrium |
 | II | Z3 mass parametrisation and Koide identity | Internal theorem for the chosen parametrisation; physical mapping remains assumed | Independent reason that charged leptons must map to the trefoil modes | Alternative mapping explains the same relation with fewer assumptions |
 | III | Topology/chirality bookkeeping | Internal model reduction; rho_0 remains the physical input | First-principles equation for the chirality phase | Chirality phase remains an empirical restatement of mass ratios |
 | IV | Vacuum equation-of-state condition for rho_0 | Self-consistency equation and numerical check | Closed vacuum EOS that determines rho_0 without mass-ratio input | EOS requires fitting the target phase |
@@ -17,7 +17,7 @@ statement at the same level of certainty.
 | IX | Even-n extension and exclusions | Internal extension and exclusion logic | Observable distinction between even and odd families | Boundary-mode interpretation fails |
 | X | Public flow/constraint derivation of self-consistency | Internal model theorem and consistency check | Independent physical derivation of Phi, C, and Psi_s mappings | Mapping is only a relabeling of the same equation |
 | XI | Cosmology bridge | Hypothesis generator; not empirical evidence | Lensing, expansion, black-hole, or substrate discriminants beyond standard models | No residual predictive value after standard cosmology fits |
-| XII | Collective-matter bridge | Hypothesis generator for laboratory systems | Incremental prediction in friction, plasma, superconductivity, turbulence, or jamming | No improvement beyond established domain models |
+| XII | Collective-matter and vacuum-memory bridge | Hypothesis generator for laboratory systems and extreme-field discriminants | Incremental prediction in friction, plasma, superconductivity, turbulence, jamming, vacuum hysteresis, or high-field alpha sensitivity | No improvement beyond established domain models, QED, or GR after controlled tests |
 
 ## Reading Rule
 
@@ -30,3 +30,9 @@ validated by data.
 
 A "hypothesis generator" means the paper proposes measurable discriminants and
 failure conditions. Those claims should be treated as future work until tested.
+
+## MISSING.docx Integration Rule
+
+The new material is treated as source notes, not as evidence. Statements about
+decoherence, vacuum hysteresis, and core-profile robustness remain hypothesis or
+open-test claims until supported by reproducible calculations or experiments.

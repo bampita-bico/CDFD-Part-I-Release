@@ -28,6 +28,18 @@ Papers XI-XII are bridge papers. They extend the vocabulary toward cosmology
 and collective matter, but they are explicitly hypothesis-level until they
 produce independent observational or laboratory discriminants.
 
+## Current Integration Note
+
+The material from `MISSING.docx` is integrated as a professional release update,
+not as a thirteenth paper. Paper I now carries the front-door interpretation of
+the adaptive operating ratio, vacuum memory, and the conditional status of the
+fine-structure numerical recovery. Paper XII now carries the falsification
+roadmap for vacuum-memory and extreme-field tests. The middle papers already
+use the shared equilibrium notation and are not padded with repeated text.
+
+See `MISSING_INTEGRATION_PLAN.md` for the source-to-paper map and claim
+guardrails.
+
 ## Review Status
 
 These manuscripts are not peer reviewed. The supplementary scripts reproduce

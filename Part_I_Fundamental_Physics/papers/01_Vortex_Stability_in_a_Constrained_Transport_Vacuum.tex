@@ -35,12 +35,14 @@ In the fundamental physical vacuum, these properties converge to a stable equili
 attractor ($S \cdot M_s \to 1.0$), reducing to the classical limit.
 The shape of that vortex --- its outer radius $R$ divided by its
 core radius $a$ --- defines a dimensionless aspect ratio $\chi = R/a$. We show that,
-within this model, (i)~the stability equation for the vortex energy has an equilibrium at
-$\chi = 1/\alpha = 137.036$, recovered numerically to twelve decimal places; and
-(ii)~the standard quantum and electromagnetic length scales used for $R$ and $a$
-give the same dimensionless ratio, $\hbar c / e^2 = 1/\alpha$. The result is
-presented as a model-level explanation to be tested against the open assumptions
-listed at the end of the paper. \end{abstract}
+within this model, (i)~the stated stability equation has an equilibrium at
+$\chi = 1/\alpha = 137.036$ when the transport stiffness is calibrated to that
+fixed point, recovered numerically to twelve decimal places; and (ii)~the
+standard quantum and electromagnetic length scales used for $R$ and $a$ give the
+same dimensionless ratio, $\hbar c / e^2 = 1/\alpha$. The result is presented as
+a model-level explanation and numerical consistency check, with the remaining
+core-profile, stiffness, memory, and experimental assumptions listed explicitly
+at the end of the paper. \end{abstract}
 
 \maketitle
 
@@ -530,6 +532,63 @@ which, using Eq.~\eqref{eq:c}, simplifies to $\kappa = 1/(a\rho_0)$ in natural
 units. Deriving this from the vacuum medium properties from first principles ---
 without using $\alpha$, $\hbar$, or $e$ as inputs --- is the goal of Paper~III.
 
+\subsection{Memory, hysteresis, and the limits of the equilibrium calculation}
+
+The adaptive factors $S$ and $M_s$ are not used as independent fitting knobs in
+the numerical recovery above. In this paper's calculation the physical vacuum is
+treated in its equilibrium limit, so $S\cdot M_s\rightarrow1$ and
+Eq.~\eqref{eq:Psi_s} reduces to the capacity condition. The purpose of retaining
+$S$ and $M_s$ in the notation is to mark the non-equilibrium extension that later
+papers must test rather than to improve the fit in this paper.
+
+A minimal way to state the hypothesis is to let vacuum memory be a local
+relaxing state variable:
+\begin{equation}
+  M_s(\bm{x},t)
+  =
+  1+\mu\int_{-\infty}^{t}
+  \max\!\left(0,\frac{|\bm{J}(\bm{x},t')|}{J_\text{crit}}-1\right)
+  e^{-(t-t')/\tau_M}\,dt'.
+  \label{eq:memory_kernel}
+\end{equation}
+Here $\tau_M$ is a candidate relaxation time and $\mu$ measures how strongly
+over-capacity flux leaves residual constraint. In ordinary low-flux settings,
+$|\bm{J}|\ll J_\text{crit}$ and the integral vanishes, so $M_s\approx1$ and the
+vacuum appears memoryless. In extreme flux settings, a nonzero $M_s-1$ would mean
+that the medium has not fully reset. This is a physical hypothesis, not a result
+already established by the present calculation.
+
+This distinction matters for quantum decoherence. Within standard quantum
+mechanics, decoherence is described by entanglement with environmental degrees of
+freedom. CDFT can only add value if the proposed memory variable predicts a
+measurable residual phase, relaxation, or hysteresis effect beyond the standard
+description. Paper~XII states this as an experimental target rather than as an
+assumed fact.
+
+\subsection{Core-profile robustness program}
+
+The twelve-decimal recovery is an internal check of the stated equilibrium
+equation. It is not yet a proof that the same fixed point survives every possible
+vortex-core model. A professional robustness program must vary the internal
+vorticity profile and ask whether the same aspect ratio is recovered without
+retuning the transport stiffness:
+\begin{center}
+\small
+\begin{tabular}{p{0.24\textwidth}p{0.30\textwidth}p{0.34\textwidth}}
+\toprule
+\textbf{Core model} & \textbf{Why it matters} & \textbf{Required test}\\
+\midrule
+Rankine / solid core & Baseline Lamb-style compact vortex model & Verify that the existing $\beta=7/4$ calculation is stable under resolution and derivative checks.\\
+Gaussian / diffuse core & Mimics smeared or soft-boundary flux density & Recompute $\beta$ and the energy minimum with a width convention fixed before comparison.\\
+Hollow or excluded core & Tests the extreme capacity-limited boundary case & Determine whether the back-pressure term changes functional form.\\
+Finite-thickness vortex rings & Tests departure from the thin-ring approximation & Compare against finite-core ring families before claiming topological invariance.\\
+\bottomrule
+\end{tabular}
+\end{center}
+Until those tests are implemented in the public supplementary code, the correct
+claim is conditional: the present model has a stable calibrated fixed point at
+$\chi=1/\alpha$, and core-profile invariance is an open robustness target.
+
 \subsection{Connection to the lepton masses}
 
 This paper has focused entirely on the electron's aspect ratio. But the same
@@ -569,11 +628,27 @@ $\hbar$ as an input.
 We used $e^2/a = mc^2$ to derive $a$. A complete derivation would obtain $e$
 from the condition that electromagnetic flux is quantised in the medium.
 
+\item \textbf{Test core-profile robustness without retuning $\kappa$.}
+The current public calculation uses the stated Lamb-style core model. A stronger
+derivation must repeat the stability calculation for hard, diffuse, hollow, and
+finite-thickness profiles with conventions fixed in advance.
+
+\item \textbf{Measure or bound the vacuum-memory relaxation time $\tau_M$.}
+The memory kernel in Eq.~\eqref{eq:memory_kernel} is a hypothesis. It becomes
+physics only if an experiment or a deeper theory can identify, bound, or rule out
+the relaxation time and coupling strength.
+
+\item \textbf{Find an external discriminant.}
+The recovery of $1/\alpha$ is a postdiction of an already known constant unless
+the framework also predicts a measurable effect not already accounted for by QED,
+general relativity, or standard condensed-matter and plasma models.
+
 \end{enumerate}
 
-When these three steps are done, $\alpha = 1/137.036$ will follow from the
-properties of the vacuum medium alone. The experimental value of $\alpha$ will
-be a prediction of the theory, not an input to it.
+When the first-principles derivations and robustness tests are complete,
+$\alpha = 1/137.036$ would follow from the properties of the vacuum medium alone.
+Until then, the experimental value of $\alpha$ remains the calibration target
+used to test the internal consistency of the model.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Conclusion}
