@@ -15,17 +15,18 @@ ORCID: https://orcid.org/0009-0001-0556-5516
 Constraint-Driven Field Theory; Constraint-Driven Flux Dynamics; CDFT; CDFD;
 fundamental physics; theoretical physics; mathematical physics; computational
 physics; particle physics; quantum foundations; field theory; vacuum structure;
-vacuum equation of state; topological physics; knot theory; torus knots; vortex
-dynamics; adaptive vacuum; vacuum memory; vacuum hysteresis; falsifiable
-predictions; Koide formula; lepton masses; fine-structure constant;
-reproducible research; open science.
+vacuum equation of state; vacuum engineering; topological physics; knot theory;
+torus knots; vortex dynamics; adaptive vacuum; vacuum memory; vacuum
+hysteresis; Mujjabi Tests; falsifiable predictions; Koide formula; lepton
+masses; fine-structure constant; reproducible research; open science.
 
 ## Recommended GitHub Topics
 
 `cdfd`, `cdft`, `theoretical-physics`, `mathematical-physics`,
 `computational-physics`, `quantum-foundations`, `field-theory`,
 `vacuum-structure`, `topological-physics`, `knot-theory`, `vortex-dynamics`,
-`fine-structure-constant`, `koide-formula`, `reproducible-research`,
+`vacuum-engineering`, `mujjabi-tests`, `fine-structure-constant`,
+`koide-formula`, `reproducible-research`,
 `open-science`.
 
 ## Contents
@@ -48,6 +49,16 @@ These manuscripts are archived as research/preprint materials and are not peer
 reviewed. The supplementary scripts reproduce the internal calculations, figures,
 tables, and consistency checks. They do not establish empirical validation of the
 physical hypotheses.
+
+## Final Part I Architecture
+
+The final edit turns Part I into a named adaptive-vacuum program rather than a
+loose sequence of papers. Paper I states the Mujjabi Capacity Law, the Mujjabi
+Adaptive Operating Ratio, and the Mujjabi Stability Attractor for the
+fine-structure ratio. Papers II-IX develop the symmetry, topology, mass-budget,
+spectrum, and boundary rules. Paper X states the vacuum-engineering control
+principle. Papers XI-XII define the Mujjabi Tests that can falsify or support
+the memory, alpha-jitter, and pressure-gradient claims.
 
 ## Suggested Reading Order
 

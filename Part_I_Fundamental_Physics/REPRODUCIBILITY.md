@@ -77,6 +77,23 @@ Paper I also writes the `MISSING.docx` core-profile robustness guardrail:
 - `outputs/paper_I/checks_core_profile_stress_tests.csv`
 - `outputs/paper_I/fig1e_core_profile_stress_test.pdf`
 
+## Mujjabi Tests and Vacuum Engineering Outputs
+
+The final Part I edit names a falsification program, but it does not pretend
+that the laboratory protocols have already been run. The current release
+contains operational definitions and guardrail tables; future engine-facing work
+should add executable protocol templates for:
+
+- pump-probe vacuum hysteresis and `tau_M` bounds;
+- extreme-field alpha-jitter spectroscopy residuals;
+- rotating-source gravitational residual controls;
+- decoherence-memory residuals after standard open-system terms;
+- transport-threshold tests in plasma, superconductivity, friction, jamming,
+  and fracture.
+
+Those protocols should write machine-readable prediction tables before any
+claim is treated as empirical evidence.
+
 ## Rebuild PDFs
 
 From `Part_I_Fundamental_Physics`:

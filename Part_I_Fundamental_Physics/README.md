@@ -16,6 +16,8 @@ ORCID: https://orcid.org/0009-0001-0556-5516
 - `outputs/` - generated figures, tables, gate checks, and interactive panels.
 - `references.bib` - shared bibliography.
 - `CLAIM_STATUS.md` - claim-level status and uncertainty map.
+- `MUJJABI_LAWS_AND_TESTS.md` - named laws, principles, tests, and vacuum
+  engineering status.
 - `REPRODUCIBILITY.md` - commands used to rebuild and verify the archive.
 - `requirements-fullstack.txt` - optional acceleration and autodiff stack for
   scripts and notebooks.
@@ -50,14 +52,31 @@ QED, general relativity, or established laboratory-domain models.
 ## Current Integration Note
 
 The material from `MISSING.docx` is integrated as a professional release update,
-not as a thirteenth paper. Paper I now carries the front-door interpretation of
-the adaptive operating ratio, vacuum memory, and the conditional status of the
-fine-structure numerical recovery. Paper XII now carries the falsification
-roadmap for vacuum-memory and extreme-field tests. The middle papers already
-use the shared equilibrium notation and are not padded with repeated text.
+not as a thirteenth paper. The final edit plants the material as a chain:
+Paper I states the laws, Papers II-IX develop symmetry/topology/mass/boundary
+consequences, Paper X becomes the vacuum-engineering control-law bridge, Paper
+XI carries cosmic-scale memory and capacity tests, and Paper XII closes with
+the Mujjabi Falsification Program.
 
 See `MISSING_INTEGRATION_PLAN.md` for the source-to-paper map and claim
-guardrails.
+guardrails. See `MUJJABI_LAWS_AND_TESTS.md` for the public naming layer.
+
+## Series Flow
+
+| Paper | Series role |
+|---|---|
+| I | States the Mujjabi Capacity Law, Adaptive Operating Ratio, and Stability Attractor for `1/alpha`. |
+| II | Turns the regulator vortex into `Z_3` generation symmetry and the Koide theorem. |
+| III | Interprets topology, chirality, and charge as constraint-history structure. |
+| IV | Converts density, capacity, and responsiveness into a vacuum equation-of-state problem. |
+| V | Closes the lepton chirality phase in the equilibrium `S*M_s -> 1` limit. |
+| VI | Extends the structure into the torus-knot hierarchy. |
+| VII | Reads mass sums as conserved transport/action budgets. |
+| VIII | Produces the spectrum and prediction ledger. |
+| IX | Defines exclusion and boundary principles so the theory can say no. |
+| X | States vacuum engineering as control of `Phi`, `C`, `S`, and `M_s`. |
+| XI | Moves capacity and memory tests to cosmology and the dark-sector bridge. |
+| XII | Gives the Mujjabi Tests and laboratory falsification program. |
 
 ## Public Universal Engine Relationship
 

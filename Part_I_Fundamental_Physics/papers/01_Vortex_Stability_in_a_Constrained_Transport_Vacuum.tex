@@ -33,6 +33,8 @@ governed by an adaptive operating ratio $\Psi_s = (J/C) \cdot S \cdot M_s$, wher
 is the dynamic responsiveness of the vacuum surface and $M_s$ is its accumulated memory.
 In the fundamental physical vacuum, these properties converge to a stable equilibrium
 attractor ($S \cdot M_s \to 1.0$), reducing to the classical limit.
+We name this grammar the Mujjabi Adaptive Operating Ratio and use it as the
+spine of the Part I sequence.
 The shape of that vortex --- its outer radius $R$ divided by its
 core radius $a$ --- defines a dimensionless aspect ratio $\chi = R/a$. We show that,
 within this model, (i)~the stated stability equation has an equilibrium at
@@ -104,6 +106,33 @@ archive. The engine provides the general implementation path for future
 domain-level simulations; the Part I scripts remain the audited source for the
 figures, tables, and checks cited here.
 
+\subsection{Named laws of the Part I sequence}
+
+For clarity, the core claims are named here at the point where their symbols are
+first introduced. The names are not substitutes for proof; they are handles for
+the reader to follow the chain across the twelve papers.
+
+\begin{center}
+\small
+\begin{tabular}{p{0.25\textwidth}p{0.38\textwidth}p{0.24\textwidth}}
+\toprule
+\textbf{Name} & \textbf{Statement inside CDFT} & \textbf{Status}\\
+\midrule
+Mujjabi Capacity Law & Local transport becomes nonlinear as $J/C\rightarrow1$; vortex states regulate overload. & Framework law\\
+Mujjabi Adaptive Operating Ratio & $\Psi_s=(J/C)\,S\,M_s$ tracks flow, capacity, responsiveness, and memory. & Core notation\\
+Mujjabi Stability Attractor & The equilibrium regulator selects $\chi=R/a=1/\alpha$. & Internal derivation target\\
+Mujjabi Vacuum Memory Law & $M_s$ is a local constraint-history state with finite recovery time $\tau_M$. & Testable extension\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+These definitions are deliberately strong. They also create failure routes. If
+$J/C$ has no predictive value, the capacity law fails. If $M_s$ leaves no
+measurable residual in controlled high-flux tests, the memory law fails. If
+core-profile changes destroy the fixed point without a principled correction,
+the stability-attractor claim fails. Paper~XII turns those failure routes into
+the Mujjabi Tests.
+
 % ─────────────────────────────────────────────────────────────────────────────
 \section{The Adaptive Vacuum Medium}
 
@@ -159,7 +188,7 @@ this cannot be infinite. There is a maximum flux $J_\text{crit}$ that the medium
 can sustain before it saturates.
 
 In the extended CDFT paradigm, this saturation is governed by the adaptive operating
-ratio $\Psi_s$:
+ratio $\Psi_s$, the explicit form of the Mujjabi Adaptive Operating Ratio:
 \begin{equation}
   \Psi_s = \left(\frac{|\bm{J}|}{J_\text{crit}}\right) \cdot S \cdot M_s \leq 1.
   \label{eq:Psi_s}

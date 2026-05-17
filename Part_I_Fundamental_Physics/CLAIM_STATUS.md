@@ -19,6 +19,21 @@ statement at the same level of certainty.
 | XI | Cosmology bridge | Hypothesis generator; not empirical evidence | Lensing, expansion, black-hole, or substrate discriminants beyond standard models | No residual predictive value after standard cosmology fits |
 | XII | Collective-matter and vacuum-memory bridge | Hypothesis generator for laboratory systems and extreme-field discriminants | Incremental prediction in friction, plasma, superconductivity, turbulence, jamming, vacuum hysteresis, or high-field alpha sensitivity | No improvement beyond established domain models, QED, or GR after controlled tests |
 
+## Named Claim Ledger
+
+| Name | Where planted | Status |
+|---|---|---|
+| Mujjabi Capacity Law | Papers I, IV, X | CDFD law inside the framework; empirical status open |
+| Mujjabi Adaptive Operating Ratio | Papers I-XII | Core notation |
+| Mujjabi Stability Attractor | Paper I | Internal derivation / numerical target |
+| Mujjabi Vacuum Memory Law | Papers I, XI, XII | Proposed non-equilibrium extension |
+| Mujjabi Hysteresis Kernel | Papers I, XII | Candidate kernel, falsifiable by pump-probe memory tests |
+| Mujjabi Boundary Principle | Paper IX | Internal selection rule |
+| Mujjabi Geometric Charge Principle | Paper III | Hypothesis |
+| Mujjabi Action Principle | Papers I, VII | Open derivation |
+| Mujjabi Vacuum Engineering Principle | Paper X | Future program; not a technology claim |
+| Mujjabi Tests | Papers XI-XII | Falsification targets |
+
 ## Reading Rule
 
 An "internal theorem" means the statement follows inside the stated CDFT model.
