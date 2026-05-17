@@ -13,11 +13,11 @@ optional Numba/sklearn Q₃ flatness scan; optional Torch/JAX gradient of min_k 
 
 Usage (from repository root):
     pip install -r requirements.txt
-    pip install -r physics_papers/requirements-fullstack.txt
-    python physics_papers/supplementary_VI.py
+    pip install -r Part_I_Fundamental_Physics/requirements-fullstack.txt
+    python Part_I_Fundamental_Physics/notebooks/supplementary_VI.py
 
-Notebook: physics_papers/notebooks/paper_VI_fullstack.ipynb
-Outputs:  physics_papers/outputs/paper_VI/
+Notebook: Part_I_Fundamental_Physics/notebooks/paper_VI_fullstack.ipynb
+Outputs:  Part_I_Fundamental_Physics/outputs/paper_VI/
 """
 from __future__ import annotations
 

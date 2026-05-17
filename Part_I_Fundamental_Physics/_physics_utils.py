@@ -163,7 +163,7 @@ def fit_brannen_to_leptons() -> dict[str, Any]:
 
 
 def output_dir(paper_id: str) -> Path:
-    """Return `physics_papers/outputs/<paper_id>/`, creating it if needed."""
+    """Return `Part_I_Fundamental_Physics/outputs/<paper_id>/`, creating it if needed."""
     d = ROOT / "outputs" / paper_id
     d.mkdir(parents=True, exist_ok=True)
     return d

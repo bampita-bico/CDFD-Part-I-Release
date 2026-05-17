@@ -8,12 +8,28 @@ Last local verification: 2026-05-17.
 - LaTeX: `pdflatex` and `bibtex` available on path
 - Required Python stack: see `../requirements.txt` and `requirements-fullstack.txt`
 - Optional acceleration backends observed during verification:
-  - `numba=ok`
+  - `numba=ok` (`0.65.1`)
   - `torch=missing`
   - `jax=missing`
 
 The optional Torch/JAX checks are written as optional gates. Their absence did
 not fail the current verification run.
+
+## Stack Policy
+
+The supplementary scripts and notebooks use the full scientific Python stack
+where it adds a real independent check:
+
+- SymPy for symbolic identities and derivatives.
+- SciPy for roots, integrals, optimizers, signal checks, and regressions.
+- Pandas for released tables and gate files.
+- Matplotlib for deterministic figures.
+- Statsmodels and scikit-learn for statistical and parity checks.
+- Numba, Torch, and JAX as optional acceleration/autodiff cross-checks.
+
+Dependencies are not added merely to make a paper look computational. If a
+manuscript does not cite a numerical result, it does not need an output or
+notebook beyond the relevant reproducibility path.
 
 ## Rebuild Supplementary Outputs
 
@@ -54,6 +70,12 @@ The current verification run found no failed summary gates in:
 
 Papers I and II report their pass/fail checks directly in generated check files
 and script output.
+
+Paper I also writes the `MISSING.docx` core-profile robustness guardrail:
+
+- `outputs/paper_I/table4_core_profile_stress_tests.csv`
+- `outputs/paper_I/checks_core_profile_stress_tests.csv`
+- `outputs/paper_I/fig1e_core_profile_stress_test.pdf`
 
 ## Rebuild PDFs
 

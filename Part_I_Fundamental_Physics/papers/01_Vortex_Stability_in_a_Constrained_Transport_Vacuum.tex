@@ -94,6 +94,16 @@ The remaining step --- deriving the transport stiffness $\kappa$ from the medium
 properties $\rho_0$ and $c$ analytically --- is the subject of Paper~III in this
 series.
 
+\subsection{Public engine and paper-local reproducibility}
+
+The CDFD Universal Engine is now public as the reusable runtime for the
+flow--constraint--memory state grammar used across the broader project. This
+paper does not depend on hidden engine behavior. Its numerical claims are
+reproduced by the paper-local supplementary script and notebook in this Part I
+archive. The engine provides the general implementation path for future
+domain-level simulations; the Part I scripts remain the audited source for the
+figures, tables, and checks cited here.
+
 % ─────────────────────────────────────────────────────────────────────────────
 \section{The Adaptive Vacuum Medium}
 
@@ -618,6 +628,13 @@ Until those tests are implemented in the public supplementary code, the correct
 claim is conditional: the present model has a stable calibrated fixed point at
 $\chi=1/\alpha$, and core-profile invariance is an open robustness target.
 
+The current supplementary script now writes an explicit guardrail table,
+\texttt{outputs/paper\_I/table4\_core\_profile\_stress\_tests.csv}, and the
+corresponding figure \texttt{outputs/paper\_I/fig1e\_core\_profile\_stress\_test.pdf}.
+Those outputs do not prove invariance. They show how alternative core
+assumptions move the equilibrium when the Rankine calibration is held fixed,
+which is the correct starting point for the robustness program.
+
 \subsection{Connection to the lepton masses}
 
 This paper has focused entirely on the electron's aspect ratio. But the same
@@ -729,7 +746,11 @@ and P.A.M.~Dirac~\cite{Dirac1951} (vacuum as physical medium)
 \section{Supplementary Material}
 \label{sec:supplement}
 
-Supplementary code, including numerical verification scripts and Jupyter notebooks, is available in the project repository.
+Supplementary code, including numerical verification scripts and Jupyter
+notebooks, is available in this Part I release archive. The broader public CDFD
+Universal Engine implements the same state grammar for reusable domain
+simulation, but the numerical values in this paper are reproduced from the
+paper-local supplementary script.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \bibliographystyle{unsrt}

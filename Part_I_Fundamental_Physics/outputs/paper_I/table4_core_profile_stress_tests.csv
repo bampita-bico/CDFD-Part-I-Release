@@ -1,0 +1,5 @@
+profile,beta_model,chi_eq_with_rankine_kappa,rel_shift_vs_target_fixed_kappa,kappa_required_to_keep_target,kappa_retune_fraction_vs_rankine,release_status,note
+Rankine/Lamb solid core,1.75,137.03599908383745,-1.1861390971641315e-12,117361.9949447333,0.0,baseline check,baseline used in the paper
+Gaussian-like diffuse core,1.55,135.04767851168367,-0.014509476236952378,121117.76795372332,0.03200161185704653,"open robustness test, not evidence of invariance",soft-boundary stress test
+hollow/excluded core,1.95,139.1101467297956,0.015135786652120405,113606.22193574329,-0.03200161185704653,"open robustness test, not evidence of invariance",capacity-limited boundary stress test
+finite-thickness surrogate,1.65,136.0314723663036,-0.007330385624295999,119239.8814492283,0.016000805928523043,"open robustness test, not evidence of invariance",thin-ring correction stress test

@@ -17,6 +17,8 @@ ORCID: https://orcid.org/0009-0001-0556-5516
 - `references.bib` - shared bibliography.
 - `CLAIM_STATUS.md` - claim-level status and uncertainty map.
 - `REPRODUCIBILITY.md` - commands used to rebuild and verify the archive.
+- `requirements-fullstack.txt` - optional acceleration and autodiff stack for
+  scripts and notebooks.
 
 ## Scope
 
@@ -56,6 +58,24 @@ use the shared equilibrium notation and are not padded with repeated text.
 
 See `MISSING_INTEGRATION_PLAN.md` for the source-to-paper map and claim
 guardrails.
+
+## Public Universal Engine Relationship
+
+The public CDFD Universal Engine is now the reusable implementation target for
+the flow-constraint-memory notation used here. Part I does not depend on hidden
+engine behavior: its manuscript claims are reproduced by the paper-local
+supplementary scripts, notebooks, and generated outputs in this archive. The
+engine is the broader runtime for future domain simulations; this release is the
+audited physics-paper reproduction layer.
+
+## Scientific Python Stack
+
+The Part I scripts use the full public scientific stack where it materially
+supports a paper-local check: NumPy, SciPy, Pandas, Matplotlib, SymPy,
+Statsmodels, scikit-learn, optional Numba, and optional Torch/JAX autodiff.
+Not every paper needs every library; the rule is to use the stack where it
+provides an independent symbolic, numerical, statistical, acceleration, or
+autodiff check rather than adding decorative dependencies.
 
 ## Review Status
 

@@ -39,6 +39,8 @@ reproducible research; open science.
 - `requirements.txt` - Python dependencies for the public supplementary scripts.
 - `environment.yml` - Conda environment for the public science stack.
 - `LICENSE` - CC BY 4.0 release license.
+- `LICENSE_BOUNDARY.md` - explains why the scholarly Part I archive can use
+  CC BY 4.0 while the public Universal Engine uses AGPL-3.0-or-later.
 
 ## Review Status
 
@@ -59,10 +61,22 @@ physical hypotheses.
 See `Part_I_Fundamental_Physics/REPRODUCIBILITY.md` for rebuild and verification
 commands.
 
+## Public Universal Engine
+
+The CDFD Universal Engine is now public in the main CDFD workspace as the
+general runtime for the flow-constraint-memory state grammar. This Part I
+release remains a scholarly archive: its paper-local Python scripts,
+notebooks, and outputs reproduce the figures and tables cited by the physics
+papers.
+
+The two layers should be cited and licensed separately until a combined engine
+release DOI exists.
+
 ## License
 
 This release is licensed under the Creative Commons Attribution 4.0
-International License (CC BY 4.0). See `LICENSE`.
+International License (CC BY 4.0). See `LICENSE` and
+`LICENSE_BOUNDARY.md`.
 
 ## Citation
 

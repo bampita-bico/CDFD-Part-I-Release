@@ -44,5 +44,5 @@
     "open science",
     "preprint"
   ],
-  "description": "Public Part I physics archive for the Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project. The release includes manuscripts, compiled PDFs, LaTeX sources, supplementary Python scripts, generated figures and checks, bibliography, claim-status notes, reproducibility instructions, and a minimal public demo. The archive is released as open preprint material with reproducible calculations; it is not peer reviewed and does not by itself establish empirical validation of the physical hypotheses."
+  "description": "Public Part I physics archive for the Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project. The release includes manuscripts, compiled PDFs, LaTeX sources, supplementary Python scripts, generated figures and checks, bibliography, claim-status notes, reproducibility instructions, and a minimal public demo. The archive is released as open preprint material with reproducible paper-local calculations; it is not peer reviewed and does not by itself establish empirical validation of the physical hypotheses. The broader public CDFD Universal Engine is separate reusable software infrastructure."
 }

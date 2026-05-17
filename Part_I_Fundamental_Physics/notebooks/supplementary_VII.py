@@ -7,8 +7,8 @@ Uses paper-local public constants for PDG lepton masses; SymPy for sum A_k^2 = 2
 SciPy `brentq` for Z₅ self-consistency; Pandas CSV tables; Matplotlib figure bundle;
 optional Numba scan and Torch/JAX derivative at the fixed point.
 
-Outputs: physics_papers/outputs/paper_VII/
-Notebook: physics_papers/notebooks/paper_VII_fullstack.ipynb
+Outputs: Part_I_Fundamental_Physics/outputs/paper_VII/
+Notebook: Part_I_Fundamental_Physics/notebooks/paper_VII_fullstack.ipynb
 """
 from __future__ import annotations
 

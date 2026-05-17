@@ -12,11 +12,11 @@ Matplotlib figure bundle.
 
 Usage (from repository root):
     pip install -r requirements.txt
-    pip install -r physics_papers/requirements-fullstack.txt
-    python physics_papers/supplementary_V.py
+    pip install -r Part_I_Fundamental_Physics/requirements-fullstack.txt
+    python Part_I_Fundamental_Physics/notebooks/supplementary_V.py
 
-Notebook: physics_papers/notebooks/paper_V_fullstack.ipynb
-Outputs:  physics_papers/outputs/paper_V/
+Notebook: Part_I_Fundamental_Physics/notebooks/paper_V_fullstack.ipynb
+Outputs:  Part_I_Fundamental_Physics/outputs/paper_V/
 """
 from __future__ import annotations
 

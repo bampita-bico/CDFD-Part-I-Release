@@ -14,11 +14,11 @@ coefficients.
 
 Usage (from repository root):
     pip install -r requirements.txt
-    pip install -r physics_papers/requirements-fullstack.txt
-    python physics_papers/supplementary_IV.py
+    pip install -r Part_I_Fundamental_Physics/requirements-fullstack.txt
+    python Part_I_Fundamental_Physics/notebooks/supplementary_IV.py
 
-Notebook: physics_papers/notebooks/paper_IV_fullstack.ipynb
-Outputs:  physics_papers/outputs/paper_IV/
+Notebook: Part_I_Fundamental_Physics/notebooks/paper_IV_fullstack.ipynb
+Outputs:  Part_I_Fundamental_Physics/outputs/paper_IV/
 """
 from __future__ import annotations
 

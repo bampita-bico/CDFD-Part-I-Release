@@ -14,11 +14,11 @@ mirror Papers I–II.
 
 Usage (from repository root):
     pip install -r requirements.txt
-    pip install -r physics_papers/requirements-fullstack.txt
-    python physics_papers/supplementary_III.py
+    pip install -r Part_I_Fundamental_Physics/requirements-fullstack.txt
+    python Part_I_Fundamental_Physics/notebooks/supplementary_III.py
 
-Notebook: physics_papers/notebooks/paper_III_fullstack.ipynb
-Outputs:  physics_papers/outputs/paper_III/
+Notebook: Part_I_Fundamental_Physics/notebooks/paper_III_fullstack.ipynb
+Outputs:  Part_I_Fundamental_Physics/outputs/paper_III/
 """
 from __future__ import annotations
 

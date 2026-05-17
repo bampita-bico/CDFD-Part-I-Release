@@ -13,11 +13,11 @@ independent roots and integrals use SciPy; tables export via Pandas.
 
 Usage (from repository root; install stack first):
     pip install -r requirements.txt
-    pip install -r physics_papers/requirements-fullstack.txt   # optional numba/torch/jax
-    python physics_papers/supplementary_I.py
+    pip install -r Part_I_Fundamental_Physics/requirements-fullstack.txt   # optional numba/torch/jax
+    python Part_I_Fundamental_Physics/notebooks/supplementary_I.py
 
-Notebook: physics_papers/notebooks/paper_I_fullstack.ipynb
-Outputs:  physics_papers/outputs/paper_I/
+Notebook: Part_I_Fundamental_Physics/notebooks/paper_I_fullstack.ipynb
+Outputs:  Part_I_Fundamental_Physics/outputs/paper_I/
 """
 from __future__ import annotations
 
@@ -150,6 +150,44 @@ def _sensitivity_sweep(
                 "kappa_rel": k / kappa0 - 1.0,
                 "chi_eq": chi,
                 "alpha": 1.0 / chi,
+            }
+        )
+    return pd.DataFrame(rows)
+
+
+def _core_profile_stress_tests(target_chi: float, beta_ref: float, kappa_ref: float) -> pd.DataFrame:
+    """Illustrative core-profile stress test requested by MISSING.docx.
+
+    The alternative beta values are not imported as evidence. They are a
+    reproducible guardrail: if the core model changes, the fixed-kappa
+    equilibrium should be recomputed before any invariance claim is made.
+    """
+    profiles = [
+        ("Rankine/Lamb solid core", beta_ref, "baseline used in the paper"),
+        ("Gaussian-like diffuse core", beta_ref - 0.20, "soft-boundary stress test"),
+        ("hollow/excluded core", beta_ref + 0.20, "capacity-limited boundary stress test"),
+        ("finite-thickness surrogate", beta_ref - 0.10, "thin-ring correction stress test"),
+    ]
+    rows = []
+    for name, beta, note in profiles:
+        chi_fixed = find_equilibrium(beta=beta, kappa=kappa_ref)
+        kappa_required = kappa_for_chi(target_chi, beta=beta)
+        rows.append(
+            {
+                "profile": name,
+                "beta_model": beta,
+                "chi_eq_with_rankine_kappa": chi_fixed,
+                "rel_shift_vs_target_fixed_kappa": (
+                    np.nan if chi_fixed is None else (chi_fixed - target_chi) / target_chi
+                ),
+                "kappa_required_to_keep_target": kappa_required,
+                "kappa_retune_fraction_vs_rankine": kappa_required / kappa_ref - 1.0,
+                "release_status": (
+                    "baseline check"
+                    if abs(beta - beta_ref) < 1e-15
+                    else "open robustness test, not evidence of invariance"
+                ),
+                "note": note,
             }
         )
     return pd.DataFrame(rows)
@@ -295,6 +333,22 @@ def run_paper_i(
     except ImportError:
         ols_row = pd.DataFrame([{"rsquared_alpha_on_kappa": np.nan, "note": "statsmodels missing"}])
 
+    core_profile_df = _core_profile_stress_tests(CHI_TARGET, BETA, kappa)
+    core_profile_gate = pd.DataFrame(
+        [
+            {
+                "check": "core_profile_stress_test_generated",
+                "ok": bool(core_profile_df["chi_eq_with_rankine_kappa"].notna().all()),
+                "note": "Alternative profile rows are open robustness tests, not evidence of profile invariance.",
+            },
+            {
+                "check": "rankine_baseline_returns_target",
+                "ok": bool(abs(core_profile_df.iloc[0]["rel_shift_vs_target_fixed_kappa"]) < 1e-9),
+                "note": "Baseline must reproduce the calibrated Paper I equilibrium.",
+            },
+        ]
+    )
+
     if verbose:
         print("=" * 60)
         print("TABLE 1 — Stability equation  (public helper + SciPy)")
@@ -321,6 +375,11 @@ def run_paper_i(
         print(numba_row.to_string(index=False))
         print()
         print(ols_row.to_string(index=False))
+        print()
+        print("Core-profile stress-test guardrail")
+        print(core_profile_df.to_string(index=False))
+        print()
+        print(core_profile_gate.to_string(index=False))
 
     if write_outputs and out is not None:
         table1.to_csv(out / "table1_stability.csv", index=False)
@@ -332,8 +391,10 @@ def run_paper_i(
         autodiff_df.to_csv(out / "checks_autodiff_second_deriv.csv", index=False)
         numba_row.to_csv(out / "checks_numba_scan.csv", index=False)
         ols_row.to_csv(out / "checks_statsmodels_alpha_on_kappa.csv", index=False)
+        core_profile_df.to_csv(out / "table4_core_profile_stress_tests.csv", index=False)
+        core_profile_gate.to_csv(out / "checks_core_profile_stress_tests.csv", index=False)
 
-        _plot_figure_bundle(out, kappa, chi_public, chi_arr, E_arr)
+        _plot_figure_bundle(out, kappa, chi_public, chi_arr, E_arr, core_profile_df)
 
         print()
         print(f"CSV + figures written under {out}")
@@ -351,6 +412,8 @@ def run_paper_i(
         "autodiff": autodiff_df,
         "numba_check": numba_row,
         "statsmodels_ols": ols_row,
+        "core_profile_stress_tests": core_profile_df,
+        "core_profile_gate": core_profile_gate,
     }
 
 
@@ -360,6 +423,7 @@ def _plot_figure_bundle(
     chi_public: float,
     chi_arr: np.ndarray,
     E_arr: np.ndarray,
+    core_profile_df: pd.DataFrame,
 ) -> None:
     out = Path(out)
     dE_arr = dE_dchi(chi_arr, BETA, kappa)
@@ -441,6 +505,26 @@ def _plot_figure_bundle(
     fig.savefig(out / "fig1d_energy_components.pdf", bbox_inches=extent.expanded(1.2, 1.3), dpi=150)
 
     plt.close(fig)
+
+    fig2, ax = plt.subplots(figsize=(8.8, 5.0))
+    colors = ["C0", "C1", "C2", "C3"]
+    window = np.linspace(CHI_TARGET * 0.985, CHI_TARGET * 1.015, 800)
+    for color, row in zip(colors, core_profile_df.itertuples(index=False)):
+        beta = float(row.beta_model)
+        energy = total_energy(window, beta=beta, kappa=kappa)
+        energy = energy - float(np.nanmin(energy))
+        ax.plot(window, energy, color=color, lw=1.8, label=f"{row.profile} (beta={beta:.2f})")
+        if np.isfinite(float(row.chi_eq_with_rankine_kappa)):
+            ax.axvline(float(row.chi_eq_with_rankine_kappa), color=color, ls=":", lw=1.0, alpha=0.75)
+    ax.axvline(CHI_TARGET, color="k", ls="--", lw=1.2, label=r"target $\chi=1/\alpha$")
+    ax.set_xlabel(r"Aspect ratio $\chi=R/a$")
+    ax.set_ylabel("energy above profile minimum (arb.)")
+    ax.set_title("Core-profile stress test at fixed Rankine calibration")
+    ax.grid(alpha=0.25)
+    ax.legend(fontsize=8)
+    fig2.tight_layout()
+    fig2.savefig(out / "fig1e_core_profile_stress_test.pdf", dpi=150)
+    plt.close(fig2)
 
 
 def main() -> dict:

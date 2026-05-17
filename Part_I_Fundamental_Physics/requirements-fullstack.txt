@@ -1,7 +1,7 @@
-# Full reproducibility stack for physics_papers supplementary scripts + notebooks.
+# Full reproducibility stack for Part I supplementary scripts and notebooks.
 # Install from repository root:
 #   pip install -r requirements.txt
-#   pip install -r physics_papers/requirements-fullstack.txt
+#   pip install -r Part_I_Fundamental_Physics/requirements-fullstack.txt
 #
 # Base scientific stack is pinned in ../requirements.txt (numpy, scipy, pandas,
 # matplotlib, sympy, statsmodels, scikit-learn, notebook, ipython, ipykernel).

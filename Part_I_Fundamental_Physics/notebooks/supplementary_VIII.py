@@ -6,7 +6,7 @@ Paper-local public `run_paper_viii()`: SymPy integral for <|A|> = (pi+4)/(2pi);
 SciPy `brentq` self-consistency vs bisection; Pandas tables; Matplotlib figure bundle;
 optional Numba `Q_tilde` batch and Torch slope gate.
 
-Outputs: physics_papers/outputs/paper_VIII/
+Outputs: Part_I_Fundamental_Physics/outputs/paper_VIII/
 """
 from __future__ import annotations
 

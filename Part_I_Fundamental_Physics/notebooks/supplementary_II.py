@@ -15,11 +15,11 @@ is flat at $2/3$. Optional Statsmodels summarizes the mass calibration.
 
 Usage (from repository root):
     pip install -r requirements.txt
-    pip install -r physics_papers/requirements-fullstack.txt
-    python physics_papers/supplementary_II.py
+    pip install -r Part_I_Fundamental_Physics/requirements-fullstack.txt
+    python Part_I_Fundamental_Physics/notebooks/supplementary_II.py
 
-Notebook: physics_papers/notebooks/paper_II_fullstack.ipynb
-Outputs:  physics_papers/outputs/paper_II/
+Notebook: Part_I_Fundamental_Physics/notebooks/paper_II_fullstack.ipynb
+Outputs:  Part_I_Fundamental_Physics/outputs/paper_II/
 """
 from __future__ import annotations
 
