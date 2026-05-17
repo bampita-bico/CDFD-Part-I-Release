@@ -16,8 +16,17 @@ Constraint-Driven Field Theory; Constraint-Driven Flux Dynamics; CDFT; CDFD;
 fundamental physics; theoretical physics; mathematical physics; computational
 physics; particle physics; quantum foundations; field theory; vacuum structure;
 vacuum equation of state; topological physics; knot theory; torus knots; vortex
-dynamics; Koide formula; lepton masses; fine-structure constant; reproducible
-research; open science.
+dynamics; adaptive vacuum; vacuum memory; vacuum hysteresis; falsifiable
+predictions; Koide formula; lepton masses; fine-structure constant;
+reproducible research; open science.
+
+## Recommended GitHub Topics
+
+`cdfd`, `cdft`, `theoretical-physics`, `mathematical-physics`,
+`computational-physics`, `quantum-foundations`, `field-theory`,
+`vacuum-structure`, `topological-physics`, `knot-theory`, `vortex-dynamics`,
+`fine-structure-constant`, `koide-formula`, `reproducible-research`,
+`open-science`.
 
 ## Contents
 

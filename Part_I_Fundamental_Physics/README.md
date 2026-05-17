@@ -28,6 +28,23 @@ Papers XI-XII are bridge papers. They extend the vocabulary toward cosmology
 and collective matter, but they are explicitly hypothesis-level until they
 produce independent observational or laboratory discriminants.
 
+## Technical Preface
+
+Part I is framed as a move from treating selected physical constants as
+empirical inputs toward asking whether they can be recovered as equilibrium
+conditions of a constrained transport medium. In that framing, the vacuum is not
+presented as empty background, but as an effective medium with capacity,
+responsiveness, and possible memory variables. The central Part I claim is
+therefore model-level: if the CDFD transport-medium assumptions hold, the
+fine-structure ratio can be read as the aspect ratio of a stable vortex
+regulator.
+
+Historical comparisons in the source notes are treated only as intellectual
+lineage. The release does not claim to replace established theories. It states
+where the CDFD reading agrees with standard formulas, where it remains an
+internal consistency check, and where future tests would have to outperform
+QED, general relativity, or established laboratory-domain models.
+
 ## Current Integration Note
 
 The material from `MISSING.docx` is integrated as a professional release update,
