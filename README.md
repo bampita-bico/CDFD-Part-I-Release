@@ -13,6 +13,7 @@ ORCID: https://orcid.org/0009-0001-0556-5516
 ## Keywords
 
 Constraint-Driven Field Theory; Constraint-Driven Flux Dynamics; CDFT; CDFD;
+CDFD Runtime; CDFL; constrained-flow language;
 fundamental physics; theoretical physics; mathematical physics; computational
 physics; particle physics; quantum foundations; field theory; vacuum structure;
 vacuum equation of state; vacuum engineering; topological physics; knot theory;
@@ -23,7 +24,7 @@ masses; fine-structure constant; reproducible research; open science.
 ## Recommended GitHub Topics
 
 `cdfd`, `cdft`, `theoretical-physics`, `mathematical-physics`,
-`computational-physics`, `quantum-foundations`, `field-theory`,
+`cdfd-runtime`, `cdfl`, `computational-physics`, `quantum-foundations`, `field-theory`,
 `vacuum-structure`, `topological-physics`, `knot-theory`, `vortex-dynamics`,
 `vacuum-engineering`, `mujjabi-tests`, `fine-structure-constant`,
 `koide-formula`, `reproducible-research`,
@@ -41,7 +42,7 @@ masses; fine-structure constant; reproducible research; open science.
 - `environment.yml` - Conda environment for the public science stack.
 - `LICENSE` - CC BY 4.0 release license.
 - `LICENSE_BOUNDARY.md` - explains why the scholarly Part I archive can use
-  CC BY 4.0 while the public Universal Engine uses AGPL-3.0-or-later.
+  CC BY 4.0 while the public CDFD Runtime uses AGPL-3.0-or-later.
 
 ## Review Status
 
@@ -72,15 +73,15 @@ the memory, alpha-jitter, and pressure-gradient claims.
 See `Part_I_Fundamental_Physics/REPRODUCIBILITY.md` for rebuild and verification
 commands.
 
-## Public Universal Engine
+## Public CDFD Runtime
 
-The CDFD Universal Engine is now public in the main CDFD workspace as the
-general runtime for the flow-constraint-memory state grammar. This Part I
+The CDFD Runtime is now public in the main CDFD workspace as the
+general runtime for CDFL, the flow-constraint-memory state grammar. This Part I
 release remains a scholarly archive: its paper-local Python scripts,
 notebooks, and outputs reproduce the figures and tables cited by the physics
 papers.
 
-The two layers should be cited and licensed separately until a combined engine
+The two layers should be cited and licensed separately until a combined runtime
 release DOI exists.
 
 ## License

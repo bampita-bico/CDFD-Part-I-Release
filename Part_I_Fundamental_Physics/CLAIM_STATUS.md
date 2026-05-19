@@ -32,6 +32,7 @@ statement at the same level of certainty.
 | Mujjabi Geometric Charge Principle | Paper III | Hypothesis |
 | Mujjabi Action Principle | Papers I, VII | Open derivation |
 | Mujjabi Vacuum Engineering Principle | Paper X | Future program; not a technology claim |
+| Fibonacci transport organization | Paper X | Cross-scale design hypothesis; not evidence by pattern matching |
 | Mujjabi Tests | Papers XI-XII | Falsification targets |
 
 ## Reading Rule

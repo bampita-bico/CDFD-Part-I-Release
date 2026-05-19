@@ -5,7 +5,7 @@ NumPy only. No platform API.
 Three coupled fields on an NX×NY grid:
   Φ (phi)  — flow / energy intensity
   C        — constraint / resistance
-  Ψ_s      — system equilibrium = (Φ / C) * S * M_s
+  Ψ_s      — adaptive proxy = (Φ / C) * S * M_s
 
 Evolution (explicit Euler, periodic boundaries):
   ∂Φ/∂t = ∇·(1/C · ∇Φ) + S - D
@@ -72,15 +72,15 @@ def step(state: State, dt=DT,
 
 def compute_life_number(state: State) -> float:
     """
-    Tri-Regime Bioenergetics (Chlorophyll, Magnetite, Water, Melanin):
-    C_input     ~ Φ (energy absorption)
+    Tri-Regime Bioenergetics, normalized public-demo form:
+    C_input     ~ Φ (usable energy input)
     C_electron  ~ σ_e (redox/electron mobility)
-    C_proton    ~ σ_p (water/proton coherence)
-    C_stability ~ 1/S (melanin-like buffering)
+    C_proton    ~ σ_p (proton/ion coupling)
+    C_stability ~ 1/S (stabilization capacity)
     
     J_max = min(C_input, C_electron, C_proton, C_stability)
     Λ = (C_input · C_electron · C_proton · τ_relax) / (S · E_maintenance)
-    Λ < 1 → non-living  |  Λ ≈ 1 → proto-biological  |  Λ > 1 → sustained life
+    Λ < 1 → decay-like  |  Λ ≈ 1 → transition band  |  Λ > 1 → sustained regime
 
     The public demo reports normalized capacity terms so the value is stable
     under simple unit rescaling and does not diverge for nearly uniform fields.

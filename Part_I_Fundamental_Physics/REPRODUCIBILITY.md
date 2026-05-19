@@ -1,6 +1,6 @@
 # Reproducibility
 
-Last local verification: 2026-05-17.
+Last local verification: 2026-05-20.
 
 ## Environment Used
 
@@ -14,6 +14,11 @@ Last local verification: 2026-05-17.
 
 The optional Torch/JAX checks are written as optional gates. Their absence did
 not fail the current verification run.
+
+If the local Matplotlib config directory is not writable, set
+`MPLCONFIGDIR=/tmp/matplotlib-cdfd-part-i` before running the scripts. The
+2026-05-20 verification completed with Matplotlib using temporary cache
+directories under `/tmp`.
 
 ## Stack Policy
 

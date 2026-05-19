@@ -500,7 +500,7 @@ def run_paper_ii(
     max_err_P = max(abs(P_direct(t) - P_formula(t)) for t in thetas_all)
     df_P_meta = pd.DataFrame([{"max_abs_diff_P_numeric_10k_grid": max_err_P}])
 
-    chi = 137.035999084
+    chi = 137.035999177
     modes_df = pd.DataFrame(
         [
             (0, "uniform expansion", False, "violates J_crit conservation"),

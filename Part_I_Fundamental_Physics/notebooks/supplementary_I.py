@@ -66,8 +66,8 @@ from _physics_utils import (
 )
 
 BETA = 1.75
-R_COMP = 3.861592680e-13  # m  reduced Compton wavelength
-A_CLASS = 2.8179403227e-15  # m  classical electron radius
+R_COMP = 3.8615926744e-13  # m  reduced Compton wavelength (CODATA 2022)
+A_CLASS = 2.8179403205e-15  # m  classical electron radius (CODATA 2022)
 
 
 def _sympy_derivative_checks(beta: float, kappa: float, chi_samples: np.ndarray) -> pd.DataFrame:

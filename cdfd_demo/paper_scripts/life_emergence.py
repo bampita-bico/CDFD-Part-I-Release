@@ -69,7 +69,7 @@ ax2.axhline(1.0, color="#222222", lw=1.0, ls="--", label=r"$\Psi_s = 1$")
 if t_cross is not None:
     ax2.axvline(t_cross, color=PALETTE["gray"], ls=":", lw=1.0)
 ax2.set_xlabel("Time t")
-ax2.set_ylabel(r"Equilibrium proxy  $\Psi_s$")
+ax2.set_ylabel(r"Adaptive proxy  $\Psi_s$")
 ax2.set_ylim(0.0, 1.25)
 ax2.legend(loc="upper left", frameon=True)
 

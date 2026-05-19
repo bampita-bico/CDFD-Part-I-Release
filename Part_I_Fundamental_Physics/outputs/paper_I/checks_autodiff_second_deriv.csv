@@ -1,2 +1,2 @@
 d2_analytic,d2_pytorch,d2_jax,backends
-0.09850966527288457,,,"torch=missing, jax=missing, numba=ok"
+0.0985096652172259,,,"torch=missing, jax=missing, numba=ok"

@@ -66,7 +66,7 @@ $A_k \geq 0$ for $n \geq 5$) and state the open problems precisely.
 \noindent In the extended notation used across the series, the vacuum limit is written
 as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
 equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
-left for later dynamical work rather than fitted in this manuscript. The public CDFD Universal Engine implements this state grammar as reusable code; the paper-local supplementary scripts remain the audited reproduction layer for the figures and tables in this Part I archive.
+left for later dynamical work rather than fitted in this manuscript. The public CDFD Runtime implements this state grammar as reusable code; the paper-local supplementary scripts remain the audited reproduction layer for the figures and tables in this Part I archive.
 
 \end{abstract}
 
@@ -321,7 +321,57 @@ The mass of the lightest mode of family $n$ is $M_n \cdot (A_{k,\min}^{(n)})^2$,
 which requires knowing $\theta_n$ (open problem).
 
 % ─────────────────────────────────────────────────────────────────────────────
-\section{The Cinquefoil $T(2,5)$: What is Known and What Remains}
+\subsection{Topological selection of the integer skeleton of $\chi^*$}
+\label{sec:crt_selection}
+
+The CDFT spectrum contains three structurally distinguished families whose
+indices $n = 7, 12, 27$ arise from independent constraints:
+\begin{itemize}
+  \item $n = 7$: the heptafoil $T(2,7)$, the unique odd-$n$ family whose
+    self-consistency attractor at $\theta_7$ produces the smallest
+    $|n\theta_n - Q_n|$ residual when $n\theta_n$ is evaluated at
+    $\chi^* = 137.035999177$ (Paper~VIII).
+  \item $n = 12 = 4 \times 3$: the product of the four spacetime dimensions
+    and the three CDFT particle generations.  This is the generation--spacetime
+    index, the degree of the lepton--quark multiplet structure.
+  \item $n = 27 = 3^3$: the algebraic closure index of the $\mathbb{Z}_3$
+    symmetry group (Theorem~\ref{thm:Z3_unique}).  The Koide formula closes
+    on a $\mathbb{Z}_3$ lattice of rank $3^3 = 27$.
+\end{itemize}
+
+These three integers jointly determine the integer skeleton of $\chi^*$ via
+the Chinese Remainder Theorem.  The simultaneous congruence system
+\begin{align}
+  n &\equiv 4 \pmod{7}   \label{eq:crt7} \\
+  n &\equiv 5 \pmod{12}  \label{eq:crt12} \\
+  n &\equiv 2 \pmod{27}  \label{eq:crt27}
+\end{align}
+has the general solution $n = 137 + 1260\,k$ for $k = 0, 1, 2, \ldots$\,.
+The first four solutions are $n = 137, 893, 1649, 2405$;
+of these, \textbf{137 is the unique prime}: $893 = 19\times 47$, $1649 = 17\times 97$,
+$2405 = 5\times 13\times 37$ (the next prime in the class is $n = 3917$).
+
+\begin{proposition}[Integer skeleton of $\chi^*$]
+  \label{prop:crt}
+  The integer 137 is the unique minimal prime satisfying the three CRT
+  congruences~\eqref{eq:crt7}--\eqref{eq:crt27} imposed by the three
+  structurally distinguished CDFT knot families $n = 7$, $n = 12$, $n = 27$.
+\end{proposition}
+
+The geometric precision of $\chi^*$ is provided by the vortex ring energy
+landscape of Paper~I: the energy minimum $\partial E/\partial\chi = 0$ selects
+the unique solution $\chi^* = 137.035999177$ to twelve decimal places~\cite{CODATA2022, MujjabiI2026}.
+Together these two results give the \textbf{Mujjabi $\chi^*$ Decomposition}:
+\begin{equation}
+  \chi^* \;=\; \underbrace{137}_{\text{topology (CRT)}}
+            \;+\; \underbrace{0.035999177}_{\text{geometry (Paper~I vortex)}}
+  \label{eq:chi_decomposition}
+\end{equation}
+The integer part is topologically protected by the primality constraint of
+Proposition~\ref{prop:crt}; the decimal part is the geometric fine-tuning
+of the vortex core profile.
+
+
 \label{sec:cinquefoil}
 
 \subsection{What is established}

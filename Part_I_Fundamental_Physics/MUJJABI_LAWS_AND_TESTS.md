@@ -44,3 +44,28 @@ not a claim of immediate technology.
 The design target is to steer a system toward, across, or away from
 `Psi_s = 1` and measure a discriminating response. A negative result is useful:
 it bounds or kills the relevant CDFD claim.
+
+## Necessary Conditions
+
+For the Part I model to hold physically, the release now states these conditions
+explicitly:
+
+| Condition | Meaning | Failure mode |
+|---|---|---|
+| Topological resilience | `chi = R/a` must be a stable fixed point/eigenmode of `Psi_s`, not an arbitrary fitted ratio. | Perturbations drift to unrelated stable ratios. |
+| Flux-memory coupling | `S` and `M_s` must relax so `S*M_s -> 1` at equilibrium while allowing bounded overload memory. | Memory either has no measurable effect or causes runaway amplification. |
+| Non-radiative equilibrium | `chi ~= 137.035999177` must behave as a minimum-dissipation regulator geometry. | The geometry radiates/decays or is not a loss minimum. |
+| Independent stiffness closure | `kappa` must be derived without hiding `alpha`, `e`, or `hbar` as inputs. | The result remains only a calibrated postdiction. |
+| External discriminant | At least one test must outperform or differ from QED, GR, or established domain models. | CDFD is only a translation of known physics. |
+
+## Future Validation Detail
+
+The first experimental roadmap should prioritize:
+
+| Experiment | What to vary | What to measure | What would count against CDFD |
+|---|---|---|---|
+| Pump-probe vacuum hysteresis | pump intensity and pump-probe delay | phase/refractive residual vs. delay | no history residual after nonlinear QED, gas, optics, thermal, and detector effects are bounded |
+| Decoherence-memory residual | prior flux loading before an interferometer or qubit coherence run | visibility residual after standard open-system terms | no preparation-history dependence after ordinary dephasing controls |
+| Extreme-field alpha sensitivity | high-Z/high-field environment, field strength, geometry | alpha-sensitive spectral residuals | QED/nuclear/systematic corrections exhaust the data |
+| Rotating-source pressure gradient | rotor angular momentum, reversal, shielding state | atom-interferometer or torsion residual | residuals track vibration, magnetic pickup, heating, or air coupling |
+| Collective transport thresholds | shear/current/field/load history in friction, plasma, superconductors, jamming | threshold timing, hysteresis loop, avalanche statistics | standard domain models predict equally well without CDFD variables |

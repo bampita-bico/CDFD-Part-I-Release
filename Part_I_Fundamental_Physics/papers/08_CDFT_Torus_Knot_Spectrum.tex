@@ -65,7 +65,7 @@ All spectra are derived from $m_e$ with zero additional free parameters.
 \noindent In the extended notation used across the series, the vacuum limit is written
 as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
 equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
-left for later dynamical work rather than fitted in this manuscript. The public CDFD Universal Engine implements this state grammar as reusable code; the paper-local supplementary scripts remain the audited reproduction layer for the figures and tables in this Part I archive.
+left for later dynamical work rather than fitted in this manuscript. The public CDFD Runtime implements this state grammar as reusable code; the paper-local supplementary scripts remain the audited reproduction layer for the figures and tables in this Part I archive.
 
 \end{abstract}
 
@@ -113,8 +113,36 @@ requires a baseline spectrum first. Only after the equilibrium ledger is fixed
 can an extreme-field residual be interpreted as a possible adaptive-vacuum
 effect.
 
-% ─────────────────────────────────────────────────────────────────────────────
-\section{The Universal Self-Consistency System}
+\subsection{Remark: the three structurally distinguished families and the CRT integer}
+\label{sec:crt_remark}
+
+Among the odd families $n = 3, 5, 7, \ldots$, three are structurally distinguished
+by the CDFT spectrum:
+\begin{center}
+\small
+\begin{tabular}{cll}
+\toprule
+$n$ & Structural role & Source \\
+\midrule
+7  & Heptafoil: self-consistency attractor sits closest to $\chi^* = 137$ & Paper~VI \\
+12 & Generation--spacetime index: $4\,\text{dimensions}\times 3\,\text{generations}$ & Papers I--V \\
+27 & $\mathbb{Z}_3$ closure index: $3^3$ & Paper~VI, Theorem~2 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+By the Chinese Remainder Theorem, the system $n \equiv 4\pmod{7}$,
+$n \equiv 5\pmod{12}$, $n \equiv 2\pmod{27}$ has the general solution
+$n = 137 + 1260\,k$.  The first four solutions are $137, 893, 1649, 2405$;
+of these, \textbf{137 is the unique minimal prime} ($893 = 19\times47$,
+$1649 = 17\times97$; the next prime in this class is $n = 3917$).
+Thus \textbf{137 is the unique minimal prime enforced by the three
+structurally distinguished CDFT families}
+(the CRT computation in Paper~VI).  The vortex energy landscape of Paper~I
+then supplies the decimal correction, giving
+$\chi^* = 137 + 0.035999177 = 137.035999177$~\cite{CODATA2022, MujjabiI2026}.
+
+
 \label{sec:sc_system}
 
 \subsection{Extending the condition to all odd $n$}

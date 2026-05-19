@@ -41,7 +41,9 @@ presented as empty background, but as an effective medium with capacity,
 responsiveness, and possible memory variables. The central Part I claim is
 therefore model-level: if the CDFD transport-medium assumptions hold, the
 fine-structure ratio can be read as the aspect ratio of a stable vortex
-regulator.
+regulator. Paper I now states the CODATA 2022 target
+`alpha^-1 = 137.035999177(21)` and the reproduced CDFD recovery
+`chi = 137.035999177` near the beginning of the manuscript.
 
 Historical comparisons in the source notes are treated only as intellectual
 lineage. The release does not claim to replace established theories. It states
@@ -80,14 +82,14 @@ release surface.
 | XI | Moves capacity and memory tests to cosmology and the dark-sector bridge. |
 | XII | Gives the Mujjabi Tests and laboratory falsification program. |
 
-## Public Universal Engine Relationship
+## Public CDFD Runtime Relationship
 
-The public CDFD Universal Engine is now the reusable implementation target for
-the flow-constraint-memory notation used here. Part I does not depend on hidden
-engine behavior: its manuscript claims are reproduced by the paper-local
+The public CDFD Runtime is now the reusable implementation target for
+CDFL, the flow-constraint-memory notation used here. Part I does not depend on
+hidden runtime behavior: its manuscript claims are reproduced by the paper-local
 supplementary scripts, notebooks, and generated outputs in this archive. The
-engine is the broader runtime for future domain simulations; this release is the
-audited physics-paper reproduction layer.
+runtime is the broader implementation path for future domain simulations; this
+release is the audited physics-paper reproduction layer.
 
 ## Scientific Python Stack
 

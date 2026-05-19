@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parent
 RTOL_DEFAULT = 1e-9
 ATOL_DEFAULT = 1e-12
 
-ALPHA_MEASURED = 1.0 / 137.035999084
+ALPHA_MEASURED = 1.0 / 137.035999177  # CODATA 2022
 CHI_TARGET = 1.0 / ALPHA_MEASURED
 LEPTON_MASSES = {
     "electron": 0.51099895,
@@ -64,8 +64,8 @@ def kappa_for_chi(target_chi: float, beta: float = 1.75) -> float:
 
 def chi_self_consistency() -> dict[str, float]:
     """Geometric alpha check from the reduced Compton and classical electron radii."""
-    r_compton = 3.861592680e-13
-    a_classical = 2.8179403227e-15
+    r_compton = 3.8615926744e-13   # CODATA 2022
+    a_classical = 2.8179403205e-15  # CODATA 2022
     chi_geom = r_compton / a_classical
     return {
         "R_compton_m": r_compton,

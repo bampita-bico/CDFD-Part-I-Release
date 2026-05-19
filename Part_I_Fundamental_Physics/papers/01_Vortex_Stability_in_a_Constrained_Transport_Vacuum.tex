@@ -96,13 +96,33 @@ The remaining step --- deriving the transport stiffness $\kappa$ from the medium
 properties $\rho_0$ and $c$ analytically --- is the subject of Paper~III in this
 series.
 
-\subsection{Public engine and paper-local reproducibility}
+\subsection{Headline numerical result}
 
-The CDFD Universal Engine is now public as the reusable runtime for the
+The public calculation targets the latest available CODATA value
+\[
+  \alpha^{-1}_{2022}=137.035999177(21),
+\]
+and the Paper~I equilibrium computation recovers
+\[
+  \chi_\mathrm{recovered}=137.035999177,
+  \qquad
+  \alpha_\mathrm{recovered}=0.007297352566.
+\]
+The relative recovery error reported by the script is
+$1.19\times10^{-12}$ for the stability-equation root. A separate geometric
+length-scale check using the reduced Compton wavelength and the classical
+electron radius gives the same inverse fine-structure ratio to twelve decimal
+places within the stated input precision. These are internal consistency
+checks of the CDFT model; they are not yet external experimental validation of
+the vacuum-medium hypothesis.
+
+\subsection{Public runtime and paper-local reproducibility}
+
+The CDFD Runtime is now public as the reusable runtime for the
 flow--constraint--memory state grammar used across the broader project. This
-paper does not depend on hidden engine behavior. Its numerical claims are
+paper does not depend on hidden runtime behavior. Its numerical claims are
 reproduced by the paper-local supplementary script and notebook in this Part I
-archive. The engine provides the general implementation path for future
+archive. The runtime provides the general implementation path for future
 domain-level simulations; the Part I scripts remain the audited source for the
 figures, tables, and checks cited here.
 
@@ -132,6 +152,33 @@ measurable residual in controlled high-flux tests, the memory law fails. If
 core-profile changes destroy the fixed point without a principled correction,
 the stability-attractor claim fails. Paper~XII turns those failure routes into
 the Mujjabi Tests.
+
+\subsection{Symbol ledger}
+
+The main symbols used in Paper~I are:
+\begin{center}
+\small
+\begin{tabular}{p{0.18\textwidth}p{0.68\textwidth}}
+\toprule
+\textbf{Symbol} & \textbf{Meaning in this manuscript}\\
+\midrule
+$\alpha$ & electromagnetic fine-structure constant; $\alpha^{-1}$ is the CODATA inverse fine-structure ratio\\
+$R$ & vortex-ring radius, identified here with the reduced Compton scale $\hbar/(mc)$\\
+$a$ & vortex-core radius, identified here with the classical electron radius $e^2/(mc^2)$ in the manuscript's electromagnetic-unit convention\\
+$\chi$ & dimensionless vortex aspect ratio $R/a$\\
+$\Gamma$ & circulation of the vortex state\\
+$\beta$ & dimensionless vortex-core profile constant; $\beta=7/4$ for the Lamb solid-rotation baseline\\
+$\kappa$ & dimensionless transport stiffness in the normalized vortex energy\\
+$J$ & local flux magnitude through the vacuum medium\\
+$J_\mathrm{crit}$ & critical flux capacity of the medium\\
+$S$ & local responsiveness or adaptive surface factor\\
+$M_s$ & retained structural-memory factor of the medium\\
+$\Psi_s$ & adaptive operating ratio $(J/J_\mathrm{crit})SM_s$ in Paper~I\\
+$\tau_M$ & candidate relaxation time for vacuum-memory decay\\
+$\mu$ & candidate coupling strength between overload and memory accumulation\\
+\bottomrule
+\end{tabular}
+\end{center}
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{The Adaptive Vacuum Medium}
@@ -445,16 +492,16 @@ Pandas.
 
 \subsection{Stability equation}
 
-Using $\beta = 1.75$ and the target $\chi_\text{target} = 1/\alpha = 137.035999084$
-(CODATA 2018~\cite{CODATA2018}), Eq.~\eqref{eq:kappa_for_chi} gives:
+Using $\beta = 1.75$ and the target $\chi_\text{target} = 1/\alpha = 137.035999177$
+(CODATA 2022~\cite{CODATA2022}), Eq.~\eqref{eq:kappa_for_chi} gives:
 \begin{equation*}
-  \kappa = 117{,}361.99.
+  \kappa = 117{,}362.00.
 \end{equation*}
 We then solve Eq.~\eqref{eq:equil} numerically using bisection over
 $\chi \in (1.01,\, 10^6)$, with $\kappa$ fixed to this value. The recovered
 equilibrium is:
 \begin{equation*}
-  \chi_\text{recovered} = 137.035999084,
+  \chi_\text{recovered} = 137.035999177,
   \quad
   \left|\frac{\chi_\text{rec} - \chi_\text{target}}{\chi_\text{target}}\right|
   = 1.19 \times 10^{-12}.
@@ -469,12 +516,12 @@ error is numerical precision --- the bisection algorithm's convergence tolerance
     \toprule
     Quantity & Value \\
     \midrule
-    $\chi_\text{target} = 1/\alpha$ & $137.035999084$ \\
+    $\chi_\text{target} = 1/\alpha$ & $137.035999177$ \\
     $\beta$ (Lamb solid-rotation) & $1.75$ \\
-    $\kappa$ required & $117{,}361.99$ \\
-    $\chi_\text{recovered}$ (bisection) & $137.035999084$ \\
-    $\alpha_\text{recovered} = 1/\chi$ & $0.00729735257$ \\
-    $\alpha_\text{measured}$ (CODATA) & $0.00729735257$ \\
+    $\kappa$ required & $117{,}362.00$ \\
+    $\chi_\text{recovered}$ (bisection) & $137.035999177$ \\
+    $\alpha_\text{recovered} = 1/\chi$ & $0.007297352566$ \\
+    $\alpha_\text{measured}$ (CODATA 2022) & $0.007297352566$ \\
     Relative error & $1.19\times10^{-12}$ \\
     \bottomrule
   \end{tabular}
@@ -513,7 +560,7 @@ contributions balance. The competition between them is genuine.
 \subsection{Geometric self-consistency}
 
 Table~\ref{tab:selfconsist} shows the self-consistency check from
-Eq.~\eqref{eq:chi_is_alpha}, using CODATA 2018 values.
+Eq.~\eqref{eq:chi_is_alpha}, using CODATA 2022 values.
 
 \begin{table}[h]
   \caption{Geometric self-consistency of $\chi = 1/\alpha$.}
@@ -524,15 +571,15 @@ Eq.~\eqref{eq:chi_is_alpha}, using CODATA 2018 values.
     \midrule
     $R$ (reduced Compton wavelength) & $3.861593\times10^{-13}$ m \\
     $a$ (classical electron radius) & $2.817940\times10^{-15}$ m \\
-    $\chi_\text{geom} = R/a$ & $137.035999$ \\
-    $\alpha_\text{geom} = a/R$ & $0.007297353$ \\
-    $\alpha_\text{measured}$ & $0.007297353$ \\
-    Relative error & $1.35\times10^{-9}$ \\
+    $\chi_\text{geom} = R/a$ & $137.035999177$ \\
+    $\alpha_\text{geom} = a/R$ & $0.007297352564$ \\
+    $\alpha_\text{measured}$ & $0.007297352564$ \\
+    Relative error & $2.26\times10^{-12}$ \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-The agreement is to nine decimal places, limited only by the precision of the
+The agreement is to twelve decimal places, limited only by the precision of the
 input constants.
 
 % ─────────────────────────────────────────────────────────────────────────────
@@ -552,7 +599,7 @@ The two-pronged verification makes this result robust. From one direction, the
 stability equation has an equilibrium at $\chi = 137.036$ when $\kappa$ takes
 the value required by the vacuum medium. From the other direction, the ratio of
 the two independently derived length scales ($R$ from quantum mechanics, $a$ from
-electromagnetism) equals $1/\alpha$ to nine decimal places. These are two
+electromagnetism) equals $1/\alpha$ to twelve decimal places. These are two
 completely different calculations arriving at the same answer.
 
 \subsection{On the naturalness of $\kappa$}
@@ -613,8 +660,8 @@ operational dictionary: it states what CDFT would have to mean in measurable
 terms if the adaptive-vacuum interpretation is physical.
 
 \begin{center}
-\small
-\begin{tabular}{p{0.18\textwidth}p{0.23\textwidth}p{0.33\textwidth}p{0.16\textwidth}}
+\scriptsize
+\begin{tabular}{p{0.16\textwidth}p{0.21\textwidth}p{0.31\textwidth}p{0.14\textwidth}}
 \toprule
 \textbf{Feature} & \textbf{Standard reading} & \textbf{CDFT reading} & \textbf{Status}\\
 \midrule
@@ -642,7 +689,7 @@ vorticity profile and ask whether the same aspect ratio is recovered without
 retuning the transport stiffness:
 \begin{center}
 \small
-\begin{tabular}{p{0.24\textwidth}p{0.30\textwidth}p{0.34\textwidth}}
+\begin{tabular}{p{0.22\textwidth}p{0.28\textwidth}p{0.32\textwidth}}
 \toprule
 \textbf{Core model} & \textbf{Why it matters} & \textbf{Required test}\\
 \midrule
@@ -657,9 +704,8 @@ Until those tests are implemented in the public supplementary code, the correct
 claim is conditional: the present model has a stable calibrated fixed point at
 $\chi=1/\alpha$, and core-profile invariance is an open robustness target.
 
-The current supplementary script now writes an explicit guardrail table,
-\texttt{outputs/paper\_I/table4\_core\_profile\_stress\_tests.csv}, and the
-corresponding figure \texttt{outputs/paper\_I/fig1e\_core\_profile\_stress\_test.pdf}.
+The current supplementary script now writes an explicit guardrail table and a
+matching figure under \texttt{outputs/paper\_I/}.
 Those outputs do not prove invariance. They show how alternative core
 assumptions move the equilibrium when the Rankine calibration is held fixed,
 which is the correct starting point for the robustness program.
@@ -678,6 +724,54 @@ Paper~II that these three modes automatically satisfy the Koide mass formula:
 which holds experimentally to six significant figures. The electron, muon, and
 tau are not three different particles in CDFT. They are three orientations of
 the same vortex structure.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Necessary Conditions for the Model to Hold}
+
+The alpha recovery in this paper is conditional. The following conditions must
+hold for the CDFT interpretation to be more than a calibrated numerical
+coincidence.
+
+\begin{enumerate}
+\item \textbf{Topological resilience.}
+The aspect ratio $\chi=R/a$ must be a stable eigenmode, or fixed point, of the
+adaptive operating ratio $\Psi_s$. In practical terms, small perturbations of
+the ring geometry must relax back toward $\chi^*$ rather than drift to a
+continuum of nearby values. If perturbations select many unrelated aspect
+ratios with equal stability, the fine-structure interpretation fails.
+
+\item \textbf{Flux--memory coupling.}
+The responsiveness $S$ and memory $M_s$ must be coupled so that the equilibrium
+vacuum satisfies $S M_s\to1$ in the low-flux limit while still allowing a
+finite, measurable residual after overload. The simplest admissible behavior is
+an inverse correlation: if $M_s$ rises after a high-flux event, the effective
+response must relax so that the attractor is restored instead of producing
+unbounded amplification.
+
+\item \textbf{Non-radiative equilibrium.}
+The geometry $\chi^*\approx137.035999177$ must represent a minimum of internal
+dissipation for the regulator vortex. In the language of this model, the
+equilibrium is a superfluid-like or zero-friction transport state; outside the
+minimum, excess curvature or excess ring size should introduce loss, radiation,
+or instability. This is a condition to be tested, not a claim already
+established by the twelve-decimal calculation.
+
+\item \textbf{Independent stiffness closure.}
+The stiffness $\kappa$ must be derived from the vacuum-medium properties without
+feeding in $\alpha$, $e$, or $\hbar$ as hidden calibration targets. Until that is
+done, the Paper~I result remains a high-precision consistency closure rather
+than a parameter-free derivation.
+
+\item \textbf{External discriminant.}
+At least one measurable prediction must survive comparison with established
+physics. Candidate tests include vacuum hysteresis, extreme-field spectral
+residuals, decoherence-memory residuals, rotating-source pressure-gradient
+residuals, and transport-threshold tests in collective matter.
+\end{enumerate}
+
+These conditions are intentionally strict. They are the difference between a
+suggestive geometric reconstruction of $\alpha$ and a physical theory that can
+be rejected by experiment.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Open Problems}
@@ -749,7 +843,7 @@ favouring small rings) balance with a ratio of 1.19, requiring no fine-tuning.
 The second line: the vortex ring radius $R = \hbar/(mc)$, derived from quantum
 circulation quantisation, and the core radius $a = e^2/(mc^2)$, derived from
 electromagnetic self-energy, come from completely separate physics. Their ratio
-$R/a = \hbar c/e^2 = 1/\alpha$ agrees with the measured value to nine decimal
+$R/a = \hbar c/e^2 = 1/\alpha$ agrees with the measured value to twelve decimal
 places.
 
 Two different equations. Two different sectors of physics. One answer: 137.
@@ -777,7 +871,7 @@ and P.A.M.~Dirac~\cite{Dirac1951} (vacuum as physical medium)
 
 Supplementary code, including numerical verification scripts and Jupyter
 notebooks, is available in this Part I release archive. The broader public CDFD
-Universal Engine implements the same state grammar for reusable domain
+Runtime implements the same state grammar for reusable domain
 simulation, but the numerical values in this paper are reproduced from the
 paper-local supplementary script.
 

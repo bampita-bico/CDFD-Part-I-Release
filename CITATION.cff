@@ -11,10 +11,12 @@ authors:
     name-suffix: MD
     affiliation: Independent Researcher
     orcid: "https://orcid.org/0009-0001-0556-5516"
-abstract: "Public Part I physics archive for the Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project, including manuscripts, supplementary scripts, generated outputs, bibliography, and a minimal public demo. The final Part I architecture names the Mujjabi Capacity Law, Adaptive Operating Ratio, Stability Attractor, Vacuum Memory Law, Vacuum Engineering Principle, and Mujjabi Tests as falsifiable targets. The broader public CDFD Universal Engine is separate reusable software infrastructure."
+abstract: "Public Part I physics archive for the Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project, including manuscripts, supplementary scripts, generated outputs, bibliography, and a minimal public demo. The final Part I architecture names the Mujjabi Capacity Law, Adaptive Operating Ratio, Stability Attractor, Vacuum Memory Law, Vacuum Engineering Principle, and Mujjabi Tests as falsifiable targets. The broader public CDFD Runtime is separate reusable software infrastructure."
 keywords:
   - CDFD
   - CDFT
+  - CDFD Runtime
+  - CDFL
   - constraint-driven field theory
   - constraint-driven flux dynamics
   - fundamental physics
