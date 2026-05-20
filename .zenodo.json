@@ -46,7 +46,13 @@
     "numerical verification",
     "reproducible research",
     "open science",
-    "preprint"
+    "preprint",
+    "Mujjabi Laws",
+    "Mujjabi Capacity Law",
+    "Adaptive Operating Ratio",
+    "Stability Attractor",
+    "Vacuum Memory Law",
+    "Vacuum Engineering Principle"
   ],
   "description": "Public Part I physics archive for the Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project. The release includes manuscripts, compiled PDFs, LaTeX sources, supplementary Python scripts, generated figures and checks, bibliography, claim-status notes, reproducibility instructions, and a minimal public demo. The final Part I architecture names the Mujjabi Capacity Law, Adaptive Operating Ratio, Stability Attractor, Vacuum Memory Law, Vacuum Engineering Principle, and Mujjabi Tests as falsifiable targets. The archive is released as open preprint material with reproducible paper-local calculations; it is not peer reviewed and does not by itself establish empirical validation of the physical hypotheses. The broader public CDFD Runtime is separate reusable software infrastructure."
 }
