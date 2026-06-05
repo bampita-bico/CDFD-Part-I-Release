@@ -9,7 +9,7 @@ The public CDFD Runtime is software infrastructure. It can use a
 different software license, such as `AGPL-3.0-or-later`, without forcing the
 papers to use AGPL.
 
-## Recommended Policy
+## Release Policy
 
 - Part I manuscripts, PDFs, figures, tables, metadata, and archival scholarly
   materials: `CC-BY-4.0`.
@@ -32,7 +32,8 @@ exists.
 
 ## Reference Links
 
-- Creative Commons FAQ: CC licenses are not recommended for software.
+- Creative Commons FAQ: CC licenses are not a primary fit for software source
+  code.
   https://creativecommons.org/faq/
 - GNU AGPLv3: software copyleft license designed for network server software.
   https://www.gnu.org/licenses/agpl.en.html

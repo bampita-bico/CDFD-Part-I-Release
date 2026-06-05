@@ -45,6 +45,7 @@ import pandas as pd  # noqa: E402
 import sympy as sp  # noqa: E402
 from scipy.optimize import minimize_scalar, root_scalar  # noqa: E402
 
+from _figure_utils import save_axes_panel
 from _physics_utils import agreement_ok, central_second_derivative, describe_autodiff_backends, output_dir
 
 from _physics_utils import (
@@ -296,7 +297,7 @@ def _plot_figure_bundle(
     e_scan = np.array([E_norm(c, kappa, BETA) for c in chis_scan])
     ax2.plot(chis_scan - chi, e_scan - np.min(e_scan), color="#2980b9", lw=1.4)
     ax2.axvline(0.0, color="crimson", ls=":", lw=1.2)
-    ax2.set_xlabel(r"$\chi - \chi_{\mathrm{eq}}$ ($\approx 137.036-\chi_{\mathrm{eq}}$ negligible)")
+    ax2.set_xlabel(r"Deviation from equilibrium, $\chi-\chi_{\mathrm{eq}}$")
     ax2.set_ylabel(r"$\Delta E_{\mathrm{norm}}$ (relative)")
     ax2.set_title(r"(c) $E_{\mathrm{norm}}$ near equilibrium")
     text = rf"geom $\chi$: {geom['chi_geometric']:.6f}"
@@ -313,8 +314,7 @@ def _plot_figure_bundle(
 
     # Export individual panels for LaTeX inclusion
     for i, ax in enumerate([ax0, ax1, ax2]):
-        extent = ax.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
-        fig.savefig(out / f"fig3_{i}_panel.pdf", bbox_inches=extent.expanded(1.2, 1.3), dpi=150)
+        save_axes_panel(fig, ax, out / f"fig3_{i}_panel.pdf")
 
     plt.close(fig)
     return pdf

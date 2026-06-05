@@ -34,6 +34,7 @@ import pandas as pd  # noqa: E402
 import sympy as sp  # noqa: E402
 from scipy.optimize import brentq  # noqa: E402
 
+from _figure_utils import save_axes_panel
 from _physics_utils import agreement_ok, describe_autodiff_backends, output_dir
 
 from _physics_utils import LEPTON_MASSES
@@ -274,8 +275,7 @@ def _plot_VIII_bundle(
 
     # Export individual panels for LaTeX inclusion
     for i, ax in enumerate([axes[0, 0], axes[0, 1], axes[1, 0], axes[1, 1]]):
-        extent = ax.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
-        fig.savefig(out / f"fig8_{i}_panel.pdf", bbox_inches=extent.expanded(1.2, 1.3), dpi=150)
+        save_axes_panel(fig, ax, out / f"fig8_{i}_panel.pdf")
 
     plt.close(fig)
     return pdf

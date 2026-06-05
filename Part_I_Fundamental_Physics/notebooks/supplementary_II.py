@@ -48,6 +48,7 @@ import sympy as sp
 from scipy.integrate import quad
 from scipy.optimize import minimize_scalar
 
+from _figure_utils import save_axes_panel
 from _physics_utils import agreement_ok, describe_autodiff_backends, output_dir
 
 from _physics_utils import (
@@ -424,8 +425,7 @@ def _plot_figure_bundle(out: Path, fit: dict, pl: dict, theta_refined_rad: Optio
 
     # Export individual panels for LaTeX inclusion
     for i, ax in enumerate([ax0, ax1, ax2, ax3, ax4, ax5]):
-        extent = ax.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
-        fig.savefig(out / f"fig2_{i}_panel.pdf", bbox_inches=extent.expanded(1.2, 1.3), dpi=150)
+        save_axes_panel(fig, ax, out / f"fig2_{i}_panel.pdf")
 
     plt.close(fig)
     return pdf

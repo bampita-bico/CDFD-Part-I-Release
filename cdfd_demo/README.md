@@ -6,8 +6,8 @@ This directory contains a small, reproducible public demonstration for the
 The demo is intentionally narrow: it exposes a minimal NumPy equation model,
 three figure-generation scripts, and a Docker path for rerunning the public
 checks. It is not the full research archive or the full paper source tree.
-The notation follows CDFL, the public CDFD flow-constraint-memory language; the
-larger reusable software target should be referred to as the CDFD Runtime.
+The notation follows CDFL, the public CDFD flow-constraint-memory language;
+refer to the larger reusable software target as the CDFD Runtime.
 
 ## Author
 
@@ -22,8 +22,8 @@ Included:
 2. Three figure-producing scripts in `paper_scripts/`.
 3. A Docker path that runs those scripts without the private app stack.
 
-The figures should be read as reproducible equation illustrations and numerical
-sanity checks, not as empirical validation of the CDFD hypotheses.
+Read the figures as reproducible equation illustrations and numerical sanity
+checks, not as empirical validation of the CDFD hypotheses.
 
 ## Run
 

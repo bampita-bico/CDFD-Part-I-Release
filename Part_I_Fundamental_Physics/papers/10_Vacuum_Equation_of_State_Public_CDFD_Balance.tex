@@ -18,14 +18,17 @@
 
 \begin{document}
 
-\title{The Vacuum Equation of State:\\
+\title{\textbf{The Vacuum Equation of State:\\
 Deriving Torus Knot Self-Consistency from the\\
-Public CDFD Balance Law $\Psi_s = \Phi / C$}
+Public CDFD Balance Law $\Psi_s = \Phi / C$}}
 
 \author{Steve Bico Mujjabi, MD\\
 \small Independent Researcher\\
+\small Founder, Vura Labs\\
+\small Kampala, Uganda\\
 \small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
 \date{May 2026}
+\maketitle
 
 % ─────────────────────────────────────────────────────────────────────────────
 \begin{abstract}
@@ -59,7 +62,45 @@ left for later dynamical work rather than fitted in this manuscript. The public 
 
 \end{abstract}
 
-\maketitle
+\section*{Symbol Conventions}
+
+\noindent\textbf{CDFD physical-vacuum symbol convention.}
+\begin{center}
+{\small
+\begin{tabular}{p{0.16\linewidth}p{0.33\linewidth}p{0.41\linewidth}}
+\hline
+Symbol & Part I meaning & Physical reading \\
+\hline
+$J$ or $\Phi$ & Driving flux or throughput & Transport current, field throughput, circulation drive, or generic flux; a subscript fixes the exact channel \\
+$C$ & Active constraint or capacity burden & Vacuum transport capacity, geometric confinement, stiffness, boundary resistance, or load-bearing limit \\
+$S$ & Surface responsiveness & Local ability of the vacuum or modeled surface to reconfigure under drive \\
+$M_s$ & Structural memory & Retained geometry, phase history, stiffness history, or accumulated constraint state \\
+$\Psi_s$ & Adaptive operating ratio $(J/C)\cdot S\cdot M_s$ or $(\Phi/C)\cdot S\cdot M_s$ & Local bookkeeping gauge for constrained operation; it is not a new universal constant \\
+$R,a,\chi$ & Ring radius, core radius, and aspect ratio $R/a$ & Geometry used to connect vortex structure to dimensionless electromagnetic scales \\
+$\rho_0,c,\kappa$ & Vacuum density scale, propagation speed, and transport stiffness & Medium parameters used in stability, pressure, and self-consistency calculations \\
+\hline
+\end{tabular}
+}
+\end{center}
+
+\noindent\textbf{Greek-symbol convention.}
+\begin{center}
+{\small
+\begin{tabular}{p{0.16\linewidth}p{0.33\linewidth}p{0.41\linewidth}}
+\hline
+Symbol & Local role & Interpretation rule \\
+\hline
+$\alpha$ & Fine-structure constant unless a local equation states otherwise & In the Part I physics papers, un-subscripted $\alpha$ means the electromagnetic fine-structure constant \\
+$\beta,\gamma$ & Local response, stiffness, coupling, or correction coefficients & Equation-local coefficients; subscripts bind them to the named mode, channel, or approximation \\
+$\theta,\phi,\Phi_c$ & Phase, orientation, or chirality angles & Used for torus-knot orientation, vacuum phase, or chiral phase geometry as defined in the nearby equation \\
+$\delta,\epsilon$ & Perturbation, residual, tolerance, or small-offset scales & Local stability margins, numerical residuals, or experimental tolerances \\
+$\lambda,\mu,\nu$ & Rate, mass, mode, or frequency labels & Meaning is fixed by the equation, subscript, and physics context where the symbol appears \\
+$\rho,\sigma,\tau$ & Density, spread/noise, or time-scale terms & Local density, variance, stress, relaxation, or transport-memory quantities \\
+$\Omega,\Lambda$ & State/domain space or integrated measure where defined & Reserved for explicitly defined state spaces, spectra, or synthesis-level quantities \\
+\hline
+\end{tabular}
+}
+\end{center}
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Introduction}
@@ -129,7 +170,8 @@ an $n$-lobed vortex ring.
 
 \subsection{Constraint ($C$): The Transport-Capacity Limit}
 A central postulate of CDFD (Paper~I) is that the vacuum possesses a finite
-transport capacity, which dictates the fine-structure constant $\alpha$.
+transport capacity, which dictates the electromagnetic fine-structure constant
+$\alpha \equiv e^2/(\hbar c)$.
 For a multi-lobed knot, the structural stress on the medium is dictated by the
 total absolute flux. In the discrete basis, the total flux is the $L^1$ norm
 $\sum |A_k|$.
@@ -286,14 +328,19 @@ In the domains of biological and clinical systems, throughput is described in
 the \textbf{Adaptive Flux Limitation (AFL)} framework~\cite{MujjabiIX2026} by
 adaptive constraints. A minimal form of that biological adaptation law is:
 \begin{equation}
-  \frac{\partial \Lambda}{\partial t} \;=\; \alpha |J| - \beta \Lambda
+  \frac{\partial \Lambda}{\partial t} \;=\; \alpha_{\Lambda} |J| - \beta_{\Lambda} \Lambda
 \end{equation}
-where $\Lambda$ is the biological constraint (e.g., insulin resistance, inflammation), $J$ is the biological flux (e.g., glucose throughput, metabolic energy flow), $\alpha$ is the constraint reinforcement coefficient, and $\beta$ is the relaxation coefficient.
+where $\Lambda$ is the biological constraint (e.g., insulin resistance, inflammation), $J$ is the biological flux (e.g., glucose throughput, metabolic energy flow), $\alpha_{\Lambda}$ is the biological constraint-reinforcement coefficient, and $\beta_{\Lambda}$ is the biological relaxation coefficient.
 
 In the CDFD quantum vacuum, the constraint field $C$ evolves precisely according to the structural reaction of the medium to the localized flow $\Phi$:
 \begin{equation}
-  \frac{\partial C}{\partial t} \;=\; \alpha |\Phi| - \beta C + \gamma \nabla^2 C
+  \frac{\partial C}{\partial t} \;=\; \alpha_C |\Phi| - \beta_C C + \gamma_C \nabla^2 C
 \end{equation}
+where $\alpha_C$ is the vacuum constraint-reinforcement coefficient, $\beta_C$
+is the vacuum relaxation coefficient, and $\gamma_C$ is the spatial smoothing
+or diffusion coefficient for the constraint field. These coefficients are
+domain-specific transport parameters and are not the fine-structure constant
+$\alpha$ defined above.
 The formal mapping is:
 \[
   \text{Vacuum Constraint } C \;\equiv\; \text{Macro Constraint } \Lambda

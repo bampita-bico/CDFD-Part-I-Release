@@ -14,6 +14,8 @@
 \newtheorem{hypothesis}{Hypothesis}
 \newtheorem{prediction}{Prediction}
 \newtheorem{criterion}{Criterion}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlength{\emergencystretch}{2em}
 
 \newcommand{\flux}{\Phi}
 \newcommand{\constraint}{C}
@@ -21,7 +23,10 @@
 
 \title{\textbf{Paper XII: Friction, Superconductivity, Plasma States, and Transport Mysteries:\\
 A Constraint-Driven Flux Map for Collective Matter}}
-\author{Steve Bico Mujjabi, MD\\ \small Independent Researcher\\
+\author{Steve Bico Mujjabi, MD\\
+\small Independent Researcher\\
+\small Founder, Vura Labs\\
+\small Kampala, Uganda\\
 \small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
 \date{May 2026}
 
@@ -41,8 +46,45 @@ the figures and tables in this Part I archive.
 
 \end{abstract}
 
-\tableofcontents
-\newpage
+\section*{Symbol Conventions}
+
+\noindent\textbf{CDFD physical-vacuum symbol convention.}
+\begin{center}
+{\small
+\begin{tabular}{L{0.16\linewidth}L{0.33\linewidth}L{0.41\linewidth}}
+\hline
+Symbol & Part I meaning & Physical reading \\
+\hline
+$J$ or $\Phi$ & Driving flux or throughput & Transport current, field throughput, circulation drive, or generic flux; a subscript fixes the exact channel \\
+$C$ & Active constraint or capacity burden & Vacuum transport capacity, geometric confinement, stiffness, boundary resistance, or load-bearing limit \\
+$S$ & Surface responsiveness & Local ability of the vacuum or modeled surface to reconfigure under drive \\
+$M_s$ & Structural memory & Retained geometry, phase history, stiffness history, or accumulated constraint state \\
+$\Psi_s$ & Adaptive operating ratio $(J/C)\cdot S\cdot M_s$ or $(\Phi/C)\cdot S\cdot M_s$ & Local bookkeeping gauge for constrained operation; it is not a new universal constant \\
+$R,a,\chi$ & Ring radius, core radius, and aspect ratio $R/a$ & Geometry used to connect vortex structure to dimensionless electromagnetic scales \\
+$\rho_0,c,\kappa$ & Vacuum density scale, propagation speed, and transport stiffness & Medium parameters used in stability, pressure, and self-consistency calculations \\
+\hline
+\end{tabular}
+}
+\end{center}
+
+\noindent\textbf{Greek-symbol convention.}
+\begin{center}
+{\small
+\begin{tabular}{L{0.16\linewidth}L{0.33\linewidth}L{0.41\linewidth}}
+\hline
+Symbol & Local role & Interpretation rule \\
+\hline
+$\alpha$ & Fine-structure constant unless a local equation states otherwise & In the Part I physics papers, un-subscripted $\alpha$ means the electromagnetic fine-structure constant \\
+$\beta,\gamma$ & Local response, stiffness, coupling, or correction coefficients & Equation-local coefficients; subscripts bind them to the named mode, channel, or approximation \\
+$\theta,\phi,\Phi_c$ & Phase, orientation, or chirality angles & Used for torus-knot orientation, vacuum phase, or chiral phase geometry as defined in the nearby equation \\
+$\delta,\epsilon$ & Perturbation, residual, tolerance, or small-offset scales & Local stability margins, numerical residuals, or experimental tolerances \\
+$\lambda,\mu,\nu$ & Rate, mass, mode, or frequency labels & Meaning is fixed by the equation, subscript, and physics context where the symbol appears \\
+$\rho,\sigma,\tau$ & Density, spread/noise, or time-scale terms & Local density, variance, stress, relaxation, or transport-memory quantities \\
+$\Omega,\Lambda$ & State/domain space or integrated measure where defined & Reserved for explicitly defined state spaces, spectra, or synthesis-level quantities \\
+\hline
+\end{tabular}
+}
+\end{center}
 
 \section{Purpose}
 
@@ -85,13 +127,10 @@ The common adaptive law is
     \label{eq:adaptive_constraint}
 \end{equation}
 where $M_X$ is a memory, damage, pinning, or ordering field. The added $M_X$ term matters in this paper because frictional aging, vortex pinning, glass relaxation, and plasma hysteresis cannot be represented by a memoryless ratio.
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.98\textwidth]{outputs/paper_XII/fig12_0_transport_mystery_map.pdf}
-\caption{Generated Paper XII mystery map. The CDFD claim is not that one scalar replaces existing theories, but that many transitions are organized by adaptive transport constraints. The source table is \texttt{outputs/paper\_XII/table1\_transport\_mystery\_map.csv}.}
-\label{fig:transport_mystery_map}
-\end{figure}
+The coefficients are domain-specific: $\alpha_X$ reinforces the effective
+constraint in response to flux, $\eta_X$ weights the memory or ordering field,
+$\beta_X$ relaxes the constraint, and $\gamma_X$ smooths or diffuses the
+constraint field in space.
 
 \subsection{Computational Status of This Paper}
 
@@ -105,6 +144,13 @@ The figures in this manuscript are not empirical fits. They are deterministic to
     \item symbolic and numerical gates checking that the examples behave as stated.
 \end{itemize}
 The outputs therefore serve as a scaffold for experiments, not as evidence that the bridge is already true.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.98\textwidth]{outputs/paper_XII/fig12_0_transport_mystery_map.pdf}
+\caption{Generated Paper XII mystery map. The CDFD claim is not that one scalar replaces existing theories, but that many transitions are organized by adaptive transport constraints. Source table: \texttt{table1\_transport\_mystery\_map.csv}.}
+\label{fig:transport_mystery_map}
+\end{figure}
 
 \section{Friction and Stick-Slip}
 
@@ -149,7 +195,7 @@ The CDFD friction bridge fails if stick-slip timing and localization are fully e
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.92\textwidth]{outputs/paper_XII/fig12_1_friction_stick_slip.pdf}
-\caption{Generated stick-slip output. A slowly increasing shear-flux proxy loads an adaptive contact constraint until release. The lower panel shows a precursor/noise proxy. The event table is \texttt{outputs/paper\_XII/table2\_friction\_stick\_slip\_events.csv}.}
+\caption{Generated stick-slip output. A slowly increasing shear-flux proxy loads an adaptive contact constraint until release. The lower panel shows a precursor/noise proxy. Event table: \texttt{table2\_friction\_stick\_slip\_events.csv}.}
 \label{fig:friction_stick_slip}
 \end{figure}
 
@@ -188,7 +234,7 @@ The superconducting transition is a regime change in which dissipative constrain
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.92\textwidth]{outputs/paper_XII/fig12_2_superconductivity_reallocation.pdf}
-\caption{Generated superconductivity output. The toy model separates dissipative constraint from phase stiffness. Below the transition, dissipative resistance falls while phase/topological constraint remains active. The curve table is \texttt{outputs/paper\_XII/table3\_superconductivity\_reallocation\_curve.csv}.}
+\caption{Generated superconductivity output. The toy model separates dissipative constraint from phase stiffness. Below the transition, dissipative resistance falls while phase/topological constraint remains active. Curve table: \texttt{table3\_superconductivity\_reallocation\_curve.csv}.}
 \label{fig:superconductivity_reallocation}
 \end{figure}
 
@@ -224,7 +270,7 @@ The superconductivity bridge fails if it cannot recover standard superconducting
 
 Superfluidity is the neutral analogue: mass flow proceeds without ordinary viscous dissipation, but quantized vortices and phase coherence still constrain transport. The CDFD reading is again not ``no constraint''. It is a switch from dissipative constraint to topological phase constraint.
 
-\subsection{High-$T_c$ and Strange-Metal Boundary}
+\subsection{\texorpdfstring{High-$T_c$ and Strange-Metal Boundary}{High-Tc and Strange-Metal Boundary}}
 
 High-$T_c$ superconductivity is where Paper XII could eventually matter most. Conventional superconductivity already has a mature theory. The difficult territory is where pairing, phase stiffness, disorder, stripe order, spin fluctuations, pseudogap behavior, and strange-metal transport do not collapse into one simple transition.
 
@@ -255,7 +301,7 @@ is a candidate rupture index for reconnection, edge-localized modes, or disrupti
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.98\textwidth]{outputs/paper_XII/fig12_3_plasma_rupture_index.pdf}
-\caption{Generated plasma output. The rupture index combines drive, constraint, and constraint-gradient information. In the toy field, risk does not follow the drive field alone. The summary table is \texttt{outputs/paper\_XII/table5\_plasma\_rupture\_index\_summary.csv}.}
+\caption{Generated plasma output. The rupture index combines drive, constraint, and constraint-gradient information. In the toy field, risk does not follow the drive field alone. Summary table: \texttt{table5\_plasma\_rupture\_index\_summary.csv}.}
 \label{fig:plasma_rupture}
 \end{figure}
 
@@ -274,14 +320,14 @@ The plasma bridge fails if disruptions, reconnection, or confinement loss correl
 \subsection{Plasma States as CDFD Regimes}
 
 \begin{center}
-\begin{tabular}{p{0.22\textwidth}p{0.28\textwidth}p{0.34\textwidth}}
+\begin{tabular}{L{0.22\textwidth}L{0.28\textwidth}L{0.34\textwidth}}
 \toprule
 \textbf{Regime} & \textbf{CDFD reading} & \textbf{Observable handle}\\
 \midrule
 Diffuse plasma & low coherence, weak constraint topology & broad particle/field distribution\\
 Confined plasma & $\Psi_p\approx1$ with magnetic topology sustaining flux & long confinement time, low loss rate\\
 Reconnection & steep constraint gradient breaks and reroutes flux & rapid magnetic-energy release\\
-Runaway/disruption & sustained $\Psi_p>1$ over critical region & quench, edge loss, global instability\\
+Runaway/\allowbreak disruption & sustained $\Psi_p>1$ over critical region & quench, edge loss, global instability\\
 Ignition-like state & self-heating flux maintains organized constraint & sustained fusion-relevant balance\\
 \bottomrule
 \end{tabular}
@@ -340,7 +386,7 @@ for trapped, over-constrained states, while avalanche failure occurs when stored
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.92\textwidth]{outputs/paper_XII/fig12_4_jamming_memory.pdf}
-\caption{Generated jamming output. Two systems with the same nominal drive but different preparation memory produce different avalanche tails. The distribution table is \texttt{outputs/paper\_XII/table6\_jamming\_memory\_distributions.csv}.}
+\caption{Generated jamming output. Two systems with the same nominal drive but different preparation memory produce different avalanche tails. Distribution table: \texttt{table6\_jamming\_memory\_distributions.csv}.}
 \label{fig:jamming_memory}
 \end{figure}
 
@@ -397,7 +443,7 @@ The key falsification test is again incremental prediction. If a topological inv
 The following topics are worth keeping in the expandable spine. Some should remain short subsections until there is enough mathematics or data for a standalone paper.
 
 \begin{center}
-\begin{tabular}{p{0.22\textwidth}p{0.34\textwidth}p{0.30\textwidth}}
+\begin{tabular}{L{0.22\textwidth}L{0.34\textwidth}L{0.30\textwidth}}
 \toprule
 \textbf{Mystery} & \textbf{CDFD bridge} & \textbf{Needed discriminant}\\
 \midrule
@@ -406,7 +452,7 @@ Strange metals & charge flux lacks ordinary quasiparticle constraint & transport
 Quantum Hall and topological phases & transport protected by topological constraint channels & edge-state resilience predicted by constraint topology\\
 Sonoluminescence & collapse focuses hydrodynamic flux through transient constraint shell & emission tied to maximum compression topology\\
 Lightning and ball-lightning candidates & atmospheric charge flux constrained by plasma channel memory & persistence depends on channel constraint lifetime\\
-Non-Newtonian fluids & imposed shear modifies the constraint field itself & shear-thickening/thinning predicted by $C(\dot{\gamma})$ dynamics\\
+Non-Newtonian fluids & imposed shear modifies the constraint field itself & shear-thickening/thinning predicted by $C(\dot{\gamma})$ dynamics, where $\dot{\gamma}$ is shear rate\\
 Fracture and crack propagation & stress flux localizes along weakening constraint corridors & crack path follows high-$\nabla(C^{-1}\nabla\Phi)$ regions\\
 Magnetorheological and ferrofluids & external field writes transport constraint topology & viscosity/yield stress follows field-imposed $C$ geometry\\
 \bottomrule
@@ -428,7 +474,8 @@ Not all mysteries should be expanded equally. The best next candidates are the o
 
 Paper I introduced $M_s$ as a possible memory or recovery state of the vacuum
 medium. That idea is not established by the numerical recovery of
-$\chi=1/\alpha$. It becomes scientific only if it creates discriminants that can
+$\chi=1/\alpha$, where un-subscripted $\alpha$ denotes the electromagnetic
+fine-structure constant. It becomes scientific only if it creates discriminants that can
 be compared against QED, general relativity, and established laboratory-domain
 models. The tests below are therefore written as falsification targets, not as
 claimed observations.
@@ -447,7 +494,7 @@ vacuum equation of state or a controlled null/result in the experiments below.
 
 \begin{center}
 \small
-\begin{tabular}{p{0.25\textwidth}p{0.31\textwidth}p{0.30\textwidth}}
+\begin{tabular}{L{0.25\textwidth}L{0.31\textwidth}L{0.30\textwidth}}
 \toprule
 \textbf{Test family} & \textbf{Primary target} & \textbf{Required control}\\
 \midrule
@@ -499,6 +546,15 @@ entanglement and dephasing channels. CDFD can add value only if, after those
 channels are fitted, a residual depends on the prior loading history of the
 experimental volume.
 
+\paragraph{Observer-effect clarification.}
+In this manuscript, observation means physical coupling, not conscious attention.
+A detector, cavity wall, probe pulse, thermal bath, residual gas, vibration
+mode, or readout circuit can change a quantum experiment because it interacts
+with the system and leaves a record. A human observer may later inspect that
+record, but the relevant physics is the coupling channel. The CDFD proposal below
+is therefore limited to a possible history-dependent residual after ordinary
+measurement, environmental, and instrumental channels have been modeled.
+
 Let $V(t)$ denote an observed interference visibility, and let
 $V_{\mathrm{std}}(t)$ be the visibility predicted by a calibrated standard
 open-system model using the known environmental couplings. Define the residual
@@ -536,7 +592,8 @@ scale with the proposed memory variable.
 
 \subsection{Mujjabi Alpha-Jitter Test}
 
-The strongest publishable form of this idea is narrow. If $\alpha=a/R$ is an
+The strongest publishable form of this idea is narrow. If the electromagnetic
+fine-structure constant $\alpha=a/R$ is an
 adaptive fixed point rather than a rigid input, extreme field
 environments could in principle create a tiny effective displacement:
 \begin{equation}
@@ -607,7 +664,8 @@ non-equilibrium extension of Paper I falsifiable.
 \section{Unified Falsification Program}
 
 \begin{center}
-\begin{tabular}{p{0.18\textwidth}p{0.28\textwidth}p{0.32\textwidth}}
+\small
+\begin{tabular}{L{0.22\textwidth}L{0.30\textwidth}L{0.34\textwidth}}
 \toprule
 \textbf{Domain} & \textbf{Primary measurement} & \textbf{Failure condition}\\
 \midrule
@@ -627,7 +685,7 @@ The correct standard is incremental predictive value. CDFD does not win by renam
 Paper XII now has its own output set:
 \begin{center}
 \small
-\begin{tabular}{p{0.42\textwidth}p{0.42\textwidth}}
+\begin{tabular}{L{0.42\textwidth}L{0.42\textwidth}}
 \toprule
 \textbf{Artifact} & \textbf{Purpose}\\
 \midrule

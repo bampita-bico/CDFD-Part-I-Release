@@ -43,6 +43,7 @@ import pandas as pd  # noqa: E402
 import sympy as sp  # noqa: E402
 from scipy.optimize import minimize_scalar  # noqa: E402
 
+from _figure_utils import save_axes_panel
 from _physics_utils import agreement_ok, describe_autodiff_backends, output_dir
 
 from _physics_utils import (
@@ -287,8 +288,9 @@ def _plot_V_bundle(
     ax2.axvline(theta_deg_derived, color="#16a085", ls=":", lw=1.3)
     ax2.axhline(-1.0, color="#95a5a6", lw=1.1, linestyle="--")
     ax2.set_xlabel(r"$\theta$ (deg)")
+    ax2.set_ylabel(r"$\cos(3\theta+\phi_c)$")
     ax2.legend(fontsize=8, loc="lower right")
-    ax2.set_title(r"(c) Chiral cosine along $\phi_c=\pi-2/3$\,rad")
+    ax2.set_title(r"(c) Chiral cosine along $\phi_c=\pi-2/3\ \mathrm{rad}$")
 
     fig.suptitle(
         "Paper V — Koide-aligned chirality vacuum phase — CDFT supplementary (2026)",
@@ -302,8 +304,7 @@ def _plot_V_bundle(
 
     # Export individual panels for LaTeX inclusion
     for i, ax in enumerate([ax0, ax1, ax2]):
-        extent = ax.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
-        fig.savefig(out / f"fig5_{i}_panel.pdf", bbox_inches=extent.expanded(1.2, 1.3), dpi=150)
+        save_axes_panel(fig, ax, out / f"fig5_{i}_panel.pdf")
 
     plt.close(fig)
     return pdf

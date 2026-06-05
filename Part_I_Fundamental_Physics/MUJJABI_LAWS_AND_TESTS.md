@@ -29,6 +29,12 @@ it physically.
 | Mujjabi Decoherence-Memory Test | Controlled systems show a residual history-dependent coherence loss after standard environmental channels are modeled. | Preparation-history-dependent phase or visibility decay. | Decoherence is exhausted by standard open-system terms. |
 | Mujjabi Transport-Threshold Test | Friction, jamming, plasma, superconducting, and rupture transitions improve when written as adaptive capacity thresholds. | Transition timing, hysteresis loop, or avalanche threshold. | Established domain models predict the same data with equal or better residuals and no CDFD state variable. |
 
+Observer-effect language in this release is operational: observation means
+physical coupling through an apparatus, environment, detector, or record. It is
+not a consciousness claim. The decoherence-memory test only asks whether a
+history-dependent residual remains after standard measurement and environmental
+channels are modeled.
+
 ## Vacuum Engineering Program
 
 Vacuum engineering means controlled manipulation of the CDFD state variables,

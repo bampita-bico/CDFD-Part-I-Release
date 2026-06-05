@@ -25,6 +25,7 @@ import pandas as pd  # noqa: E402
 import sympy as sp  # noqa: E402
 from scipy.optimize import brentq  # noqa: E402
 
+from _figure_utils import save_axes_panel
 from _physics_utils import agreement_ok, describe_autodiff_backends, output_dir
 
 import sys
@@ -186,7 +187,9 @@ def plot_bundle(out: Path, m3: float, theta: Dict[int, float]) -> Path:
     for n, c in [(2, "C3"), (3, "C0"), (5, "C2")]:
         y = [sum(np.cos(t + 2 * np.pi * k / n) ** 2 for k in range(n)) for t in ts]
         ax[0, 0].plot(ts, y, label=f"n={n}", color=c)
-    ax[0, 0].set_title("sum cos^2 vs theta")
+    ax[0, 0].set_title(r"Fourier sum $\sum_k\cos^2(\theta+2\pi k/n)$")
+    ax[0, 0].set_xlabel(r"$\theta$ (rad)")
+    ax[0, 0].set_ylabel(r"$\sum_k\cos^2(\theta+2\pi k/n)$")
     ax[0, 0].legend(fontsize=8)
 
     for n in (4, 6, 8, 10):
@@ -194,14 +197,18 @@ def plot_bundle(out: Path, m3: float, theta: Dict[int, float]) -> Path:
         mn = Mn(n, m3)
         ms = sorted(mn * A(th, n, k) ** 2 for k in range(n))
         ax[0, 1].plot(range(n), ms, "o-", label=f"n={n}")
-    ax[0, 1].set_title("even-n spectra")
+    ax[0, 1].set_title("Even-$n$ mode spectra")
+    ax[0, 1].set_xlabel(r"Mode index $k$")
+    ax[0, 1].set_ylabel(r"$m_k$ (MeV)")
     ax[0, 1].legend(fontsize=8)
 
     ns = list(range(3, 14))
     coeff = 2 * np.pi**2 / (np.pi + 4) ** 2
     ax[1, 0].plot(ns, [theta[n] for n in ns], "o-", label="theta_n")
     ax[1, 0].plot(ns, [coeff / n**2 for n in ns], "--", label="asymptotic")
-    ax[1, 0].set_title("theta convergence")
+    ax[1, 0].set_title(r"Convergence of $\theta_n$")
+    ax[1, 0].set_xlabel(r"Family index $n$")
+    ax[1, 0].set_ylabel(r"$\theta_n$ (rad)")
     ax[1, 0].legend(fontsize=8)
 
     x = []
@@ -213,15 +220,16 @@ def plot_bundle(out: Path, m3: float, theta: Dict[int, float]) -> Path:
         x.append(mn * th * th)
         y.append(ms[0])
     ax[1, 1].plot(x, y, "o-")
-    ax[1, 1].set_title("m_min vs M_n theta_n^2")
+    ax[1, 1].set_title(r"Minimum mass vs $M_n\theta_n^2$")
+    ax[1, 1].set_xlabel(r"$M_n\theta_n^2$ (MeV)")
+    ax[1, 1].set_ylabel(r"$m_{\min}$ (MeV)")
     fig.tight_layout()
     pdf = out / "paper_IX_figures.pdf"
     fig.savefig(pdf, bbox_inches="tight")
 
     # Export individual panels for LaTeX inclusion
     for i, ax_ in enumerate([ax[0, 0], ax[0, 1], ax[1, 0], ax[1, 1]]):
-        extent = ax_.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
-        fig.savefig(out / f"fig9_{i}_panel.pdf", bbox_inches=extent.expanded(1.2, 1.3), dpi=150)
+        save_axes_panel(fig, ax_, out / f"fig9_{i}_panel.pdf")
 
     plt.close(fig)
     return pdf

@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import os
 import sys
+import textwrap
 from pathlib import Path
 from typing import Dict, Optional
 
@@ -83,30 +84,51 @@ def phase_map(out: Path) -> pd.DataFrame:
     df = pd.DataFrame(rows)
     _save_csv(df, out / "table1_transport_mystery_map.csv")
 
-    fig, ax = plt.subplots(figsize=(9.8, 4.6))
+    def wrap_label(value: str, width: int = 28) -> str:
+        return "\n".join(textwrap.wrap(value, width=width, break_long_words=False))
+
+    fig, ax = plt.subplots(figsize=(12.8, 6.8))
     ax.axis("off")
-    y_positions = np.arange(len(rows))[::-1]
+    y_positions = np.linspace(0.80, 0.18, len(rows))
     colors = ["#476A6F", "#7B5E7B", "#B85C38", "#386FA4", "#6A994E"]
+    columns = {
+        "Flux": (0.25, "phi_proxy", 28),
+        "Constraint": (0.49, "constraint_proxy", 31),
+        "Signal": (0.75, "transition_signal", 34),
+    }
+    for heading, (x, _, _) in columns.items():
+        ax.text(x, 0.94, heading, fontsize=10.5, fontweight="bold", ha="left", va="center")
     for y, row, color in zip(y_positions, rows, colors):
-        ax.scatter(0.06, y, s=550, color=color, alpha=0.92)
-        ax.text(0.06, y, row["domain"].replace("_", " ").title(), color="white",
-                ha="center", va="center", fontsize=8.5, fontweight="bold")
-        ax.annotate("", xy=(0.28, y), xytext=(0.12, y),
-                    arrowprops=dict(arrowstyle="->", lw=1.5, color="#444"))
-        ax.text(0.30, y + 0.16, "Flux", fontsize=9, fontweight="bold")
-        ax.text(0.30, y - 0.10, row["phi_proxy"], fontsize=8)
-        ax.annotate("", xy=(0.58, y), xytext=(0.49, y),
-                    arrowprops=dict(arrowstyle="->", lw=1.5, color="#444"))
-        ax.text(0.60, y + 0.16, "Constraint", fontsize=9, fontweight="bold")
-        ax.text(0.60, y - 0.10, row["constraint_proxy"], fontsize=8)
-        ax.annotate("", xy=(0.90, y), xytext=(0.81, y),
-                    arrowprops=dict(arrowstyle="->", lw=1.5, color="#444"))
-        ax.text(0.92, y + 0.16, "Signal", fontsize=9, fontweight="bold")
-        ax.text(0.92, y - 0.10, row["transition_signal"], fontsize=8, ha="left")
-    ax.set_xlim(0, 1.42)
-    ax.set_ylim(-0.7, len(rows) - 0.25)
+        domain = row["domain"].replace("_", "\n").title()
+        ax.text(
+            0.09,
+            y,
+            domain,
+            color="white",
+            ha="center",
+            va="center",
+            fontsize=8.8,
+            fontweight="bold",
+            bbox=dict(boxstyle="round,pad=0.55", facecolor=color, edgecolor="none", alpha=0.95),
+        )
+        for x, key, width in columns.values():
+            ax.text(
+                x,
+                y,
+                wrap_label(row[key], width),
+                fontsize=8.2,
+                ha="left",
+                va="center",
+                linespacing=1.18,
+                bbox=dict(boxstyle="round,pad=0.35", facecolor="#F8F8F3", edgecolor="#D6D6CE", linewidth=0.7),
+            )
+        ax.annotate("", xy=(0.21, y), xytext=(0.14, y), arrowprops=dict(arrowstyle="->", lw=1.1, color="#555"))
+        ax.annotate("", xy=(0.45, y), xytext=(0.40, y), arrowprops=dict(arrowstyle="->", lw=1.1, color="#555"))
+        ax.annotate("", xy=(0.71, y), xytext=(0.66, y), arrowprops=dict(arrowstyle="->", lw=1.1, color="#555"))
+    ax.set_xlim(0, 1.0)
+    ax.set_ylim(0.05, 1.0)
     ax.set_title("Paper XII transport mystery map: flux, constraint, transition signal", fontsize=12)
-    fig.tight_layout()
+    fig.tight_layout(pad=1.25)
     fig.savefig(out / "fig12_0_transport_mystery_map.pdf")
     plt.close(fig)
     return df
@@ -339,8 +361,8 @@ def plasma_model(out: Path) -> Dict[str, object]:
         a.set_xticks([])
         a.set_yticks([])
         fig.colorbar(im, ax=a, fraction=0.046, pad=0.02)
-    fig.suptitle("Toy plasma output: risk localizes at drive plus topology extrema", y=1.03)
-    fig.tight_layout()
+    fig.suptitle("Toy plasma output: risk localizes at drive plus topology extrema", y=0.98)
+    fig.tight_layout(rect=[0, 0, 1, 0.90])
     fig.savefig(out / "fig12_3_plasma_rupture_index.pdf")
     plt.close(fig)
     return {"summary": summary, "checks": checks}

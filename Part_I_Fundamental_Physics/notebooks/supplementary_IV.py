@@ -45,6 +45,7 @@ import pandas as pd  # noqa: E402
 import sympy as sp  # noqa: E402
 from scipy.optimize import minimize_scalar, root_scalar  # noqa: E402
 
+from _figure_utils import save_axes_panel
 from _physics_utils import agreement_ok, describe_autodiff_backends, output_dir
 
 from _physics_utils import (
@@ -309,7 +310,7 @@ def _plot_IV_bundle(out: Path, geom: Dict, chi: float, alpha: float, M3_mev: flo
         gg = E_norm(chi_here, kappa, BETA)
         Xs.append(1.0 / (gg * Ae**2))
     ax1.plot(phis_deg, Xs, color="#8e44ad", lw=1.5)
-    ax1.set_xlabel(r"$\Phi_c$ (deg) — illustrative slice; EOS sets true $\Phi_c(\rho_0)$")
+    ax1.set_xlabel(r"Illustrative chirality slice, $\Phi_c$ (deg)")
     ax1.set_ylabel(r"$X=\rho_0 a^3/m_e = 1/(g A_e^2)$")
     ax1.set_title("(b) Dimensionless coupling vs chirality slice")
 
@@ -334,8 +335,7 @@ def _plot_IV_bundle(out: Path, geom: Dict, chi: float, alpha: float, M3_mev: flo
 
     # Export individual panels for LaTeX inclusion
     for i, ax in enumerate([ax0, ax1, ax2]):
-        extent = ax.get_window_extent().transformed(fig.dpi_scale_trans.inverted())
-        fig.savefig(out / f"fig4_{i}_panel.pdf", bbox_inches=extent.expanded(1.2, 1.3), dpi=150)
+        save_axes_panel(fig, ax, out / f"fig4_{i}_panel.pdf")
 
     plt.close(fig)
     return pdf

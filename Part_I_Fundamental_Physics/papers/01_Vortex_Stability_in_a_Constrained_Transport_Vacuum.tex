@@ -11,17 +11,21 @@
 
 \begin{document}
 
-\title{Vortex Stability in a Constrained Transport Vacuum\\
-and the Origin of the Fine-Structure Constant}
+\title{\textbf{Vortex Stability in a Constrained Transport Vacuum\\
+and the Origin of the Fine-Structure Constant}}
 
 \author{Steve Bico Mujjabi, MD\\
 \small Independent Researcher\\
+\small Founder, Vura Labs\\
+\small Kampala, Uganda\\
 \small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
 \date{May 2026}
+\maketitle
 
 % ─────────────────────────────────────────────────────────────────────────────
 \begin{abstract}
-The fine-structure constant $\alpha \approx 1/137$ is one of the most precisely
+The electromagnetic fine-structure constant, denoted here by
+$\alpha \equiv e^2/(\hbar c) \approx 1/137$, is one of the most precisely
 measured dimensionless numbers in physics, yet its value remains an input to the
 Standard Model rather than a derived consequence. This paper proposes a
 transport-medium interpretation of that fact. We treat the physical vacuum not
@@ -46,7 +50,45 @@ a model-level explanation and numerical consistency check, with the remaining
 core-profile, stiffness, memory, and experimental assumptions listed explicitly
 at the end of the paper. \end{abstract}
 
-\maketitle
+\section*{Symbol Conventions}
+
+\noindent\textbf{CDFD physical-vacuum symbol convention.}
+\begin{center}
+{\small
+\begin{tabular}{p{0.16\linewidth}p{0.33\linewidth}p{0.41\linewidth}}
+\hline
+Symbol & Part I meaning & Physical reading \\
+\hline
+$J$ or $\Phi$ & Driving flux or throughput & Transport current, field throughput, circulation drive, or generic flux; a subscript fixes the exact channel \\
+$C$ & Active constraint or capacity burden & Vacuum transport capacity, geometric confinement, stiffness, boundary resistance, or load-bearing limit \\
+$S$ & Surface responsiveness & Local ability of the vacuum or modeled surface to reconfigure under drive \\
+$M_s$ & Structural memory & Retained geometry, phase history, stiffness history, or accumulated constraint state \\
+$\Psi_s$ & Adaptive operating ratio $(J/C)\cdot S\cdot M_s$ or $(\Phi/C)\cdot S\cdot M_s$ & Local bookkeeping gauge for constrained operation; it is not a new universal constant \\
+$R,a,\chi$ & Ring radius, core radius, and aspect ratio $R/a$ & Geometry used to connect vortex structure to dimensionless electromagnetic scales \\
+$\rho_0,c,\kappa$ & Vacuum density scale, propagation speed, and transport stiffness & Medium parameters used in stability, pressure, and self-consistency calculations \\
+\hline
+\end{tabular}
+}
+\end{center}
+
+\noindent\textbf{Greek-symbol convention.}
+\begin{center}
+{\small
+\begin{tabular}{p{0.16\linewidth}p{0.33\linewidth}p{0.41\linewidth}}
+\hline
+Symbol & Local role & Interpretation rule \\
+\hline
+$\alpha$ & Fine-structure constant unless a local equation states otherwise & In the Part I physics papers, un-subscripted $\alpha$ means the electromagnetic fine-structure constant \\
+$\beta,\gamma$ & Local response, stiffness, coupling, or correction coefficients & Equation-local coefficients; subscripts bind them to the named mode, channel, or approximation \\
+$\theta,\phi,\Phi_c$ & Phase, orientation, or chirality angles & Used for torus-knot orientation, vacuum phase, or chiral phase geometry as defined in the nearby equation \\
+$\delta,\epsilon$ & Perturbation, residual, tolerance, or small-offset scales & Local stability margins, numerical residuals, or experimental tolerances \\
+$\lambda,\mu,\nu$ & Rate, mass, mode, or frequency labels & Meaning is fixed by the equation, subscript, and physics context where the symbol appears \\
+$\rho,\sigma,\tau$ & Density, spread/noise, or time-scale terms & Local density, variance, stress, relaxation, or transport-memory quantities \\
+$\Omega,\Lambda$ & State/domain space or integrated measure where defined & Reserved for explicitly defined state spaces, spectra, or synthesis-level quantities \\
+\hline
+\end{tabular}
+}
+\end{center}
 
 % ─────────────────────────────────────────────────────────────────────────────
 \section{Introduction}
@@ -162,7 +204,7 @@ The main symbols used in Paper~I are:
 \toprule
 \textbf{Symbol} & \textbf{Meaning in this manuscript}\\
 \midrule
-$\alpha$ & electromagnetic fine-structure constant; $\alpha^{-1}$ is the CODATA inverse fine-structure ratio\\
+$\alpha$ & electromagnetic fine-structure constant, written here as $e^2/(\hbar c)$ in the manuscript's electromagnetic-unit convention; $\alpha^{-1}$ is the CODATA inverse fine-structure ratio\\
 $R$ & vortex-ring radius, identified here with the reduced Compton scale $\hbar/(mc)$\\
 $a$ & vortex-core radius, identified here with the classical electron radius $e^2/(mc^2)$ in the manuscript's electromagnetic-unit convention\\
 $\chi$ & dimensionless vortex aspect ratio $R/a$\\
@@ -650,6 +692,14 @@ freedom. CDFT can only add value if the proposed memory variable predicts a
 measurable residual phase, relaxation, or hysteresis effect beyond the standard
 description. Paper~XII states this as an experimental target rather than as an
 assumed fact.
+
+This is also the intended meaning of any observer-effect language in this
+release. An observer is not a disembodied human mind changing the vacuum by
+attention. Operationally, an observation is a physical coupling between the
+system and an apparatus, environment, detector, or record. If such coupling
+changes the state, the mechanism must be specified as an interaction channel.
+CDFT therefore treats ``observation'' as a boundary-and-measurement problem, not
+as a consciousness claim.
 
 \subsection{Operational dictionary relative to standard quantum language}
 

@@ -7,8 +7,13 @@ Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project.
 
 ## Author
 
-Steve Bico Mujjabi, MD  
+Steve Bico Mujjabi, MD<br>
+Independent Researcher<br>
+Founder, Vura Labs<br>
+Kampala, Uganda<br>
 ORCID: https://orcid.org/0009-0001-0556-5516
+
+Institutional home: **Vura Labs**
 
 ## Keywords
 
@@ -21,7 +26,7 @@ torus knots; vortex dynamics; adaptive vacuum; vacuum memory; vacuum
 hysteresis; Mujjabi Tests; falsifiable predictions; Koide formula; lepton
 masses; fine-structure constant; reproducible research; open science.
 
-## Recommended GitHub Topics
+## GitHub Topics
 
 `cdfd`, `cdft`, `theoretical-physics`, `mathematical-physics`,
 `cdfd-runtime`, `cdfl`, `computational-physics`, `quantum-foundations`, `field-theory`,
@@ -81,8 +86,8 @@ release remains a scholarly archive: its paper-local Python scripts,
 notebooks, and outputs reproduce the figures and tables cited by the physics
 papers.
 
-The two layers should be cited and licensed separately until a combined runtime
-release DOI exists.
+Cite and license the two layers separately until a combined runtime release DOI
+exists.
 
 ## License
 
