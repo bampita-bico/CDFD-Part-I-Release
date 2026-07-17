@@ -1,14 +1,20 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[aps,prd,10pt,superscriptaddress,nofootinbib,showkeys,amsmath,amssymb]{revtex4-2}
+
 \usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
 \usepackage{bm}
-\usepackage{hyperref}
 \usepackage{booktabs}
-\usepackage{geometry}
-\geometry{margin=2.5cm}
-\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+\usepackage{array}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{lineno}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{proposition}{Proposition}
@@ -16,18 +22,16 @@
 
 \begin{document}
 
-\title{\textbf{Zero Parameters: Deriving the Vacuum Chirality Phase\\
-from the Koide Invariant}}
+\title{Zero Parameters: Deriving the Vacuum Chirality Phase from the Koide Invariant}
 
-\author{Steve Bico Mujjabi, MD\\
-\small Independent Researcher\\
-\small Founder, Vura Labs\\
-\small Kampala, Uganda\\
-\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
-\date{May 2026}
-\maketitle
+\author{Steve Bico Mujjabi, MD}
+\email{msbico@gmail.com}
+\homepage{https://github.com/bampita-bico/CDFD-Part-I-Release}
+\thanks{Independent researcher; ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}.}
+\affiliation{VuraLabs, Kampala, Uganda}
 
-% ─────────────────────────────────────────────────────────────────────────────
+\date{July 2026}
+
 \begin{abstract}
 Paper~IV of this series derived the master self-consistency equation for the
 CDFT vacuum density $\rho_0$ and identified the vacuum chirality phase
@@ -63,8 +67,20 @@ this step.
 as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
 equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
 left for later dynamical work rather than fitted in this manuscript. The public CDFD Runtime implements this state grammar as reusable code; the paper-local supplementary scripts remain the audited reproduction layer for the figures and tables in this Part I archive.
-
 \end{abstract}
+
+\keywords{Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, vacuum chirality phase, zero-parameter model}
+
+\maketitle
+\linenumbers
+
+\section*{Project Context}
+This manuscript constitutes Part I (Paper 05) of the multi-part series
+\textit{Constraint-Driven Flux Dynamics (CDFD)}. The underlying mathematical
+architecture builds directly upon the concepts established in Paper 04 of this
+series (Steve Bico Mujjabi, \textit{``CDFD Part I: Fundamental Physics ---
+Paper 04: The Vacuum Equation of State and the Self-Consistency of the CDFT
+Lepton Sector''}, prepared for APS submission and archived in the Part I REVTeX release).
 
 \section*{Symbol Conventions}
 
@@ -106,7 +122,7 @@ $\Omega,\Lambda$ & State/domain space or integrated measure where defined & Rese
 }
 \end{center}
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{Introduction}
 
 The Constraint-Driven Field Theory (CDFT) series has, paper by paper,
@@ -154,7 +170,7 @@ In this sense, the chirality phase is a memory-compatible phase: it is stable
 because the local constraint history has settled, not because the medium has no
 history.
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{Setup: Three Equations, One Unknown}
 \label{sec:setup}
 
@@ -187,7 +203,7 @@ $\phi_c$.
 Equation~\eqref{eq:equil} is one equation in two unknowns.
 An additional condition is required.
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{The $\mathbb{Z}_3$ Self-Consistency Condition}
 \label{sec:self_consistency}
 
@@ -225,7 +241,7 @@ expressed as a dimensionless number in radians:
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.8\textwidth]{outputs/paper_V/fig5_1_panel.pdf}
+  \includegraphics[width=0.8\textwidth]{figures/fig5_1_panel.pdf}
   \caption{The trefoil phase angle $\theta$. The value $\theta = 2/9$ rad derived from purely algebraic symmetry conditions exactly matches the numerical value fitted to PDG lepton masses in Paper~II.}
   \label{fig:theta_derived}
 \end{figure}
@@ -274,12 +290,12 @@ machine precision).
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.8\textwidth]{outputs/paper_V/fig5_2_panel.pdf}
+  \includegraphics[width=0.8\textwidth]{figures/fig5_2_panel.pdf}
   \caption{The chiral cosine interaction evaluated along the derived vacuum phase $\phi_c = \pi - 2/3$. The minimum rests cleanly at the predicted orientation $\theta = 2/9$ rad.}
   \label{fig:chiral_cosine}
 \end{figure}
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{The Lepton Mass Prediction}
 \label{sec:masses}
 
@@ -322,7 +338,7 @@ values~\cite{PDG2022}.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.8\textwidth]{outputs/paper_V/fig5_0_panel.pdf}
+  \includegraphics[width=0.8\textwidth]{figures/fig5_0_panel.pdf}
   \caption{Comparison of the lepton masses predicted by the zero-parameter CDFT derivation ($\theta = 2/9$ rad) against the 2022 PDG measured values. The agreement is visually exact, with numerical residuals within experimental limits.}
   \label{fig:masses_vs_pdg}
 \end{figure}
@@ -341,7 +357,7 @@ The Koide ratio holds exactly:
 \end{equation}
 to machine precision (Paper~II theorem: this holds for any $\theta$).
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{Internal Derivation Chain}
 \label{sec:chain}
 
@@ -390,7 +406,7 @@ The lepton sector is determined by three numbers:
 All three are derived from CDFT (Papers~I, II, and the definition of the mass unit
 respectively).
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{The Significance of $3\theta = Q$}
 
 The identity $3\theta = Q = 2/3$ is the key equation of this paper.
@@ -415,7 +431,7 @@ the chirality breaking is commensurate with the symmetry it breaks.
 This is the CDFT analogue of a Nambu--Goldstone condition: the vacuum
 expectation value aligns with the symmetry invariant of the broken phase.
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{Open Problems}
 
 Within the assumptions of the model, the lepton-sector construction is complete.
@@ -446,7 +462,7 @@ The remaining open problems for future papers concern the extension beyond lepto
   (free) depends on the topology of the knot's self-intersection structure.
 \end{enumerate}
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{Conclusion}
 
 The vacuum chirality phase $\phi_c$ is not an independent property of
@@ -468,7 +484,26 @@ closed. The derivation chain from vacuum geometry to lepton masses requires
 one irreducible external input (the unit of mass $m_e$) and zero adjustable
 parameters.
 
-% ─────────────────────────────────────────────────────────────────────────────
+
+\section*{Supplementary Material}
+
+This manuscript is accompanied by release-archive supplementary material in
+the canonical Part I tree. The relevant paper-local Python scripts, numerical checks, generated figure outputs,
+tabulated data, figure assets, and environment notes are maintained under
+\texttt{notebooks/}, \texttt{outputs/}, \texttt{figures/}, and
+\texttt{REPRODUCIBILITY.md} in \texttt{Part\_I\_Fundamental\_Physics/}.
+
+
+\section*{Data and Code Availability}
+
+The release-archive supplementary material is included in the archived Part I
+release on Zenodo at \url{https://doi.org/10.5281/zenodo.20250820}. The current version DOI is assigned by Zenodo after each GitHub release. Zenodo is the
+permanent release archive, and the public source archive is available on GitHub at
+\url{https://github.com/bampita-bico/CDFD-Part-I-Release}. The broader public CDFD
+Runtime is separate reusable software infrastructure; the numerical values reported
+here are reproduced from this paper's Supplementary Material.
+
+
 \section*{Acknowledgments}
 The author used AI-assisted tools for formatting checks and code-verification
 support. The scientific claims, interpretations, and final manuscript decisions
@@ -481,14 +516,20 @@ phase-angle approach that this paper closes),
 and L.~Faddeev and A.J.~Niemi~\cite{FaddeevNiemi1997} (knots and particles)
 --- whose ideas are unified here into a zero-parameter lepton sector.
 
-% ─────────────────────────────────────────────────────────────────────────────
-\appendix
-\section{Supplementary Material}
+\section*{Declarations}
 
-Supplementary code, including numerical verification scripts and Jupyter notebooks, is available in the project repository.
+\subsection*{Funding}
+This research received no external institutional funding.
 
-% ─────────────────────────────────────────────────────────────────────────────
-\bibliographystyle{unsrt}
+\subsection*{Author Contributions}
+Steve Bico Mujjabi: conceptualization, methodology, formal analysis, software,
+validation, visualization, writing--original draft, and writing--review and
+editing.
+
+\subsection*{Conflicts of Interest}
+The author declares no conflicts of interest.
+
+\bibliographystyle{apsrev4-2}
 \bibliography{references}
 
 \end{document}

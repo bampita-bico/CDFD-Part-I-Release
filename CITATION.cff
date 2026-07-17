@@ -1,17 +1,17 @@
 cff-version: 1.2.0
-message: "If you use this archive, please cite the Zenodo DOI for the specific release version."
+message: "If you use this archive, cite the Zenodo DOI for the specific release version when available; this file carries the all-versions DOI."
 title: "CDFD Part I: Fundamental Physics - Constraint-Driven Field Theory and Flux Dynamics"
-version: "1.0.2"
-date-released: 2026-06-05
-doi: "10.5281/zenodo.20250821"
+version: "1.0.3"
+date-released: 2026-07-17
+doi: "10.5281/zenodo.20250820"
 license: CC-BY-4.0
 authors:
   - family-names: Mujjabi
     given-names: Steve Bico
     name-suffix: MD
-    affiliation: Vura Labs
+    affiliation: VuraLabs
     orcid: "https://orcid.org/0009-0001-0556-5516"
-abstract: "Public Part I physics archive for the Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project, including manuscripts, supplementary scripts, generated outputs, bibliography, and a minimal public demo. The final Part I architecture names the Mujjabi Capacity Law, Adaptive Operating Ratio, Stability Attractor, Vacuum Memory Law, Vacuum Engineering Principle, and Mujjabi Tests as falsifiable targets. The broader public CDFD Runtime is separate reusable software infrastructure."
+abstract: "Public Part I physics archive for the Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project, including REVTeX manuscripts, supplementary scripts, generated outputs, bibliography, and a minimal public demo. The final Part I architecture names the Mujjabi Capacity Law, Adaptive Operating Ratio, Stability Attractor, Vacuum Memory Law, Vacuum Engineering Principle, and Mujjabi Tests as falsifiable targets. The broader public CDFD Runtime is separate reusable software infrastructure."
 keywords:
   - CDFD
   - CDFT
@@ -44,6 +44,8 @@ keywords:
   - reproducible research
   - open science
   - preprint
+  - REVTeX
+  - APS-style manuscript
   - Mujjabi Laws
   - Mujjabi Capacity Law
   - Adaptive Operating Ratio

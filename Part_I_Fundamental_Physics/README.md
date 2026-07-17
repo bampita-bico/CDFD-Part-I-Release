@@ -10,8 +10,9 @@ ORCID: https://orcid.org/0009-0001-0556-5516
 
 ## Contents
 
-- `papers/` - LaTeX sources for Papers I-XII.
+- `papers/` - REVTeX 4-2 LaTeX sources for Papers I-XII.
 - `PDFs/` - compiled submission PDFs.
+- `figures/` - paper figures referenced by the REVTeX source files.
 - `notebooks/supplementary_*.py` - deterministic supplementary scripts.
 - `outputs/` - generated figures, tables, gate checks, and interactive panels.
 - `references.bib` - shared bibliography.
@@ -114,6 +115,6 @@ empirical validation of the physical hypotheses.
 
 ## Submission Note
 
-For archival submission, include the compiled PDFs, LaTeX sources,
+For APS-style archival submission, include the compiled PDFs, REVTeX sources,
 `references.bib`, supplementary scripts, generated outputs, and the two
 orientation files `CLAIM_STATUS.md` and `REPRODUCIBILITY.md`.

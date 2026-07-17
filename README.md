@@ -3,17 +3,18 @@
 [![DOI](https://zenodo.org/badge/1241207680.svg)](https://doi.org/10.5281/zenodo.20250820)
 
 This release contains the public Part I physics archive for the
-Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project.
+Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project. The
+manuscript sources are now maintained as REVTeX 4-2 files for APS-style review.
 
 ## Author
 
 Steve Bico Mujjabi, MD<br>
 Independent Researcher<br>
-Founder, Vura Labs<br>
+CDFD framework: Steve Bico Mujjabi and VuraLabs<br>
 Kampala, Uganda<br>
 ORCID: https://orcid.org/0009-0001-0556-5516
 
-Institutional home: **Vura Labs**
+Institutional home: **VuraLabs**
 
 ## Keywords
 
@@ -37,9 +38,9 @@ masses; fine-structure constant; reproducible research; open science.
 
 ## Contents
 
-- `Part_I_Fundamental_Physics/` - Part I manuscripts, PDFs, supplementary
-  scripts, generated outputs, bibliography, claim-status notes, and
-  reproducibility instructions.
+- `Part_I_Fundamental_Physics/` - Part I REVTeX manuscripts, PDFs, figure
+  assets, supplementary scripts, generated outputs, bibliography, claim-status
+  notes, and reproducibility instructions.
 - `cdfd_demo/` - small public equation demo with Docker support.
 - `CITATION.cff` - GitHub citation metadata.
 - `.zenodo.json` - Zenodo deposit metadata.
@@ -97,10 +98,10 @@ International License (CC BY 4.0). See `LICENSE` and
 
 ## Citation
 
-For this release, cite:
+For this release family, cite:
 
 Steve Bico Mujjabi, MD. CDFD Part I: Fundamental Physics. Zenodo.
-https://doi.org/10.5281/zenodo.20250821
-
-The all-versions Zenodo DOI is:
 https://doi.org/10.5281/zenodo.20250820
+
+After a new GitHub release is archived by Zenodo, cite the version DOI shown on
+that Zenodo record for the exact released snapshot.

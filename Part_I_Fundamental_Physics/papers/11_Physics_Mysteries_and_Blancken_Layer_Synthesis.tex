@@ -1,31 +1,36 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[aps,prd,10pt,superscriptaddress,nofootinbib,showkeys,amsmath,amssymb]{revtex4-2}
+
 \usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
 \usepackage{bm}
-\usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{array}
-\usepackage{geometry}
-\geometry{margin=2.5cm}
-\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{lineno}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
 
 \newtheorem{hypothesis}{Hypothesis}
 \newtheorem{prediction}{Prediction}
 \newtheorem{criterion}{Criterion}
 
-\title{\textbf{Paper XI: Dark Matter, Dark Energy, Black Holes, and the Blancken-Layer Synthesis:\\
-A Constraint-Driven Flux Interpretation of Cosmological Anomalies}}
-\author{Steve Bico Mujjabi, MD\\
-\small Independent Researcher\\
-\small Founder, Vura Labs\\
-\small Kampala, Uganda\\
-\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
-\date{May 2026}
-
 \begin{document}
-\maketitle
+
+\title{Paper XI: Dark Matter, Dark Energy, Black Holes, and the Blancken-Layer Synthesis: A Constraint-Driven Flux Interpretation of Cosmological Anomalies}
+
+\author{Steve Bico Mujjabi, MD}
+\email{msbico@gmail.com}
+\homepage{https://github.com/bampita-bico/CDFD-Part-I-Release}
+\thanks{Independent researcher; ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}.}
+\affiliation{VuraLabs, Kampala, Uganda}
+
+\date{July 2026}
 
 \begin{abstract}
 Paper XI develops the speculative cosmological bridge of Constraint-Driven Flux Dynamics (CDFD). It asks whether dark matter phenomenology, dark energy, black-hole horizons, vacuum self-consistency, and the proposed sub-Planckian Blancken layer can be treated as related manifestations of constrained transport rather than unrelated mysteries. The manuscript is deliberately status-aware: the lepton and vacuum equations in Papers I--X contain formal derivations internal to the model, while the dark-sector and Blancken-layer claims remain hypotheses until they generate observational discriminants beyond qualitative analogy.
@@ -38,8 +43,20 @@ cosmological evidence. The public CDFD Runtime implements the same
 state grammar for reusable simulations; the paper-local supplementary script
 remains the audited reproduction layer for the figures and tables in this Part I
 archive.
-
 \end{abstract}
+
+\keywords{Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, dark matter, dark energy, black holes}
+
+\maketitle
+\linenumbers
+
+\section*{Project Context}
+This manuscript constitutes Part I (Paper 11) of the multi-part series
+\textit{Constraint-Driven Flux Dynamics (CDFD)}. The underlying mathematical
+architecture builds directly upon the concepts established in Paper 10 of this
+series (Steve Bico Mujjabi, \textit{``CDFD Part I: Fundamental Physics ---
+Paper 10: The Vacuum Equation of State: Deriving Torus Knot Self-Consistency
+from the Public CDFD Balance Law $\Psi_s = \Phi / C$''}, prepared for APS submission and archived in the Part I REVTeX release).
 
 \section*{Symbol Conventions}
 
@@ -101,7 +118,7 @@ The question is whether apparent anomalies arise where vacuum flux and vacuum co
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.95\textwidth]{outputs/paper_XI/fig8_cosmology_bridge.pdf}
+  \includegraphics[width=0.95\textwidth]{figures/fig8_cosmology_bridge.pdf}
   \caption{Cosmological bridge map. Dark matter, dark energy, black-hole saturation, and the Blancken-layer proposal are shown as hypothesis classes attached to the same constrained-transport operator. The lower bar states the required falsification standard.}
   \label{fig:cosmology_bridge}
 \end{figure}
@@ -194,7 +211,7 @@ The CDFD dark-matter claim fails if lensing residuals require no history-depende
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.82\textwidth]{outputs/paper_XI/paper_4_dark_matter_lensing.png}
+  \includegraphics[width=0.82\textwidth]{figures/paper_4_dark_matter_lensing.png}
 \caption{Reproducible Paper XI conceptual output for the dark-matter claim:
   persistent flux aggregation hardens the surrounding constraint geometry,
   producing lensing-like curvature. In this manuscript the image is treated
@@ -271,7 +288,7 @@ The effective dark-energy term should be close to constant where the vacuum is a
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.82\textwidth]{outputs/paper_XI/paper_4_dark_energy_expansion.png}
+  \includegraphics[width=0.82\textwidth]{figures/paper_4_dark_energy_expansion.png}
 \caption{Reproducible Paper XI conceptual output for adaptive expansion. The
   revised claim is narrower: cosmic acceleration is modeled as a residual
   of incomplete vacuum self-consistency, not as proof that the residual has
@@ -304,14 +321,14 @@ conditions, and cosmological parameters fixed before comparison with data.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.78\textwidth]{outputs/paper_X/fig10_1_panel.pdf}
+  \includegraphics[width=0.78\textwidth]{figures/fig10_1_panel.pdf}
   \caption{Archived Paper X vacuum equation-of-state check: the equilibrium variable $\Psi_s$ tracks $\Phi/C$ across the torus-knot family. In this synthesis paper the same relation is used only as a bridge assumption for cosmological hypotheses, not as direct evidence for the dark sector.}
   \label{fig:psi_phi_over_c_bridge}
 \end{figure}
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.78\textwidth]{outputs/paper_X/fig10_2_panel.pdf}
+  \includegraphics[width=0.78\textwidth]{figures/fig10_2_panel.pdf}
   \caption{Archived Paper X residual panel. Residuals near numerical precision support internal consistency of the vacuum equation-of-state calculation; external cosmological validation remains a separate requirement.}
   \label{fig:vacuum_residual_bridge}
 \end{figure}
@@ -334,7 +351,7 @@ The CDFD black-hole interpretation fails if it yields no measurable distinction 
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.82\textwidth]{outputs/paper_XI/paper_4_black_hole_rupture.png}
+  \includegraphics[width=0.82\textwidth]{figures/paper_4_black_hole_rupture.png}
 \caption{Reproducible Paper XI conceptual output for black-hole rupture. The
   figure is retained as a transport-capacity visualization; the actual
   physics claim must be tested through horizon, ringdown, or thermodynamic
@@ -383,7 +400,7 @@ The Blancken-layer claim remains non-scientific unless it yields a calculable in
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.82\textwidth]{outputs/paper_XI/paper_4_blancken_layer.png}
+  \includegraphics[width=0.82\textwidth]{figures/paper_4_blancken_layer.png}
 \caption{Reproducible Paper XI conceptual output for the Blancken layer. In the revised manuscript the
   layer is explicitly marked as speculative until it yields a calculable
   invariant or boundary condition.}
@@ -509,13 +526,44 @@ Blancken layer & speculative hypothesis & calculable invariant\\
 
 This synthesis is the edge of the physics program, not its foundation. The strongest CDFD physics claims remain the self-consistency and mass-spectrum derivations developed elsewhere in the series. The dark matter, dark energy, black-hole, and Blancken-layer claims are valuable only if they mature into concrete discriminants. Until then, they should be presented as a structured hypothesis: one transport ontology, several cosmological anomalies, and explicit routes by which the whole synthesis can fail.
 
+\section*{Supplementary Material}
+
+This manuscript is accompanied by release-archive supplementary material in
+the canonical Part I tree. The relevant paper-local Python scripts, numerical checks, generated figure outputs,
+tabulated data, figure assets, and environment notes are maintained under
+\texttt{notebooks/}, \texttt{outputs/}, \texttt{figures/}, and
+\texttt{REPRODUCIBILITY.md} in \texttt{Part\_I\_Fundamental\_Physics/}.
+
+
+\section*{Data and Code Availability}
+
+The release-archive supplementary material is included in the archived Part I
+release on Zenodo at \url{https://doi.org/10.5281/zenodo.20250820}. The current version DOI is assigned by Zenodo after each GitHub release. Zenodo is the
+permanent release archive, and the public source archive is available on GitHub at
+\url{https://github.com/bampita-bico/CDFD-Part-I-Release}. The broader public CDFD
+Runtime is separate reusable software infrastructure; the numerical values reported
+here are reproduced from this paper's Supplementary Material.
+
 \section*{Acknowledgments}
 
 The author used AI-assisted tools for formatting checks and code-verification
 support. The scientific claims, interpretations, and final manuscript decisions
 are the author's responsibility.
 
-\bibliographystyle{unsrt}
+\section*{Declarations}
+
+\subsection*{Funding}
+This research received no external institutional funding.
+
+\subsection*{Author Contributions}
+Steve Bico Mujjabi: conceptualization, methodology, formal analysis, software,
+validation, visualization, writing--original draft, and writing--review and
+editing.
+
+\subsection*{Conflicts of Interest}
+The author declares no conflicts of interest.
+
+\bibliographystyle{apsrev4-2}
 \bibliography{references}
 
 \end{document}

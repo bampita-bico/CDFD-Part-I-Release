@@ -1,28 +1,33 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[aps,prd,10pt,superscriptaddress,nofootinbib,showkeys,amsmath,amssymb]{revtex4-2}
+
 \usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amssymb}
 \usepackage{bm}
-\usepackage{hyperref}
 \usepackage{booktabs}
-\usepackage{geometry}
-\geometry{margin=2.5cm}
-\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+\usepackage{array}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{lineno}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
 
 \begin{document}
 
-\title{\textbf{Vortex Stability in a Constrained Transport Vacuum\\
-and the Origin of the Fine-Structure Constant}}
+\title{Vortex Stability in a Constrained Transport Vacuum and the Origin of the Fine-Structure Constant}
 
-\author{Steve Bico Mujjabi, MD\\
-\small Independent Researcher\\
-\small Founder, Vura Labs\\
-\small Kampala, Uganda\\
-\small ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}}
-\date{May 2026}
-\maketitle
+\author{Steve Bico Mujjabi, MD}
+\email{msbico@gmail.com}
+\homepage{https://github.com/bampita-bico/CDFD-Part-I-Release}
+\thanks{Independent researcher; ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}.}
+\affiliation{VuraLabs, Kampala, Uganda}
 
-% ─────────────────────────────────────────────────────────────────────────────
+\date{July 2026}
+
 \begin{abstract}
 The electromagnetic fine-structure constant, denoted here by
 $\alpha \equiv e^2/(\hbar c) \approx 1/137$, is one of the most precisely
@@ -48,7 +53,20 @@ standard quantum and electromagnetic length scales used for $R$ and $a$ give the
 same dimensionless ratio, $\hbar c / e^2 = 1/\alpha$. The result is presented as
 a model-level explanation and numerical consistency check, with the remaining
 core-profile, stiffness, memory, and experimental assumptions listed explicitly
-at the end of the paper. \end{abstract}
+at the end of the paper.
+\end{abstract}
+
+\keywords{Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, fine-structure constant, vortex stability}
+
+\maketitle
+\linenumbers
+
+\section*{Project Context}
+This manuscript constitutes Part I (Paper 01) of the multi-part series
+\textit{Constraint-Driven Flux Dynamics (CDFD)}. It is the opening mathematical
+and physical paper in the Part I stack. Downstream Papers 02--12 are prepared
+for APS submission in the same REVTeX release family and cite this manuscript by
+title through the Part I archive DOI.
 
 \section*{Symbol Conventions}
 
@@ -90,7 +108,7 @@ $\Omega,\Lambda$ & State/domain space or integrated measure where defined & Rese
 }
 \end{center}
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{Introduction}
 
 Richard Feynman once wrote that the fine-structure constant ``has been a mystery
@@ -222,7 +240,7 @@ $\mu$ & candidate coupling strength between overload and memory accumulation\\
 \end{tabular}
 \end{center}
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{The Adaptive Vacuum Medium}
 
 \subsection{Governing equation}
@@ -299,7 +317,7 @@ maintaining global transport while locally the flux is regulated. The vortex rin
 is not inserted by hand --- it is the medium's natural response to approaching
 its transport limit.
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{Vortex Ring Geometry and Energy}
 \label{sec:geometry}
 
@@ -404,7 +422,7 @@ The full normalised vortex energy is the sum of these two contributions:
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.8\textwidth]{outputs/paper_I/fig1a_energy_landscape.pdf}
+  \includegraphics[width=0.8\textwidth]{figures/fig1a_energy_landscape.pdf}
   \caption{Energy landscape showing the stable minimum at $\chi^* = 137.036$. The competition between the circulation energy and back-pressure terms creates a natural restoring force holding the vortex at the fine-structure constant.}
   \label{fig:energy_landscape}
 \end{figure}
@@ -414,7 +432,7 @@ small. They compete. Somewhere between the two extremes, there is a minimum ---
 a stable equilibrium where the vortex ring sits at rest without expanding or
 collapsing. As demonstrated in Figure~\ref{fig:energy_landscape}, this minimum defines the particle.
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{The Stability Equation}
 
 \subsection{Variational derivation}
@@ -450,7 +468,7 @@ Setting this to zero gives the equilibrium condition:
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.8\textwidth]{outputs/paper_I/fig1b_equilibrium.pdf}
+  \includegraphics[width=0.8\textwidth]{figures/fig1b_equilibrium.pdf}
   \caption{Equilibrium condition $dE/d\chi = 0$. The root is cleanly crossed at $\chi = 1/\alpha$.}
   \label{fig:equilibrium}
 \end{figure}
@@ -483,12 +501,12 @@ the fundamental medium properties $\rho_0$ and $c$ is the subject of Paper~III. 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.8\textwidth]{outputs/paper_I/fig1c_sensitivity.pdf}
+  \includegraphics[width=0.8\textwidth]{figures/fig1c_sensitivity.pdf}
   \caption{Sensitivity of the predicted fine-structure constant $\alpha$ to deviations in the underlying transport stiffness $\kappa$. A $10\%$ variation in $\kappa$ produces only a small fractional shift in $\alpha$, ensuring stability against macroscopic fluctuations in the medium.}
   \label{fig:sensitivity}
 \end{figure}
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{Self-Consistency of $\chi = 1/\alpha$}
 
 We now bring together the two independent derivations of Section~\ref{sec:geometry}.
@@ -522,15 +540,15 @@ a purely electromagnetic fact. These are two different equations from two differ
 branches of physics. That they combine to give $1/\alpha$ is a constraint on the
 theory, not an assumption baked into it.
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{Numerical Results}
 \label{sec:results}
 
-All computations were performed using the supplementary script and notebook
-(Appendix~\ref{sec:supplement}). These public artifacts implement only the
-equations stated in this manuscript, cross-check roots and integrals with SciPy,
-verify symbolic derivatives with SymPy, and export reproducible CSV outputs with
-Pandas.
+All computations were performed using the paper-local supplementary script and
+notebook listed in the Data and Code Availability section. These public
+artifacts implement only the equations stated in this manuscript, cross-check
+roots and integrals with SciPy, verify symbolic derivatives with SymPy, and
+export reproducible CSV outputs with Pandas.
 
 \subsection{Stability equation}
 
@@ -589,7 +607,7 @@ Table~\ref{tab:energy} shows the two energy contributions at the equilibrium poi
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.8\textwidth]{outputs/paper_I/fig1d_energy_components.pdf}
+  \includegraphics[width=0.8\textwidth]{figures/fig1d_energy_components.pdf}
   \caption{The individual energy components ($E_\text{circ}$ and $E_\text{back}$) plotted against the total energy. Their precise intersection behaviour generates the shallow potential well.}
   \label{fig:energy_components}
 \end{figure}
@@ -624,7 +642,7 @@ Eq.~\eqref{eq:chi_is_alpha}, using CODATA 2022 values.
 The agreement is to twelve decimal places, limited only by the precision of the
 input constants.
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{Discussion}
 
 \subsection{What this result means}
@@ -755,7 +773,7 @@ claim is conditional: the present model has a stable calibrated fixed point at
 $\chi=1/\alpha$, and core-profile invariance is an open robustness target.
 
 The current supplementary script now writes an explicit guardrail table and a
-matching figure under \texttt{outputs/paper\_I/}.
+matching figure in the Paper I output directory.
 Those outputs do not prove invariance. They show how alternative core
 assumptions move the equilibrium when the Rankine calibration is held fixed,
 which is the correct starting point for the robustness program.
@@ -775,7 +793,7 @@ which holds experimentally to six significant figures. The electron, muon, and
 tau are not three different particles in CDFT. They are three orientations of
 the same vortex structure.
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{Necessary Conditions for the Model to Hold}
 
 The alpha recovery in this paper is conditional. The following conditions must
@@ -823,7 +841,7 @@ These conditions are intentionally strict. They are the difference between a
 suggestive geometric reconstruction of $\alpha$ and a physical theory that can
 be rejected by experiment.
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{Open Problems}
 
 We state the following explicitly, because we believe clear honesty about what
@@ -877,7 +895,7 @@ $\alpha = 1/137.036$ would follow from the properties of the vacuum medium alone
 Until then, the experimental value of $\alpha$ remains the calibration target
 used to test the internal consistency of the model.
 
-% ─────────────────────────────────────────────────────────────────────────────
+
 \section{Conclusion}
 
 We have presented two independent lines of evidence that the fine-structure
@@ -900,7 +918,26 @@ Two different equations. Two different sectors of physics. One answer: 137.
 
 The fine-structure constant is a shape.
 
-% ─────────────────────────────────────────────────────────────────────────────
+
+\section*{Supplementary Material}
+
+This manuscript is accompanied by release-archive supplementary material in
+the canonical Part I tree. The relevant paper-local Python scripts, numerical checks, generated figure outputs,
+tabulated data, figure assets, and environment notes are maintained under
+\texttt{notebooks/}, \texttt{outputs/}, \texttt{figures/}, and
+\texttt{REPRODUCIBILITY.md} in \texttt{Part\_I\_Fundamental\_Physics/}.
+
+
+\section*{Data and Code Availability}
+
+The release-archive supplementary material is included in the archived Part I
+release on Zenodo at \url{https://doi.org/10.5281/zenodo.20250820}. The current version DOI is assigned by Zenodo after each GitHub release. Zenodo is the
+permanent release archive, and the public source archive is available on GitHub at
+\url{https://github.com/bampita-bico/CDFD-Part-I-Release}. The broader public CDFD
+Runtime is separate reusable software infrastructure; the numerical values reported
+here are reproduced from this paper's Supplementary Material.
+
+
 \section*{Acknowledgments}
 The author used AI-assisted tools for formatting checks and code-verification
 support. The scientific claims, interpretations, and final manuscript decisions
@@ -914,19 +951,20 @@ H.~von Helmholtz~\cite{Helmholtz1858} (vortex theorems),
 and P.A.M.~Dirac~\cite{Dirac1951} (vacuum as physical medium)
 --- whose ideas this paper attempts to build upon.
 
-% ─────────────────────────────────────────────────────────────────────────────
-\appendix
-\section{Supplementary Material}
-\label{sec:supplement}
+\section*{Declarations}
 
-Supplementary code, including numerical verification scripts and Jupyter
-notebooks, is available in this Part I release archive. The broader public CDFD
-Runtime implements the same state grammar for reusable domain
-simulation, but the numerical values in this paper are reproduced from the
-paper-local supplementary script.
+\subsection*{Funding}
+This research received no external institutional funding.
 
-% ─────────────────────────────────────────────────────────────────────────────
-\bibliographystyle{unsrt}
+\subsection*{Author Contributions}
+Steve Bico Mujjabi: conceptualization, methodology, formal analysis, software,
+validation, visualization, writing--original draft, and writing--review and
+editing.
+
+\subsection*{Conflicts of Interest}
+The author declares no conflicts of interest.
+
+\bibliographystyle{apsrev4-2}
 \bibliography{references}
 
 \end{document}

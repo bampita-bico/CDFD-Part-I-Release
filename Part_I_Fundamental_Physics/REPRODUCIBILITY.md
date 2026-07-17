@@ -1,11 +1,12 @@
 # Reproducibility
 
-Last local verification: 2026-05-20.
+Last local verification: 2026-07-17.
 
 ## Environment Used
 
 - Python: `3.14.4`
-- LaTeX: `pdflatex` and `bibtex` available on path
+- LaTeX: `latexmk`, `pdflatex`, `bibtex`, REVTeX 4-2, and `apsrev4-2`
+  available on path
 - Required Python stack: see `../requirements.txt` and `requirements-fullstack.txt`
 - Optional acceleration backends observed during verification:
   - `numba=ok` (`0.65.1`)
@@ -104,16 +105,12 @@ claim is treated as empirical evidence.
 From `Part_I_Fundamental_Physics`:
 
 ```bash
-mkdir -p build
-pdflatex -interaction=nonstopmode -halt-on-error -output-directory build papers/01_Vortex_Stability_in_a_Constrained_Transport_Vacuum.tex
-bibtex build/01_Vortex_Stability_in_a_Constrained_Transport_Vacuum
-pdflatex -interaction=nonstopmode -halt-on-error -output-directory build papers/01_Vortex_Stability_in_a_Constrained_Transport_Vacuum.tex
-pdflatex -interaction=nonstopmode -halt-on-error -output-directory build papers/01_Vortex_Stability_in_a_Constrained_Transport_Vacuum.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error \
+  -outdir=/tmp/cdfd_parti_revtex_build papers/*.tex
 ```
 
-Repeat the same `pdflatex, bibtex, pdflatex, pdflatex` sequence for Papers
-II-XII. The current local build completed with no failed papers and no missing
-citation or reference warnings.
+The current local REVTeX build completed for all 12 papers with no failed
+papers and no missing citation or reference warnings.
 
 The submission-facing PDFs are copied to `PDFs/`.
 
