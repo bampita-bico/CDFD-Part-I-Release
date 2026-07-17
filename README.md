@@ -1,6 +1,6 @@
 # CDFD Part I: Fundamental Physics
 
-[![DOI](https://zenodo.org/badge/1241207680.svg)](https://doi.org/10.5281/zenodo.20250820)
+[![DOI](https://zenodo.org/badge/1241207680.svg)](https://doi.org/10.5281/zenodo.21420219)
 
 This release contains the public Part I physics archive for the
 Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project. The
