@@ -1,4 +1,8 @@
-\documentclass[aps,prd,10pt,superscriptaddress,nofootinbib,showkeys,amsmath,amssymb]{revtex4-2}
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \usepackage{graphicx}
 \usepackage{bm}
@@ -6,6 +10,7 @@
 \usepackage{array}
 \usepackage{amsthm}
 \usepackage{enumerate}
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref}
 \usepackage{lineno}
 
@@ -25,57 +30,55 @@
 
 \title{The Vacuum Equation of State: Deriving Torus Knot Self-Consistency from the Public CDFD Balance Law $\Psi_s = \Phi / C$}
 
-\author{Steve Bico Mujjabi, MD}
-\email{msbico@gmail.com}
-\homepage{https://github.com/bampita-bico/CDFD-Part-I-Release}
-\thanks{Independent researcher; ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}.}
-\affiliation{VuraLabs, Kampala, Uganda}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
+\url{https://github.com/bampita-bico/CDFD-Part-I-Release}}
 
-\date[]{July 2026}
+\date{July 2026}
+
+\maketitle
 
 \begin{abstract}
 This paper serves as the capstone of the formal 10-part CDFD mass-spectrum
-sequence, addressing its remaining open problem: the physical origin of the torus knot
-self-consistency condition $n\theta_n = \widetilde{Q}_n(\theta_n)$.
-Previously reported as a successful but ungrounded hypothesis that correctly
-determines the vacuum twist angles $\theta_n$ for all $T(2,n)$ families,
-it is here recast as a model theorem inside the public flow--constraint notation.
+sequence. It addresses the remaining open problem: the physical origin of the
+torus-knot self-consistency condition that fixes the vacuum twist angle for
+each family. Earlier papers reported this condition as a successful but
+ungrounded hypothesis. Here it is recast as a model theorem inside the public
+flow-constraint notation.
 
-We map the Constraint-Driven Field Theory (CDFD) vacuum medium onto
-the tripartite public CDFD notation:
-Flow ($\Phi$), Constraint ($C$), and Adaptive Operating Ratio ($\Psi_s$).
-We identify the continuous flow energy $\Phi$ with the $L^2$ norm of the
-amplitude field ($\sum A_k^2 = 2n$), the transport-capacity limit $C$
-with the $L^1$ norm squared $(\sum |A_k|)^2$, and the equilibrium deformation
-$\Psi_s$ with the total vacuum twist $n\theta_n$.
+The paper maps the Constraint-Driven Field Theory vacuum medium onto three
+public CDFD quantities: Flow, Constraint, and Adaptive Operating Ratio. The
+continuous flow energy is identified with the squared-amplitude norm of the
+field, the transport-capacity limit with the squared absolute-amplitude sum,
+and the equilibrium deformation with the total vacuum twist. Applying the
+public balance law then yields the same self-consistency condition used in the
+torus-knot spectrum.
 
-Applying the public balance law $\Psi_s = \Phi / C$ yields exactly the
-self-consistency condition, showing that the Koide-like ratio $\widetilde{Q}_n$
-is the geometric manifestation of a transport-limited vacuum equation of state.
-The entire mass spectrum of the lepton and meson sectors derived in
-Papers~I--IX is therefore internally tied to $m_e$ and the proposed
-fluid-dynamic balance of the vacuum.
+The result interprets the Koide-like ratio as the geometric signature of a
+transport-limited vacuum equation of state. The lepton and meson-sector
+spectra derived in Papers I-IX are therefore internally tied to the electron
+mass and to the proposed fluid-dynamic balance of the vacuum.
 
-\medskip
-\noindent In the extended notation used across the series, the vacuum limit is written
-as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
-equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
-left for later dynamical work rather than fitted in this manuscript. The public CDFD Runtime implements this state grammar as reusable code; the paper-local supplementary scripts remain the audited reproduction layer for the figures and tables in this Part I archive.
+Across the series, the public CDFD Runtime expresses this equilibrium vacuum
+limit as a reusable flow-constraint state grammar. The calculations below use
+that equilibrium limit only; adaptive departures are left for later dynamical
+work rather than fitted in this manuscript. The paper-local supplementary
+scripts remain the audited reproduction layer for the figures and tables in
+this Part I archive.
 \end{abstract}
 
-\keywords{Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, vacuum balance, public CDFD model}
+\noindent\textbf{Keywords:} Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, vacuum balance, public CDFD model
 
-\maketitle
+\vspace{0.75em}
 \linenumbers
 
 \section*{Project Context}
 This manuscript constitutes Part I (Paper 10) of the multi-part series
 \textit{Constraint-Driven Flux Dynamics (CDFD)}. The underlying mathematical
 architecture builds directly upon the concepts established in Paper 09 of this
-series (Steve Bico Mujjabi, \textit{``CDFD Part I: Fundamental Physics ---
-Paper 09: Even-$n$ Torus Knots in CDFD: The Exclusion of $T(2,2)$, the
-Extension to $T(2,2m)$, and the Anti-Phase Mass Scaling Law''},
-manuscript; paper-specific DOI pending).
+series~\cite{MujjabiIX2026}.
 
 \section*{Symbol Conventions}
 
@@ -490,7 +493,7 @@ editing.
 The author declares no conflicts of interest.
 
 \section*{References}
-\bibliographystyle{apsrev4-2}
+\bibliographystyle{plainnat}
 \bibliography{references}
 
 \end{document}

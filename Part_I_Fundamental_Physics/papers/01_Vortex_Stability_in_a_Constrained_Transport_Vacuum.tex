@@ -1,4 +1,8 @@
-\documentclass[aps,prd,10pt,superscriptaddress,nofootinbib,showkeys,amsmath,amssymb]{revtex4-2}
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \usepackage{graphicx}
 \usepackage{bm}
@@ -6,6 +10,7 @@
 \usepackage{array}
 \usepackage{amsthm}
 \usepackage{enumerate}
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref}
 \usepackage{lineno}
 
@@ -20,51 +25,51 @@
 
 \title{Vortex Stability in a Constrained Transport Vacuum and the Origin of the Fine-Structure Constant}
 
-\author{Steve Bico Mujjabi, MD}
-\email{msbico@gmail.com}
-\homepage{https://github.com/bampita-bico/CDFD-Part-I-Release}
-\thanks{Independent researcher; ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}.}
-\affiliation{VuraLabs, Kampala, Uganda}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
+\url{https://github.com/bampita-bico/CDFD-Part-I-Release}}
 
-\date[]{July 2026}
+\date{July 2026}
+
+\maketitle
 
 \begin{abstract}
-The electromagnetic fine-structure constant, denoted here by
-$\alpha \equiv e^2/(\hbar c) \approx 1/137$, is one of the most precisely
+The electromagnetic fine-structure constant, alpha, is one of the most precisely
 measured dimensionless numbers in physics, yet its value remains an input to the
 Standard Model rather than a derived consequence. This paper proposes a
 transport-medium interpretation of that fact. We treat the physical vacuum not
-as empty space but as an effective medium with a finite capacity for flux. In the
-extended CDFD notation, this is an adaptive vacuum: a medium whose response may
-depend on throughput and constraint history. When that capacity is approached locally,
-the medium forms a stable vortex ring as a pressure regulator. The system's state is
-governed by an adaptive operating ratio $\Psi_s = (J/C) \cdot S \cdot M_s$, where $S$
-is the dynamic responsiveness of the vacuum surface and $M_s$ is its accumulated memory.
-In the fundamental physical vacuum, these properties converge to a stable equilibrium
-attractor ($S \cdot M_s \to 1.0$), reducing to the classical limit.
-We name this grammar the Mujjabi Adaptive Operating Ratio and use it as the
-spine of the Part I sequence.
-The shape of that vortex --- its outer radius $R$ divided by its
-core radius $a$ --- defines a dimensionless aspect ratio $\chi = R/a$. We show that,
-within this model, (i)~the stated stability equation has an equilibrium at
-$\chi = 1/\alpha = 137.036$ when the transport stiffness is calibrated to that
-fixed point, recovered numerically to twelve decimal places; and (ii)~the
-standard quantum and electromagnetic length scales used for $R$ and $a$ give the
-same dimensionless ratio, $\hbar c / e^2 = 1/\alpha$. The result is presented as
-a model-level explanation and numerical consistency check, with the remaining
-core-profile, stiffness, memory, and experimental assumptions listed explicitly
-at the end of the paper.
+as empty space but as an effective medium with a finite capacity for flux. In
+the extended Constraint-Driven Flux Dynamics notation, this is an adaptive
+vacuum: a medium whose response may depend on throughput and constraint
+history. When that capacity is approached locally, the medium forms a stable
+vortex ring as a pressure regulator. The system's state is governed by an
+adaptive operating ratio dependent on the dynamic responsiveness of the vacuum
+surface and its accumulated memory. In the fundamental physical vacuum, these
+properties converge to a stable equilibrium attractor, reducing to the classical
+limit. We name this grammar the Mujjabi Adaptive Operating Ratio and use it as
+the spine of the Part I sequence. The shape of that vortex, its outer radius R
+divided by its core radius a, defines a dimensionless aspect ratio. We show
+that, within this model, first, the stated stability equation has an equilibrium
+matching the inverse fine-structure constant, approximately 137.036, when the
+transport stiffness is calibrated to that fixed point, recovered numerically to
+twelve decimal places; and second, the standard quantum and electromagnetic
+length scales used for R and a give the same dimensionless ratio. The result is
+presented as a model-level explanation and numerical consistency check, with
+the remaining core-profile, stiffness, memory, and experimental assumptions
+listed explicitly at the end of the paper.
 \end{abstract}
 
-\keywords{Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, fine-structure constant, vortex stability}
+\noindent\textbf{Keywords:} Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, fine-structure constant, vortex stability
 
-\maketitle
+\vspace{0.75em}
 \linenumbers
 
 \section*{Project Context}
 This manuscript constitutes Part I (Paper 01) of the multi-part series
 \textit{Constraint-Driven Flux Dynamics (CDFD)}. It is the opening mathematical
-and physical paper in the Part I stack. Downstream Papers 02--12 are organized in the same REVTeX release family and cite this manuscript by title until paper-specific DOIs are assigned.
+and physical paper in the Part I stack. Downstream Papers 02--12 are organized in the same article-class release family and cite this manuscript by title until paper-specific DOIs are assigned.
 
 \section*{Symbol Conventions}
 
@@ -963,7 +968,7 @@ editing.
 The author declares no conflicts of interest.
 
 \section*{References}
-\bibliographystyle{apsrev4-2}
+\bibliographystyle{plainnat}
 \bibliography{references}
 
 \end{document}

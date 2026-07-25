@@ -1,4 +1,8 @@
-\documentclass[aps,prd,10pt,superscriptaddress,nofootinbib,showkeys,amsmath,amssymb]{revtex4-2}
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \usepackage{graphicx}
 \usepackage{bm}
@@ -6,6 +10,7 @@
 \usepackage{array}
 \usepackage{amsthm}
 \usepackage{enumerate}
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref}
 \usepackage{lineno}
 
@@ -25,72 +30,61 @@
 
 \title{Even-$n$ Torus Knots in CDFD: The Exclusion of $T(2,2)$, the Extension to $T(2,2m)$, and the Anti-Phase Mass Scaling Law}
 
-\author{Steve Bico Mujjabi, MD}
-\email{msbico@gmail.com}
-\homepage{https://github.com/bampita-bico/CDFD-Part-I-Release}
-\thanks{Independent researcher; ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}.}
-\affiliation{VuraLabs, Kampala, Uganda}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
+\url{https://github.com/bampita-bico/CDFD-Part-I-Release}}
 
-\date[]{July 2026}
-
-\begin{abstract}
-Paper~VIII left four open problems, of which this paper resolves three:
-the physical identification of the universal anti-phase modes, the
-extension of the CDFD torus knot hierarchy to even~$n$, and the
-derivation of a mass scaling law for the lightest mode of each family.
-
-The central structural result is the \textbf{Fourier exclusion theorem}:
-the universal mass sum rule $\sum_k m_k = 2nM_n$ rests on the Fourier
-identity $\sum_{k=0}^{n-1}\cos^2(\theta + 2\pi k/n) = n/2$, which holds
-if and only if $n \geq 3$.
-For $n = 2$ the identity fails (the residual is $\cos(2\theta)$, not zero),
-so the $T(2,2)$ Hopf fibration is excluded from the CDFD framework by
-algebraic necessity.
-
-For even $n \geq 4$, the Fourier identity holds and the entire machinery
-of Papers~VI--VIII extends without modification.
-Self-consistency solutions $\theta_n$, amplitude splits, mode mass spectra,
-and the $n^{7/4}$ hierarchy are computed for $n = 4, 6, 8, 10$.
-The amplitude-split formula of Paper~VIII applies to even~$n$ with one
-exception at $n = 8$.
-
-The anti-phase modes (the universally light pair present in every family
-$n \geq 5$) are identified as \textbf{boundary modes}: their mass is set
-by how close the self-consistency orientation $\theta_n$ places the two
-anti-phase Fourier modes to the amplitude zeros at
-$\cos\phi = -1/\sqrt{2}$.
-The minimum amplitude satisfies:
-\[
-  |A_\text{min}| \;=\; \bigl|1 + \sqrt{2}\cos\!\bigl(\theta_n + 2\pi\lceil 3n/8\rceil/n\bigr)\bigr|\,,
-\]
-which depends on the fractional part $\{3n/8\}$ and is not a simple
-power of $n$ or $\theta_n$.
-This explains why the two lightest modes are not Goldstone bosons and
-have no simple mass formula independent of the knot topology.
-
-A complete mode-mass census for all $T(2,n)$ families with
-$3 \leq n \leq 13$ (odd and even) is assembled and presented as a
-unified hierarchy table.
-
-\medskip
-\noindent In the extended notation used across the series, the vacuum limit is written
-as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
-equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
-left for later dynamical work rather than fitted in this manuscript. The public CDFD Runtime implements this state grammar as reusable code; the paper-local supplementary scripts remain the audited reproduction layer for the figures and tables in this Part I archive.
-\end{abstract}
-
-\keywords{Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, even-n torus knots, topological exclusion}
+\date{July 2026}
 
 \maketitle
+
+\begin{abstract}
+Paper VIII left four open problems, of which this paper resolves three: the
+physical interpretation of the universal anti-phase modes, the extension of
+the CDFD torus-knot hierarchy to even family numbers, and the mass scaling of
+the lightest modes.
+
+The central structural result is the Fourier exclusion theorem. The universal
+mass sum rule depends on a Fourier identity that holds exactly for family
+numbers three and higher but fails for family number two. The Hopf fibration
+is therefore excluded from the CDFD hierarchy by algebraic necessity rather
+than by an adjustable physical preference.
+
+For even family numbers of four and greater, the Fourier identity holds and
+the machinery of Papers VI-VIII extends without modification. The paper
+computes self-consistency solutions, amplitude splits, mode spectra, and the
+seven-fourths mass hierarchy for family numbers four, six, eight, and ten. The
+amplitude-split rule from Paper VIII applies to even families with one
+identified exception at family number eight.
+
+The anti-phase modes are identified as boundary modes. Their masses are set by
+how close the self-consistency orientation places the anti-phase Fourier modes
+to an amplitude zero, which depends on discrete number-theoretic alignment
+rather than on a simple power law. This explains why the two lightest modes are
+not Goldstone bosons and have no simple topology-independent mass formula. A
+complete mode-mass census for family numbers three through thirteen is
+assembled as a unified hierarchy table.
+
+Across the series, the public CDFD Runtime expresses this equilibrium vacuum
+limit as a reusable flow-constraint state grammar. The calculations below use
+that equilibrium limit only; adaptive departures are left for later dynamical
+work rather than fitted in this manuscript. The paper-local supplementary
+scripts remain the audited reproduction layer for the figures and tables in
+this Part I archive.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, even-n torus knots, topological exclusion
+
+\vspace{0.75em}
 \linenumbers
 
 \section*{Project Context}
 This manuscript constitutes Part I (Paper 09) of the multi-part series
 \textit{Constraint-Driven Flux Dynamics (CDFD)}. The underlying mathematical
 architecture builds directly upon the concepts established in Paper 08 of this
-series (Steve Bico Mujjabi, \textit{``CDFD Part I: Fundamental Physics ---
-Paper 08: The CDFT Torus Knot Spectrum: Closing the Four Open Problems of
-Paper VII''}, manuscript; paper-specific DOI pending).
+series~\cite{MujjabiVIII2026}.
 
 \section*{Symbol Conventions}
 
@@ -645,7 +639,7 @@ editing.
 The author declares no conflicts of interest.
 
 \section*{References}
-\bibliographystyle{apsrev4-2}
+\bibliographystyle{plainnat}
 \bibliography{references}
 
 \end{document}

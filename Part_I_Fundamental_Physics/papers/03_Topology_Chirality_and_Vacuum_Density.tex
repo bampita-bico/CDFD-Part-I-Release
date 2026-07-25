@@ -1,4 +1,8 @@
-\documentclass[aps,prd,10pt,superscriptaddress,nofootinbib,showkeys,amsmath,amssymb]{revtex4-2}
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \usepackage{graphicx}
 \usepackage{bm}
@@ -6,6 +10,7 @@
 \usepackage{array}
 \usepackage{amsthm}
 \usepackage{enumerate}
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref}
 \usepackage{lineno}
 
@@ -23,79 +28,61 @@
 
 \title{Topology, Chirality, and the Vacuum Density: Closing All Open Problems of the CDFT Series}
 
-\author{Steve Bico Mujjabi, MD}
-\email{msbico@gmail.com}
-\homepage{https://github.com/bampita-bico/CDFD-Part-I-Release}
-\thanks{Independent researcher; ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}.}
-\affiliation{VuraLabs, Kampala, Uganda}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
+\url{https://github.com/bampita-bico/CDFD-Part-I-Release}}
 
-\date[]{July 2026}
+\date{July 2026}
+
+\maketitle
 
 \begin{abstract}
 The first two papers of the Constraint-Driven Field Theory (CDFT) series
-established: (I)~the electromagnetic fine-structure constant
-$\alpha \equiv e^2/(\hbar c) = 1/137.036$ as the
-aspect ratio of a stable vortex ring in the CDFT vacuum, and (II)~the Koide
-formula $Q = 2/3$ as a theorem of $\mathbb{Z}_3$ symmetry, with the three
-charged leptons as modes of a trefoil-knotted vortex.
-Those papers listed four open problems.
-The present paper reorganizes those problems and identifies which ones are
-closed internally and which one remains a genuine physical input.
+identified the fine-structure constant with the aspect ratio of a stable
+vacuum vortex ring and treated the Koide relation as a consequence of
+Z-three symmetry in a trefoil-knotted charged-lepton sector. Those papers also
+left four open problems. This paper reorganizes those problems and separates
+the issues already closed inside the model from the one quantity that remains
+a genuine physical input.
 
-Problem~1 ($\kappa$ not derived): the transport stiffness is algebraically
-determined by $\chi = 1/\alpha$ and the Lamb core parameter $\beta$, where
-$\beta$ is the dimensionless vortex-core profile constant fixed to
-$\beta=7/4=1.75$ for the solid-rotation baseline:
-$\kappa = \chi^2(\ln 8\chi - \beta + 1) = 117{,}362.0$.
-It was already derived in Paper~I; the listing was a framing error.
+The transport stiffness is shown to follow algebraically from the inverse
+fine-structure aspect ratio and the Lamb core profile constant used in
+Paper I, so its appearance as an open problem was a framing error. The choice
+of mode number three is then argued to be topological: the mode-two excitation
+is a separable Hopf link, while the mode-three excitation is a trefoil knot
+with a topological barrier to separation. By the Faddeev-Niemi result used in
+the model, the trefoil is the lowest-energy knotted soliton available to the
+constrained field.
 
-Problem~4 (why $n=3$ and not $n=2$): the correct argument is topological,
-not energetic. The $n=2$ azimuthal mode of the vortex ring is a Hopf
-\emph{link} --- a two-component structure with no topological barrier to
-separation. The $n=3$ mode is a trefoil \emph{knot} --- topologically locked.
-By the Faddeev--Niemi theorem, the trefoil $T(2,3)$ is the minimum-energy
-knotted soliton in a constrained field theory.
-Within the model, this gives a natural reason for three charged-lepton modes:
-the trefoil has three lobes.
+The remaining mass-scale problem is reduced to the vacuum density. The vortex
+energy scale factors into that density times known geometric, transport, and
+core-profile terms inherited from Papers I and II. The lepton phase problem is
+also reduced to the same density because the background chirality phase fixes
+the charged-lepton orientation once the vacuum equation of state is known.
+The paper therefore reduces the open problem set to a single next target:
+derive the CDFT vacuum density. Paper IV formulates the corresponding
+equation-of-state condition.
 
-Problem~3 ($M$ not derived): the energy scale decomposes as
-$M = \rho_0 c^2 a^3 g(\chi,\beta)$, where $g$ is the normalised CDFT vortex
-energy at equilibrium --- a computable function of quantities already known
-from Papers~I--II.
-The only unknown factor is the vacuum density $\rho_0$.
-
-Problem~2 ($\theta$ not derived): the vacuum has a background chirality phase
-$\phi_c$ that breaks the $\mathbb{Z}_3$ symmetry of the trefoil.
-Minimising the chiral interaction energy gives the equation
-$3\theta + \phi_c = \pi$, which determines $\theta$ given $\phi_c$.
-From the observed lepton mass ratios we compute $\phi_c = 141.80^\circ$.
-Deriving $\phi_c$ from first principles reduces to deriving $\rho_0$.
-
-The problem set therefore reduces to a single remaining quantity:
-$\rho_0$, the CDFT vacuum density.
-Paper~IV formulates the vacuum equation-of-state condition for $\rho_0$,
-which is the required next step before the model can claim a fully independent
-mass-scale derivation.
-
-\medskip
-\noindent In the extended notation used across the series, the vacuum limit is written
-as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
-equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
-left for later dynamical work rather than fitted in this manuscript. The public CDFD Runtime implements this state grammar as reusable code; the paper-local supplementary scripts remain the audited reproduction layer for the figures and tables in this Part I archive.
+Across the series, the public CDFD Runtime expresses this equilibrium vacuum
+limit as a reusable flow-constraint state grammar. The calculations below use
+that equilibrium limit only; adaptive departures are left for later dynamical
+work rather than fitted in this manuscript. The paper-local supplementary
+scripts remain the audited reproduction layer for the figures and tables in
+this Part I archive.
 \end{abstract}
 
-\keywords{Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, topology, chirality, vacuum density}
+\noindent\textbf{Keywords:} Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, topology, chirality, vacuum density
 
-\maketitle
+\vspace{0.75em}
 \linenumbers
 
 \section*{Project Context}
 This manuscript constitutes Part I (Paper 03) of the multi-part series
 \textit{Constraint-Driven Flux Dynamics (CDFD)}. The underlying mathematical
 architecture builds directly upon the concepts established in Paper 02 of this
-series (Steve Bico Mujjabi, \textit{``CDFD Part I: Fundamental Physics ---
-Paper 02: Lepton Masses from Z\textsubscript{3}-Symmetric Vortex Modes and
-the Origin of the Koide Formula''}, manuscript; paper-specific DOI pending).
+series~\cite{MujjabiII2026}.
 
 \section*{Symbol Conventions}
 
@@ -655,7 +642,7 @@ editing.
 The author declares no conflicts of interest.
 
 \section*{References}
-\bibliographystyle{apsrev4-2}
+\bibliographystyle{plainnat}
 \bibliography{references}
 
 \end{document}

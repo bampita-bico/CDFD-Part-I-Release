@@ -1,4 +1,8 @@
-\documentclass[aps,prd,10pt,superscriptaddress,nofootinbib,showkeys,amsmath,amssymb]{revtex4-2}
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \usepackage{graphicx}
 \usepackage{bm}
@@ -6,6 +10,7 @@
 \usepackage{array}
 \usepackage{amsthm}
 \usepackage{enumerate}
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref}
 \usepackage{lineno}
 
@@ -24,58 +29,53 @@
 
 \title{The Vacuum Equation of State and the Self-Consistency of the CDFT Lepton Sector}
 
-\author{Steve Bico Mujjabi, MD}
-\email{msbico@gmail.com}
-\homepage{https://github.com/bampita-bico/CDFD-Part-I-Release}
-\thanks{Independent researcher; ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}.}
-\affiliation{VuraLabs, Kampala, Uganda}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
+\url{https://github.com/bampita-bico/CDFD-Part-I-Release}}
 
-\date[]{July 2026}
+\date{July 2026}
+
+\maketitle
 
 \begin{abstract}
 The first three papers of the Constraint-Driven Field Theory (CDFT) series
-connected the electromagnetic fine-structure constant
-$\alpha \equiv e^2/(\hbar c) = 1/137.036$ to a vortex
-aspect ratio, proved the Koide formula as a theorem of a $\mathbb{Z}_3$
-mass parametrisation, and identified the three charged leptons as modes of a
-trefoil-knotted vortex. Within that model, the remaining unknown is the vacuum
-medium density $\rho_0$.
+connected the fine-structure constant to a vortex aspect ratio, proved the
+Koide relation as a theorem of Z-three mass structure, and identified the
+charged leptons with modes of a trefoil-knotted vortex. Within that model, the
+remaining unknown is the vacuum medium density.
 
-This paper formulates the next step.
-We derive the \emph{master self-consistency equation} that $\rho_0$ would need to
-satisfy, combining the CDFT energy scale relation (Paper~III) with the
-chirality equilibrium condition (Paper~III) and the Brannen mass parametrisation
-(Paper~II).
-The equation takes the form
-\begin{equation*}
-  \rho_0 \;=\; \frac{m_e}{c^2 a^3 g\,
-    \bigl[\min_k\{1 + \sqrt{2}\cos\!\bigl(\tfrac{\pi - \Phi_c(\rho_0)}{3} + \tfrac{2\pi k}{3}\bigr)\}\bigr]^2}\,,
-\end{equation*}
-where $\Phi_c(\rho_0)$ is the vacuum chirality phase as a function of $\rho_0$.
-This equation has a unique solution when $\Phi_c(\rho_0)$ is known.
-We identify the constraints that the vacuum equation of state must satisfy and
-show that the observed value $\rho_0 = 1.587 \times 10^{13}$~kg/m$^3$
-(inferred from lepton masses) is fully self-consistent.
+This paper formulates the next step by deriving the master self-consistency
+condition that the vacuum density must satisfy. The condition combines the
+energy-scale relation and chirality equilibrium developed in Paper III with
+the Brannen mass parametrization used in Paper II. Once the vacuum chirality
+phase is known as a function of density, the condition has a unique solution.
 
-\medskip
-\noindent In the extended notation used across the series, the vacuum limit is written
-as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
-equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
-left for later dynamical work rather than fitted in this manuscript. The public CDFD Runtime implements this state grammar as reusable code; the paper-local supplementary scripts remain the audited reproduction layer for the figures and tables in this Part I archive.
+The paper identifies the constraints that any vacuum equation of state must
+meet and shows that the density inferred from the lepton masses, about
+15.87 trillion kilograms per cubic meter, is self-consistent within the CDFT
+construction. This does not yet constitute a first-principles derivation of
+the density; it states the equation that such a derivation must close.
+
+Across the series, the public CDFD Runtime expresses this equilibrium vacuum
+limit as a reusable flow-constraint state grammar. The calculations below use
+that equilibrium limit only; adaptive departures are left for later dynamical
+work rather than fitted in this manuscript. The paper-local supplementary
+scripts remain the audited reproduction layer for the figures and tables in
+this Part I archive.
 \end{abstract}
 
-\keywords{Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, vacuum equation of state, self-consistency}
+\noindent\textbf{Keywords:} Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, vacuum equation of state, self-consistency
 
-\maketitle
+\vspace{0.75em}
 \linenumbers
 
 \section*{Project Context}
 This manuscript constitutes Part I (Paper 04) of the multi-part series
 \textit{Constraint-Driven Flux Dynamics (CDFD)}. The underlying mathematical
 architecture builds directly upon the concepts established in Paper 03 of this
-series (Steve Bico Mujjabi, \textit{``CDFD Part I: Fundamental Physics ---
-Paper 03: Topology, Chirality, and the Vacuum Density: Closing All Open
-Problems of the CDFT Series''}, manuscript; paper-specific DOI pending).
+series~\cite{MujjabiIII2026}.
 
 \section*{Symbol Conventions}
 
@@ -590,7 +590,7 @@ editing.
 The author declares no conflicts of interest.
 
 \section*{References}
-\bibliographystyle{apsrev4-2}
+\bibliographystyle{plainnat}
 \bibliography{references}
 
 \end{document}

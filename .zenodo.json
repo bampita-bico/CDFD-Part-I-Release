@@ -1,6 +1,6 @@
 {
   "title": "CDFD Part I: Fundamental Physics - Constraint-Driven Field Theory and Flux Dynamics",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "creators": [
     {
       "name": "Mujjabi, Steve Bico, MD",
@@ -47,8 +47,6 @@
     "reproducible research",
     "open science",
     "preprint",
-    "REVTeX",
-    "APS-style manuscript",
     "Mujjabi Laws",
     "Mujjabi Capacity Law",
     "Adaptive Operating Ratio",
@@ -56,5 +54,5 @@
     "Vacuum Memory Law",
     "Vacuum Engineering Principle"
   ],
-  "description": "Public Part I physics archive for the Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project. The release includes REVTeX 4-2 manuscripts, APS-style compiled PDFs, LaTeX figure assets, supplementary Python scripts, generated figures and checks, bibliography, claim-status notes, reproducibility instructions, and a minimal public demo. The final Part I architecture names the Mujjabi Capacity Law, Adaptive Operating Ratio, Stability Attractor, Vacuum Memory Law, Vacuum Engineering Principle, and Mujjabi Tests as falsifiable targets. The archive is released as open preprint material with reproducible paper-local calculations; it is not peer reviewed and does not by itself establish empirical validation of the physical hypotheses. The broader public CDFD Runtime is separate reusable software infrastructure."
+  "description": "Public Part I physics archive for the Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project. The release includes neutral LaTeX article-class manuscripts, compiled PDFs, LaTeX figure assets, supplementary Python scripts, generated figures and checks, bibliography, claim-status notes, reproducibility instructions, and a minimal public demo. The final Part I architecture names the Mujjabi Capacity Law, Adaptive Operating Ratio, Stability Attractor, Vacuum Memory Law, Vacuum Engineering Principle, and Mujjabi Tests as falsifiable targets. The archive is released as open preprint material with reproducible paper-local calculations; it is not peer reviewed and does not by itself establish empirical validation of the physical hypotheses. The broader public CDFD Runtime is separate reusable software infrastructure."
 }

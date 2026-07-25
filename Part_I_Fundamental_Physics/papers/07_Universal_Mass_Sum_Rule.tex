@@ -1,4 +1,8 @@
-\documentclass[aps,prd,10pt,superscriptaddress,nofootinbib,showkeys,amsmath,amssymb]{revtex4-2}
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \usepackage{graphicx}
 \usepackage{bm}
@@ -6,6 +10,7 @@
 \usepackage{array}
 \usepackage{amsthm}
 \usepackage{enumerate}
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref}
 \usepackage{lineno}
 
@@ -25,68 +30,57 @@
 
 \title{The Universal Mass Sum Rule: A Theta-Independent Prediction for All CDFT Torus Knot Families}
 
-\author{Steve Bico Mujjabi, MD}
-\email{msbico@gmail.com}
-\homepage{https://github.com/bampita-bico/CDFD-Part-I-Release}
-\thanks{Independent researcher; ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}.}
-\affiliation{VuraLabs, Kampala, Uganda}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
+\url{https://github.com/bampita-bico/CDFD-Part-I-Release}}
 
-\date[]{July 2026}
-
-\begin{abstract}
-Paper~VI of this series argued within the model that the Brannen amplitude coefficient
-$c_n = \sqrt{2}$ is universal across all $\mathbb{Z}_n$ torus knot families,
-and established that $\mathbb{Z}_3$ is uniquely exactly solvable.
-For $n \geq 5$, the individual mode masses depend on the orientation angle
-$\theta_n$, which cannot be determined by purely algebraic methods.
-
-The present paper identifies what \emph{can} be derived without knowing
-$\theta_n$.
-The central result is the \textbf{universal mass sum rule}:
-\begin{equation*}
-  \sum_{k=0}^{n-1} m_k \;=\; 2\,n\,M_n\,,
-\end{equation*}
-which holds exactly and independently of $\theta_n$ for every $T(2,n)$
-family.
-The proof is two lines from the $\mathbb{Z}_n$ Fourier identity.
-Combined with the Faddeev--Niemi energy scaling $M_n = M_3(n/3)^{3/4}$
-(Paper~IV), the total mass of every torus knot family scales as $n^{7/4}$:
-\begin{equation*}
-  \sum_k m_k(n) \;=\; 2M_3 \cdot 3^{-3/4} \cdot n^{7/4}\,.
-\end{equation*}
-For $n = 3$ this gives $m_e + m_\mu + m_\tau = 1883.16$~MeV
-(verified against PDG: within $0.067\%$, consistent with the tau mass
-error from Paper~V).
-For $n = 5$: $\sum_k m_k^{(5)} = 4603.85$~MeV.
-
-We also prove the $\mathbb{Z}_5$ mode split: at the symmetric point
-$\theta = 0$, the five cinquefoil amplitudes divide into three positive
-and two negative, yielding a structural $3 + 2$ pattern.
-We derive the $\mathbb{Z}_5$ self-consistency transcendental equation
-$5\theta_5 = \tilde{Q}_5(\theta_5)$ and its unique solution
-$\theta_5 \approx 3.70^\circ$, reported as a hypothesis pending
-a first-principles physical argument.
-
-\medskip
-\noindent In the extended notation used across the series, the vacuum limit is written
-as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
-equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
-left for later dynamical work rather than fitted in this manuscript. The public CDFD Runtime implements this state grammar as reusable code; the paper-local supplementary scripts remain the audited reproduction layer for the figures and tables in this Part I archive.
-\end{abstract}
-
-\keywords{Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, mass sum rule, particle spectra}
+\date{July 2026}
 
 \maketitle
+
+\begin{abstract}
+Paper VI argued within the model that the Brannen amplitude coefficient is
+universal across all Z-n torus-knot families and that the Z-three family is
+uniquely exactly solvable. For family numbers of five or greater, the
+individual mode masses depend on an orientation angle that cannot be fixed by
+pure algebra alone.
+
+The present paper identifies what can still be derived without knowing that
+orientation. Its central result is the universal mass sum rule: for every
+T(2,n) family, the total mass of the family equals twice the family number
+times the family energy scale. The proof follows directly from the Z-n Fourier
+identity and does not depend on the orientation angle. Combined with
+Faddeev-Niemi scaling, this means the total family mass grows as the family
+number to the seven-fourths power.
+
+For the trefoil family, the rule reproduces the observed charged-lepton total
+within the tau-mass uncertainty reported in Paper V. For the cinquefoil family,
+it gives a total mass of about 4604 MeV. The paper also proves the Z-five mode
+split: at the symmetric point, the five amplitudes divide into three positive
+and two negative modes. A unique Z-five self-consistency angle near
+3.70 degrees is derived and reported as a hypothesis pending a first-principles
+physical argument.
+
+Across the series, the public CDFD Runtime expresses this equilibrium vacuum
+limit as a reusable flow-constraint state grammar. The calculations below use
+that equilibrium limit only; adaptive departures are left for later dynamical
+work rather than fitted in this manuscript. The paper-local supplementary
+scripts remain the audited reproduction layer for the figures and tables in
+this Part I archive.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, mass sum rule, particle spectra
+
+\vspace{0.75em}
 \linenumbers
 
 \section*{Project Context}
 This manuscript constitutes Part I (Paper 07) of the multi-part series
 \textit{Constraint-Driven Flux Dynamics (CDFD)}. The underlying mathematical
 architecture builds directly upon the concepts established in Paper 06 of this
-series (Steve Bico Mujjabi, \textit{``CDFD Part I: Fundamental Physics ---
-Paper 06: The Universal Torus Knot Hierarchy: $\mathbb{Z}_n$ Symmetry, the
-Cinquefoil Family, and the General Structure of CDFT Particle Families''},
-manuscript; paper-specific DOI pending).
+series~\cite{MujjabiVI2026}.
 
 \section*{Symbol Conventions}
 
@@ -570,7 +564,7 @@ editing.
 The author declares no conflicts of interest.
 
 \section*{References}
-\bibliographystyle{apsrev4-2}
+\bibliographystyle{plainnat}
 \bibliography{references}
 
 \end{document}

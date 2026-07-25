@@ -1,4 +1,8 @@
-\documentclass[aps,prd,10pt,superscriptaddress,nofootinbib,showkeys,amsmath,amssymb]{revtex4-2}
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \usepackage{graphicx}
 \usepackage{bm}
@@ -6,6 +10,7 @@
 \usepackage{array}
 \usepackage{amsthm}
 \usepackage{enumerate}
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref}
 \usepackage{lineno}
 
@@ -24,43 +29,45 @@
 
 \title{Paper XI: Dark Matter, Dark Energy, Black Holes, and the Blancken-Layer Synthesis: A Constraint-Driven Flux Interpretation of Cosmological Anomalies}
 
-\author{Steve Bico Mujjabi, MD}
-\email{msbico@gmail.com}
-\homepage{https://github.com/bampita-bico/CDFD-Part-I-Release}
-\thanks{Independent researcher; ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}.}
-\affiliation{VuraLabs, Kampala, Uganda}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
+\url{https://github.com/bampita-bico/CDFD-Part-I-Release}}
 
-\date[]{July 2026}
-
-\begin{abstract}
-Paper XI develops the speculative cosmological bridge of Constraint-Driven Flux Dynamics (CDFD). It asks whether dark matter phenomenology, dark energy, black-hole horizons, vacuum self-consistency, and the proposed sub-Planckian Blancken layer can be treated as related manifestations of constrained transport rather than unrelated mysteries. The manuscript is deliberately status-aware: the lepton and vacuum equations in Papers I--X contain formal derivations internal to the model, while the dark-sector and Blancken-layer claims remain hypotheses until they generate observational discriminants beyond qualitative analogy.
-
-\medskip
-\noindent In the extended notation used across the series, the vacuum limit is written
-as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. This paper treats that expression as a
-hypothesis generator for cosmological discriminants, not as established
-cosmological evidence. The public CDFD Runtime implements the same
-state grammar for reusable simulations; the paper-local supplementary script
-remains the audited reproduction layer for the figures and tables in this Part I
-archive.
-\end{abstract}
-
-\keywords{Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, dark matter, dark energy, black holes}
+\date{July 2026}
 
 \maketitle
+
+\begin{abstract}
+Paper XI develops the speculative cosmological bridge of Constraint-Driven
+Flux Dynamics (CDFD). It asks whether dark matter phenomenology, dark energy,
+black-hole horizons, vacuum self-consistency, and the proposed sub-Planckian
+Blancken layer can be treated as related manifestations of constrained
+transport rather than as unrelated mysteries.
+
+The manuscript is deliberately status-aware. The lepton and vacuum equations
+in Papers I-X contain formal derivations internal to the model, while the
+dark-sector and Blancken-layer claims remain hypotheses until they generate
+observational discriminants beyond qualitative analogy. The shared runtime
+state grammar is used here as a generator of cosmological tests, not as
+established cosmological evidence.
+
+The public CDFD Runtime implements the same flow-constraint grammar for
+reusable simulations. The paper-local supplementary script remains the audited
+reproduction layer for the figures and tables in this Part I archive.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, dark matter, dark energy, black holes
+
+\vspace{0.75em}
 \linenumbers
 
 \section*{Project Context}
 This manuscript constitutes Part I (Paper 11) of the multi-part series
 \textit{Constraint-Driven Flux Dynamics (CDFD)}. The underlying mathematical
 architecture builds directly upon the concepts established in Paper 10 of this
-series (Steve Bico Mujjabi, \textit{``CDFD Part I: Fundamental Physics ---
-Paper 10: The Vacuum Equation of State: Deriving Torus Knot Self-Consistency
-from the Public CDFD Balance Law $\Psi_s = \Phi / C$''}, manuscript; paper-specific DOI pending).
-Its local reference chain includes the preceding Part I manuscripts, Papers
-01--10~\cite{MujjabiI2026,MujjabiII2026,MujjabiIII2026,MujjabiIV2026,
-MujjabiV2026,MujjabiVI2026,MujjabiVII2026,MujjabiVIII2026,MujjabiIX2026,
-MujjabiX2026}.
+series~\cite{MujjabiX2026}.
 
 \section*{Symbol Conventions}
 
@@ -568,7 +575,7 @@ editing.
 The author declares no conflicts of interest.
 
 \section*{References}
-\bibliographystyle{apsrev4-2}
+\bibliographystyle{plainnat}
 \bibliography{references}
 
 \end{document}

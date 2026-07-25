@@ -1,4 +1,8 @@
-\documentclass[aps,prd,10pt,superscriptaddress,nofootinbib,showkeys,amsmath,amssymb]{revtex4-2}
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \usepackage{graphicx}
 \usepackage{bm}
@@ -6,6 +10,7 @@
 \usepackage{array}
 \usepackage{amsthm}
 \usepackage{enumerate}
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref}
 \usepackage{lineno}
 
@@ -24,63 +29,55 @@
 
 \title{Zero Parameters: Deriving the Vacuum Chirality Phase from the Koide Invariant}
 
-\author{Steve Bico Mujjabi, MD}
-\email{msbico@gmail.com}
-\homepage{https://github.com/bampita-bico/CDFD-Part-I-Release}
-\thanks{Independent researcher; ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}.}
-\affiliation{VuraLabs, Kampala, Uganda}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
+\url{https://github.com/bampita-bico/CDFD-Part-I-Release}}
 
-\date[]{July 2026}
-
-\begin{abstract}
-Paper~IV of this series derived the master self-consistency equation for the
-CDFT vacuum density $\rho_0$ and identified the vacuum chirality phase
-$\phi_c$ as the single remaining unknown.
-The present paper derives $\phi_c$ from the $\mathbb{Z}_3$ algebraic structure
-of the trefoil vortex itself, closing the loop.
-
-The argument is a self-consistency condition:
-the Brannen $\mathbb{Z}_3$ parametrisation of the lepton masses has a
-universal invariant $Q = 2/3$ (the Koide ratio, proved in Paper~II).
-The chirality equilibrium condition (Paper~III) requires $3\theta + \phi_c = \pi$.
-Self-consistency demands that the chirality breaking angle $3\theta$
-equals the $\mathbb{Z}_3$ invariant $Q$:
-\begin{equation*}
-  3\theta \;=\; Q \;=\; \tfrac{2}{3}\,,
-  \quad \Rightarrow \quad
-  \phi_c \;=\; \pi - \tfrac{2}{3}\,.
-\end{equation*}
-This gives $\theta = 2/9$~rad exactly.
-
-With one input ($m_e$ as the mass unit), the theory predicts:
-\begin{align*}
-  m_\mu  &= 105.659~\text{MeV} \quad (+9.8~\text{ppm from PDG 2022}) \\
-  m_\tau &= 1776.985~\text{MeV} \quad (+0.125~\text{MeV} = +1.04\,\sigma\text{ from PDG 2022})
-\end{align*}
-The Koide formula $Q = 2/3$ holds exactly within the parametrisation.
-The CDFT lepton-sector construction is therefore internally closed, with
-$m_e$ as the external mass-unit input and no additional fitted parameter in
-this step.
-
-\medskip
-\noindent In the extended notation used across the series, the vacuum limit is written
-as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
-equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
-left for later dynamical work rather than fitted in this manuscript. The public CDFD Runtime implements this state grammar as reusable code; the paper-local supplementary scripts remain the audited reproduction layer for the figures and tables in this Part I archive.
-\end{abstract}
-
-\keywords{Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, vacuum chirality phase, zero-parameter model}
+\date{July 2026}
 
 \maketitle
+
+\begin{abstract}
+Paper IV derived the master self-consistency condition for the CDFT vacuum
+density and identified the vacuum chirality phase as the single remaining
+unknown. The present paper derives that phase from the Z-three algebraic
+structure of the trefoil vortex itself, closing the lepton-sector loop inside
+the model.
+
+The argument uses a self-consistency condition. The Brannen Z-three
+parametrization of the lepton masses has the universal Koide invariant proved
+in Paper II. The chirality equilibrium condition from Paper III fixes the
+charged-lepton orientation once the background chirality phase is known.
+Self-consistency identifies the chirality-breaking angle with the Z-three
+invariant, setting the lepton phase to two ninths of a radian and fixing the
+background phase without an additional fit.
+
+With the electron mass used only as the mass unit, the construction predicts
+the muon and tau masses at the reported precision and keeps the Koide relation
+exact inside the parametrization. The CDFT lepton-sector construction is
+therefore internally closed at this step, with no fitted parameter beyond the
+external choice of mass unit.
+
+Across the series, the public CDFD Runtime expresses this equilibrium vacuum
+limit as a reusable flow-constraint state grammar. The calculations below use
+that equilibrium limit only; adaptive departures are left for later dynamical
+work rather than fitted in this manuscript. The paper-local supplementary
+scripts remain the audited reproduction layer for the figures and tables in
+this Part I archive.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, vacuum chirality phase, zero-parameter model
+
+\vspace{0.75em}
 \linenumbers
 
 \section*{Project Context}
 This manuscript constitutes Part I (Paper 05) of the multi-part series
 \textit{Constraint-Driven Flux Dynamics (CDFD)}. The underlying mathematical
 architecture builds directly upon the concepts established in Paper 04 of this
-series (Steve Bico Mujjabi, \textit{``CDFD Part I: Fundamental Physics ---
-Paper 04: The Vacuum Equation of State and the Self-Consistency of the CDFT
-Lepton Sector''}, manuscript; paper-specific DOI pending).
+series~\cite{MujjabiIV2026}.
 
 \section*{Symbol Conventions}
 
@@ -530,7 +527,7 @@ editing.
 The author declares no conflicts of interest.
 
 \section*{References}
-\bibliographystyle{apsrev4-2}
+\bibliographystyle{plainnat}
 \bibliography{references}
 
 \end{document}

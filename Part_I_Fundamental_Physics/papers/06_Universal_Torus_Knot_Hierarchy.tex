@@ -1,4 +1,8 @@
-\documentclass[aps,prd,10pt,superscriptaddress,nofootinbib,showkeys,amsmath,amssymb]{revtex4-2}
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \usepackage{graphicx}
 \usepackage{bm}
@@ -6,6 +10,7 @@
 \usepackage{array}
 \usepackage{amsthm}
 \usepackage{enumerate}
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref}
 \usepackage{lineno}
 
@@ -25,68 +30,58 @@
 
 \title{The Universal Torus Knot Hierarchy: $\mathbb{Z}_n$ Symmetry, the Cinquefoil Family, and the General Structure of CDFT Particle Families}
 
-\author{Steve Bico Mujjabi, MD}
-\email{msbico@gmail.com}
-\homepage{https://github.com/bampita-bico/CDFD-Part-I-Release}
-\thanks{Independent researcher; ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}.}
-\affiliation{VuraLabs, Kampala, Uganda}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
+\url{https://github.com/bampita-bico/CDFD-Part-I-Release}}
 
-\date[]{July 2026}
-
-\begin{abstract}
-Papers~I--V of the Constraint-Driven Field Theory (CDFT) series built the
-lepton-sector construction: the electromagnetic fine-structure constant
-$\alpha \equiv e^2/(\hbar c) = 1/137.036$ from vortex ring equilibrium, the Koide
-formula from $\mathbb{Z}_3$ symmetry, and all three lepton masses from a single
-input ($m_e$).
-This paper extends the framework beyond leptons by studying the full hierarchy
-of torus knot families $T(2,n)$ for odd $n \geq 3$.
-
-We prove two new theorems.
-\textbf{Theorem~1} (universal coefficient): the Brannen amplitude coefficient
-$c_n = \sqrt{2}$ for all $\mathbb{Z}_n$ families, fixed by a maximum-entropy
-self-consistency condition on the amplitude distribution.
-\textbf{Theorem~2} ($\mathbb{Z}_3$ uniqueness): $\mathbb{Z}_3$ is the unique
-torus knot family for which the constant Koide-like invariant
-$Q_n = 2/n$ and the $\mathbb{Z}_n$ self-consistency condition hold
-simultaneously on a connected valid domain.
-For $n \geq 5$, the amplitude $A_k = 1 + \sqrt{2}\cos(\cdot)$ is
-negative for some modes at every orientation $\theta$, so the Koide
-theorem does not extend directly.
-
-The energy scale of the $n$-th family is given by Faddeev--Niemi scaling:
-\begin{equation*}
-  M_n \;=\; M_3 \left(\frac{n}{3}\right)^{3/4}\,,
-\end{equation*}
-where $M_3 = 313.86$~MeV is the trefoil scale from Paper~V.
-This gives $M_5 = 460.4$~MeV for the cinquefoil $T(2,5)$,
-$M_7 = 592.5$~MeV for the heptafoil $T(2,7)$, and so on.
-These are model predictions for the energy scales at which candidate
-knotted-vortex particle families would appear if the hierarchy maps to nature.
-
-The mass spectrum of the $T(2,5)$ family requires separate work:
-we identify the structural obstruction (no valid $\theta$ domain with all
-$A_k \geq 0$ for $n \geq 5$) and state the open problems precisely.
-
-\medskip
-\noindent In the extended notation used across the series, the vacuum limit is written
-as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
-equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
-left for later dynamical work rather than fitted in this manuscript. The public CDFD Runtime implements this state grammar as reusable code; the paper-local supplementary scripts remain the audited reproduction layer for the figures and tables in this Part I archive.
-\end{abstract}
-
-\keywords{Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, torus knots, particle families}
+\date{July 2026}
 
 \maketitle
+
+\begin{abstract}
+Papers I-V of the Constraint-Driven Field Theory (CDFT) series built the
+lepton-sector construction from vortex-ring equilibrium, Z-three symmetry, and
+one external mass unit. This paper extends the framework beyond leptons by
+studying the hierarchy of torus-knot families T(2,n) for odd family numbers
+starting at three.
+
+Two results are proved. First, the Brannen amplitude coefficient is universal
+across the Z-n torus-knot families and is fixed by a maximum-entropy
+self-consistency condition on the amplitude distribution. Second, the Z-three
+family is uniquely exactly solvable: it is the only family in which the
+constant Koide-like invariant and the Z-n self-consistency condition hold
+together on a connected valid domain. For family numbers of five or greater,
+some amplitudes become negative at every orientation, so the exact Koide
+theorem does not extend directly.
+
+The paper then uses Faddeev-Niemi scaling to assign model energy scales to the
+families. The trefoil scale from Paper V sets the cinquefoil scale near
+460 MeV, the heptafoil scale near 593 MeV, and the higher-family sequence that
+follows. These are model predictions for the scales at which candidate
+knotted-vortex particle families would appear if the hierarchy maps to nature.
+The individual spectrum of the cinquefoil family is left as a separate problem
+because the higher families lack a fully positive amplitude domain.
+
+Across the series, the public CDFD Runtime expresses this equilibrium vacuum
+limit as a reusable flow-constraint state grammar. The calculations below use
+that equilibrium limit only; adaptive departures are left for later dynamical
+work rather than fitted in this manuscript. The paper-local supplementary
+scripts remain the audited reproduction layer for the figures and tables in
+this Part I archive.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, torus knots, particle families
+
+\vspace{0.75em}
 \linenumbers
 
 \section*{Project Context}
 This manuscript constitutes Part I (Paper 06) of the multi-part series
 \textit{Constraint-Driven Flux Dynamics (CDFD)}. The underlying mathematical
 architecture builds directly upon the concepts established in Paper 05 of this
-series (Steve Bico Mujjabi, \textit{``CDFD Part I: Fundamental Physics ---
-Paper 05: Zero Parameters: Deriving the Vacuum Chirality Phase from the Koide
-Invariant''}, manuscript; paper-specific DOI pending).
+series~\cite{MujjabiV2026}.
 
 \section*{Symbol Conventions}
 
@@ -642,7 +637,7 @@ editing.
 The author declares no conflicts of interest.
 
 \section*{References}
-\bibliographystyle{apsrev4-2}
+\bibliographystyle{plainnat}
 \bibliography{references}
 
 \end{document}

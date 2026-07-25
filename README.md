@@ -4,7 +4,7 @@
 
 This release contains the public Part I physics archive for the
 Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project. The
-manuscript sources are now maintained as REVTeX 4-2 files for APS-style review.
+manuscript sources are maintained as neutral LaTeX `article`-class files.
 
 ## Author
 
@@ -38,7 +38,7 @@ masses; fine-structure constant; reproducible research; open science.
 
 ## Contents
 
-- `Part_I_Fundamental_Physics/` - Part I REVTeX manuscripts, PDFs, figure
+- `Part_I_Fundamental_Physics/` - Part I article-class manuscripts, PDFs, figure
   assets, supplementary scripts, generated outputs, bibliography, claim-status
   notes, and reproducibility instructions.
 - `cdfd_demo/` - small public equation demo with Docker support.

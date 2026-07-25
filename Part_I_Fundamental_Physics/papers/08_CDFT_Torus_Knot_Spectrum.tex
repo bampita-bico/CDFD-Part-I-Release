@@ -1,4 +1,8 @@
-\documentclass[aps,prd,10pt,superscriptaddress,nofootinbib,showkeys,amsmath,amssymb]{revtex4-2}
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \usepackage{graphicx}
 \usepackage{bm}
@@ -6,6 +10,7 @@
 \usepackage{array}
 \usepackage{amsthm}
 \usepackage{enumerate}
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref}
 \usepackage{lineno}
 
@@ -25,67 +30,58 @@
 
 \title{The CDFT Torus Knot Spectrum: Closing the Four Open Problems of Paper~VII}
 
-\author{Steve Bico Mujjabi, MD}
-\email{msbico@gmail.com}
-\homepage{https://github.com/bampita-bico/CDFD-Part-I-Release}
-\thanks{Independent researcher; ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}.}
-\affiliation{VuraLabs, Kampala, Uganda}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
+\url{https://github.com/bampita-bico/CDFD-Part-I-Release}}
 
-\date[]{July 2026}
-
-\begin{abstract}
-Paper~VII identified four open problems for torus knot families $T(2,n)$ with
-$n \geq 5$: (1) a first-principles derivation of the orientation angle $\theta_n$;
-(2) the individual $\mathbb{Z}_5$ mode masses and their PDG identification;
-(3) the physical meaning of the $3+2$ amplitude split;
-(4) the mode spectra for higher families $n \geq 7$.
-
-The present paper resolves all four.
-
-The self-consistency condition $n\theta_n = \widetilde{Q}_n(\theta_n)$ is
-extended to all odd $n$ and shown to have a unique solution for each $n$.
-We prove the \textbf{universal amplitude-split theorem}: at the
-self-consistency point $\theta_n$, the number of negative-amplitude modes is
-exactly $n_- = \lfloor 5n/8 \rfloor - \lceil 3n/8 \rceil + 1$, which equals
-2 for $5 \leq n \leq 11$ and grows in steps of 2 at critical values $n = 12,
-21, \ldots$\,.
-We derive the exact large-$n$ asymptotics:
-\[
-  \theta_n \;\xrightarrow{n\to\infty}\; \frac{8\pi^2}{(\pi+4)^2}\,\frac{1}{n^2}\,,
-\]
-a closed-form limit from the Fourier geometry of the CDFT vacuum.
-
-The $\mathbb{Z}_5$ mode masses at $\theta_5 \approx 3.698^\circ$ are
-$\{3.6,\, 17.6,\, 838.3,\, 1067.7,\, 2676.8\}$~MeV.
-The two lightest modes are the anti-phase pair at the amplitude zero, not
-identified with observed hadrons; the three heavier modes bracket the
-$K^*(892)$--$\phi(1020)$ region of the meson spectrum.
-
-Complete mode spectra are tabulated for $n = 5, 7, 9, 11, 13$.
-The $\mathbb{Z}_7$ heptafoil produces two modes near the
-nucleon--$\Delta$ scale ($\sim 313$~MeV) and a high-energy doublet at
-$\sim 2.1$~GeV.
-All spectra are derived from $m_e$ with zero additional free parameters.
-
-\medskip
-\noindent In the extended notation used across the series, the vacuum limit is written
-as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
-equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
-left for later dynamical work rather than fitted in this manuscript. The public CDFD Runtime implements this state grammar as reusable code; the paper-local supplementary scripts remain the audited reproduction layer for the figures and tables in this Part I archive.
-\end{abstract}
-
-\keywords{Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, torus knot spectrum, constrained vacuum}
+\date{July 2026}
 
 \maketitle
+
+\begin{abstract}
+Paper VII identified four open problems for torus-knot families with family
+numbers of five or greater: a first-principles derivation of the orientation
+angle, the individual Z-five mode masses and their possible Particle Data
+Group identifications, the meaning of the three-plus-two amplitude split, and
+the spectra of higher families. The present paper resolves all four inside the
+model.
+
+The self-consistency condition is extended to all odd family numbers and is
+shown to have a unique solution for each family. The paper proves a universal
+amplitude-split theorem: at the self-consistency point, the number of
+negative-amplitude modes follows a fixed discrete counting rule, equals two
+from family numbers five through eleven, and then grows in steps at critical
+family numbers. The large-family orientation angle is also shown to decay with
+the inverse square of the family number, with a closed coefficient determined
+by the Fourier geometry of the CDFT vacuum.
+
+For the Z-five family, the mode masses are about 3.6, 17.6, 838.3, 1067.7,
+and 2676.8 MeV. The two lightest modes are interpreted as an anti-phase pair
+near an amplitude zero rather than identified with observed hadrons, while the
+three heavier modes bracket the K-star and phi meson region. Complete spectra
+are tabulated for family numbers five, seven, nine, eleven, and thirteen. All
+spectra are derived from the electron mass with no additional free parameters.
+
+Across the series, the public CDFD Runtime expresses this equilibrium vacuum
+limit as a reusable flow-constraint state grammar. The calculations below use
+that equilibrium limit only; adaptive departures are left for later dynamical
+work rather than fitted in this manuscript. The paper-local supplementary
+scripts remain the audited reproduction layer for the figures and tables in
+this Part I archive.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, torus knot spectrum, constrained vacuum
+
+\vspace{0.75em}
 \linenumbers
 
 \section*{Project Context}
 This manuscript constitutes Part I (Paper 08) of the multi-part series
 \textit{Constraint-Driven Flux Dynamics (CDFD)}. The underlying mathematical
 architecture builds directly upon the concepts established in Paper 07 of this
-series (Steve Bico Mujjabi, \textit{``CDFD Part I: Fundamental Physics ---
-Paper 07: The Universal Mass Sum Rule: A Theta-Independent Prediction for All
-CDFT Torus Knot Families''}, manuscript; paper-specific DOI pending).
+series~\cite{MujjabiVII2026}.
 
 \section*{Symbol Conventions}
 
@@ -854,7 +850,7 @@ editing.
 The author declares no conflicts of interest.
 
 \section*{References}
-\bibliographystyle{apsrev4-2}
+\bibliographystyle{plainnat}
 \bibliography{references}
 
 \end{document}

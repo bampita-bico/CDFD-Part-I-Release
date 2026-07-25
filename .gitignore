@@ -14,3 +14,6 @@ dist/
 .env
 .env.*
 !.env.example
+missfont.log
+Part_I_Fundamental_Physics/missfont.log
+Part_I_Fundamental_Physics/article_submissions/

@@ -1,4 +1,8 @@
-\documentclass[aps,prd,10pt,superscriptaddress,nofootinbib,showkeys,amsmath,amssymb]{revtex4-2}
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \usepackage{graphicx}
 \usepackage{bm}
@@ -6,6 +10,7 @@
 \usepackage{array}
 \usepackage{amsthm}
 \usepackage{enumerate}
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref}
 \usepackage{lineno}
 
@@ -23,59 +28,53 @@
 
 \title{Lepton Masses from Z\textsubscript{3}-Symmetric Vortex Modes and the Origin of the Koide Formula}
 
-\author{Steve Bico Mujjabi, MD}
-\email{msbico@gmail.com}
-\homepage{https://github.com/bampita-bico/CDFD-Part-I-Release}
-\thanks{Independent researcher; ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}.}
-\affiliation{VuraLabs, Kampala, Uganda}
+\author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
+VuraLabs, Kampala, Uganda\\
+Independent researcher\\
+ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
+\url{https://github.com/bampita-bico/CDFD-Part-I-Release}}
 
-\date[]{July 2026}
-
-\begin{abstract}
-The Koide formula $Q = (m_e + m_\mu + m_\tau)/(\sqrt{m_e}+\sqrt{m_\mu}+\sqrt{m_\tau})^2
-= 2/3$ has been satisfied by the measured lepton masses to better than one part in
-$10^4$ since its discovery in 1981, yet no standard-model explanation exists for this
-coincidence.
-In this paper, the second in the Constraint-Driven Field Theory (CDFT) series,
-we show that the Koide formula follows naturally from a specific
-$\mathbb{Z}_3$-symmetric mass parametrisation.
-The vortex ring established in Paper~I as the CDFT model of the electron
-has a unique stable azimuthal excitation at mode number $n = 3$: the trefoil.
-We prove as a mathematical theorem that any three quantities constructed from
-the $\mathbb{Z}_3$-symmetric Brannen form
-$m_k = M(1 + \sqrt{2}\cos(\theta + 2\pi k/3))^2$ ($k = 0,1,2$)
-satisfy $Q = 2/3$ exactly, for \emph{all} $M > 0$ and \emph{all} $\theta$.
-The proof requires only two elementary trigonometric identities and contains
-no free parameters.
-We further argue, within the vortex-ring model, that $n = 3$ is the only stable azimuthal mode of a constrained
-vortex ring: $n = 1$ is a zero mode, $n = 2$ is unstable, and $n \geq 4$ are
-energetically suppressed.
-Fitting $M$ and $\theta$ to any two of the three lepton masses, we predict all
-three to within $0.015\%$ of PDG values.
-The phase $\theta$ is not a free parameter: with Koide automatic, two lepton
-masses completely determine $M$ and $\theta$.
-Its derivation from CDFT vacuum properties without using measured masses as input
-is the central task of Paper~III.
-
-\medskip
-\noindent In the extended notation used across the series, the vacuum limit is written
-as $\Psi_s = (\Phi/C)\cdot S\cdot M_s$. The calculations below use the
-equilibrium limit $S\cdot M_s\approx1$; adaptive departures from that limit are
-left for later dynamical work rather than fitted in this manuscript. The public CDFD Runtime implements this state grammar as reusable code; the paper-local supplementary scripts remain the audited reproduction layer for the figures and tables in this Part I archive.
-\end{abstract}
-
-\keywords{Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, Koide formula, lepton masses, Z3 symmetry}
+\date{July 2026}
 
 \maketitle
+
+\begin{abstract}
+The Koide relation has matched the measured charged-lepton masses to better
+than one part in ten thousand since its discovery in 1981, yet no
+standard-model explanation exists for this coincidence. This paper, the second
+in the Constraint-Driven Field Theory series, argues that the relation follows
+naturally from a Z-three-symmetric mass parametrization. The vortex ring
+introduced in Paper I as the model of the electron has a unique stable
+azimuthal excitation at mode number three, the trefoil. We prove as a
+mathematical theorem that any three quantities built from the corresponding
+Z-three-symmetric Brannen form satisfy the Koide relation exactly. The proof
+requires only two elementary trigonometric identities and introduces no free
+parameters. Within the vortex-ring model, mode number three is the only stable
+azimuthal mode of a constrained vortex ring: mode number one is a zero mode,
+mode number two is unstable, and mode numbers four and higher are energetically
+suppressed. Fitting the mass scale and phase to any two of the three charged
+lepton masses predicts all three to within 0.015 percent of Particle Data Group
+values. The phase is therefore not a free parameter once the Koide relation is
+automatic; two lepton masses completely determine the mass scale and phase. Its
+derivation from vacuum properties without using measured masses as input is the
+central task of Paper III. In the extended notation used across the series, the
+calculations below use the equilibrium vacuum limit; adaptive departures from
+that limit are left for later dynamical work rather than fitted in this
+manuscript. The public CDFD Runtime implements this state grammar as reusable
+code, while the paper-local supplementary scripts remain the audited
+reproduction layer for the figures and tables in this Part I archive.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, Koide formula, lepton masses, Z3 symmetry
+
+\vspace{0.75em}
 \linenumbers
 
 \section*{Project Context}
 This manuscript constitutes Part I (Paper 02) of the multi-part series
 \textit{Constraint-Driven Flux Dynamics (CDFD)}. The underlying mathematical
 architecture builds directly upon the concepts established in Paper 01 of this
-series (Steve Bico Mujjabi, \textit{``CDFD Part I: Fundamental Physics ---
-Paper 01: Vortex Stability in a Constrained Transport Vacuum and the Origin of
-the Fine-Structure Constant''}, manuscript; paper-specific DOI pending).
+series~\cite{MujjabiI2026}.
 
 \section*{Symbol Conventions}
 
@@ -653,7 +652,7 @@ editing.
 The author declares no conflicts of interest.
 
 \section*{References}
-\bibliographystyle{apsrev4-2}
+\bibliographystyle{plainnat}
 \bibliography{references}
 
 \end{document}

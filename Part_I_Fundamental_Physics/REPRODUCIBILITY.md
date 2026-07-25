@@ -1,12 +1,12 @@
 # Reproducibility
 
-Last local verification: 2026-07-17.
+Last local verification: 2026-07-25.
 
 ## Environment Used
 
 - Python: `3.14.4`
-- LaTeX: `latexmk`, `pdflatex`, `bibtex`, REVTeX 4-2, and `apsrev4-2`
-  available on path
+- LaTeX: `latexmk`, `pdflatex`, `bibtex`, standard `article` class, and
+  `plainnat` bibliography style available on path
 - Required Python stack: see `../requirements.txt` and `requirements-fullstack.txt`
 - Optional acceleration backends observed during verification:
   - `numba=ok` (`0.65.1`)
@@ -106,13 +106,25 @@ From `Part_I_Fundamental_Physics`:
 
 ```bash
 latexmk -pdf -interaction=nonstopmode -halt-on-error \
-  -outdir=/tmp/cdfd_parti_revtex_build papers/*.tex
+  -outdir=/tmp/cdfd_parti_article_build papers/*.tex
 ```
 
-The current local REVTeX build completed for all 12 papers with no failed
-papers and no missing citation or reference warnings.
+The 2026-07-25 local article-class build completed for all 12 papers with no
+failed papers and no missing citation or reference warnings in the final log
+scan.
 
 The submission-facing PDFs are copied to `PDFs/`.
+
+The neutral submission package was separately rebuilt from
+`Part_I_Fundamental_Physics/article_submissions` with:
+
+```bash
+latexmk -pdf -interaction=nonstopmode -halt-on-error \
+  -outdir=/tmp/cdfd_parti_article_submission_build papers/*.tex
+```
+
+That build also produced 12 PDFs and passed the same final log scan before the
+PDFs were copied to `article_submissions/PDFs/`.
 
 ## What This Verifies
 
