@@ -26,7 +26,7 @@
 
 \begin{document}
 
-\title{Topology, Chirality, and the Vacuum Density: Closing All Open Problems of the CDFT Series}
+\title{Topology, Chirality, and Vacuum Density: Conditional CDFT Constructions}
 
 \author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
 VuraLabs, Kampala, Uganda\\
@@ -39,31 +39,19 @@ ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
 \maketitle
 
 \begin{abstract}
-The first two papers of the Constraint-Driven Field Theory (CDFT) series
-identified the fine-structure constant with the aspect ratio of a stable
-vacuum vortex ring and treated the Koide relation as a consequence of
-Z-three symmetry in a trefoil-knotted charged-lepton sector. Those papers also
-left four open problems. This paper reorganizes those problems and separates
-the issues already closed inside the model from the one quantity that remains
-a genuine physical input.
+This paper records conditional algebra and modelling hypotheses used by the
+first CDFT papers. It does not close their physical open problems. The stiffness
+relation is a rearrangement of Paper I's calibrated equilibrium equation, not an
+independent derivation. The standard classification of $T(2,n)$ knots remains
+usable, but the Faddeev--Niemi soliton-energy result has not been shown to apply
+to the CDFT vortex functional. Consequently it does not select a trefoil or a
+particle family here.
 
-The transport stiffness is shown to follow algebraically from the inverse
-fine-structure aspect ratio and the Lamb core profile constant used in
-Paper I, so its appearance as an open problem was a framing error. The choice
-of mode number three is then argued to be topological: the mode-two excitation
-is a separable Hopf link, while the mode-three excitation is a trefoil knot
-with a topological barrier to separation. By the Faddeev-Niemi result used in
-the model, the trefoil is the lowest-energy knotted soliton available to the
-constrained field.
-
-The remaining mass-scale problem is reduced to the vacuum density. The vortex
-energy scale factors into that density times known geometric, transport, and
-core-profile terms inherited from Papers I and II. The lepton phase problem is
-also reduced to the same density because the background chirality phase fixes
-the charged-lepton orientation once the vacuum equation of state is known.
-The paper therefore reduces the open problem set to a single next target:
-derive the CDFT vacuum density. Paper IV formulates the corresponding
-equation-of-state condition.
+The displayed vacuum-density expression back-solves $\rho_0$ from a mass scale
+already fitted to observed lepton masses. The chirality interaction is a
+symmetry-allowed ansatz whose coefficient and phase are not derived from a
+vacuum equation of state. These constructions are retained as hypotheses and
+conditional calculations, not physical predictions.
 
 Across the series, the public CDFD Runtime expresses this equilibrium vacuum
 limit as a reusable flow-constraint state grammar. The calculations below use
@@ -127,22 +115,17 @@ $\Omega,\Lambda$ & State/domain space or integrated measure where defined & Rese
 
 \section{Introduction}
 
-Paper~I of this series~\cite{MujjabiI2026} derived the fine-structure
-constant $\alpha$ as the equilibrium aspect ratio $\chi = R/a = 1/\alpha$
-of a vortex ring in a transport-capacity-limited vacuum medium.
-Paper~II~\cite{MujjabiII2026} proved the Koide formula as a theorem of
-$\mathbb{Z}_3$ symmetry and identified the charged leptons as the three
-lobes of a trefoil-knotted excitation of that ring.
-
-Both papers listed open problems explicitly.
-The present paper's goal is simple: close them all.
+Paper~I records a calibrated toy energy functional; it did not derive
+$\alpha$ or a vacuum stiffness. Paper~II records a selected $\mathbb{Z}_3$
+parametrisation; it did not establish particle topology. Both leave physical
+open problems. This paper distinguishes conditional algebra from the still
+unsupported physical mappings.
 
 We proceed problem by problem, in order of increasing depth:
 Problem~1 ($\S$\ref{sec:kappa}), Problem~4 ($\S$\ref{sec:topology}),
 Problem~3 ($\S$\ref{sec:M}), Problem~2 ($\S$\ref{sec:theta}).
 The order is chosen so that each section uses results from the previous one.
-Section~\ref{sec:summary} states what remains for Paper~IV and why it is
-only one quantity.
+Section~\ref{sec:summary} records the remaining open physical questions.
 
 \subsection{Constraint history, chirality, and charge}
 
@@ -161,17 +144,18 @@ hypothesis, because topology and chirality are where boundary orientation first
 becomes physical in the model.
 
 
-\section{Closing Problem 1: $\kappa$ is Already Derived}
+\section{Conditional Algebra for $\kappa$}
 \label{sec:kappa}
 
 Paper~I introduced the transport stiffness $\kappa$ and noted that it was
 computed from the condition $\chi = 1/\alpha$ rather than derived from the
 vacuum medium properties independently.
-This was a framing error.
+It remains unresolved physically because the target aspect ratio was used to
+fit $\kappa$ in Paper~I.
 
 \begin{proposition}
-  The dimensionless transport stiffness $\kappa$ is algebraically determined
-  by $\chi = 1/\alpha$ and the Lamb core parameter $\beta = 1.75$:
+  Conditional on the selected equilibrium equation and chosen $\chi$ and
+  $\beta$, the fitted parameter $\kappa$ obeys:
   \begin{equation}
     \kappa \;=\; \chi^2\bigl(\ln(8\chi) - \beta + 1\bigr)\,.
     \label{eq:kappa_closed}
@@ -184,8 +168,8 @@ This was a framing error.
     \ln(8\chi) - \beta + 1 \;=\; \frac{\kappa}{\chi^2}\,.
   \end{equation}
   Multiplying both sides by $\chi^2$ gives Eq.~\eqref{eq:kappa_closed}.
-  Since $\chi = 1/\alpha$ is derived in Paper~I and $\beta = 1.75$ is the
-  standard Lamb solid-rotation value, $\kappa$ requires no additional input.
+  This is a rearrangement of the assumed equilibrium condition. It does not
+  determine $\kappa$ independently or derive $\chi$.
 \end{proof}
 
 Numerically:
@@ -195,21 +179,17 @@ Numerically:
          &= 18{,}778.87 \times 6.2497 \;=\; 117{,}362.0\,.
   \label{eq:kappa_numerical}
 \end{align}
-This agrees with the value used in Paper~I to twelve significant figures
-(verification to machine precision in supplementary Table~1).
-
-\textbf{Problem~1 is closed.}
-$\kappa$ is a function of $\chi$ and $\beta$ alone.
-No vacuum density, no compressibility, no additional measurement.
+This returns the value used to calibrate Paper~I. Agreement to machine precision
+is a property of the same algebra, not an independent verification.
 
 
-\section{Closing Problem 4: Why the Trefoil --- a Topological Argument}
+\section{Topological Context and Its Modelling Boundary}
 \label{sec:topology}
 
 Paper~II argued that the $n = 2$ azimuthal mode of the electron vortex is
 dynamically unstable at $\chi = 137$, while $n = 3$ is stable.
 This argument was an energy-scaling estimate and not fully rigorous.
-The correct argument is topological.
+Topology supplies a classification, not a selection argument for this model.
 The idea that particles may be understood as topological solitons has
 a long history, from Skyrme's baryon model~\cite{Skyrme1961} to
 Ra\~{n}ada's knotted electromagnetic fields~\cite{Ranada1989}
@@ -240,41 +220,42 @@ Table~\ref{tab:torus_knots} lists the first seven torus knots $T(2,n)$ with
 their classifications.
 
 \begin{table}[h]
-  \caption{Torus knots $T(2,n)$: classification and physical interpretation.}
+\caption{Torus knots $T(2,n)$: standard classification and unvalidated CDFT associations.}
   \label{tab:torus_knots}
   \begin{tabular}{clllll}
     \toprule
     $n$ & $T(2,n)$ & Knot? & Lobes & Symmetry & Physical role \\
     \midrule
-    1 & Unknot              & No  & 1 & $\mathrm{U}(1)$ & Electron (Paper~I) \\
-    2 & Hopf link           & No  & 2 & $\mathbb{Z}_2$  & Transient, no particle \\
-    3 & Trefoil             & \textbf{Yes} & 3 & $\mathbb{Z}_3$ & \textbf{Leptons ($e,\mu,\tau$)} \\
-    4 & Solomon's link      & No  & 4 & $\mathbb{Z}_4$  & Transient, no particle \\
-    5 & Cinquefoil          & Yes & 5 & $\mathbb{Z}_5$  & Next knotted family \\
-    6 & 3-component link    & No  & 6 & $\mathbb{Z}_6$  & Transient \\
-    7 & $T(2,7)$ knot       & Yes & 7 & $\mathbb{Z}_7$  & Higher knotted family \\
+    1 & Unknot              & No  & 1 & $\mathrm{U}(1)$ & No particle assignment \\
+    2 & Hopf link           & No  & 2 & $\mathbb{Z}_2$  & Standard link classification \\
+    3 & Trefoil             & \textbf{Yes} & 3 & $\mathbb{Z}_3$ & Candidate CDFT association \\
+    4 & Solomon's link      & No  & 4 & $\mathbb{Z}_4$  & Standard link classification \\
+    5 & Cinquefoil          & Yes & 5 & $\mathbb{Z}_5$  & No particle assignment \\
+    6 & 3-component link    & No  & 6 & $\mathbb{Z}_6$  & Standard link classification \\
+    7 & $T(2,7)$ knot       & Yes & 7 & $\mathbb{Z}_7$  & No particle assignment \\
     \bottomrule
   \end{tabular}
 \end{table}
 
 \subsection{Why $n = 3$ and not $n = 5, 7, \ldots$}
 
-The Faddeev--Niemi theorem~\cite{FaddeevNiemi1997} states that the minimum
-energy of a knotted soliton with Hopf charge $Q$ satisfies
+The Faddeev--Niemi result~\cite{FaddeevNiemi1997} gives a bound for a particular
+Skyrme-type field theory, in which the minimum energy of a knotted soliton with Hopf charge $Q$ satisfies
 $E_\text{min}(Q) \sim Q^{3/4}$.
-For the torus knot $T(2,n)$ with $n$ odd, the Hopf charge is $Q = n$.
-Therefore:
+The CDFT vortex functional has not been shown to be that field theory, nor has
+its torus-knot index been shown to equal the Hopf charge. The following ratio is
+therefore only a hypothetical analogue, not a CDFT energy result:
 \begin{equation}
   \frac{E_\text{min}(T(2,n))}{E_\text{min}(T(2,3))}
   \;=\; \left(\frac{n}{3}\right)^{3/4}\,.
   \label{eq:energy_ratio}
 \end{equation}
-The trefoil $T(2,3)$ is the global energy minimum among all knotted solitons.
-The cinquefoil $T(2,5)$ costs $\approx 47\%$ more energy.
+Within the cited model the trefoil is its lowest-charge nontrivial example. This
+does not select a CDFT trefoil or establish a $47\%$ CDFT energy difference.
 
 Table~\ref{tab:energy_ordering} shows the energy ordering.
 \begin{table}[h]
-  \caption{Energy ordering of knotted solitons (Faddeev--Niemi bound).}
+\caption{Illustrative Faddeev--Niemi scaling, not an energy ordering for CDFT vortices.}
   \label{tab:energy_ordering}
   \begin{tabular}{llcc}
     \toprule
@@ -319,7 +300,7 @@ The three-mode structure follows because the trefoil has exactly three
 $\mathbb{Z}_3$ lobes.
 
 
-\section{Closing Problem 3: The Energy Scale $M$}
+\section{A Conditional Parametrisation of $M$}
 \label{sec:M}
 
 The Brannen parametrisation (Paper~II) writes the lepton masses as
@@ -354,9 +335,9 @@ The \emph{dimensional} vortex energy is
   E_\text{vortex} \;=\; 2\pi \rho_0 c^2 a^3 \cdot g(\chi, \beta)\,,
   \label{eq:E_dimensional}
 \end{equation}
-where $\rho_0$ is the vacuum density (the remaining unknown), $c$ is the speed of
-light, and $a = e^2/(m_e c^2)$ is the classical electron radius (derived in
-Paper~I).
+where $\rho_0$ is a model parameter, $c$ is the speed of light, and $a$ is the
+standard classical electron radius. This dimensional expression is an ansatz,
+not a derived vortex energy.
 
 The trefoil energy scale $M$ is proportional to $E_\text{vortex}$:
 \begin{equation}
@@ -398,22 +379,16 @@ Combining Eqs.~\eqref{eq:M_decomposed} and \eqref{eq:M_from_masses}:
   \;=\; 1.587 \times 10^{13}~\text{kg/m}^3\,.
   \label{eq:rho0_numerical}
 \end{equation}
-This is between the density of a classical electron ($9.7 \times 10^{12}$~kg/m$^3$)
-and nuclear matter ($2.3 \times 10^{17}$~kg/m$^3$) --- physically reasonable
-for the vacuum medium.
-
-\textbf{Problem~3 is resolved.}
-$M$ decomposes cleanly into $\rho_0$ and factors derived from Papers~I--II.
-The structure is fully understood.
-The single remaining unknown is $\rho_0$.
+This is a back-solved numerical value because $M$ was fitted from observed
+lepton masses. Its numerical scale does not establish a physical vacuum density.
 
 
-\section{Closing Problem 2: The Chirality Mechanism for $\theta$}
+\section{A Symmetry-Allowed Chirality Ansatz}
 \label{sec:theta}
 
 The phase $\theta \approx 12.73^\circ$ was fitted in Paper~II but not derived.
-We now derive the \emph{mechanism} that fixes $\theta$, reducing its
-computation to knowledge of $\rho_0$.
+The following is a symmetry-allowed ansatz; it does not derive a mechanism or
+reduce the physical problem to knowledge of $\rho_0$.
 
 \subsection{Vacuum chirality and $\mathbb{Z}_3$ breaking}
 
@@ -440,14 +415,14 @@ fundamental $\cos(3\theta + \phi_c)$.
 
 \subsection{Equilibrium condition for $\theta$}
 
-\begin{theorem}
-  The trefoil orientation $\theta$ satisfies
+\begin{proposition}
+  Conditional on the assumed chiral energy, a stationary orientation $\theta$ satisfies
   \begin{equation}
     3\theta + \phi_c \;=\; n\pi\,,
     \quad n \in \mathbb{Z}\,.
     \label{eq:theta_equation}
   \end{equation}
-\end{theorem}
+\end{proposition}
 
 \begin{figure}[ht]
   \centering
@@ -463,7 +438,8 @@ fundamental $\cos(3\theta + \phi_c)$.
   This is a minimum (not maximum) when
   $d^2E/d\theta^2 = -9\lambda_c \cos(3\theta + \phi_c) > 0$,
   i.e., when $n$ is odd and $\lambda_c > 0$.
-  The unique solution in the physical domain $\theta \in (0, \pi/3)$ is $n = 1$.
+  This does not establish a physical domain, unique physical solution, or the
+  existence of the chiral interaction.
 \end{proof}
 
 \subsection{Computing $\phi_c$ from observation}
@@ -489,110 +465,28 @@ This ratio is a function of $\rho_0$, $c$, $a$, and the vacuum
 compressibility --- all quantities that the vacuum equation of state relates
 to $\rho_0$.
 
-\textbf{Therefore}: $\phi_c = \phi_c(\rho_0)$, and once Paper~IV derives $\rho_0$,
-Eq.~\eqref{eq:theta_equation} predicts $\theta$ with no free parameters.
-From $\theta$, all three lepton masses follow via the Brannen form.
-
-\textbf{Problem~2 is resolved.}
-The mechanism fixing $\theta$ is the chiral interaction of the trefoil with the
-vacuum background.
-The equation $3\theta + \phi_c = \pi$ is a derived result.
-The remaining step is deriving $\phi_c$ --- equivalently $\rho_0$ --- from
-the vacuum equation of state.
+No derivation in this paper establishes $\phi_c=\phi_c(\rho_0)$. The displayed
+phase is back-solved from a fitted $\theta$, and the stationary relation is only
+conditional calculus for the assumed interaction.
 
 
-\section{Summary: One Quantity Remains}
+\section{Scope Boundary and Conclusion}
 \label{sec:summary}
 
-Table~\ref{tab:summary} shows the status of all four open problems.
+This paper retains four conditional calculations, none of which closes a
+physical problem. First, the $\kappa$ expression is a rearrangement of the
+Paper I calibration equation. Second, the knot classifications are standard
+topology, but their physical application and energy ordering have not been
+derived for CDFT. Third, the displayed $\rho_0$ is back-solved from an observed
+mass fit, so it is not a vacuum-density determination. Fourth, the stationary
+condition for the assumed chiral cosine is calculus conditional on an ansatz;
+the ansatz, phase, and coupling are not independently derived.
 
-\begin{table}[h]
-  \caption{Status of open problems from Papers~I--II after Paper~III.}
-  \label{tab:summary}
-  \begin{tabular}{llp{6cm}}
-    \toprule
-    Problem & Status & Result \\
-    \midrule
-    1. $\kappa$ & \textbf{Internal algebra} &
-      $\kappa = \chi^2(\ln 8\chi - \beta + 1) = 117{,}362.0$;
-      algebraic consequence of Paper~I. \\[4pt]
-    4. Why trefoil & \textbf{Internal topology} &
-      $T(2,3)$ is the lowest-energy knotted soliton (Faddeev--Niemi).
-      $n = 2$ is a Hopf link (unknottable), not a knot.
-      Three model modes = three $\mathbb{Z}_3$ lobes of $T(2,3)$. \\[4pt]
-    3. $M$ scale & \textbf{Reduced} &
-      $M = \rho_0 c^2 a^3 g(\chi,\beta)$; all factors except $\rho_0$ derived.
-      $g = 1{,}575.83$ (dimensionless).
-      Remaining: $\rho_0$. \\[4pt]
-    2. $\theta$ & \textbf{Mechanism proposed} &
-      $3\theta + \phi_c = \pi$ (derived).
-      $\phi_c = 141.80^\circ$ (measured).
-      $\phi_c = \phi_c(\rho_0)$: reduces to deriving $\rho_0$. \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-The problem set reduces to a single remaining quantity: the CDFT vacuum
-density $\rho_0$.
-
-If the vacuum equation of state determines $\rho_0$ without mass-ratio input:
-\begin{enumerate}
-  \item $\phi_c$ is predicted.
-  \item $\theta$ follows from $3\theta = \pi - \phi_c$.
-  \item All three lepton masses follow from the Brannen form with $\theta$ and $M = \rho_0 c^2 a^3 g$.
-  \item The Koide formula holds automatically (Paper~II theorem).
-  \item $\alpha = 1/137.036$ follows from Paper~I.
-\end{enumerate}
-the theory would then predict the fine-structure constant and all three charged
-lepton masses from the properties of the vacuum medium alone, with $m_e$ fixing
-the mass unit.
-
-
-\section{Open Problems}
-
-A single open problem remains in the lepton sector:
-
-\begin{enumerate}
-\item \textbf{Derive $\rho_0$ from the vacuum equation of state (Paper~IV).}
-The vacuum density $\rho_0 = 1.587 \times 10^{13}$~kg/m$^3$ has been
-\emph{computed} from the observed lepton masses
-(Eq.~\eqref{eq:rho0_numerical}).
-Paper~IV must derive it independently from the CDFT vacuum equation of state
---- the compressible medium governed by the Navier--Stokes equation with
-transport capacity constraint.
-When this is done, $\phi_c$ and hence $\theta$ and hence all lepton masses
-become zero-parameter predictions.
-\end{enumerate}
-
-Beyond leptons, the torus knot hierarchy suggests further families:
-$T(2,5)$ (cinquefoil, $\mathbb{Z}_5$) may correspond to the quark sector,
-and $T(2,7)$ and above to higher families.
-These are not addressed here.
-
-
-\section{Conclusion}
-
-Four open problems were listed at the end of Papers~I and~II.
-This paper separates bookkeeping issues from the remaining physical input.
-
-Problem~1 was a framing error: $\kappa$ was already derived in Paper~I as
-$\kappa = \chi^2(\ln 8\chi - \beta + 1)$.
-
-Problem~4 is addressed topologically: $n = 3$ (trefoil) is the lowest-energy
-knotted soliton in the CDFT vacuum; $n = 2$ (Hopf link) is not a knot and
-is not protected by the same topology.
-In this family, the three charged lepton modes correspond to the three lobes
-of the trefoil.
-
-Problem~3 is expressed structurally: $M = \rho_0 c^2 a^3 g(\chi,\beta)$,
-with $g = 1{,}575.83$ fully determined and $\rho_0$ the sole unknown.
-
-Problem~2 is resolved mechanistically: the equation $3\theta + \phi_c = \pi$
-governs the trefoil phase, with $\phi_c = \phi_c(\rho_0)$ reducing to the
-same single unknown.
-
-One free quantity remains in the entire lepton sector: $\rho_0$.
-Paper~IV closes it.
+The open requirements are an independently specified physical energy functional,
+a dimensional closure for its parameters, a justified relation to any soliton
+model, and a prespecified discriminating observation. Until these exist, this
+paper must not be cited as a derivation of $\alpha$, lepton masses, vacuum density,
+trefoil selection, or a universal knot hierarchy.
 
 
 \section*{Supplementary Material}

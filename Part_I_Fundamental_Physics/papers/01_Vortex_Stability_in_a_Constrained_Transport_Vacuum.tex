@@ -23,7 +23,7 @@
 
 \begin{document}
 
-\title{Vortex Stability in a Constrained Transport Vacuum and the Origin of the Fine-Structure Constant}
+\title{A Calibrated Vortex-Ring Toy Model for the Fine-Structure Ratio}
 
 \author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
 VuraLabs, Kampala, Uganda\\
@@ -36,29 +36,21 @@ ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
 \maketitle
 
 \begin{abstract}
-The electromagnetic fine-structure constant, alpha, is one of the most precisely
-measured dimensionless numbers in physics, yet its value remains an input to the
-Standard Model rather than a derived consequence. This paper proposes a
-transport-medium interpretation of that fact. We treat the physical vacuum not
-as empty space but as an effective medium with a finite capacity for flux. In
-the extended Constraint-Driven Flux Dynamics notation, this is an adaptive
-vacuum: a medium whose response may depend on throughput and constraint
-history. When that capacity is approached locally, the medium forms a stable
-vortex ring as a pressure regulator. The system's state is governed by an
-adaptive operating ratio dependent on the dynamic responsiveness of the vacuum
-surface and its accumulated memory. In the fundamental physical vacuum, these
-properties converge to a stable equilibrium attractor, reducing to the classical
-limit. We name this grammar the Mujjabi Adaptive Operating Ratio and use it as
-the spine of the Part I sequence. The shape of that vortex, its outer radius R
-divided by its core radius a, defines a dimensionless aspect ratio. We show
-that, within this model, first, the stated stability equation has an equilibrium
-matching the inverse fine-structure constant, approximately 137.036, when the
-transport stiffness is calibrated to that fixed point, recovered numerically to
-twelve decimal places; and second, the standard quantum and electromagnetic
-length scales used for R and a give the same dimensionless ratio. The result is
-presented as a model-level explanation and numerical consistency check, with
-the remaining core-profile, stiffness, memory, and experimental assumptions
-listed explicitly at the end of the paper.
+The electromagnetic fine-structure constant is a measured input to the Standard
+Model. This paper records a conditional vortex-ring toy model in which a chosen
+dimensionless stiffness is set so that a specified energy functional has its
+minimum at the known inverse fine-structure ratio. The numerical recovery is
+therefore a calibration check: the reported residual is the root solver's
+convergence tolerance, not a prediction error. The accompanying length-scale
+calculation gives $R/a=\hbar c/e^2=1/\alpha$ by the definitions of the reduced
+Compton wavelength, classical electron radius, and $\alpha$; it is not an
+independent confirmation.
+
+The transport-medium, capacity, and memory language remains a hypothesis. The
+calculus of the stated energy functional is valid conditional on its assumptions,
+but the stiffness has no independent physical derivation and the model provides
+no established vacuum mechanism or fine-structure prediction. A correction
+status notice in the Part I release gives the binding interpretation boundary.
 \end{abstract}
 
 \noindent\textbf{Keywords:} Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, fine-structure constant, vortex stability
@@ -134,50 +126,38 @@ $1/\alpha = 136$ from quantum combinatorics~\cite{Eddington1929} --- wrong value
 no physical mechanism. Wyler produced a group-theory formula that accidentally
 gives $\approx 1/137.03$~\cite{Wyler1969}, but it provides no dynamical explanation
 for why the vacuum selects that geometry. More recent stochastic approaches remain
-incomplete~\cite{BeckMackey2004}. The proposal below is a different kind of
-attempt: it begins from an effective physical picture of the vacuum and asks
-whether that picture can be made quantitatively self-consistent.
+incomplete~\cite{BeckMackey2004}. The proposal below is a toy construction: it
+fixes an energy functional and examines the algebraic consequences of
+calibrating one of its parameters to a known constant.
 
-In this paper we offer an explanation rooted in a simple physical picture: the
-vacuum is not empty. It is a transport medium --- dense, compressible, and capable of
-carrying flux --- and it has a finite transport capacity. Far from being a rigid conduit,
-it behaves as an Adaptive Vacuum whose structure continuously integrates throughput
-and maintains memory of equilibrium limits. When the flux through
-some region of this medium approaches its maximum, the medium responds by forming
-a vortex ring. The classical theory of vortex motion was founded by
-Helmholtz~\cite{Helmholtz1858} and developed by Kelvin~\cite{Thomson1867},
-Lamb~\cite{Lamb1932}, and Saffman~\cite{Saffman1992}.
-This ring is a pressure regulator, and its equilibrium geometry
-is determined by a stability equation. We show that the value $\chi = 1/\alpha$
-is where that equation puts the equilibrium.
-
-We are not claiming to derive $\alpha$ from pure mathematics. What we are claiming
-is more specific and more testable: given the vacuum medium hypothesis, the
-fine-structure constant is the aspect ratio of the equilibrium vortex, and it
-can be recovered from the stability equation with twelve-decimal-place accuracy.
-The remaining step --- deriving the transport stiffness $\kappa$ from the medium
-properties $\rho_0$ and $c$ analytically --- is the subject of Paper~III in this
-series.
+Within that construction, the vacuum is treated as a hypothetical transport
+medium with finite capacity. A vortex ring is a modelling ansatz, not an
+established physical constituent of the vacuum. The classical theory of vortex
+motion was founded by Helmholtz~\cite{Helmholtz1858} and developed by
+Kelvin~\cite{Thomson1867}, Lamb~\cite{Lamb1932}, and Saffman~\cite{Saffman1992}.
+The calibration below chooses $\kappa$ so that its equilibrium condition is met
+at $\chi=1/\alpha$. It does not derive $\alpha$, determine a vacuum stiffness,
+or establish the physical interpretation of the ansatz.
 
 \subsection{Headline numerical result}
 
-The public calculation targets the latest available CODATA value
+The public calculation takes the CODATA value
 \[
   \alpha^{-1}_{2022}=137.035999177(21),
 \]
-and the Paper~I equilibrium computation recovers
+as its target. Solving Eq.~\eqref{eq:kappa_for_chi} for the stiffness that gives
+that target, then solving the same equilibrium condition with the fitted
+stiffness, returns
 \[
   \chi_\mathrm{recovered}=137.035999177,
   \qquad
   \alpha_\mathrm{recovered}=0.007297352566.
 \]
-The relative recovery error reported by the script is
-$1.19\times10^{-12}$ for the stability-equation root. A separate geometric
-length-scale check using the reduced Compton wavelength and the classical
-electron radius gives the same inverse fine-structure ratio to twelve decimal
-places within the stated input precision. These are internal consistency
-checks of the CDFT model; they are not yet external experimental validation of
-the vacuum-medium hypothesis.
+The reported $1.19\times10^{-12}$ relative difference is the bisection
+convergence tolerance. The length-scale calculation is an algebraic identity,
+not a separate check, because the definitions already give
+$R/a=\hbar c/e^2=1/\alpha$. Neither calculation validates the vacuum-medium
+hypothesis.
 
 \subsection{Public runtime and paper-local reproducibility}
 
@@ -189,11 +169,11 @@ archive. The runtime provides the general implementation path for future
 domain-level simulations; the Part I scripts remain the audited source for the
 figures, tables, and checks cited here.
 
-\subsection{Named laws of the Part I sequence}
+\subsection{Named hypotheses and notation}
 
-For clarity, the core claims are named here at the point where their symbols are
-first introduced. The names are not substitutes for proof; they are handles for
-the reader to follow the chain across the twelve papers.
+For clarity, the candidate constructs are named here at the point where their
+symbols are first introduced. These labels do not confer the status of physical
+laws, and they must not be used as evidence for downstream claims.
 
 \begin{center}
 \small
@@ -201,20 +181,19 @@ the reader to follow the chain across the twelve papers.
 \toprule
 \textbf{Name} & \textbf{Statement inside CDFT} & \textbf{Status}\\
 \midrule
-Mujjabi Capacity Law & Local transport becomes nonlinear as $J/C\rightarrow1$; vortex states regulate overload. & Framework law\\
+Mujjabi Capacity Hypothesis & Local transport becomes nonlinear as $J/C\rightarrow1$; vortex states regulate overload. & Unvalidated hypothesis\\
 Mujjabi Adaptive Operating Ratio & $\Psi_s=(J/C)\,S\,M_s$ tracks flow, capacity, responsiveness, and memory. & Core notation\\
-Mujjabi Stability Attractor & The equilibrium regulator selects $\chi=R/a=1/\alpha$. & Internal derivation target\\
-Mujjabi Vacuum Memory Law & $M_s$ is a local constraint-history state with finite recovery time $\tau_M$. & Testable extension\\
+Calibrated Stability Minimum & The selected energy functional has a minimum at the target $\chi=R/a=1/\alpha$ after fitting $\kappa$. & Conditional calculus\\
+Vacuum Memory Hypothesis & $M_s$ is a local constraint-history state with finite recovery time $\tau_M$. & Unvalidated hypothesis\\
 \bottomrule
 \end{tabular}
 \end{center}
 
-These definitions are deliberately strong. They also create failure routes. If
-$J/C$ has no predictive value, the capacity law fails. If $M_s$ leaves no
-measurable residual in controlled high-flux tests, the memory law fails. If
-core-profile changes destroy the fixed point without a principled correction,
-the stability-attractor claim fails. Paper~XII turns those failure routes into
-the Mujjabi Tests.
+These hypotheses create failure routes. If $J/C$ has no predictive value, the
+capacity hypothesis fails. If $M_s$ leaves no measurable residual in controlled
+high-flux tests, the memory hypothesis fails. If core-profile changes destroy a
+calibrated fixed point without a principled, independently determined
+correction, the model adds no explanatory value.
 
 \subsection{Symbol ledger}
 
@@ -284,11 +263,9 @@ CDFT identifies this with the speed of light:
   c = \sqrt{\frac{\kappa_\text{vac}}{\rho_0}}.
   \label{eq:c}
 \end{equation}
-This is not an assumption pulled from thin air. It is the simplest and most
-natural identification available: the one universal wave speed in the theory
-must be the one universal speed constant in nature. The fact that electromagnetic
-waves propagate at $c$ in vacuum becomes, in this picture, the statement that
-electromagnetic disturbances \emph{are} compression waves in the medium.
+This is a modelling postulate. It does not establish that electromagnetic waves
+are compression waves in a material vacuum, and it needs an independent
+discriminant beyond standard electrodynamics.
 
 \subsection{Transport flux and the adaptive capacity constraint}
 
@@ -426,14 +403,15 @@ The full normalised vortex energy is the sum of these two contributions:
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{figures/fig1a_energy_landscape.pdf}
-  \caption{Energy landscape showing the stable minimum at $\chi^* = 137.036$. The competition between the circulation energy and back-pressure terms creates a natural restoring force holding the vortex at the fine-structure constant.}
+  \caption{The selected energy functional after $\kappa$ has been calibrated to place its minimum at $\chi^*=137.036$. This conditional minimum does not establish a physical vortex or fine-structure mechanism.}
   \label{fig:energy_landscape}
 \end{figure}
 
 The first term wants the ring to be large. The second term wants the ring to be
 small. They compete. Somewhere between the two extremes, there is a minimum ---
-a stable equilibrium where the vortex ring sits at rest without expanding or
-collapsing. As demonstrated in Figure~\ref{fig:energy_landscape}, this minimum defines the particle.
+a stable minimum of the chosen energy functional. Figure~\ref{fig:energy_landscape}
+illustrates this conditional mathematical property; it does not identify a
+particle or an observed vacuum state.
 
 
 \section{The Stability Equation}
@@ -472,7 +450,7 @@ Setting this to zero gives the equilibrium condition:
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{figures/fig1b_equilibrium.pdf}
-  \caption{Equilibrium condition $dE/d\chi = 0$. The root is cleanly crossed at $\chi = 1/\alpha$.}
+  \caption{Equilibrium condition $dE/d\chi = 0$ after the stiffness has been fitted to the target $\chi=1/\alpha$.}
   \label{fig:equilibrium}
 \end{figure}
 
@@ -485,9 +463,9 @@ stability, we check the second derivative at $\chi = 137$:
   = \frac{1}{\chi} + \frac{2\kappa}{\chi^3}.
   \label{eq:d2E}
 \end{equation}
-Both terms are strictly positive for all $\chi > 0$. The equilibrium is always
-a stable minimum. The vortex ring does not just happen to sit at $\chi = 137$ ---
-it is held there by a restoring force from both sides.
+Both terms are strictly positive for all $\chi > 0$, so the selected energy
+functional has a stable minimum. This calculus result is conditional on the
+postulated back-pressure term and does not determine its physical parameter.
 
 \subsection{The required transport stiffness}
 
@@ -497,22 +475,24 @@ places the energy minimum at any desired $\chi$:
   \kappa(\chi) = \chi^2\left[\ln(8\chi) - \beta + 1\right].
   \label{eq:kappa_for_chi}
 \end{equation}
-At $\chi = 1/\alpha = 137.036$, this evaluates to $\kappa = 117{,}362$. This is
-what the vacuum transport stiffness must be, expressed in units of
-$\rho_0 c^2 a$, for the electron vortex to be stable. Deriving this number from
-the fundamental medium properties $\rho_0$ and $c$ is the subject of Paper~III. The sensitivity of the emergent fine-structure constant to variations in this fundamental stiffness $\kappa$ is illustrated in Figure~\ref{fig:sensitivity}.
+At the pre-specified target $\chi=1/\alpha=137.036$, this evaluates to
+$\kappa=117{,}362$. It is the fitted dimensionless parameter required by this
+functional, not a determined vacuum transport stiffness. No independent route
+from $\rho_0$ and $c$ to this value has been established. Figure~\ref{fig:sensitivity}
+only shows local sensitivity of the calibrated functional.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{figures/fig1c_sensitivity.pdf}
-  \caption{Sensitivity of the predicted fine-structure constant $\alpha$ to deviations in the underlying transport stiffness $\kappa$. A $10\%$ variation in $\kappa$ produces only a small fractional shift in $\alpha$, ensuring stability against macroscopic fluctuations in the medium.}
+  \caption{Sensitivity of the calibrated energy minimum to variations in the fitted parameter $\kappa$. It is a local property of the selected functional, not a prediction of fine-structure fluctuations.}
   \label{fig:sensitivity}
 \end{figure}
 
 
-\section{Self-Consistency of $\chi = 1/\alpha$}
+\section{Definitional Relation of $\chi$ and $\alpha$}
 
-We now bring together the two independent derivations of Section~\ref{sec:geometry}.
+The following calculation makes explicit why the advertised geometric agreement
+is not independent evidence.
 
 From quantum circulation quantisation and $v(R) = c$, we obtained:
 \begin{equation*}
@@ -534,14 +514,10 @@ Every cancellation is shown. Nothing is hidden. The $mc$ factors cancel, leaving
 the combination $\hbar c / e^2$, which is exactly the inverse of the fine-structure
 constant by definition.
 
-What makes this significant is what it is \emph{not}. It is not a circular
-argument. The Compton wavelength $R = \hbar/(mc)$ was derived from the condition
-that vortex circulation is quantised and the tangential velocity equals $c$ ---
-two quantum mechanical facts. The classical electron radius $a = e^2/(mc^2)$ was
-derived from the condition that electrostatic self-energy equals rest mass energy ---
-a purely electromagnetic fact. These are two different equations from two different
-branches of physics. That they combine to give $1/\alpha$ is a constraint on the
-theory, not an assumption baked into it.
+This is an algebraic identity. The standard reduced Compton wavelength and
+classical electron radius contain the same constants that define $\alpha$.
+Dividing them therefore recovers $1/\alpha$ by construction; it neither tests
+the vortex ansatz nor supplies an additional physical constraint.
 
 
 \section{Numerical Results}
@@ -569,11 +545,12 @@ equilibrium is:
   \left|\frac{\chi_\text{rec} - \chi_\text{target}}{\chi_\text{target}}\right|
   = 1.19 \times 10^{-12}.
 \end{equation*}
-The stability equation has a valid, stable solution at $\chi = 1/\alpha$. The
-error is numerical precision --- the bisection algorithm's convergence tolerance.
+The fitted functional has a stable solution at the target $\chi=1/\alpha$. The
+reported difference is numerical precision --- the bisection algorithm's
+convergence tolerance --- rather than a prediction error.
 
 \begin{table}[h]
-  \caption{Stability equation: input and recovered values.}
+  \caption{Calibration input and root-solver output for the same equilibrium equation.}
   \label{tab:stability}
   \begin{tabular}{lc}
     \toprule
@@ -581,11 +558,11 @@ error is numerical precision --- the bisection algorithm's convergence tolerance
     \midrule
     $\chi_\text{target} = 1/\alpha$ & $137.035999177$ \\
     $\beta$ (Lamb solid-rotation) & $1.75$ \\
-    $\kappa$ required & $117{,}362.00$ \\
+    $\kappa$ fitted to target & $117{,}362.00$ \\
     $\chi_\text{recovered}$ (bisection) & $137.035999177$ \\
     $\alpha_\text{recovered} = 1/\chi$ & $0.007297352566$ \\
     $\alpha_\text{measured}$ (CODATA 2022) & $0.007297352566$ \\
-    Relative error & $1.19\times10^{-12}$ \\
+    Root-solver tolerance & $1.19\times10^{-12}$ \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -615,18 +592,16 @@ Table~\ref{tab:energy} shows the two energy contributions at the equilibrium poi
   \label{fig:energy_components}
 \end{figure}
 
-The ratio is 1.19. This means the two terms are within 20\% of each other at the
-equilibrium. Neither dominates. This is what physicists mean by a ``natural''
-equilibrium: no fine-tuning of any parameter was required to make the two
-contributions balance. The competition between them is genuine.
+The ratio is 1.19 within the calibrated functional. This numerical balance says
+nothing about whether the fitted parameter is natural or independently fixed.
 
-\subsection{Geometric self-consistency}
+\subsection{Definitional length-ratio identity}
 
-Table~\ref{tab:selfconsist} shows the self-consistency check from
+Table~\ref{tab:selfconsist} evaluates the definitional identity in
 Eq.~\eqref{eq:chi_is_alpha}, using CODATA 2022 values.
 
 \begin{table}[h]
-  \caption{Geometric self-consistency of $\chi = 1/\alpha$.}
+  \caption{Definitional identity $R/a=1/\alpha$ evaluated from standard length scales.}
   \label{tab:selfconsist}
   \begin{tabular}{lc}
     \toprule
@@ -637,55 +612,43 @@ Eq.~\eqref{eq:chi_is_alpha}, using CODATA 2022 values.
     $\chi_\text{geom} = R/a$ & $137.035999177$ \\
     $\alpha_\text{geom} = a/R$ & $0.007297352564$ \\
     $\alpha_\text{measured}$ & $0.007297352564$ \\
-    Relative error & $2.26\times10^{-12}$ \\
+    Rounding difference & $2.26\times10^{-12}$ \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-The agreement is to twelve decimal places, limited only by the precision of the
-input constants.
+The agreement follows from the definitions and is limited only by the rounding
+of the input constants; it is not an independent model check.
 
 
 \section{Discussion}
 
-\subsection{What this result means}
+\subsection{Interpretation boundary}
 
-The fine-structure constant $\alpha$ is traditionally treated as a dimensionless
-constant of nature whose value must be measured and accepted. What we have shown
-is that if the vacuum is a transport medium, then $\alpha$ is not a free parameter
---- it is the aspect ratio of the equilibrium vortex ring, determined by the
-geometry of the stability equation. The number 137 is where the competition
-between circulation energy and transport back-pressure balances. It is a
-\emph{fixed point} of the vortex energy landscape.
-
-The two-pronged verification makes this result robust. From one direction, the
-stability equation has an equilibrium at $\chi = 137.036$ when $\kappa$ takes
-the value required by the vacuum medium. From the other direction, the ratio of
-the two independently derived length scales ($R$ from quantum mechanics, $a$ from
-electromagnetism) equals $1/\alpha$ to twelve decimal places. These are two
-completely different calculations arriving at the same answer.
+The fine-structure constant remains an empirical QED coupling. This manuscript
+shows only that a chosen energy functional can be fitted to have a minimum at
+the known value and that standard length-scale definitions algebraically recover
+the same value. Those facts do not identify $\alpha$ as a vortex aspect ratio or
+provide a vacuum mechanism.
 
 \subsection{On the naturalness of $\kappa$}
 
-The transport stiffness $\kappa = 117{,}362$ may look large, but its size is not
-surprising. The ratio $\chi = 137$ is itself moderately large, and Eq.~\eqref{eq:kappa_for_chi}
-scales as $\kappa \sim \chi^2 \ln\chi$, giving $\sim 137^2 \times \ln(8\times137)
-\approx 117{,}000$. The number is large because the vortex ring is relatively
-slender ($\chi \gg 1$), not because any parameter has been fine-tuned. The
-dimensional form of $\kappa$ is:
+Equation~\eqref{eq:kappa_for_chi} makes the calibration explicit. Its scaling
+with the target does not determine $\kappa$ independently. A previously proposed
+dimensional form was
 \begin{equation}
   \kappa = \frac{\kappa_\text{vac}}{\rho_0 c^2 a},
   \label{eq:kappa_dim}
 \end{equation}
-which, using Eq.~\eqref{eq:c}, simplifies to $\kappa = 1/(a\rho_0)$ in natural
-units. Deriving this from the vacuum medium properties from first principles ---
-without using $\alpha$, $\hbar$, or $e$ as inputs --- is the goal of Paper~III.
+but substituting Eq.~\eqref{eq:c} gives $\kappa=1/a$, not $1/(a\rho_0)$.
+The unresolved dimensional mismatch means this expression cannot supply a
+physical closure. Paper~III did not establish an independent derivation.
 
 \subsection{Memory, hysteresis, and the limits of the equilibrium calculation}
 
 The adaptive factors $S$ and $M_s$ are not used as independent fitting knobs in
-the numerical recovery above. In this paper's calculation the physical vacuum is
-treated in its equilibrium limit, so $S\cdot M_s\rightarrow1$ and
+the numerical recovery above. The calculation assumes its hypothetical vacuum
+medium is in an equilibrium limit, so $S\cdot M_s\rightarrow1$ and
 Eq.~\eqref{eq:Psi_s} reduces to the capacity condition. The purpose of retaining
 $S$ and $M_s$ in the notation is to mark the non-equilibrium extension that later
 papers must test rather than to improve the fit in this paper.
@@ -737,7 +700,7 @@ terms if the adaptive-vacuum interpretation is physical.
 \textbf{Feature} & \textbf{Standard reading} & \textbf{CDFT reading} & \textbf{Status}\\
 \midrule
 Vacuum & Background state with quantum fields & Effective transport medium with finite capacity $C$ and response variables $S,M_s$ & Hypothesis\\
-Fine-structure constant & Empirical QED coupling & Equilibrium aspect ratio $\chi=R/a$ of the regulator vortex & Calibrated consistency check\\
+Fine-structure constant & Empirical QED coupling & Candidate vortex-aspect-ratio interpretation $\chi=R/a$ & Calibrated toy model\\
 Wave--particle duality & Complementary measurement descriptions & Smooth flux transport below threshold, vortex regulation near $\Psi_s\approx1$ & Interpretation\\
 Decoherence & Environmental entanglement and phase suppression & Possible residual vacuum-memory lag in addition to standard decoherence & Test target\\
 Planck constant & Fundamental quantum of action & Candidate product of a critical flux threshold and vortex period, $h=\Phi_c\tau_v$ & Open derivation\\
@@ -783,18 +746,16 @@ which is the correct starting point for the robustness program.
 
 \subsection{Connection to the lepton masses}
 
-This paper has focused entirely on the electron's aspect ratio. But the same
-vortex ring, when excited into three rotational modes related by 120° symmetry,
-produces a \emph{trefoil} topology with $\mathbb{Z}_3$ symmetry. We show in
-Paper~II that these three modes automatically satisfy the Koide mass formula:
+This paper makes no particle-family assignment. Paper~II studies a selected
+$\mathbb{Z}_3$ parametrisation and its relation to the Koide mass formula,
 \begin{equation*}
   Q = \frac{m_e + m_\mu + m_\tau}
            {(\sqrt{m_e} + \sqrt{m_\mu} + \sqrt{m_\tau})^2}
   = \frac{2}{3},
 \end{equation*}
-which holds experimentally to six significant figures. The electron, muon, and
-tau are not three different particles in CDFT. They are three orientations of
-the same vortex structure.
+which holds experimentally to six significant figures. That conditional
+parametrisation is not evidence that the electron, muon, and tau are vortex
+orientations, and it supplies no physical particle assignment.
 
 
 \section{Necessary Conditions for the Model to Hold}
@@ -852,14 +813,14 @@ remains to be done is more valuable than overclaiming:
 
 \begin{enumerate}
 
-\item \textbf{Derive $\kappa$ from first principles (Paper~III).}
+\item \textbf{Find an independent physical closure for $\kappa$.}
 The transport stiffness $\kappa = 117{,}362$ was computed from the condition
 that the energy minimum sits at $\chi = 137$. It has not yet been derived
-independently from the vacuum medium properties $\rho_0$ and $c$. When that
-derivation is complete, the theory will predict $\alpha$ with no experimental
-constants as inputs.
+independently from the vacuum medium properties $\rho_0$ and $c$. The proposed
+Paper~III route did not establish that derivation. Until an independently
+dimensionally consistent closure exists, this model cannot predict $\alpha$.
 
-\item \textbf{Derive $\hbar$ from circulation quantisation (Paper~III).}
+\item \textbf{Specify an independently testable route for $\hbar$.}
 We used $\Gamma = \hbar/m$ to derive $R$. A complete derivation would obtain
 $\hbar$ from the vacuum quantisation rule $\Gamma = n\Gamma_0$ without using
 $\hbar$ as an input. A concrete target suggested by the source notes is
@@ -868,9 +829,9 @@ $\hbar$ as an input. A concrete target suggested by the source notes is
 \end{equation}
 where $\Phi_c$ is a critical vacuum-flux threshold and $\tau_v$ is the
 characteristic period of the vortex attractor. At present this is a target
-identity for Paper~III, not a completed derivation.
+identity, not a completed derivation or a result of Paper~III.
 
-\item \textbf{Derive $e$ from transport flux quantisation (Paper~III).}
+\item \textbf{Specify an independently testable route for $e$.}
 We used $e^2/a = mc^2$ to derive $a$. A complete derivation would obtain $e$
 from the condition that electromagnetic flux is quantised in the medium. In the
 same language, charge would be the measurable discontinuity induced at the
@@ -893,33 +854,25 @@ general relativity, or standard condensed-matter and plasma models.
 
 \end{enumerate}
 
-When the first-principles derivations and robustness tests are complete,
-$\alpha = 1/137.036$ would follow from the properties of the vacuum medium alone.
-Until then, the experimental value of $\alpha$ remains the calibration target
-used to test the internal consistency of the model.
+Until an independently derived, dimensionally consistent parameterisation and a
+new discriminating observation exist, the experimental value of $\alpha$ remains
+only the calibration target used to inspect this model's internal algebra.
 
 
 \section{Conclusion}
 
-We have presented two independent lines of evidence that the fine-structure
-constant $\alpha$ is the inverse aspect ratio of an equilibrium vortex ring in a
-constrained transport vacuum.
+This paper documents a calibrated toy energy functional. Choosing $\kappa$ from
+the known target $\chi=1/\alpha$ and solving the same equilibrium equation
+returns that target to the numerical tolerance of the solver. The ordinary
+relation $R/a=\hbar c/e^2=1/\alpha$ is a definitional identity. Neither is an
+independent prediction or evidence that the physical vacuum is a constrained
+transport medium.
 
-The first line: the vortex stability equation $dE_\text{norm}/d\chi = 0$ has a
-valid, stable minimum at $\chi = 1/\alpha = 137.036$, recovered numerically to
-twelve decimal places. The equilibrium is physically natural --- the two competing
-energy terms (circulation energy favouring large rings, transport back-pressure
-favouring small rings) balance with a ratio of 1.19, requiring no fine-tuning.
-
-The second line: the vortex ring radius $R = \hbar/(mc)$, derived from quantum
-circulation quantisation, and the core radius $a = e^2/(mc^2)$, derived from
-electromagnetic self-energy, come from completely separate physics. Their ratio
-$R/a = \hbar c/e^2 = 1/\alpha$ agrees with the measured value to twelve decimal
-places.
-
-Two different equations. Two different sectors of physics. One answer: 137.
-
-The fine-structure constant is a shape.
+The conditional second-derivative calculation remains valid for the specified
+functional. The physical mapping, the proposed back-pressure term, the
+dimensions and independent origin of $\kappa$, and every vacuum-memory extension
+remain open hypotheses. This paper must not be cited as a derivation of the
+fine-structure constant or as support for downstream universal claims.
 
 
 \section*{Supplementary Material}

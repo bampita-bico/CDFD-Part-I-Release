@@ -28,7 +28,7 @@
 
 \begin{document}
 
-\title{The Universal Torus Knot Hierarchy: $\mathbb{Z}_n$ Symmetry, the Cinquefoil Family, and the General Structure of CDFT Particle Families}
+\title{Conditional $\mathbb{Z}_n$ Amplitude Results for a Torus-Knot Parametrisation}
 
 \author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
 VuraLabs, Kampala, Uganda\\
@@ -41,28 +41,20 @@ ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
 \maketitle
 
 \begin{abstract}
-Papers I-V of the Constraint-Driven Field Theory (CDFT) series built the
-lepton-sector construction from vortex-ring equilibrium, Z-three symmetry, and
-one external mass unit. This paper extends the framework beyond leptons by
-studying the hierarchy of torus-knot families T(2,n) for odd family numbers
-starting at three.
+This paper studies conditional $\mathbb{Z}_n$ amplitude results for a selected
+torus-knot parametrisation. It does not establish a hierarchy of physical
+particle families or a vacuum mechanism.
 
-Two results are proved. First, the Brannen amplitude coefficient is universal
-across the Z-n torus-knot families and is fixed by a maximum-entropy
-self-consistency condition on the amplitude distribution. Second, the Z-three
-family is uniquely exactly solvable: it is the only family in which the
-constant Koide-like invariant and the Z-n self-consistency condition hold
-together on a connected valid domain. For family numbers of five or greater,
-some amplitudes become negative at every orientation, so the exact Koide
-theorem does not extend directly.
+Two conditional algebraic results are proved. Given the stated
+maximum-entropy modelling axiom, the Brannen amplitude coefficient is
+$c_n=\sqrt{2}$. Given that coefficient and the selected parametrisation,
+$\mathbb{Z}_3$ is the only family with a connected all-positive domain. These
+results do not derive the axiom, select a physical knot, or assign particles.
 
-The paper then uses Faddeev-Niemi scaling to assign model energy scales to the
-families. The trefoil scale from Paper V sets the cinquefoil scale near
-460 MeV, the heptafoil scale near 593 MeV, and the higher-family sequence that
-follows. These are model predictions for the scales at which candidate
-knotted-vortex particle families would appear if the hierarchy maps to nature.
-The individual spectrum of the cinquefoil family is left as a separate problem
-because the higher families lack a fully positive amplitude domain.
+The displayed family scales are numerical extrapolations that assume, without
+derivation, that a Faddeev--Niemi scaling transfers to the CDFT functional.
+They are not physical predictions. The higher-family parametrisations also lack
+a fully positive amplitude domain.
 
 Across the series, the public CDFD Runtime expresses this equilibrium vacuum
 limit as a reusable flow-constraint state grammar. The calculations below use
@@ -326,14 +318,14 @@ The torus knot $T(2,n)$ is a knot (a single connected component, hence
 topologically stable) if and only if $n$ is odd.
 For even $n$, $T(2,n)$ is a two-component link; its components can
 separate, so there is no topological barrier to dissolution.
-The particle families of CDFT therefore occur only at odd $n$:
-$n = 3, 5, 7, 9, \ldots$
+Odd $n$ therefore labels the knot cases in this mathematical construction;
+it does not establish physical particle families.
 
 \subsection{Energy scaling from Faddeev--Niemi}
 
-The Faddeev--Niemi theorem~\cite{FaddeevNiemi1997} states that the minimum
-energy of a knotted soliton with Hopf charge $Q$ satisfies $E_\text{min} \sim Q^{3/4}$.
-For $T(2,n)$ the Hopf charge is $Q = n$, so:
+The Faddeev--Niemi result~\cite{FaddeevNiemi1997} applies to a specific
+Skyrme-type functional. CDFT has not been shown to share that functional or to
+identify its index with Hopf charge. The following is a conditional analogue:
 \begin{equation}
   M_n \;=\; M_3 \left(\frac{n}{3}\right)^{3/4}\,,
   \label{eq:Mn}
@@ -344,7 +336,7 @@ where $M_3 = 313.86$~MeV is the trefoil scale derived in Paper~V
 \begin{table}[h]
   \caption{CDFT torus knot energy hierarchy.
     $M_3 = 313.86$~MeV from Paper~V.
-    All predictions from Faddeev--Niemi scaling, zero free parameters.}
+    Conditional extrapolations from fitted $M_3$ and unverified Faddeev--Niemi transfer.}
   \label{tab:hierarchy}
   \begin{tabular}{ccccc}
     \toprule
@@ -363,7 +355,7 @@ where $M_3 = 313.86$~MeV is the trefoil scale derived in Paper~V
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.8\textwidth]{figures/fig6_1_panel.pdf}
-  \caption{The mass scales of the higher $\mathbb{Z}_n$ knotted families, predicted by Faddeev-Niemi scaling directly from the lepton scale $M_3$.}
+  \caption{Conditional numerical extrapolations under a Faddeev--Niemi scaling assumption.}
   \label{fig:energy_hierarchy}
 \end{figure}
 
@@ -372,63 +364,12 @@ The mass of the lightest mode of family $n$ is $M_n \cdot (A_{k,\min}^{(n)})^2$,
 which requires knowing $\theta_n$ (open problem).
 
 
-\subsection{Topological selection of the integer skeleton of $\chi^*$}
-\label{sec:crt_selection}
-
-The CDFT spectrum contains three structurally distinguished families whose
-indices $n = 7, 12, 27$ arise from independent constraints:
-\begin{itemize}
-  \item $n = 7$: the heptafoil $T(2,7)$, the unique odd-$n$ family whose
-    self-consistency attractor at $\theta_7$ produces the smallest
-    $|n\theta_n - Q_n|$ residual when $n\theta_n$ is evaluated at
-    $\chi^* = 137.035999177$ (Paper~VIII).
-  \item $n = 12 = 4 \times 3$: the product of the four spacetime dimensions
-    and the three CDFT particle generations.  This is the generation--spacetime
-    index, the degree of the lepton--quark multiplet structure.
-  \item $n = 27 = 3^3$: the algebraic closure index of the $\mathbb{Z}_3$
-    symmetry group (Theorem~\ref{thm:Z3_unique}).  The Koide formula closes
-    on a $\mathbb{Z}_3$ lattice of rank $3^3 = 27$.
-\end{itemize}
-
-These three integers jointly determine the integer skeleton of $\chi^*$ via
-the Chinese Remainder Theorem.  The simultaneous congruence system
-\begin{align}
-  n &\equiv 4 \pmod{7}   \label{eq:crt7} \\
-  n &\equiv 5 \pmod{12}  \label{eq:crt12} \\
-  n &\equiv 2 \pmod{27}  \label{eq:crt27}
-\end{align}
-has the general solution $n = 137 + 1260\,k$ for $k = 0, 1, 2, \ldots$\,.
-The first four solutions are $n = 137, 893, 1649, 2405$;
-of these, \textbf{137 is the unique prime}: $893 = 19\times 47$, $1649 = 17\times 97$,
-$2405 = 5\times 13\times 37$ (the next prime in the class is $n = 3917$).
-
-\begin{proposition}[Integer skeleton of $\chi^*$]
-  \label{prop:crt}
-  The integer 137 is the unique minimal prime satisfying the three CRT
-  congruences~\eqref{eq:crt7}--\eqref{eq:crt27} imposed by the three
-  structurally distinguished CDFT knot families $n = 7$, $n = 12$, $n = 27$.
-\end{proposition}
-
-The geometric precision of $\chi^*$ is provided by the vortex ring energy
-landscape of Paper~I: the energy minimum $\partial E/\partial\chi = 0$ selects
-the unique solution $\chi^* = 137.035999177$ to twelve decimal places~\cite{CODATA2022, MujjabiI2026}.
-Together these two results give the \textbf{Mujjabi $\chi^*$ Decomposition}:
-\begin{equation}
-  \chi^* \;=\; \underbrace{137}_{\text{topology (CRT)}}
-            \;+\; \underbrace{0.035999177}_{\text{geometry (Paper~I vortex)}}
-  \label{eq:chi_decomposition}
-\end{equation}
-The integer part is topologically protected by the primality constraint of
-Proposition~\ref{prop:crt}; the decimal part is the geometric fine-tuning
-of the vortex core profile.
-
-
 \label{sec:cinquefoil}
 
 \subsection{What is established}
 
 \paragraph{Energy scale.}
-$M_5 = 460.4$~MeV (Eq.~\eqref{eq:Mn}, zero free parameters).
+$M_5 = 460.4$~MeV is a conditional numerical extrapolation from fitted $M_3$.
 
 \paragraph{Topology.}
 $T(2,5)$ is a knot, hence topologically stable.
@@ -567,28 +508,14 @@ The mass spectra of $n \geq 5$ families are open.
 \end{enumerate}
 
 
-\section{Conclusion}
+\section{Scope Boundary and Conclusion}
 
-This paper extends the CDFT framework beyond the lepton sector by studying
-the general $\mathbb{Z}_n$ structure of torus knot families $T(2,n)$.
-
-\textbf{Theorem~1} proves that $c_n = \sqrt{2}$ for all families,
-from the maximum-entropy self-consistency condition
-$\text{Var}(A_k) = \overline{A_k}^2$.
-This is a universal property of the CDFT vacuum that applies across all
-particle families.
-
-\textbf{Theorem~2} proves that $\mathbb{Z}_3$ is the unique family where
-the Koide invariant $Q_n = 2/n$ is constant on a connected valid domain.
-For $n \geq 5$, the amplitude $A_k = 1 + \sqrt{2}\cos(\cdot)$ is
-everywhere negative for at least one mode, so the Koide self-consistency
-of Paper~V does not extend.
-This explains structurally why the lepton sector is exactly solvable and
-the cinquefoil sector requires new ingredients.
-
-The Faddeev--Niemi energy hierarchy~\eqref{eq:Mn} gives the first-principles
-energy scales of all torus knot families (Table~\ref{tab:hierarchy}),
-with $M_5 = 460.4$~MeV the firm prediction for the cinquefoil family.
+Under the stated amplitude ansatz and maximum-entropy modelling axiom, the
+coefficient and $\mathbb{Z}_3$ domain results are conditional mathematical
+results. They do not derive the axiom, a vortex energy functional, or a physical
+particle interpretation. The family-scale table is an unvalidated extrapolation.
+This paper must not be cited as a universal hierarchy, an explanation of 137,
+or a particle-spectrum prediction.
 
 
 \section*{Supplementary Material}

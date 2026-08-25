@@ -40,7 +40,7 @@ masses; fine-structure constant; reproducible research; open science.
 
 - `Part_I_Fundamental_Physics/` - Part I article-class manuscripts, PDFs, figure
   assets, supplementary scripts, generated outputs, bibliography, claim-status
-  notes, and reproducibility instructions.
+  notes, correction status, and reproducibility instructions.
 - `cdfd_demo/` - small public equation demo with Docker support.
 - `CITATION.cff` - GitHub citation metadata.
 - `.zenodo.json` - Zenodo deposit metadata.
@@ -57,22 +57,27 @@ reviewed. The supplementary scripts reproduce the internal calculations, figures
 tables, and consistency checks. They do not establish empirical validation of the
 physical hypotheses.
 
-## Final Part I Architecture
+Before citing or distributing Part I, read
+`Part_I_Fundamental_Physics/CORRECTION_STATUS_2026-08-18.md` together with
+`Part_I_Fundamental_Physics/CLAIM_STATUS.md`.
 
-The final edit turns Part I into a named adaptive-vacuum program rather than a
-loose sequence of papers. Paper I states the Mujjabi Capacity Law, the Mujjabi
-Adaptive Operating Ratio, and the Mujjabi Stability Attractor for the
-fine-structure ratio. Papers II-IX develop the symmetry, topology, mass-budget,
-spectrum, and boundary rules. Paper X states the vacuum-engineering control
-principle. Papers XI-XII define the Mujjabi Tests that can falsify or support
-the memory, alpha-jitter, and pressure-gradient claims.
+## Archive Architecture
+
+This is the historical architecture of the released manuscripts, not an
+endorsement of their physical claims. Paper I introduces the named capacity,
+operating-ratio, and stability-attractor notation. Papers II-IX develop the
+symmetry, topology, mass-budget, spectrum, and boundary constructions. Paper X
+presents a hypothetical vacuum-engineering control programme. Papers XI-XII
+propose falsification targets for memory, alpha-jitter, and pressure-gradient
+hypotheses. The correction status file governs their current evidentiary status.
 
 ## Suggested Reading Order
 
 1. `Part_I_Fundamental_Physics/README.md`
-2. `Part_I_Fundamental_Physics/CLAIM_STATUS.md`
-3. `Part_I_Fundamental_Physics/REPRODUCIBILITY.md`
-4. `Part_I_Fundamental_Physics/PDFs/`
+2. `Part_I_Fundamental_Physics/CORRECTION_STATUS_2026-08-18.md`
+3. `Part_I_Fundamental_Physics/CLAIM_STATUS.md`
+4. `Part_I_Fundamental_Physics/REPRODUCIBILITY.md`
+5. `Part_I_Fundamental_Physics/PDFs/`
 
 ## Reproducibility
 

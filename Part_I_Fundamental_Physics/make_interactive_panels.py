@@ -15,18 +15,18 @@ BASE = Path(__file__).resolve().parent
 OUT = BASE / "outputs"
 
 PAPER_ORDER = [
-    ("paper_I", "Paper I: Vortex Stability"),
-    ("paper_II", "Paper II: Koide and Z3 Vortex Modes"),
-    ("paper_III", "Paper III: Topology, Chirality, and Vacuum Density"),
-    ("paper_IV", "Paper IV: Vacuum Equation of State"),
-    ("paper_V", "Paper V: Zero-Parameter Chirality Phase"),
-    ("paper_VI", "Paper VI: Universal Torus Knot Hierarchy"),
-    ("paper_VII", "Paper VII: Universal Mass Sum Rule"),
-    ("paper_VIII", "Paper VIII: CDFT Torus Knot Spectrum"),
-    ("paper_IX", "Paper IX: Even-n Torus Knots"),
-    ("paper_X", "Paper X: Public Vacuum Balance"),
-    ("paper_XI", "Paper XI: Physics Mysteries and Blancken Layer"),
-    ("paper_XII", "Paper XII: Transport Mysteries"),
+    ("paper_I", "Paper I: Calibrated Vortex-Ring Toy Model"),
+    ("paper_II", "Paper II: Koide Identity in a Z3 Mass Parametrisation"),
+    ("paper_III", "Paper III: Conditional Topology, Chirality, and Density"),
+    ("paper_IV", "Paper IV: Conditional Vacuum-Density Bookkeeping"),
+    ("paper_V", "Paper V: Postulated Chirality Phase"),
+    ("paper_VI", "Paper VI: Conditional Z_n Amplitude Results"),
+    ("paper_VII", "Paper VII: Theta-Independent Mass-Sum Identity"),
+    ("paper_VIII", "Paper VIII: Conditional Numerical Spectra"),
+    ("paper_IX", "Paper IX: Fourier Exclusion and Even-n Calculations"),
+    ("paper_X", "Paper X: Notational Flow-Constraint Reformulation"),
+    ("paper_XI", "Paper XI Addendum: Cosmological Analogies and Falsifiers"),
+    ("paper_XII", "Paper XII Addendum: Collective-Matter Falsifiability"),
 ]
 
 STYLE = r"""

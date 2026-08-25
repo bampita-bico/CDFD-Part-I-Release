@@ -69,9 +69,11 @@ CDFD Part I: Fundamental Physics — Paper 01 of 12
 
 Title: Vortex Stability in a Constrained Transport Vacuum and the Origin of the Fine-Structure Constant
 
-This opening manuscript introduces the core physical model of the Constraint-Driven Flux Dynamics (CDFD) / Constraint-Driven Field Theory (CDFT) Part I series. It presents a constrained transport-vacuum interpretation of the electromagnetic fine-structure constant, treating the physical vacuum as an effective medium with finite flux capacity. When that capacity is approached locally, the medium is proposed to form a stable vortex-ring regulator.
+The electromagnetic fine-structure constant, alpha, remains an input to the Standard Model rather than a derived consequence. This opening manuscript of Constraint-Driven Flux Dynamics (CDFD) / Constraint-Driven Field Theory (CDFT) Part I proposes a transport-medium reading: the physical vacuum is treated as an adaptive medium with finite flux capacity. When that capacity is approached locally, the medium forms a stable vortex-ring pressure regulator.
 
-The constant is modeled as the inverse aspect ratio of that regulator: chi = R/a = 1/alpha ≈ 137.036. The text develops the Mujjabi Adaptive Operating Ratio Psi_s = (J/C) · S · M_s, states the stability attractor in the vacuum limit S · M_s → 1, and shows that the stated stability equation has a calibrated equilibrium at chi = 1/alpha. The same dimensionless ratio is checked geometrically from the reduced Compton wavelength and classical electron radius. The reported result is a model-level consistency check against the CODATA fine-structure ratio, with core-profile, stiffness, memory, and experimental assumptions stated explicitly.
+The system state is governed by the Mujjabi Adaptive Operating Ratio Psi_s = (J/C) · S · M_s. In the fundamental vacuum limit the surface responsiveness and memory factors converge to the stability attractor S · M_s → 1. Within the model, the vortex aspect ratio chi = R/a has a calibrated equilibrium matching the inverse fine-structure constant (≈ 137.036), recovered numerically to twelve decimal places when transport stiffness is fixed at that point; the same dimensionless ratio follows from the reduced Compton wavelength and classical electron radius used for R and a. Core-profile, stiffness, memory, and experimental assumptions are stated explicitly.
+
+Status: model-level explanation and numerical consistency check — not an experimental derivation of alpha.
 
 Series role: Foundational framework — Mujjabi Capacity Law, Adaptive Operating Ratio, and Stability Attractor for 1/alpha.
 
@@ -146,9 +148,11 @@ CDFD Part I: Fundamental Physics — Paper 02 of 12
 
 Title: Lepton Masses from Z3-Symmetric Vortex Modes and the Origin of the Koide Formula
 
-Building directly on Paper 01’s vortex-ring regulator, this manuscript turns the electron vortex into a Z3 generation structure. It shows that the empirical Koide formula Q = 2/3 follows as a mathematical theorem from the Z3-symmetric Brannen mass parametrisation, with no free parameters in the identity itself. Within the model, the unique stable azimuthal excitation of the constrained vortex ring is the trefoil (n = 3); n = 1 is a zero mode, n = 2 is unstable or topologically unlocked, and higher modes are suppressed.
+Building on Paper 01’s vortex-ring regulator for the electron, this manuscript turns the charged-lepton sector into a Z3 generation structure. The Koide relation has matched measured charged-lepton masses to better than one part in ten thousand since 1981 without a Standard Model explanation. Here it is proved as a mathematical theorem: any three quantities built from the Z3-symmetric Brannen mass form satisfy Q = 2/3 exactly, using only elementary trigonometric identities and no free parameters in the identity itself.
 
-Fitting the scale and phase to any two charged-lepton masses predicts the third. The result is framed as an internal theorem for the chosen parametrisation plus a physical mapping hypothesis from leptons to trefoil modes — not a Standard Model derivation.
+Within the vortex-ring model, the unique stable azimuthal excitation is the trefoil (n = 3): n = 1 is a zero mode, n = 2 is unstable, and higher modes are energetically suppressed. Fitting the scale and phase to any two charged-lepton masses predicts all three to within about 0.015% of Particle Data Group values.
+
+Status: internal theorem for the chosen parametrisation plus a lepton-to-trefoil mapping hypothesis — not a Standard Model derivation.
 
 Series role: Z3 generation symmetry and the Koide theorem from the Paper 01 regulator.
 
@@ -222,9 +226,11 @@ CDFD Part I: Fundamental Physics — Paper 03 of 12
 
 Title: Topology, Chirality, and the Vacuum Density: Closing All Open Problems of the CDFT Series
 
-Papers 01–02 established the fine-structure aspect-ratio model and the Koide/Z3 lepton construction. This manuscript reorganizes the remaining open problems and closes those that admit an internal resolution. Transport stiffness is tied algebraically to 1/alpha and the Lamb core profile; the preference for n = 3 over n = 2 is argued topologically (trefoil lock versus Hopf-link separation) via Faddeev–Niemi knot energetics; chirality and charge are read as constraint-history structure on the vacuum medium.
+Papers 01–02 identified alpha with a vortex aspect ratio and treated Koide as a Z3/trefoil consequence, while leaving four open problems. This manuscript reorganizes those problems and separates what is already closed inside the model from the one genuine physical input that remains.
 
-The vacuum density rho_0 remains the genuine physical input carried forward. Status: internal model reduction and bookkeeping closure — not a first-principles derivation of rho_0 from experiment.
+Transport stiffness is shown to follow algebraically from 1/alpha and the Lamb core-profile constant of Paper 01, so its appearance as an open problem was a framing error. Preference for n = 3 over n = 2 is argued topologically: mode 2 is a separable Hopf link, while mode 3 is a trefoil with a barrier to separation; by the Faddeev–Niemi energetics used in the model, the trefoil is the lowest-energy knotted soliton available to the constrained field. The remaining mass-scale and lepton-phase problems reduce to the vacuum density rho_0, which is carried forward as the next target for Paper 04.
+
+Status: internal model reduction and bookkeeping closure — not a first-principles derivation of vacuum density from experiment.
 
 Series role: Topology, chirality, and vacuum-density bookkeeping that closes Paper 01–02 open problems where possible.
 
@@ -297,9 +303,11 @@ CDFD Part I: Fundamental Physics — Paper 04 of 12
 
 Title: The Vacuum Equation of State and the Self-Consistency of the CDFT Lepton Sector
 
-With alpha, Koide/Z3, and topological bookkeeping in place, the remaining unknown inside the lepton-sector construction is the vacuum medium density rho_0. This paper formulates the master self-consistency equation that rho_0 must satisfy by combining the CDFT energy-scale relation, the chirality equilibrium condition, and the Brannen mass parametrisation.
+With alpha, Koide/Z3, and topological bookkeeping in place, the remaining unknown inside the lepton-sector construction is the vacuum medium density. This paper derives the master self-consistency condition that density must satisfy by combining the Paper 03 energy-scale and chirality-equilibrium relations with the Paper 02 Brannen mass parametrisation.
 
-It identifies the constraints a vacuum equation of state must obey and shows that the density inferred from lepton masses is self-consistent inside the model when the chirality phase is specified. Status: self-consistency equation and numerical check — not an independent laboratory determination of rho_0.
+Once the vacuum chirality phase is known as a function of density, the condition has a unique solution. The manuscript identifies the constraints any vacuum equation of state must meet and shows that the density inferred from the lepton masses — about 15.87 × 10^12 kg/m^3 — is self-consistent inside the CDFT construction. That states the equation a first-principles derivation must close; it is not yet such a derivation.
+
+Status: self-consistency equation and numerical check — not an independent laboratory determination of vacuum density.
 
 Series role: Converts density, capacity, and responsiveness into a vacuum equation-of-state problem for the lepton sector.
 
@@ -370,9 +378,11 @@ CDFD Part I: Fundamental Physics — Paper 05 of 12
 
 Title: Zero Parameters: Deriving the Vacuum Chirality Phase from the Koide Invariant
 
-Paper 04 left the vacuum chirality phase as the remaining adjustable unknown in the lepton-sector loop. This manuscript closes that loop by setting the chirality-breaking angle equal to the Koide invariant Q = 2/3, which yields theta = 2/9 rad and the vacuum chirality phase theta_c = pi − 2/3.
+Paper 04 left the vacuum chirality phase as the single remaining unknown in the lepton-sector loop. This manuscript derives that phase from the Z3 algebraic structure of the trefoil vortex itself.
 
-With the electron mass m_e as the sole mass-unit input, the construction predicts the muon and tau masses inside the stated residuals and keeps Q = 2/3 exact within the parametrisation. Status: internally closed lepton-sector construction after the m_e unit choice — not a claim that the Standard Model has been replaced.
+Self-consistency identifies the chirality-breaking angle with the Koide invariant Q = 2/3, setting the lepton phase to theta = 2/9 rad and fixing the background vacuum chirality phase without an additional fit. With the electron mass used only as the mass unit, the construction predicts the muon and tau masses at the reported precision and keeps Q = 2/3 exact inside the parametrisation. The CDFT lepton sector is therefore internally closed at this step, with no fitted parameter beyond the external choice of mass unit.
+
+Status: internally closed lepton-sector construction after the m_e unit choice — not a claim that the Standard Model has been replaced.
 
 Series role: Zero-adjustable-parameter lepton-sector closure after the m_e mass-unit input.
 
@@ -446,9 +456,11 @@ CDFD Part I: Fundamental Physics — Paper 06 of 12
 
 Title: The Universal Torus Knot Hierarchy: Zn Symmetry, the Cinquefoil Family, and the General Structure of CDFT Particle Families
 
-Papers 01–05 close the charged-lepton construction. This manuscript extends the framework to the torus-knot hierarchy T(2,n) for odd n ≥ 3. It proves a universal Brannen amplitude coefficient c_n = 2 and a Zn-uniqueness result: Z3 is the unique family for which the constant Koide-like invariant and Zn self-consistency hold together on a connected valid domain.
+Papers 01–05 close the charged-lepton construction from vortex-ring equilibrium, Z3 symmetry, and one external mass unit. This manuscript extends the framework beyond leptons to the torus-knot hierarchy T(2,n) for odd family numbers n ≥ 3.
 
-Higher families (n ≥ 5) are organized by Faddeev–Niemi energy scaling from the trefoil scale. Status: internal algebra and hierarchy proposal — external particle-family assignments remain to be tested.
+Two results are proved. First, the Brannen amplitude coefficient is universal across Zn torus-knot families and is fixed by a maximum-entropy self-consistency condition on the amplitude distribution (c_n = 2). Second, Z3 is uniquely exactly solvable: it is the only family in which the constant Koide-like invariant and Zn self-consistency hold together on a connected valid domain. For n ≥ 5 some amplitudes become negative at every orientation, so the exact Koide theorem does not extend directly. Faddeev–Niemi scaling from the trefoil then assigns model energy scales (cinquefoil near ~460 MeV, heptafoil near ~593 MeV, and the higher sequence that follows).
+
+Status: internal algebra and hierarchy proposal — external particle-family assignments remain to be tested.
 
 Series role: Extends the lepton construction into the general torus-knot hierarchy.
 
@@ -522,9 +534,11 @@ CDFD Part I: Fundamental Physics — Paper 07 of 12
 
 Title: The Universal Mass Sum Rule: A Theta-Independent Prediction for All CDFT Torus Knot Families
 
-For n ≥ 5, individual mode masses depend on an orientation angle that cannot be fixed by algebra alone. This paper isolates what remains theta-independent: the universal mass sum rule sum_k m_k = 2 n M_n, proved from the Zn Fourier identity, and the resulting n^(7/4) total-mass hierarchy when combined with Faddeev–Niemi scaling.
+For family numbers n ≥ 5, individual mode masses depend on an orientation angle that cannot be fixed by pure algebra. This paper isolates what remains theta-independent.
 
-It also establishes the Z5 structural 3+2 amplitude split at the symmetric point and states the transcendental self-consistency equation that later papers solve. Status: internal theorem for the amplitude model — empirical family assignments remain open.
+The central result is the universal mass sum rule: for every T(2,n) family, the total family mass equals 2 n M_n. The proof follows from the Zn Fourier identity and does not depend on orientation. Combined with Faddeev–Niemi scaling, total family mass grows as n^(7/4). For the trefoil family the rule reproduces the observed charged-lepton total within the tau-mass uncertainty of Paper 05; for the cinquefoil it gives a total mass of about 4604 MeV. The paper also proves the Z5 structural 3+2 amplitude split at the symmetric point and states the transcendental self-consistency equation solved in later papers.
+
+Status: internal theorem for the amplitude model — empirical family assignments remain open.
 
 Series role: Mass sums as conserved transport/action budgets independent of orientation angle.
 
@@ -597,9 +611,11 @@ CDFD Part I: Fundamental Physics — Paper 08 of 12
 
 Title: The CDFT Torus Knot Spectrum: Closing the Four Open Problems of Paper VII
 
-This manuscript resolves Paper 07’s four open problems for odd-n families n ≥ 5: first-principles orientation angles from self-consistency, individual Z5 mode masses, the meaning of the 3+2 amplitude split, and higher-family spectra. It proves a universal amplitude-split theorem, derives large-n asymptotics for the vacuum twist, and tabulates mode spectra for n = 5, 7, 9, 11, 13.
+Paper 07 left four open problems for odd-n families n ≥ 5: first-principles orientation angles, individual Z5 mode masses and possible PDG readings, the meaning of the 3+2 amplitude split, and higher-family spectra. This manuscript resolves all four inside the model.
 
-Z5 modes are compared cautiously with meson-spectrum regions; anti-phase light modes are not identified with observed hadrons. Status: numerical self-consistency and mode census inside the model — stable external predictions still require independent confirmation.
+Self-consistency is extended to all odd family numbers with a unique solution per family. A universal amplitude-split theorem is proved: the number of negative-amplitude modes follows a fixed discrete counting rule (two for n = 5 through 11, then growing in steps). The large-n orientation angle decays as 1/n^2 with a closed Fourier coefficient. For Z5 the mode masses are about 3.6, 17.6, 838.3, 1067.7, and 2676.8 MeV; the two lightest modes are read as an anti-phase pair near an amplitude zero rather than identified with observed hadrons, while the heavier modes bracket the K*–phi region. Complete spectra are tabulated for n = 5, 7, 9, 11, and 13, all from m_e with no additional free parameters.
+
+Status: numerical self-consistency and mode census inside the model — stable external predictions still require independent confirmation.
 
 Series role: Spectrum and prediction ledger for odd-n torus-knot families.
 
@@ -672,9 +688,11 @@ CDFD Part I: Fundamental Physics — Paper 09 of 12
 
 Title: Even-n Torus Knots in CDFD: The Exclusion of T(2,2), the Extension to T(2,2m), and the Anti-Phase Mass Scaling Law
 
-Paper 08 left open the physical reading of anti-phase modes, even-n extension, and lightest-mode scaling. This manuscript proves a Fourier exclusion theorem: the universal mass sum rule rests on an identity that fails for n = 2, so the T(2,2) Hopf fibration is excluded by algebraic necessity. For even n ≥ 4 the machinery of Papers 06–08 extends, with spectra computed for n = 4, 6, 8, 10.
+Paper 08 left open the physical reading of anti-phase modes, the even-n extension, and lightest-mode scaling. This manuscript resolves three of those problems.
 
-Anti-phase modes are identified as boundary modes whose masses track proximity to amplitude zeros, and a lightest-mode scaling law is derived. Status: internal extension and exclusion logic — observable even/odd distinctions remain to be tested.
+The central structural result is the Fourier exclusion theorem: the universal mass sum rule rests on an identity that holds for n ≥ 3 but fails for n = 2, so the T(2,2) Hopf fibration is excluded by algebraic necessity rather than preference. For even n ≥ 4 the identity holds and the machinery of Papers 06–08 extends; self-consistency, amplitude splits, spectra, and the n^(7/4) hierarchy are computed for n = 4, 6, 8, and 10 (with one identified amplitude-split exception at n = 8). Anti-phase modes are identified as boundary modes whose masses track proximity to amplitude zeros, and a unified mode-mass census for n = 3 through 13 is assembled.
+
+Status: internal extension and exclusion logic — observable even/odd distinctions remain to be tested.
 
 Series role: Exclusion and boundary principles so the theory can say no.
 
@@ -747,9 +765,11 @@ CDFD Part I: Fundamental Physics — Paper 10 of 12
 
 Title: The Vacuum Equation of State: Deriving Torus Knot Self-Consistency from the Public CDFD Balance Law Psi_s = Phi / C
 
-Capstone of the formal 10-paper mass-spectrum sequence. The previously successful but ungrounded torus-knot self-consistency condition n theta_n = Q_n(theta_n) is recast as a model theorem inside the public flow–constraint notation. Flow energy Phi is identified with the L2 amplitude norm, capacity C with the squared L1 norm, and equilibrium deformation Psi_s with total vacuum twist.
+Capstone of the formal 10-paper CDFD mass-spectrum sequence. Earlier papers used a successful but ungrounded torus-knot self-consistency condition to fix each family’s vacuum twist. Here that condition is recast as a model theorem inside the public flow–constraint notation.
 
-Applying the public balance law Psi_s = Phi / C recovers the self-consistency condition exactly, so the Koide-like ratio Q_n becomes the geometric face of a transport-limited vacuum equation of state. The lepton/meson spectrum of Papers 01–09 is thereby tied internally to m_e and the proposed vacuum balance. Status: internal model theorem and consistency check — not a demonstrated vacuum-engineering technology.
+The CDFT vacuum medium is mapped onto three public CDFD quantities: Flow (Phi), Constraint/capacity (C), and Adaptive Operating Ratio (Psi_s). Continuous flow energy is identified with the squared-amplitude L2 norm, transport capacity with the squared absolute-amplitude sum, and equilibrium deformation with total vacuum twist. Applying the public balance law Psi_s = Phi / C recovers the same self-consistency condition used in the torus-knot spectrum, so the Koide-like ratio Q_n becomes the geometric face of a transport-limited vacuum equation of state. The lepton/meson spectra of Papers 01–09 are thereby tied internally to m_e and the proposed vacuum balance.
+
+Status: internal model theorem and consistency check — not a demonstrated vacuum-engineering technology.
 
 Series role: Vacuum-engineering control-law bridge — control of Phi, C, S, and M_s.
 
@@ -820,11 +840,13 @@ Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, CDFT, CDFD, vac
 ```
 CDFD Part I: Fundamental Physics — Paper 11 of 12
 
-Title: Dark Matter, Dark Energy, Black Holes, and the Blancken-Layer Synthesis: A Constraint-Driven Flux Interpretation of Cosmological Anomalies
+Title: Paper XI: Dark Matter, Dark Energy, Black Holes, and the Blancken-Layer Synthesis: A Constraint-Driven Flux Interpretation of Cosmological Anomalies
 
-Bridge paper. Asks whether dark-matter phenomenology, dark energy, black-hole horizons, vacuum self-consistency, and the proposed sub-Planckian Blancken layer can be read as related manifestations of constrained transport rather than unrelated mysteries. Deliberately status-aware: Papers 01–10 contain formal model-internal constructions; dark-sector and Blancken-layer claims remain hypotheses until they generate observational discriminants beyond qualitative analogy.
+Bridge paper. Asks whether dark-matter phenomenology, dark energy, black-hole horizons, vacuum self-consistency, and the proposed sub-Planckian Blancken layer can be read as related manifestations of constrained transport rather than unrelated mysteries.
 
-Psi_s = (Phi/C) · S · M_s is used here as a hypothesis generator for cosmological tests, not as established cosmological evidence.
+The manuscript is deliberately status-aware: Papers 01–10 contain formal model-internal constructions, while dark-sector and Blancken-layer claims remain hypotheses until they generate observational discriminants beyond qualitative analogy. The shared runtime state grammar Psi_s = (Phi/C) · S · M_s is used here as a generator of cosmological tests, not as established cosmological evidence. The paper-local supplementary script remains the audited reproduction layer for the figures and tables in this archive.
+
+Status: hypothesis generator for cosmological tests — Papers 01–10 are model-internal; dark-sector and Blancken-layer claims remain hypotheses until observational discriminants appear.
 
 Series role: Cosmology / dark-sector bridge and capacity–memory tests at cosmic scale.
 
@@ -894,11 +916,13 @@ Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, CDFT, CDFD, dar
 ```
 CDFD Part I: Fundamental Physics — Paper 12 of 12
 
-Title: Friction, Superconductivity, Plasma States, and Transport Mysteries: A Constraint-Driven Flux Map for Collective Matter
+Title: Paper XII: Friction, Superconductivity, Plasma States, and Transport Mysteries: A Constraint-Driven Flux Map for Collective Matter
 
-Closing bridge paper. Turns the same discipline toward laboratory- and engineering-scale mysteries: friction, stick-slip rupture, superconductivity, superfluidity, plasma confinement, magnetic reconnection, turbulence, jamming, glasses, and anomalous transport. These systems are treated as falsifiable test beds for one claim: many mysteries arise where flux is forced through adaptive constraints whose capacity, memory, and topology change during transport.
+Closing bridge paper. Turns the same discipline toward laboratory- and engineering-scale mysteries: friction, stick-slip rupture, superconductivity, superfluidity, plasma confinement, magnetic reconnection, turbulence, jamming, glasses, and anomalous transport.
 
-The manuscript separates established physics from CDFD interpretation, gives domain-specific mappings for Phi, C, and Psi_s, states failure conditions for each proposed bridge, and includes reproducible outputs from the Paper 12 supplementary script. Status: hypothesis generator for laboratory discriminants — not a claim that domain models have been superseded.
+These systems are not treated as solved by analogy. They are treated as falsifiable test beds for one claim: many physical mysteries arise where flux is forced through adaptive constraints whose capacity, memory, and topology change during transport. The manuscript separates established physics from CDFD interpretation, gives domain-specific mappings for Phi, C, and Psi_s, states failure conditions for each proposed bridge, and includes reproducible outputs from the Paper 12 supplementary script.
+
+Status: hypothesis generator for laboratory discriminants — not a claim that domain models have been superseded.
 
 Series role: Mujjabi Tests and laboratory falsification program for collective matter and vacuum memory.
 

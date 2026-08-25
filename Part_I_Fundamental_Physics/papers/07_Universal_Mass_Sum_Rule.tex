@@ -28,7 +28,7 @@
 
 \begin{document}
 
-\title{The Universal Mass Sum Rule: A Theta-Independent Prediction for All CDFT Torus Knot Families}
+\title{A Theta-Independent Mass-Sum Identity in a $\mathbb{Z}_n$ Amplitude Ansatz}
 
 \author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
 VuraLabs, Kampala, Uganda\\
@@ -47,17 +47,14 @@ uniquely exactly solvable. For family numbers of five or greater, the
 individual mode masses depend on an orientation angle that cannot be fixed by
 pure algebra alone.
 
-The present paper identifies what can still be derived without knowing that
-orientation. Its central result is the universal mass sum rule: for every
-T(2,n) family, the total mass of the family equals twice the family number
-times the family energy scale. The proof follows directly from the Z-n Fourier
-identity and does not depend on the orientation angle. Combined with
-Faddeev-Niemi scaling, this means the total family mass grows as the family
-number to the seven-fourths power.
+The central result is conditional algebra: for every selected amplitude family,
+the sum equals twice the family number times the chosen scale. The proof follows
+from a Fourier identity and does not depend on orientation. Any physical scaling
+of that chosen scale is an additional, unestablished assumption.
 
-For the trefoil family, the rule reproduces the observed charged-lepton total
-within the tau-mass uncertainty reported in Paper V. For the cinquefoil family,
-it gives a total mass of about 4604 MeV. The paper also proves the Z-five mode
+For the trefoil family, the rule reproduces the total implied by the fitted
+Paper V parametrisation; this is not an independent check. For the cinquefoil
+family, it gives a conditional extrapolation near 4604 MeV. The paper also proves the Z-five mode
 split: at the symmetric point, the five amplitudes divide into three positive
 and two negative modes. A unique Z-five self-consistency angle near
 3.70 degrees is derived and reported as a hypothesis pending a first-principles
@@ -211,22 +208,20 @@ The non-trivial content is twofold:
     Individual masses $m_k = M_n A_k^2$ depend strongly on $\theta_n$:
     they range from $0$ (when $A_k = 0$) to $M_n(1+\sqrt{2})^2 \approx 5.83 M_n$.
     Yet their sum is always exactly $2nM_n$.
-    This means the total mass of a family is a firm prediction even when
-    the mass spectrum (individual mode masses) is not.
+    This means the sum is fixed once a family scale is specified; it is not a
+    physical prediction until that scale has an independent physical basis.
 
   \item Combined with the Faddeev--Niemi scaling $M_n = M_3(n/3)^{3/4}$
-    (Paper~IV~\cite{MujjabiIV2026}), the sum becomes a prediction from
-    first principles:
+    as an unverified CDFT transfer assumption, the sum becomes a conditional
+    numerical extrapolation:
     \begin{equation}
       \sum_{k=0}^{n-1} m_k(n)
       \;=\; 2n M_3 \left(\frac{n}{3}\right)^{3/4}
       \;=\; 2M_3 \cdot 3^{-3/4} \cdot n^{7/4}\,.
       \label{eq:sum_n74}
     \end{equation}
-    This requires only $M_3$ (derived from $m_e$ in Paper~V) and the
-    Faddeev--Niemi exponent $3/4$ (from the field theory of knotted
-    solitons~\cite{FaddeevNiemi1997}).
-    No other free parameters enter.
+    This also inherits the fitted/postulated Paper V chain and the unestablished
+    transfer of the Faddeev--Niemi exponent.
 \end{enumerate}
 
 \subsection{Verification for $n = 3$}
@@ -266,15 +261,15 @@ Their product gives $n^{7/4}$.
 
 \begin{table}[h]
   \caption{CDFT torus knot mass sum hierarchy.
-    All predictions from Theorem~\ref{thm:sum_rule} and Faddeev--Niemi
-    scaling, zero free parameters beyond $m_e$.}
+    Conditional extrapolations using the Fourier identity and unverified
+    Faddeev--Niemi transfer.}
   \label{tab:hierarchy}
   \begin{tabular}{ccccc}
     \toprule
     $n$ & Knot & $M_n$ (MeV) & $\Sigma_n$ (MeV) & Status \\
     \midrule
-    3  & $T(2,3)$ trefoil    & 313.9  & 1\,883.2  & Verified (PDG: 1\,883.0) \\
-    5  & $T(2,5)$ cinquefoil & 460.4  & 4\,603.9  & Predicted \\
+    3  & $T(2,3)$ trefoil    & 313.9  & 1\,883.2  & Implied by fitted parametrisation \\
+    5  & $T(2,5)$ cinquefoil & 460.4  & 4\,603.9  & Conditional extrapolation \\
     7  & $T(2,7)$ heptafoil  & 592.5  & 8\,295.6  & Predicted \\
     9  & $T(2,9)$            & 715.4  & 12\,878.0 & Predicted \\
     11 & $T(2,11)$           & 831.6  & 18\,296.2 & Predicted \\
@@ -286,15 +281,13 @@ Their product gives $n^{7/4}$.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.8\textwidth]{figures/fig7_0_panel.pdf}
-  \caption{The mass sum hierarchy $\Sigma_n$. The total mass of the $n$-th family scales exactly as $n^{7/4}$, driven by the combination of the topological mode count $n$ and the Faddeev-Niemi field energy $n^{3/4}$.}
+  \caption{Conditional $n^{7/4}$ numerical extrapolation under the assumed family-scale law.}
   \label{fig:mass_sum_hierarchy}
 \end{figure}
 
-The $n^{7/4}$ scaling is the universal mass growth law of the CDFT
-torus knot hierarchy.
-It is a direct consequence of two independently derived results:
-the universal Brannen coefficient $c_n = \sqrt{2}$ (Paper~VI) and
-the Faddeev--Niemi energy bound (Paper~IV).
+The $n^{7/4}$ expression is conditional on the chosen family-scale law. The
+Fourier identity is internal algebra; the Faddeev--Niemi transfer is not an
+independently derived CDFT result.
 
 
 \section{The $\mathbb{Z}_5$ Mode Split}
@@ -501,22 +494,21 @@ for all $n$ without requiring the valid-domain condition.
 \end{enumerate}
 
 
-\section{Conclusion}
+\section{Scope Boundary and Conclusion}
 
-The universal mass sum rule $\sum_k m_k = 2nM_n$ is derived from
-two algebraic facts: the $\mathbb{Z}_n$ Fourier identity
-(which forces $\sum A_k^2 = 2n$ regardless of $\theta_n$) and the
-Faddeev--Niemi energy scaling $M_n = M_3(n/3)^{3/4}$.
-Together they give the $n^{7/4}$ mass hierarchy (Eq.~\eqref{eq:n74}),
-verified for $n = 3$ and predicted for all higher families.
+For the stated amplitude ansatz, the identity $\sum_k m_k=2nM_n$ and the
+$\mathbb{Z}_5$ arithmetic are conditional mathematical results. The `$n^{7/4}$'
+sequence and all higher-family totals additionally assume a Faddeev--Niemi
+transfer and a fitted/postulated starting scale. They are not independently
+verified physical predictions.
 
 For $\mathbb{Z}_5$ specifically, we prove the $3 + 2$ mode split
 (Theorem~\ref{thm:Z5_split}) and derive the transcendental
 self-consistency equation~\eqref{eq:sc_5} for $\theta_5$,
 reporting its solution $\theta_5 \approx 3.70^\circ$ as a hypothesis.
 
-The mass sum $\Sigma_5 = 4603.9$~MeV is a model-level prediction, conditional
-on the torus-knot hierarchy and the $m_e$ mass-unit calibration.
+The mass sum $\Sigma_5=4603.9$~MeV is a conditional extrapolation. This paper
+must not be cited as establishing a universal particle mass hierarchy.
 
 
 \section*{Supplementary Material}

@@ -27,7 +27,7 @@
 
 \begin{document}
 
-\title{The Vacuum Equation of State and the Self-Consistency of the CDFT Lepton Sector}
+\title{Conditional Vacuum-Density Bookkeeping in the CDFT Lepton Parametrisation}
 
 \author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
 VuraLabs, Kampala, Uganda\\
@@ -40,23 +40,18 @@ ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
 \maketitle
 
 \begin{abstract}
-The first three papers of the Constraint-Driven Field Theory (CDFT) series
-connected the fine-structure constant to a vortex aspect ratio, proved the
-Koide relation as a theorem of Z-three mass structure, and identified the
-charged leptons with modes of a trefoil-knotted vortex. Within that model, the
-remaining unknown is the vacuum medium density.
+This paper records a conditional algebraic relation among quantities fitted or
+calibrated in earlier CDFT papers. Solving that relation for $\rho_0$ is a
+back-calculation from the known electron mass, fitted lepton phase, and the
+calibrated aspect ratio; it is not a vacuum-density measurement or prediction.
+The equation is internally satisfied when its fitted inputs are substituted,
+which is not physical validation.
 
-This paper formulates the next step by deriving the master self-consistency
-condition that the vacuum density must satisfy. The condition combines the
-energy-scale relation and chirality equilibrium developed in Paper III with
-the Brannen mass parametrization used in Paper II. Once the vacuum chirality
-phase is known as a function of density, the condition has a unique solution.
-
-The paper identifies the constraints that any vacuum equation of state must
-meet and shows that the density inferred from the lepton masses, about
-15.87 trillion kilograms per cubic meter, is self-consistent within the CDFT
-construction. This does not yet constitute a first-principles derivation of
-the density; it states the equation that such a derivation must close.
+The proposed vacuum equation of state, chirality phase, transport capacity, and
+vortex interpretation remain hypotheses. The listed higher-family masses are
+numerical extrapolations conditional on applying Faddeev--Niemi scaling to a
+different functional; that transfer has not been established. This paper makes
+no zero-parameter lepton, fine-structure, or particle-family claim.
 
 Across the series, the public CDFD Runtime expresses this equilibrium vacuum
 limit as a reusable flow-constraint state grammar. The calculations below use
@@ -226,11 +221,11 @@ The vacuum pressure is:
 and the vacuum energy density is $u = \rho_0 c^2$.
 
 
-\section{The Master Self-Consistency Equation}
+\section{A Back-Calculation for $\rho_0$}
 \label{sec:master}
 
-We now assemble the three equations from Papers~I--III into a single
-equation for $\rho_0$.
+We now assemble selected fitted and assumed relations into an algebraic
+back-calculation for $\rho_0$.
 
 \subsection{The three input equations}
 
@@ -262,7 +257,7 @@ of the three Brannen amplitudes (corresponding to the electron mode).
 \end{equation}
 where $\phi_c$ is the vacuum chirality phase.
 
-\subsection{Derivation of the master equation}
+\subsection{Algebraic substitution}
 
 Substituting Eq.~\eqref{eq:C} into \eqref{eq:B}:
 \begin{equation}
@@ -306,14 +301,14 @@ the CDFT vacuum equation of state.
   uniqueness.
 \end{proof}
 
-\subsection{Self-consistency verification}
+\subsection{Internal substitution check}
 
 Using the observed values (from lepton mass data, Paper~II):
 \begin{align}
   \theta_\text{obs} &= 12.7325^\circ \label{eq:theta_obs} \\
   \phi_c            &= \pi - 3\theta_\text{obs} = 141.80^\circ \label{eq:phi_c_obs}
 \end{align}
-we verify that the master equation is satisfied:
+the same fitted inputs reproduce the back-calculation:
 \begin{align}
   A_e &= 1 + \sqrt{2}\cos\!\left(\frac{\pi - 141.80^\circ}{3}\right)
          = 1 + \sqrt{2}\cos(12.7325^\circ)
@@ -323,8 +318,9 @@ we verify that the master equation is satisfied:
   \rho_0 &= M / (c^2 a^3 g) = 1.587 \times 10^{13}~\text{kg/m}^3
          \label{eq:rho0_val}
 \end{align}
-All numbers are consistent to the precision of the lepton mass measurements
-(supplementary Table~2 verifies to machine precision).
+This agreement is expected because $M$, $\theta$, and $\chi$ were already fixed
+from the same observed inputs. It is an algebraic substitution check, not a
+validation of a physical vacuum density.
 
 
 \section{What the Vacuum Equation of State Must Provide}
@@ -393,21 +389,22 @@ The solution gives $X$, from which $\rho_0 = X m_e / a^3$.
 \section{Beyond Leptons: The Cinquefoil Family $T(2,5)$}
 \label{sec:cinquefoil}
 
-We now use the derived lepton mass scale $M_3 \equiv M = 313.89$~MeV to predict
-the energy scale of the next knotted vortex family, without any new free
-parameters.
+We now display a numerical extrapolation from the fitted lepton scale
+$M_3 \equiv M = 313.89$~MeV. It is conditional on an unestablished transfer of
+Faddeev--Niemi scaling to the CDFT functional.
 
 \subsection{The Faddeev--Niemi energy scaling}
 
-The Faddeev--Niemi theorem~\cite{FaddeevNiemi1997} gives the minimum energy
-of a knotted soliton with Hopf charge $Q$:
+The Faddeev--Niemi result~\cite{FaddeevNiemi1997} applies to a particular
+Skyrme-type model and gives a minimum-energy scaling with Hopf charge $Q$:
 \begin{equation}
   E_\text{min}(Q) \;\sim\; Q^{3/4}\,.
   \label{eq:FN_scaling}
 \end{equation}
-For the torus knot $T(2,n)$ with $n$ odd, the Hopf charge is $Q = n$.
+CDFT has not been shown to lie in that model class or to identify its knot index
+with Hopf charge; the following values are illustrative extrapolations only.
 
-\subsection{Prediction of $M_5$}
+\subsection{Conditional extrapolation of $M_5$}
 
 The lepton family corresponds to $T(2,3)$ with $Q = 3$ and Brannen scale
 $M_3 = 313.89$~MeV.
@@ -419,7 +416,8 @@ The cinquefoil $T(2,5)$ has $Q = 5$, so:
   \label{eq:M5}
 \end{equation}
 
-This is the energy scale of the cinquefoil vortex family.
+This is a numerical output of the stated extrapolation, not an established
+cinquefoil energy scale or particle prediction.
 The $T(2,5)$ knot has $\mathbb{Z}_5$ symmetry: five lobes, five $\mathbb{Z}_5$
 modes.
 Its lightest member has mass $M_5 A_{e,5}^2$, where $A_{e,5}$ is the smallest
@@ -438,8 +436,8 @@ Using the same scaling:
   M_7 &= M_3 \left(\frac{7}{3}\right)^{3/4} = 313.89 \times 1.888 = 592.6~\text{MeV} \\
   M_9 &= M_3 \left(\frac{9}{3}\right)^{3/4} = 313.89 \times 2.280 = 715.6~\text{MeV}
 \end{align}
-These are all first-principles predictions from the trefoil scale $M_3$ and the
-Faddeev--Niemi bound, with zero additional free parameters.
+These are conditional extrapolations from a fitted $M_3$ and an unverified
+model transfer; they are not first-principles predictions.
 
 \begin{figure}[ht]
   \centering
@@ -449,101 +447,20 @@ Faddeev--Niemi bound, with zero additional free parameters.
 \end{figure}
 
 
-\section{Summary: The Complete CDFT Chain}
+\section{Scope Boundary and Conclusion}
 \label{sec:summary}
 
-Table~\ref{tab:chain} shows the complete CDFT derivation chain.
-Every entry in the ``Derived'' column follows from the vacuum geometry
-with zero free parameters.
-The ``Inferred'' entries use lepton mass measurements as input.
-The ``Open'' entry is the single remaining step.
+The displayed $\rho_0$ relation is a back-calculation: it combines values fitted
+to the electron mass and lepton ratios with the calibrated Paper I target. Its
+internal substitution check is not an equation of state, a density measurement,
+or a physical validation. The standard Compton, classical-radius, and Bohr-radius
+relations are useful pedagogy but follow from their definitions.
 
-\begin{table}[h]
-  \caption{The complete CDFT derivation chain after Papers~I--IV.}
-  \label{tab:chain}
-  \begin{tabular}{llp{7cm}}
-    \toprule
-    Quantity & Status & Result / Method \\
-    \midrule
-    $\alpha = 1/137.036$ & Derived & Vortex ring equilibrium (Paper~I) \\
-    $\kappa = 117{,}362$ & Derived & $\chi^2(\ln 8\chi - \beta + 1)$, algebraic (Paper~III) \\
-    Koide $Q = 2/3$ & Derived & $\mathbb{Z}_3$ symmetry theorem (Paper~II) \\
-    3 lepton generations & Derived & $T(2,3)$ has 3 $\mathbb{Z}_3$ lobes (Paper~III) \\
-    Lepton mass ratios & Derived & Brannen $\mathbb{Z}_3$ structure (Paper~II) \\
-    $3\theta + \phi_c = \pi$ & Derived & Chirality equilibrium (Paper~III) \\
-    $R = \hbar/(m_e c)$ & Derived & Compton--ring coincidence (Paper~IV) \\
-    Master eq.\ for $\rho_0$ & Derived & Eq.~\eqref{eq:master} (Paper~IV) \\
-    $M_5 = 460.4$~MeV & Predicted & Faddeev--Niemi scaling (Paper~IV) \\
-    \midrule
-    $\theta = 12.73^\circ$ & Inferred & From PDG lepton masses \\
-    $\phi_c = 141.80^\circ$ & Inferred & From $\theta$ via $3\theta + \phi_c = \pi$ \\
-    $M_3 = 313.89$~MeV & Inferred & From $m_e$, $\theta$ \\
-    $\rho_0 = 1.587\times10^{13}$ kg/m$^3$ & Inferred & From $M_3$, $g$, $a$, $c$ \\
-    \midrule
-    $\Phi_c(\rho_0)$ from EOS & \textbf{Open} & Requires full vacuum EOS solution \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-The master equation \eqref{eq:master} is the precise statement of what remains.
-Once $\Phi_c(\rho_0)$ is computed from the CDFT Navier--Stokes equation, the
-theory produces the following from the vacuum geometry alone:
-\begin{enumerate}
-  \item $\alpha = 1/137.036$
-  \item $\theta$ (hence $m_e : m_\mu : m_\tau$ and the Koide formula)
-  \item $\rho_0$ (hence $M_3$ and the absolute mass scale $m_e$)
-\end{enumerate}
-with zero free parameters.
-
-
-\section{Open Problems}
-
-\begin{enumerate}
-\item \textbf{Solve the CDFT vacuum EOS for $\Phi_c(\rho_0)$.}
-  This requires solving the nonlinear CDFT Navier--Stokes equation with
-  transport-capacity constraint in the presence of the electron vortex ring,
-  computing the background helicity as a function of $\rho_0$, and extracting
-  the phase $\phi_c$.
-  The equation to solve is the dimensionless master
-  equation~\eqref{eq:master_dimensionless}.
-  When this is done, the entire lepton sector (masses, ratios, Koide formula,
-  $\alpha$) follows from zero free parameters.
-
-\item \textbf{Derive the $T(2,5)$ chirality phase $\theta_5$.}
-  The cinquefoil family has Brannen scale $M_5 = 460.4$~MeV (predicted here)
-  but its internal mass spectrum depends on the $\mathbb{Z}_5$ chirality phase
-  $\theta_5$, which requires a $T(2,5)$ analogue of Papers~II--III.
-
-\item \textbf{Identify the cinquefoil spectrum with known particles.}
-  The $T(2,5)$ family has 5 modes.
-  Its energy scale ($\sim 460$~MeV) overlaps the light hadron sector.
-  Whether the cinquefoil modes correspond to known particles (e.g.\ quark
-  composites) or predict new ones is an open question.
-\end{enumerate}
-
-
-\section{Conclusion}
-
-We have derived the master self-consistency equation~\eqref{eq:master}
-for the CDFT vacuum density $\rho_0$.
-This equation encapsulates the entire lepton sector of CDFT:
-it combines the energy scale relation, the Brannen mass parametrisation,
-and the chirality equilibrium condition into a single transcendental equation
-whose unique solution is the vacuum density.
-
-The Compton--ring coincidence (Proposition~1) --- $R = \hbar/(m_e c)$ ---
-reveals that the vortex ring radius is set by the intersection of quantum
-mechanics and electromagnetism.
-The three length scales $a$, $R$, $a_0$ form a geometric progression in
-$\alpha$, a hierarchy that was implicit in Paper~I but is made explicit here.
-
-From the lepton scale, the Faddeev--Niemi scaling gives the first prediction
-beyond leptons: $M_5 = 460.4$~MeV for the cinquefoil family $T(2,5)$.
-
-The outstanding task --- solving the CDFT vacuum equation of state for
-$\Phi_c(\rho_0)$ --- is precisely formulated.
-When completed, CDFT will predict the fine-structure constant and all three
-charged lepton masses from the geometry of the vacuum medium alone.
+The $M_5$, $M_7$, and $M_9$ values are conditional extrapolations only. They
+would require an independently specified CDFT energy functional, a justified
+mapping to the Faddeev--Niemi model, and a prespecified observable before they
+could become physical predictions. This paper must not be cited as deriving
+$\alpha$, lepton masses, vacuum density, or a particle-family hierarchy.
 
 
 \section*{Supplementary Material}

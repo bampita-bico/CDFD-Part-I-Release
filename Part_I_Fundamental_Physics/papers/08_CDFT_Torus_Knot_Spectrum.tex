@@ -28,7 +28,7 @@
 
 \begin{document}
 
-\title{The CDFT Torus Knot Spectrum: Closing the Four Open Problems of Paper~VII}
+\title{Conditional Numerical Spectra in a Torus-Knot Amplitude Ansatz}
 
 \author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
 VuraLabs, Kampala, Uganda\\
@@ -41,28 +41,15 @@ ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
 \maketitle
 
 \begin{abstract}
-Paper VII identified four open problems for torus-knot families with family
-numbers of five or greater: a first-principles derivation of the orientation
-angle, the individual Z-five mode masses and their possible Particle Data
-Group identifications, the meaning of the three-plus-two amplitude split, and
-the spectra of higher families. The present paper resolves all four inside the
-model.
+This paper computes conditional numerical consequences of a selected
+torus-knot amplitude ansatz. It does not close a first-principles derivation of
+the orientation equation or establish a physical spectrum. Given the postulated
+self-consistency equation, existence/uniqueness, amplitude counts, and
+large-family asymptotics are mathematical results of that equation.
 
-The self-consistency condition is extended to all odd family numbers and is
-shown to have a unique solution for each family. The paper proves a universal
-amplitude-split theorem: at the self-consistency point, the number of
-negative-amplitude modes follows a fixed discrete counting rule, equals two
-from family numbers five through eleven, and then grows in steps at critical
-family numbers. The large-family orientation angle is also shown to decay with
-the inverse square of the family number, with a closed coefficient determined
-by the Fourier geometry of the CDFT vacuum.
-
-For the Z-five family, the mode masses are about 3.6, 17.6, 838.3, 1067.7,
-and 2676.8 MeV. The two lightest modes are interpreted as an anti-phase pair
-near an amplitude zero rather than identified with observed hadrons, while the
-three heavier modes bracket the K-star and phi meson region. Complete spectra
-are tabulated for family numbers five, seven, nine, eleven, and thirteen. All
-spectra are derived from the electron mass with no additional free parameters.
+The tabulated mode masses inherit the calibration, lepton-mass fit, phase
+postulate, and unverified family-scale transfer of earlier papers. Their PDG
+comparisons are weak or negative evidence, not particle identifications.
 
 Across the series, the public CDFD Runtime expresses this equilibrium vacuum
 limit as a reusable flow-constraint state grammar. The calculations below use
@@ -164,36 +151,6 @@ This distinction matters because the Mujjabi Alpha-Jitter Test in Paper~XII
 requires a baseline spectrum first. Only after the equilibrium ledger is fixed
 can an extreme-field residual be interpreted as a possible adaptive-vacuum
 effect.
-
-\subsection{Remark: the three structurally distinguished families and the CRT integer}
-\label{sec:crt_remark}
-
-Among the odd families $n = 3, 5, 7, \ldots$, three are structurally distinguished
-by the CDFT spectrum:
-\begin{center}
-\small
-\begin{tabular}{cll}
-\toprule
-$n$ & Structural role & Source \\
-\midrule
-7  & Heptafoil: self-consistency attractor sits closest to $\chi^* = 137$ & Paper~VI \\
-12 & Generation--spacetime index: $4\,\text{dimensions}\times 3\,\text{generations}$ & Papers I--V \\
-27 & $\mathbb{Z}_3$ closure index: $3^3$ & Paper~VI, Theorem~2 \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-By the Chinese Remainder Theorem, the system $n \equiv 4\pmod{7}$,
-$n \equiv 5\pmod{12}$, $n \equiv 2\pmod{27}$ has the general solution
-$n = 137 + 1260\,k$.  The first four solutions are $137, 893, 1649, 2405$;
-of these, \textbf{137 is the unique minimal prime} ($893 = 19\times47$,
-$1649 = 17\times97$; the next prime in this class is $n = 3917$).
-Thus \textbf{137 is the unique minimal prime enforced by the three
-structurally distinguished CDFT families}
-(the CRT computation in Paper~VI).  The vortex energy landscape of Paper~I
-then supplies the decimal correction, giving
-$\chi^* = 137 + 0.035999177 = 137.035999177$~\cite{CODATA2022, MujjabiI2026}.
-
 
 \label{sec:sc_system}
 
@@ -766,9 +723,10 @@ The following remain:
 \end{enumerate}
 
 
-\section{Conclusion}
+\section{Scope Boundary and Conclusion}
 
-Paper~VIII closes the four open problems of Paper~VII.
+Paper~VIII provides conditional computations for the four Paper VII questions;
+it does not close their missing physical derivations.
 
 \textbf{Problem~1} (first-principles derivation of $\theta_n$):
 The self-consistency condition $n\theta_n = \widetilde{Q}_n(\theta_n)$ is
@@ -776,8 +734,8 @@ extended to all odd $n$ and proved to have a unique solution
 (Proposition~\ref{prop:unique}).
 The closed-form asymptotic $\theta_n \to 8\pi^2/[(\pi+4)^2 n^2]$
 is derived analytically (Eq.~\eqref{eq:theta_asymp}).
-The physical principle elevating the self-consistency condition to a theorem
-remains the primary open problem.
+The physical principle justifying the self-consistency condition remains the
+primary open problem.
 
 \textbf{Problem~2} (cinquefoil mass spectrum):
 The five $\mathbb{Z}_5$ mode masses are
@@ -796,11 +754,12 @@ amplitude zeros at the $45^\circ$ diagonals, so the negativity arc spans
 exactly one quarter-circle.
 
 \textbf{Problem~4} (higher families):
-Complete mode spectra for $n = 7, 9, 11, 13$ are computed
+Conditional mode spectra for $n = 7, 9, 11, 13$ are computed
 (Tables~\ref{tab:Z7_masses}--\ref{tab:Z13_masses}).
-The $n^{7/4}$ mass hierarchy (Paper~VII) is verified for all families.
-Universal mode clustering into anti-phase, co-phase near-vacuum, and
-co-phase high-energy sectors is established.
+The $n^{7/4}$ expression is merely evaluated under the inherited scale
+assumption. The amplitude clustering is internal arithmetic, not physical
+particle phenomenology. This paper must not be cited as a spectrum prediction
+or a derivation of a universal hierarchy.
 
 
 \section*{Supplementary Material}

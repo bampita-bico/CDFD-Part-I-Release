@@ -17,8 +17,13 @@ ORCID: https://orcid.org/0009-0001-0556-5516
 - `outputs/` - generated figures, tables, gate checks, and interactive panels.
 - `references.bib` - shared bibliography.
 - `CLAIM_STATUS.md` - claim-level status and uncertainty map.
-- `MUJJABI_LAWS_AND_TESTS.md` - named laws, principles, tests, and vacuum
-  engineering status.
+- `CORRECTION_STATUS_2026-08-18.md` - binding correction notice for claims that
+  are not established physics.
+- `ARCHIVE_NOTICE_2026-08-24.md` - retained release scope and the separate
+  archive boundary for working material.
+- `standalone_notes/` - retained corrected algebra note and finite-thickness
+  computational non-result.
+- `methods/` - shared auditable toy-model declaration protocol.
 - `REPRODUCIBILITY.md` - commands used to rebuild and verify the archive.
 - `requirements-fullstack.txt` - optional acceleration and autodiff stack for
   scripts and notebooks.
@@ -35,14 +40,13 @@ produce independent observational or laboratory discriminants.
 
 ## Technical Preface
 
-Part I is framed as a move from treating selected physical constants as
+The original Part I model is framed as a move from treating selected physical constants as
 empirical inputs toward asking whether they can be recovered as equilibrium
 conditions of a constrained transport medium. In that framing, the vacuum is not
 presented as empty background, but as an effective medium with capacity,
-responsiveness, and possible memory variables. The central Part I claim is
-therefore model-level: if the CDFD transport-medium assumptions hold, the
-fine-structure ratio can be read as the aspect ratio of a stable vortex
-regulator. Paper I now states the CODATA 2022 target
+responsiveness, and possible memory variables. This is an unconfirmed model
+proposal, not an independent recovery of the fine-structure ratio. Paper I
+states the CODATA 2022 target
 `alpha^-1 = 137.035999177(21)` and the reproduced CDFD recovery
 `chi = 137.035999177` near the beginning of the manuscript.
 
@@ -52,25 +56,26 @@ where the CDFD reading agrees with standard formulas, where it remains an
 internal consistency check, and where future tests would have to outperform
 QED, general relativity, or established laboratory-domain models.
 
-## Current Integration Note
+## Archive Integration Note
 
-The material from `MISSING.docx` is integrated as a professional release update,
-not as a thirteenth paper. The final edit plants the material as a chain:
+The following describes the historical manuscript architecture. The correction
+status, not this architecture summary, governs the current scientific reading.
+The material from `MISSING.docx` was integrated as a release update, not as a
+thirteenth paper. The final edit planted the material as a chain:
 Paper I states the laws, Papers II-IX develop symmetry/topology/mass/boundary
 consequences, Paper X becomes the vacuum-engineering control-law bridge, Paper
 XI carries cosmic-scale memory and capacity tests, and Paper XII closes with
 the Mujjabi Falsification Program.
 
-The public release keeps the final architecture in `MUJJABI_LAWS_AND_TESTS.md`
-and the uncertainty boundaries in `CLAIM_STATUS.md`. The working extraction map
-from `MISSING.docx` is an editorial artifact and is not part of the public
-release surface.
+The uncertainty boundaries in `CLAIM_STATUS.md` govern the public release. The
+working extraction map from `MISSING.docx` is an editorial artifact and is not
+part of the public release surface.
 
 ## Series Flow
 
 | Paper | Series role |
 |---|---|
-| I | States the Mujjabi Capacity Law, Adaptive Operating Ratio, and Stability Attractor for `1/alpha`. |
+| I | Introduces the named capacity, operating-ratio, and stability-attractor notation. |
 | II | Turns the regulator vortex into `Z_3` generation symmetry and the Koide theorem. |
 | III | Interprets topology, chirality, and charge as constraint-history structure. |
 | IV | Converts density, capacity, and responsiveness into a vacuum equation-of-state problem. |
@@ -79,7 +84,7 @@ release surface.
 | VII | Reads mass sums as conserved transport/action budgets. |
 | VIII | Produces the spectrum and prediction ledger. |
 | IX | Defines exclusion and boundary principles so the theory can say no. |
-| X | States vacuum engineering as control of `Phi`, `C`, `S`, and `M_s`. |
+| X | Presents vacuum engineering as a hypothetical control programme for `Phi`, `C`, `S`, and `M_s`. |
 | XI | Moves capacity and memory tests to cosmology and the dark-sector bridge. |
 | XII | Gives the Mujjabi Tests and laboratory falsification program. |
 
@@ -113,9 +118,13 @@ These manuscripts are not peer reviewed. The supplementary scripts reproduce
 the calculations and checks internal to the manuscripts; they do not constitute
 empirical validation of the physical hypotheses.
 
+The active Part I claim boundary is
+`CORRECTION_STATUS_2026-08-18.md`, read together with `CLAIM_STATUS.md`.
+The original PDFs remain archival records and must not be cited as established
+physics where that notice withdraws or demotes a claim.
+
 ## Submission Note
 
 For neutral journal submission, include the compiled PDFs, article-class
 sources, `references.bib`, supplementary scripts, generated outputs, and the
-two orientation files `CLAIM_STATUS.md` and `REPRODUCIBILITY.md`. Use the
-`article_submissions/` package when a shorter submission-facing copy is needed.
+two orientation files `CLAIM_STATUS.md` and `REPRODUCIBILITY.md`.

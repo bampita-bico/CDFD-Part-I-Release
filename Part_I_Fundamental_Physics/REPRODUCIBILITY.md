@@ -115,16 +115,9 @@ scan.
 
 The submission-facing PDFs are copied to `PDFs/`.
 
-The neutral submission package was separately rebuilt from
-`Part_I_Fundamental_Physics/article_submissions` with:
-
-```bash
-latexmk -pdf -interaction=nonstopmode -halt-on-error \
-  -outdir=/tmp/cdfd_parti_article_submission_build papers/*.tex
-```
-
-That build also produced 12 PDFs and passed the same final log scan before the
-PDFs were copied to `article_submissions/PDFs/`.
+Earlier neutral submission-package material was moved to the separate local
+archive on 2026-08-24. The active `papers/` and `PDFs/` directories are the
+only maintained release surface.
 
 ## What This Verifies
 

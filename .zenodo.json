@@ -1,6 +1,6 @@
 {
   "title": "CDFD Part I: Fundamental Physics - Constraint-Driven Field Theory and Flux Dynamics",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "creators": [
     {
       "name": "Mujjabi, Steve Bico, MD",
@@ -54,5 +54,5 @@
     "Vacuum Memory Law",
     "Vacuum Engineering Principle"
   ],
-  "description": "Public Part I physics archive for the Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics project. The release includes neutral LaTeX article-class manuscripts, compiled PDFs, LaTeX figure assets, supplementary Python scripts, generated figures and checks, bibliography, claim-status notes, reproducibility instructions, and a minimal public demo. The final Part I architecture names the Mujjabi Capacity Law, Adaptive Operating Ratio, Stability Attractor, Vacuum Memory Law, Vacuum Engineering Principle, and Mujjabi Tests as falsifiable targets. The archive is released as open preprint material with reproducible paper-local calculations; it is not peer reviewed and does not by itself establish empirical validation of the physical hypotheses. The broader public CDFD Runtime is separate reusable software infrastructure."
+  "description": "Public Part I physics archive for Constraint-Driven Field Theory / Constraint-Driven Flux Dynamics (release v1.1.0, 2026-08-25). Twelve article-class manuscripts with supplementary scripts, interactive panels, bibliography, claim-status and correction-status ledgers, and a minimal public demo. Named capacity, operating-ratio, vacuum-memory, and Mujjabi-test constructs are postulated CDFT notation and falsifiable targets\u2014not established physical laws. Open preprint; not peer reviewed. Separate from the AGPL CDFD Runtime."
 }

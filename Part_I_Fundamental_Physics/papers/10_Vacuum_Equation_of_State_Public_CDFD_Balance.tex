@@ -28,7 +28,7 @@
 
 \begin{document}
 
-\title{The Vacuum Equation of State: Deriving Torus Knot Self-Consistency from the Public CDFD Balance Law $\Psi_s = \Phi / C$}
+\title{A Notational Reformulation of Torus-Knot Self-Consistency in Flow--Constraint Variables}
 
 \author{Steve Bico Mujjabi, MD\thanks{msbico@gmail.com}\\
 VuraLabs, Kampala, Uganda\\
@@ -41,32 +41,17 @@ ORCID: \href{https://orcid.org/0009-0001-0556-5516}{0009-0001-0556-5516}\\
 \maketitle
 
 \begin{abstract}
-This paper serves as the capstone of the formal 10-part CDFD mass-spectrum
-sequence. It addresses the remaining open problem: the physical origin of the
-torus-knot self-consistency condition that fixes the vacuum twist angle for
-each family. Earlier papers reported this condition as a successful but
-ungrounded hypothesis. Here it is recast as a model theorem inside the public
-flow-constraint notation.
+This paper records a flow--constraint notation for the torus-knot
+self-consistency construction used in the earlier CDFD papers. It does not
+derive a physical vacuum equation of state or establish the physical origin of
+the twist condition. The relation $\Psi_s=\Phi/C$ is postulated notation whose
+utility must be judged by an independent physical prediction.
 
-The paper maps the Constraint-Driven Field Theory vacuum medium onto three
-public CDFD quantities: Flow, Constraint, and Adaptive Operating Ratio. The
-continuous flow energy is identified with the squared-amplitude norm of the
-field, the transport-capacity limit with the squared absolute-amplitude sum,
-and the equilibrium deformation with the total vacuum twist. Applying the
-public balance law then yields the same self-consistency condition used in the
-torus-knot spectrum.
-
-The result interprets the Koide-like ratio as the geometric signature of a
-transport-limited vacuum equation of state. The lepton and meson-sector
-spectra derived in Papers I-IX are therefore internally tied to the electron
-mass and to the proposed fluid-dynamic balance of the vacuum.
-
-Across the series, the public CDFD Runtime expresses this equilibrium vacuum
-limit as a reusable flow-constraint state grammar. The calculations below use
-that equilibrium limit only; adaptive departures are left for later dynamical
-work rather than fitted in this manuscript. The paper-local supplementary
-scripts remain the audited reproduction layer for the figures and tables in
-this Part I archive.
+The paper maps selected Fourier quantities onto three CDFD labels: Flow,
+Constraint, and Adaptive Operating Ratio. The resulting equality is an
+algebraic restatement of those choices, not an independent result. The
+paper-local supplementary scripts reproduce the algebra and figures; they do
+not validate the physical model.
 \end{abstract}
 
 \noindent\textbf{Keywords:} Constraint-Driven Field Theory, Constraint-Driven Flux Dynamics, adaptive operating ratio, vacuum structure, Mujjabi tests, reproducible physics, vacuum balance, public CDFD model
@@ -123,14 +108,11 @@ $\Omega,\Lambda$ & State/domain space or integrated measure where defined & Rese
 
 \section{Introduction}
 
-Over the course of Papers~I--IX~\cite{MujjabiI2026,MujjabiII2026,MujjabiIII2026,%
+Across Papers~I--IX~\cite{MujjabiI2026,MujjabiII2026,MujjabiIII2026,%
 MujjabiIV2026,MujjabiV2026,MujjabiVI2026,MujjabiVII2026,MujjabiVIII2026,MujjabiIX2026},
-the Constraint-Driven Field Theory (CDFD) has constructed a parameter-free
-derivation of the $T(2,n)$ torus knot mass hierarchy.
-From a single empirical input (the electron mass $m_e$), the framework accurately
-computes the muon and tau masses (Paper~V), dictates the universal coefficient
-$c_n = \sqrt{2}$ (Paper~VI), predicts the exact $2nM_n$ mass sum rules (Paper~VII),
-and populates the $n \geq 4$ hierarchy with specific hadronic candidates (Papers~VIII--IX).
+CDFD introduced a torus-knot parametrisation and several internal algebraic
+identities. \texttt{CORRECTION\_STATUS\_2026-08-18.md} records the binding distinction
+between those conditional identities and the unsupported physical mapping.
 
 The entire predictive power of the higher families rests on the unique solution
 to the self-consistency condition:
@@ -144,8 +126,8 @@ In Papers~VIII and IX, it was extended to $n \geq 4$ as a working hypothesis
 that yielded convergent, mathematically bounded solutions, but lacked a
 first-principles derivation from the vacuum Equation of State (EOS).
 
-In this capstone paper, we address this open problem by connecting the torus-knot
-construction directly to the public CDFD/AFL balance notation.
+This paper only rewrites the torus-knot construction in the public CDFD
+flow--constraint notation; it does not close the open physical problem.
 
 
 \section{The Tripartite Vacuum Framework}
@@ -156,7 +138,7 @@ Volovik's condensate analogy~\cite{Volovik2003}.
 The vortex dynamics rest on Helmholtz's conservation
 theorems~\cite{Helmholtz1858} and the Faddeev--Niemi knot
 soliton framework~\cite{FaddeevNiemi1997}.
-Such a medium is represented here by the public tripartite balance equation:
+For this manuscript, the following postulated notational identity is adopted:
 \begin{equation}
   \Psi_s \;=\; \frac{\Phi}{C}
   \label{eq:UE_axiom}
@@ -214,33 +196,23 @@ Let $\theta_n$ be the phase twist per lobe. The total equilibrium deformation
 \end{equation}
 
 
-\section{The Vacuum Equation of State Theorem}
+\section{The $\Psi_s=\Phi/C$ Notational Identity}
 
-\begin{theorem}[Derivation of Self-Consistency]
-  \label{thm:eos_derivation}
-  In a transport-capacity-limited elastic vacuum governed by the CDFD
-  equilibrium $\Psi_s = \Phi / C$, the orientation angle $\theta_n$ of a $T(2,n)$
-  torus knot must exactly satisfy:
-  \[
-    n\theta_n \;=\; \widetilde{Q}_n(\theta_n)\,.
-  \]
-\end{theorem}
-
-\begin{proof}
-  Substituting the CDFD mappings \eqref{eq:flow_phi}, \eqref{eq:constraint_C},
-  and \eqref{eq:equilibrium_psi} directly into the fundamental balance equation
-  $\Psi_s = \Phi / C$, we obtain:
+Substituting the chosen CDFD mappings \eqref{eq:flow_phi},
+\eqref{eq:constraint_C}, and \eqref{eq:equilibrium_psi} into the postulated
+notation $\Psi_s = \Phi / C$ gives:
   \begin{equation}
     n\theta_n \;=\; \frac{\sum_{k=0}^{n-1} A_k^2}{\left(\sum_{k=0}^{n-1} |A_k|\right)^2}\,.
   \end{equation}
-  The right-hand side is exactly the definition of the modified Koide ratio
-  $\widetilde{Q}_n(\theta_n)$ from Eq.~\eqref{eq:self_consistency}.
-\end{proof}
+The right-hand side is the chosen definition of the modified Koide ratio
+$\widetilde{Q}_n(\theta_n)$ from Eq.~\eqref{eq:self_consistency}. This is a
+consistent relabelling of the construction, not a theorem, proof, or physical
+derivation.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.8\textwidth]{figures/fig10_1_panel.pdf}
-  \caption{The equilibrium $\Psi_s$ plotted against $\Phi / C$ across all torus knot families. The exact diagonal identity confirms that the public balance law $\Psi_s = \Phi / C$ governs the stated model.}
+  \caption{The chosen labels $\Psi_s$ and $\Phi/C$ plotted across the stated torus-knot construction. The diagonal identity verifies the internal algebraic relabelling only.}
   \label{fig:psi_vs_phi_over_c}
 \end{figure}
 
@@ -251,15 +223,13 @@ Let $\theta_n$ be the phase twist per lobe. The total equilibrium deformation
   \label{fig:residuals}
 \end{figure}
 
-\subsection{Physical Implications}
-Within the proposed mapping, this theorem interprets the Koide ratio
-$Q_3 = 2/3$ observed in the lepton masses as a signature of the vacuum's
-equation of state rather than as an isolated numerical fit.
-The modified ratio $\widetilde{Q}_n(\theta_n)$ represents the specific energy-to-capacity
-stress induced by higher knots, and the angle $\theta_n$ is the vacuum's
-precise geometric relaxation in response to that stress.
+\subsection{Interpretation boundary}
+The mapping does not show that the observed Koide ratio is a vacuum equation of
+state, nor that the higher-knot quantities are particle spectra. Any physical
+interpretation requires an independent mapping and a test that outperforms
+standard theory.
 
-\section{Vacuum Engineering as Control of the Balance Law}
+\section{Vacuum Engineering as a Hypothetical Control Programme}
 
 The public balance law is also the first engineering form of the theory. Vacuum
 engineering, in this manuscript, does not mean a claimed device. It means a
@@ -332,116 +302,14 @@ states the falsification condition. The refreshed reports in
 any vacuum-engineering device or clinical intervention already exists.
 
 
-\section{The Universal Isomorphism: Scaling CDFD to Macro-Systems}
+\section{Scope Boundary and Summary}
 
-If the proposed flow--constraint equations capture something general about
-transport-limited systems, they should have macroscopic analogues rather than
-remaining restricted to the particle-scale model. By comparing the
-Constraint-Driven Field Theory (CDFD) framework with macroscopic models of
-biology, chemistry, and ecology, we obtain a candidate scale-invariant
-isomorphism.
-
-\subsection{The Scale-Invariant Isomorphism (CDFD $\equiv$ AFL)}
-In the domains of biological and clinical systems, throughput is described in
-the \textbf{Adaptive Flux Limitation (AFL)} framework~\cite{MujjabiIX2026} by
-adaptive constraints. A minimal form of that biological adaptation law is:
-\begin{equation}
-  \frac{\partial \Lambda}{\partial t} \;=\; \alpha_{\Lambda} |J| - \beta_{\Lambda} \Lambda
-\end{equation}
-where $\Lambda$ is the biological constraint (e.g., insulin resistance, inflammation), $J$ is the biological flux (e.g., glucose throughput, metabolic energy flow), $\alpha_{\Lambda}$ is the biological constraint-reinforcement coefficient, and $\beta_{\Lambda}$ is the biological relaxation coefficient.
-
-In the CDFD quantum vacuum, the constraint field $C$ evolves precisely according to the structural reaction of the medium to the localized flow $\Phi$:
-\begin{equation}
-  \frac{\partial C}{\partial t} \;=\; \alpha_C |\Phi| - \beta_C C + \gamma_C \nabla^2 C
-\end{equation}
-where $\alpha_C$ is the vacuum constraint-reinforcement coefficient, $\beta_C$
-is the vacuum relaxation coefficient, and $\gamma_C$ is the spatial smoothing
-or diffusion coefficient for the constraint field. These coefficients are
-domain-specific transport parameters and are not the fine-structure constant
-$\alpha$ defined above.
-The formal mapping is:
-\[
-  \text{Vacuum Constraint } C \;\equiv\; \text{Macro Constraint } \Lambda
-\]
-\[
-  \text{Vacuum Flow } \Phi \;\equiv\; \text{Macro Flux } J
-\]
-This does not by itself prove that biological evolution and physiological
-adaptation are governed by vacuum mechanics. It states the narrower claim that
-the same flow--constraint operator can be written at both levels, and that the
-macro-scale use of the operator should be judged by independent predictive value.
-
-\subsection{Ontological Redefinition of Mass}
-This proposed isomorphism suggests a different operational reading of mass
-inside the model. Rather than treating mass only as a distinct intrinsic label,
-CDFD treats it as a \emph{localized, stable constraint field} within the vacuum
-flux.
-
-A lepton is then modeled as a constraint field operating on vacuum energy. At
-larger scales, the same notation can describe boundaries such as membranes,
-interfaces, or transport bottlenecks without claiming that those systems are
-literally the same physical object. The value of the analogy depends on whether
-it improves prediction.
-
-\subsection{Cross-Scale Stability Ratio}
-The relationship $\Psi_s = \Phi / C$ can therefore be read as a candidate
-cross-scale stability ratio:
-\begin{itemize}
-  \item \textbf{$\Psi_s \approx 1$ (Stable Equilibrium):} Flow matches constraint capacity. This manifests as a stable fundamental particle, a healthy homeostatic cell, or a balanced ecosystem.
-  \item \textbf{$\Psi_s \gg 1$ (Flux Overload / Rupture):} Flow overwhelms constraint capacity. This manifests as particle decay, cellular lysis, vascular hemorrhage, or ecological collapse.
-  \item \textbf{$\Psi_s \ll 1$ (Over-Constraint / Freeze):} Constraints choke off flow entirely. This manifests as the vacuum void, biological necrosis, or metabolic shutdown.
-\end{itemize}
-
-The public scientific framework is therefore internally linked: the same
-flow--constraint notation used for the vacuum papers also organizes the
-biological manuscripts, without disclosing any private implementation
-architecture.
-
-\subsection{Fibonacci organization as constrained transport optimization}
-
-The source notes also propose that Fibonacci-like organization can emerge when
-transport pathways optimize under constraint. In this paper that idea is kept
-as a cross-scale design hypothesis rather than a completed physics derivation.
-Let a branching or packing system add a new channel whenever the marginal gain
-in usable flow $\Delta\Phi$ exceeds the marginal increase in constraint
-$\Delta C$. A simple discrete recurrence can then appear:
-\begin{equation}
-    N_{k+1}=N_k+N_{k-1},
-\end{equation}
-where $N_k$ is the number of effective channels, turns, or packing positions at
-step $k$. In CDFD language, Fibonacci organization is therefore a candidate
-signature of adaptive transport optimization: new structure reuses the two
-previous constraint states instead of rebuilding the whole medium from scratch.
-
-This claim should be used carefully. Fibonacci or golden-ratio patterns are
-common enough that they can become numerology if treated as proof. The useful
-CDFD statement is narrower: if a system shows Fibonacci-like organization, the
-model should be able to identify the flow variable $\Phi$, the constraint
-variable $C$, the recurrence mechanism, and a falsifiable reason why a different
-branching sequence would be less stable.
-
-
-\section{Closure of the CDFD Series}
-
-With Theorem~\ref{thm:eos_derivation}, the formal CDFD mass-spectrum ladder is
-internally closed.
-
-\begin{enumerate}
-  \item \textbf{Parameter ledger:} Paper~I recovers the fine-structure ratio
-        inside a limited-capacity elastic-vacuum model, with the transport
-        stiffness still requiring an independent first-principles derivation.
-  \item \textbf{Mass Gap:} The lowest topological excitation $T(2,3)$ takes the
-        mass scale $M_3$, anchored to physical units solely by $m_e$ (Paper~V).
-  \item \textbf{Asymptotic Scaling:} The Faddeev--Niemi bounds establish the rigorous
-        progression of energy scales $M_n \propto n^{3/4}$ (Paper~IV).
-  \item \textbf{Spectrum Prediction:} The vacuum EOS forces the twist $\theta_n$,
-        which breaks the $n$-fold degeneracy and splits the spectrum into anti-phase
-        boundary modes and co-phase physical resonances (Papers~VIII--IX).
-\end{enumerate}
-
-All tables, mass values, bounds, and limits tabulated across the first ten
-papers are therefore internal consequences of the single condition
-$\Psi_s = \Phi / C$, together with the model assumptions stated in those papers.
+This paper makes no cross-scale biology, medicine, ecology, or Fibonacci claim.
+Such analogies were removed because formal resemblance does not supply a
+physical derivation or incremental prediction. The remaining content is a
+notational restatement of a selected torus-knot construction. It does not close
+the Part I physical programme, establish a mass hierarchy, or support
+downstream Parts II and III as a source of established infrastructure.
 
 
 \section*{Supplementary Material}

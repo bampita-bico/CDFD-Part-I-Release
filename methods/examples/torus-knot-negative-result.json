@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "model_id": "torus-knot-finite-thickness-proxy-2026-08-24",
+  "title": "Finite-thickness T(2,n) Fourier-curve optimization",
+  "status": "toy",
+  "scientific_context": {
+    "domain": "geometric knot optimization",
+    "question": "Does the stated finite sampled SLSQP workflow certify a unit-thickness equilibrium for T(2,n) curves?",
+    "native_baselines": [
+      {
+        "name": "Ideal-knot ropelength literature",
+        "description": "External geometric reference, not an energy calculation."
+      }
+    ],
+    "decision_context": "Do not fit or report a scaling exponent unless every predeclared acceptance gate passes."
+  },
+  "claim_boundary": {
+    "what_is_tested": "The numerical adequacy of one finite-dimensional, sampled constrained optimizer.",
+    "what_is_not_established": [
+      "A continuous hard-thickness certificate.",
+      "A global ideal-knot ropelength minimum.",
+      "A field-theory energy law.",
+      "A particle-mass or CDFT claim."
+    ]
+  },
+  "model": {
+    "inputs": [
+      {"name": "n", "description": "Odd torus-knot index in {3,5,7,9,11,13}."},
+      {"name": "target_distance", "description": "Required sampled nonlocal pair distance.", "units": "curve units"}
+    ],
+    "state": [
+      {"name": "Fourier coefficients", "description": "Finite representation of the closed spatial curve."}
+    ],
+    "equations": [
+      "Minimize polygonal curve length subject to d_ij >= 1 on the constraint grid."
+    ],
+    "calibration": {
+      "status": "none",
+      "description": "No post-hoc rescaling is used to turn a failed dense-thickness check into a fit."
+    }
+  },
+  "evaluation": {
+    "outcomes": [
+      {"name": "dense_minimum_distance", "description": "Minimum nonlocal distance on the sixfold validation grid."},
+      {"name": "converged", "description": "All predeclared solver, plateau, constraint, and dense-thickness gates pass."}
+    ],
+    "finite_output_audit": {
+      "performed": true,
+      "all_finite": true,
+      "scope": "CSV and JSON numerical optimizer outputs."
+    },
+    "falsification": {
+      "criterion": "Every n must pass the dense-thickness and plateau gates before a scaling fit is attempted.",
+      "result": "fail"
+    }
+  },
+  "provenance": {
+    "source_repository": "CDFD Part I working archive retained separately on 2026-08-24",
+    "source_revision": "working tree; archived result reproduced on 2026-08-24",
+    "command": "Frozen command and settings are recorded in the retained Part I standalone note.",
+    "run_bundle": "See the retained Part I standalone note and the separate local archive.",
+    "date_executed": "2026-08-24"
+  }
+}

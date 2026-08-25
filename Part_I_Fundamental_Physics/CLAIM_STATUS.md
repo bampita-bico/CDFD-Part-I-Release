@@ -4,6 +4,9 @@ This table separates internal mathematical statements from physical
 interpretation. It is intended to prevent the archive from presenting every
 statement at the same level of certainty.
 
+**Binding correction notice:** `CORRECTION_STATUS_2026-08-18.md`. Where this
+older ledger conflicts with that notice, the correction notice governs.
+
 | Paper | Main role | Current status | What would strengthen it | What would weaken it |
 |---|---|---|---|---|
 | I | Vortex aspect-ratio model for alpha | Model assumption plus numerical consistency check; vacuum-memory, Planck-action mapping, charge mapping, and core-profile robustness are now explicit open tests | Independent derivation of the transport stiffness, charge/circulation inputs, `h = Phi_c tau_v`, memory relaxation law, and core-profile invariance without retuning | Vacuum-medium premise fails, stiffness must be tuned arbitrarily, or core-profile changes destroy the claimed equilibrium |
@@ -15,7 +18,7 @@ statement at the same level of certainty.
 | VII | Mass sum rule | Internal theorem for the amplitude model | Empirical family assignments matching independent spectra | Sum rules do not map to observed families |
 | VIII | Odd-n spectrum extension | Numerical self-consistency and mode census | Stable external predictions for n >= 5 | Solutions exist mathematically but have no physical referent |
 | IX | Even-n extension and exclusions | Internal extension and exclusion logic | Observable distinction between even and odd families | Boundary-mode interpretation fails |
-| X | Public flow/constraint derivation of self-consistency | Internal model theorem and consistency check | Independent physical derivation of Phi, C, and Psi_s mappings | Mapping is only a relabeling of the same equation |
+| X | Public flow/constraint notation for self-consistency | Postulated notation and consistency check; not an internal or physical derivation | Independent physical derivation of Phi, C, and Psi_s mappings | Mapping is only a relabeling of the same equation |
 | XI | Cosmology bridge | Hypothesis generator; not empirical evidence | Lensing, expansion, black-hole, or substrate discriminants beyond standard models | No residual predictive value after standard cosmology fits |
 | XII | Collective-matter and vacuum-memory bridge | Hypothesis generator for laboratory systems and extreme-field discriminants | Incremental prediction in friction, plasma, superconductivity, turbulence, jamming, vacuum hysteresis, or high-field alpha sensitivity | No improvement beyond established domain models, QED, or GR after controlled tests |
 
@@ -23,7 +26,7 @@ statement at the same level of certainty.
 
 | Name | Where planted | Status |
 |---|---|---|
-| Mujjabi Capacity Law | Papers I, IV, X | CDFD law inside the framework; empirical status open |
+| Mujjabi Capacity Law | Papers I, IV, X | Postulated CDFT notation/hypothesis; not an established physical law |
 | Mujjabi Adaptive Operating Ratio | Papers I-XII | Core notation |
 | Mujjabi Stability Attractor | Paper I | Internal derivation / numerical target |
 | Mujjabi Vacuum Memory Law | Papers I, XI, XII | Proposed non-equilibrium extension |
