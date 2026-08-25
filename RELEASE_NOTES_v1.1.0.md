@@ -2,7 +2,9 @@
 
 **Release date:** 25 August 2026  
 **Tag:** `v1.1.0`  
-**License:** CC BY 4.0
+**License:** CC BY 4.0  
+**Concept DOI:** [10.5281/zenodo.20250820](https://doi.org/10.5281/zenodo.20250820)  
+**This version DOI:** [10.5281/zenodo.22090527](https://doi.org/10.5281/zenodo.22090527)
 
 ## Summary
 
@@ -62,4 +64,5 @@ Before citing, read `CORRECTION_STATUS_2026-08-18.md` and `CLAIM_STATUS.md`.
 
 ## DOI note
 
-Concept / all-versions DOI remains associated with this repository’s Zenodo record. Mint a **new versioned Zenodo deposit** for tag `v1.1.0` before citing this exact snapshot by DOI.
+- **Cite this snapshot:** [10.5281/zenodo.22090527](https://doi.org/10.5281/zenodo.22090527) (v1.1.0)
+- **All-versions / concept:** [10.5281/zenodo.20250820](https://doi.org/10.5281/zenodo.20250820)
